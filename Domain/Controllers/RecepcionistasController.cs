@@ -6,40 +6,36 @@ using System.Web.Mvc;
 
 namespace Domain.Controllers
 {
-    public class RecepcionistasController : Controllers
+    public class RecepcionistasController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
 
-        public RecepcionistasController(IUnitOfWork unitOfWork) {
+        public RecepcionistasController(IUnitOfWork unitOfWork)
+        {
             _unitOfWork = unitOfWork;
         }
 
-        //Método de cadastrar(Recepcionista recepcionista)
-        public Recepcionista Cadastrar(Recepcionista recepcionista) {
+        public void Cadastrar(Recepcionista recepcionista)
+        {
             _unitOfWork.RepositoryRecepcionista.Adicionar(recepcionista);
             _unitOfWork.Commit();
-            return recepcionista;
         }
 
-        //Método de Autenticar(string nome, int id)
-        public bool Autenticar(string nome, int id) {
-            return _unitOfWork.RepositoryRecepcionista.Obter().Where(r => r.Nome.Equals(nome) && (r.IdUsuario == id)).FirstOrDefault() != null;
-        }
-
-        //Método de ObterTodos()
-        public List<Recepcionista> ObterTodos() {
+        public List<Recepcionista> ObterTodos()
+        {
             return _unitOfWork.RepositoryRecepcionista.Obter().ToList();
         }
 
-        //Método de ObterPorId
-        public Recepcionista ObterPorId(int id) {
+        public Recepcionista ObterPorId(int id)
+        {
             return _unitOfWork.RepositoryRecepcionista.Obter().Where(r => r.Id == id).FirstOrDefault();
         }
 
-        //Método Excluir(int id)
-        public bool Excluir(int id) {
+        public bool Excluir(int id)
+        {
             var recepcionista = ObterPorId(id);
-            if (recepcionista != null) {
+            if (recepcionista != null)
+            {
                 _unitOfWork.RepositoryRecepcionista.Remover(recepcionista);
                 _unitOfWork.Commit();
                 return true;

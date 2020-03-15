@@ -18,7 +18,6 @@ namespace Domain.Controllers
 
         public Usuario Cadastrar(Usuario usuario)
         {
-
             if (!usuario.IsValid())
             {
                 return usuario;

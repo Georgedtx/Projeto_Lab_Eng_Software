@@ -17,5 +17,10 @@ namespace Domain.Entities
         public string Descricao { get; private set; }
 
         public virtual ICollection<PedidoExame> PedidosExames { get; private set; }
+
+        public void Atualizar(string novaDescricao)
+        {
+            Nome = novaDescricao;
+        }
     }
 }
