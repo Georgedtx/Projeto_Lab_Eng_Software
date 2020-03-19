@@ -10,13 +10,14 @@ namespace Domain.Entities
         public RegistroExame(int idPedidoExame)
         {
             this.Data = DateTime.Now;
+            this.Laudo = "";
             this.Status = false;
             this.IdPedidoExame = idPedidoExame;
         }
 
         public int Id { get; private set; }
         public DateTime Data { get; private set; }
-        public string? Laudo { get; private set; }
+        public string Laudo { get; private set; }
         public bool Status { get; private set; }
         public int? IdDocente { get; private set; }
         public int? IdResidente { get; private set; }

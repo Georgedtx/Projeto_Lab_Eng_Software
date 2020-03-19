@@ -1,6 +1,6 @@
 ﻿using Domain.Entities;
 using DomainValidation.Interfaces.Specification;
-using Infra.Validations.Usuarios;
+using Domain.Validations.Usuarios;
 
 namespace Domain.Specifications.Usuarios
 {

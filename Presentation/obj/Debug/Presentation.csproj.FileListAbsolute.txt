@@ -1,0 +1,4 @@
+C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.csprojAssemblyReference.cache
+C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Properties.Resources.resources
+C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Usuarios.Login.resources
+C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.csproj.GenerateResource.cache
