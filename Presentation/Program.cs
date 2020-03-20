@@ -1,4 +1,5 @@
-﻿using Presentation.Usuarios;
+﻿using Infra.IoC;
+using Presentation.Usuarios;
 using System;
 using System.Windows.Forms;
 
@@ -14,6 +15,8 @@ namespace Presentation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            DependenciesResolve.Wire(Dependencies.Create());
             Application.Run(new Login());
         }
     }

@@ -2,11 +2,10 @@ using Domain.Entities;
 using Domain.Interfaces.Uow;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web.Mvc;
 
 namespace Domain.Controllers
 {
-    public class AdministradoresController : Controller
+    public class AdministradoresController
     {
         private readonly IUnitOfWork _unitOfWork;
 

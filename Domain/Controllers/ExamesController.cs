@@ -2,11 +2,10 @@
 using Domain.Interfaces.Uow;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web.Mvc;
 
 namespace Domain.Controllers
 {
-    public class ExamesController : Controller
+    public class ExamesController
     {
         private readonly IUnitOfWork _unitOfWork;
 

@@ -1,12 +1,11 @@
-using Domain.Interfaces.Uow;
 using Domain.Entities;
-using System.Linq;
+using Domain.Interfaces.Uow;
 using System.Collections.Generic;
-using System.Web.Mvc;
+using System.Linq;
 
 namespace Domain.Controllers
 {
-    public class RecepcionistasController : Controller
+    public class RecepcionistasController
     {
         private readonly IUnitOfWork _unitOfWork;
 

@@ -39,3 +39,4 @@ C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_E
 C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Infra\obj\Debug\net472\Infra.csproj.CopyComplete
 C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Infra\obj\Debug\net472\Infra.dll
 C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Infra\obj\Debug\net472\Infra.pdb
+C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\Ninject.dll

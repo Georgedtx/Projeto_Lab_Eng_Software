@@ -1,16 +1,17 @@
 ﻿using Domain.Entities;
 using Domain.Interfaces.Uow;
 using Domain.Validations.Usuarios;
+using Ninject;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web.Mvc;
 
 namespace Domain.Controllers
 {
-    public class UsuariosController : Controller
+    public class UsuariosController
     {
         private readonly IUnitOfWork _unitOfWork;
 
+        [Inject()]
         public UsuariosController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;

@@ -1,4 +1,5 @@
 ﻿using Domain.Controllers;
+using Infra.IoC;
 using System;
 using System.Windows.Forms;
 
@@ -8,10 +9,11 @@ namespace Presentation.Usuarios
     {
         private readonly UsuariosController _usuariosController;
 
-        public Login(UsuariosController usuariosController)
+        public Login()
         {
             InitializeComponent();
-            _usuariosController = usuariosController;
+            _usuariosController = DependenciesResolve.Resolve<UsuariosController>();
+
             //esconde barra
             this.Text = string.Empty;
             this.ControlBox = false;
