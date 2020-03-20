@@ -14,6 +14,8 @@ namespace Infra.Configurations
                 .HasMaxLength(30)
                 .IsRequired();
 
+            builder.HasIndex(m => m.Crm)
+                .IsUnique();
             builder.Property(m => m.Crm)
                 .HasMaxLength(10)
                 .IsRequired();

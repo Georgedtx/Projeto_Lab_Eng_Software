@@ -2,3 +2,10 @@ C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_E
 C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Properties.Resources.resources
 C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Usuarios.Login.resources
 C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.csproj.GenerateResource.cache
+C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Presentation.exe.config
+C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Presentation.exe
+C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Presentation.pdb
+C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Presentation\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.csproj.CopyComplete
+C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.exe
+C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.pdb

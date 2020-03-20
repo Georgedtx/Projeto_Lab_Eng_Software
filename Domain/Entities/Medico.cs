@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using DomainValidation.Validation;
+using System.Collections.Generic;
 
 namespace Domain.Entities
 {
@@ -22,5 +23,7 @@ namespace Domain.Entities
         public virtual Docente Docente { get; private set; }
         public virtual Residente Residente { get; private set; }
         public virtual ICollection<PedidoExame> PedidosExames { get; private set; }
+
+        public ValidationResult Validation { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Tela
+﻿namespace Presentation.Usuarios
 {
     partial class Login
     {

@@ -1,13 +1,17 @@
-﻿using System;
+﻿using Domain.Controllers;
+using System;
 using System.Windows.Forms;
 
 namespace Presentation.Usuarios
 {
     public partial class Login : Form
     {
-        public Login()
+        private readonly UsuariosController _usuariosController;
+
+        public Login(UsuariosController usuariosController)
         {
-            //InitializeComponent();
+            InitializeComponent();
+            _usuariosController = usuariosController;
             //esconde barra
             this.Text = string.Empty;
             this.ControlBox = false;
