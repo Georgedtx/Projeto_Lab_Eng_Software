@@ -15,3 +15,20 @@ C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_E
 C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Domain\obj\Debug\net472\Domain.dll
 C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Domain\obj\Debug\net472\Domain.pdb
 C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Domain\bin\Debug\net472\Ninject.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Domain\bin\Debug\net472\Domain.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Domain\bin\Debug\net472\Domain.pdb
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Domain\bin\Debug\net472\DomainValidation.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Domain\bin\Debug\net472\System.Web.Mvc.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Domain\bin\Debug\net472\System.Web.Razor.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Domain\bin\Debug\net472\System.Web.Helpers.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Domain\bin\Debug\net472\System.Web.WebPages.Deployment.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Domain\bin\Debug\net472\System.Web.WebPages.Razor.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Domain\bin\Debug\net472\System.Web.WebPages.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Domain\bin\Debug\net472\Microsoft.Web.Infrastructure.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Domain\bin\Debug\net472\Ninject.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Domain\obj\Debug\net472\Domain.csprojAssemblyReference.cache
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Domain\obj\Debug\net472\Domain.AssemblyInfoInputs.cache
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Domain\obj\Debug\net472\Domain.AssemblyInfo.cs
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Domain\obj\Debug\net472\Domain.csproj.CopyComplete
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Domain\obj\Debug\net472\Domain.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Domain\obj\Debug\net472\Domain.pdb

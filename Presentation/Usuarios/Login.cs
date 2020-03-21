@@ -2,6 +2,8 @@
 using Infra.IoC;
 using System;
 using System.Windows.Forms;
+using System.Text;
+using System.Runtime.InteropServices;
 
 namespace Presentation.Usuarios
 {
@@ -20,7 +22,10 @@ namespace Presentation.Usuarios
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
-
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
         private void fechar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -28,16 +33,53 @@ namespace Presentation.Usuarios
 
         private void EntrarLogin_Click(object sender, EventArgs e)
         {
-            //var menuPrincipal = new AdmMenuPrincipal();
-            //menuPrincipal.Show();
+            if (caixaUserAdm.Text != string.Empty)
+            {
+                if (caixaSenhaAdm.Text != string.Empty)
+                {
+                    var validLogin = _usuariosController.Autenticar(caixaUserAdm.Text, caixaSenhaAdm.Text);
+                    if (validLogin != null)
+                    {
+                        //FormPrincipal mainMenu = new FormPrincipal();
+                        //mainMenu.Show();
+                        //this.Hide();
+                    }
+                    msgError("Nome de usuário ou senha digitados incorretos. \n Por favor tente novamente.");
+                    caixaSenhaAdm.Clear();
+                    caixaUserAdm.Focus();
+                }
+                else msgError("Digite a senha");
+            }
+            else msgError("Digite o usuário");
         }
-
+        private void msgError(String msg)
+        {
+            lblErrorMessage.Text = " " + msg;
+            lblErrorMessage.Visible = true;
+        }
         void panelDesktop_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
         private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelDesktop_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void iconPictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void caixaUserAdm_TextChanged(object sender, EventArgs e)
         {
 
         }
