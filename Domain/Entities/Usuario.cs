@@ -1,5 +1,5 @@
 ﻿using Domain.Validations.Usuarios;
-using DomainValidation.Validation;
+using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Entities
 {
@@ -14,10 +14,15 @@ namespace Domain.Entities
         }
 
         public int Id { get; private set; }
-        public string Email { get; private set; }
-        public string Senha { get; private set; }
 
-        public ValidationResult Validation { get; set; }
+        [Required]
+        [RegularExpression(@"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z")]
+        public string Email { get; set; }
+        [Required]
+        [StringLength(12, MinimumLength = 10)]
+        public string Senha { get; set; }
+
+        public DomainValidation.Validation.ValidationResult Validation { get; set; }
 
         public virtual Administrador Administrador { get; private set; }
         public virtual Medico Medico { get; private set; }

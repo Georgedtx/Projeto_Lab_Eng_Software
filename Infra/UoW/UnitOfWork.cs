@@ -11,9 +11,9 @@ namespace Infra.UoW
     {
         private readonly ProjectContext _context;
 
-        public UnitOfWork(ProjectContext context)
+        public UnitOfWork()
         {
-            _context = context;
+            _context = new ProjectContext();
         }
 
         private Repository<Administrador> repositoryAdministrador;
@@ -56,7 +56,7 @@ namespace Infra.UoW
         {
             get
             {
-                if(repositoryDocente == null)
+                if (repositoryDocente == null)
                 {
                     repositoryDocente = new Repository<Docente>(_context);
                 }
@@ -64,10 +64,11 @@ namespace Infra.UoW
             }
         }
 
-        public IRepository<Exame> RepositoryExame {
+        public IRepository<Exame> RepositoryExame
+        {
             get
             {
-                if(repositoryExame == null)
+                if (repositoryExame == null)
                 {
                     repositoryExame = new Repository<Exame>(_context);
                 }
@@ -75,10 +76,11 @@ namespace Infra.UoW
             }
         }
 
-        public IRepository<Medico> RepositoryMedico {
+        public IRepository<Medico> RepositoryMedico
+        {
             get
             {
-                if(repositoryMedico == null)
+                if (repositoryMedico == null)
                 {
                     repositoryMedico = new Repository<Medico>(_context);
                 }
@@ -86,10 +88,11 @@ namespace Infra.UoW
             }
         }
 
-        public IRepository<Paciente> RepositoryPaciente {
+        public IRepository<Paciente> RepositoryPaciente
+        {
             get
             {
-                if(repositoryPaciente == null)
+                if (repositoryPaciente == null)
                 {
                     repositoryPaciente = new Repository<Paciente>(_context);
                 }
@@ -97,10 +100,11 @@ namespace Infra.UoW
             }
         }
 
-        public IRepository<PedidoExame> RepositoryPedidoExame {
+        public IRepository<PedidoExame> RepositoryPedidoExame
+        {
             get
             {
-                if(repositoryPedidoExame == null)
+                if (repositoryPedidoExame == null)
                 {
                     repositoryPedidoExame = new Repository<PedidoExame>(_context);
                 }
@@ -108,10 +112,11 @@ namespace Infra.UoW
             }
         }
 
-        public IRepository<Recepcionista> RepositoryRecepcionista {
+        public IRepository<Recepcionista> RepositoryRecepcionista
+        {
             get
             {
-                if(repositoryRecepcionista == null)
+                if (repositoryRecepcionista == null)
                 {
                     repositoryRecepcionista = new Repository<Recepcionista>(_context);
                 }
@@ -119,10 +124,11 @@ namespace Infra.UoW
             }
         }
 
-        public IRepository<RegistroExame> RepositoryRegistroExame {
+        public IRepository<RegistroExame> RepositoryRegistroExame
+        {
             get
             {
-                if(repositoryRegistroExame == null)
+                if (repositoryRegistroExame == null)
                 {
                     repositoryRegistroExame = new Repository<RegistroExame>(_context);
                 }
@@ -130,10 +136,11 @@ namespace Infra.UoW
             }
         }
 
-        public IRepository<Residente> RepositoryResidente {
+        public IRepository<Residente> RepositoryResidente
+        {
             get
             {
-                if(repositoryResidente == null)
+                if (repositoryResidente == null)
                 {
                     repositoryResidente = new Repository<Residente>(_context);
                 }
@@ -145,7 +152,7 @@ namespace Infra.UoW
         {
             get
             {
-                if(repositoryUsuario == null)
+                if (repositoryUsuario == null)
                 {
                     repositoryUsuario = new Repository<Usuario>(_context);
                 }
