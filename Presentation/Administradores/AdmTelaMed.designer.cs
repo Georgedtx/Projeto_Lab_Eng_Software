@@ -31,39 +31,39 @@
             this.Detalhes = new System.Windows.Forms.TabPage();
             this.textDetalhes = new System.Windows.Forms.TextBox();
             this.Medicos = new System.Windows.Forms.TabPage();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.ListarMedicos = new System.Windows.Forms.DataGridView();
-            this.NomeMD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TelefoneMD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CPFmd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SexoMD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AbasMedicos = new System.Windows.Forms.TabControl();
             this.NovoMedico = new System.Windows.Forms.TabPage();
-            this.Area = new System.Windows.Forms.Label();
-            this.UF = new System.Windows.Forms.Label();
-            this.CPF = new System.Windows.Forms.Label();
-            this.Telefone = new System.Windows.Forms.Label();
-            this.Sexo = new System.Windows.Forms.Label();
-            this.Endereco = new System.Windows.Forms.Label();
-            this.Nascimento = new System.Windows.Forms.Label();
+            this.Senha = new System.Windows.Forms.Label();
+            this.CRM = new System.Windows.Forms.Label();
+            this.TitUni = new System.Windows.Forms.Label();
+            this.Email = new System.Windows.Forms.Label();
+            this.AnoResidencia = new System.Windows.Forms.Label();
             this.Nome = new System.Windows.Forms.Label();
-            this.textUF = new System.Windows.Forms.ComboBox();
             this.textEndereco = new System.Windows.Forms.TextBox();
             this.Cancelar = new System.Windows.Forms.Button();
             this.Cadastrar = new System.Windows.Forms.Button();
             this.textNome = new System.Windows.Forms.TextBox();
-            this.textCPF = new System.Windows.Forms.MaskedTextBox();
-            this.textSexo = new System.Windows.Forms.ComboBox();
-            this.textCEP = new System.Windows.Forms.MaskedTextBox();
+            this.textCRM = new System.Windows.Forms.MaskedTextBox();
+            this.TituloUni = new System.Windows.Forms.ComboBox();
+            this.BoxSenha = new System.Windows.Forms.MaskedTextBox();
             this.textNascimento = new System.Windows.Forms.MaskedTextBox();
-            this.textTel = new System.Windows.Forms.MaskedTextBox();
-            this.AreaMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.ResidenteButton = new System.Windows.Forms.RadioButton();
+            this.DocenteButton = new System.Windows.Forms.RadioButton();
+            this.SalvarButton = new System.Windows.Forms.Button();
+            this.panelDesktop = new System.Windows.Forms.Panel();
+            this.NomeMD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmailMD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CRMmd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TitUniMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnoResidenciaMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Detalhes.SuspendLayout();
             this.Medicos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ListarMedicos)).BeginInit();
             this.AbasMedicos.SuspendLayout();
             this.NovoMedico.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Detalhes
@@ -102,281 +102,6 @@
             this.Medicos.Text = "Medicos";
             this.Medicos.Click += new System.EventHandler(this.Medicos_Click);
             // 
-            // ListarMedicos
-            // 
-            this.ListarMedicos.AllowUserToAddRows = false;
-            this.ListarMedicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ListarMedicos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NomeMD,
-            this.TelefoneMD,
-            this.CPFmd,
-            this.SexoMD,
-            this.AreaMed});
-            this.ListarMedicos.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ListarMedicos.Location = new System.Drawing.Point(3, 3);
-            this.ListarMedicos.Name = "ListarMedicos";
-            this.ListarMedicos.RowHeadersWidth = 51;
-            this.ListarMedicos.RowTemplate.Height = 24;
-            this.ListarMedicos.Size = new System.Drawing.Size(679, 563);
-            this.ListarMedicos.TabIndex = 2;
-            this.ListarMedicos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // NomeMD
-            // 
-            this.NomeMD.HeaderText = "Nome";
-            this.NomeMD.MinimumWidth = 6;
-            this.NomeMD.Name = "NomeMD";
-            this.NomeMD.Width = 125;
-            // 
-            // TelefoneMD
-            // 
-            this.TelefoneMD.HeaderText = "Tell";
-            this.TelefoneMD.MinimumWidth = 6;
-            this.TelefoneMD.Name = "TelefoneMD";
-            this.TelefoneMD.Width = 125;
-            // 
-            // CPFmd
-            // 
-            this.CPFmd.HeaderText = "CPF";
-            this.CPFmd.MinimumWidth = 6;
-            this.CPFmd.Name = "CPFmd";
-            this.CPFmd.Width = 125;
-            // 
-            // SexoMD
-            // 
-            this.SexoMD.HeaderText = "Sexo";
-            this.SexoMD.MinimumWidth = 6;
-            this.SexoMD.Name = "SexoMD";
-            this.SexoMD.Width = 125;
-            // 
-            // AbasMedicos
-            // 
-            this.AbasMedicos.Controls.Add(this.Medicos);
-            this.AbasMedicos.Controls.Add(this.NovoMedico);
-            this.AbasMedicos.Controls.Add(this.Detalhes);
-            this.AbasMedicos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AbasMedicos.ItemSize = new System.Drawing.Size(64, 21);
-            this.AbasMedicos.Location = new System.Drawing.Point(0, 0);
-            this.AbasMedicos.Name = "AbasMedicos";
-            this.AbasMedicos.SelectedIndex = 0;
-            this.AbasMedicos.Size = new System.Drawing.Size(1258, 598);
-            this.AbasMedicos.TabIndex = 0;
-            // 
-            // NovoMedico
-            // 
-            this.NovoMedico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(74)))));
-            this.NovoMedico.Controls.Add(this.Area);
-            this.NovoMedico.Controls.Add(this.UF);
-            this.NovoMedico.Controls.Add(this.CPF);
-            this.NovoMedico.Controls.Add(this.Telefone);
-            this.NovoMedico.Controls.Add(this.Sexo);
-            this.NovoMedico.Controls.Add(this.Endereco);
-            this.NovoMedico.Controls.Add(this.Nascimento);
-            this.NovoMedico.Controls.Add(this.Nome);
-            this.NovoMedico.Controls.Add(this.textUF);
-            this.NovoMedico.Controls.Add(this.textEndereco);
-            this.NovoMedico.Controls.Add(this.Cancelar);
-            this.NovoMedico.Controls.Add(this.Cadastrar);
-            this.NovoMedico.Controls.Add(this.textNome);
-            this.NovoMedico.Controls.Add(this.textCPF);
-            this.NovoMedico.Controls.Add(this.textSexo);
-            this.NovoMedico.Controls.Add(this.textCEP);
-            this.NovoMedico.Controls.Add(this.textNascimento);
-            this.NovoMedico.Controls.Add(this.textTel);
-            this.NovoMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NovoMedico.Location = new System.Drawing.Point(4, 25);
-            this.NovoMedico.Name = "NovoMedico";
-            this.NovoMedico.Padding = new System.Windows.Forms.Padding(3);
-            this.NovoMedico.Size = new System.Drawing.Size(1250, 569);
-            this.NovoMedico.TabIndex = 1;
-            this.NovoMedico.Text = "Novo Medico";
-            this.NovoMedico.Click += new System.EventHandler(this.NovoMedico_Click);
-            // 
-            // Area
-            // 
-            this.Area.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Area.AutoSize = true;
-            this.Area.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Area.Location = new System.Drawing.Point(921, 359);
-            this.Area.Name = "Area";
-            this.Area.Size = new System.Drawing.Size(54, 25);
-            this.Area.TabIndex = 20;
-            this.Area.Text = "Area";
-            // 
-            // UF
-            // 
-            this.UF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.UF.AutoSize = true;
-            this.UF.ForeColor = System.Drawing.Color.Gainsboro;
-            this.UF.Location = new System.Drawing.Point(921, 268);
-            this.UF.Name = "UF";
-            this.UF.Size = new System.Drawing.Size(38, 25);
-            this.UF.TabIndex = 19;
-            this.UF.Text = "UF";
-            // 
-            // CPF
-            // 
-            this.CPF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CPF.AutoSize = true;
-            this.CPF.ForeColor = System.Drawing.Color.Gainsboro;
-            this.CPF.Location = new System.Drawing.Point(921, 160);
-            this.CPF.Name = "CPF";
-            this.CPF.Size = new System.Drawing.Size(52, 25);
-            this.CPF.TabIndex = 18;
-            this.CPF.Text = "CPF";
-            // 
-            // Telefone
-            // 
-            this.Telefone.AutoSize = true;
-            this.Telefone.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Telefone.Location = new System.Drawing.Point(32, 365);
-            this.Telefone.Name = "Telefone";
-            this.Telefone.Size = new System.Drawing.Size(89, 25);
-            this.Telefone.TabIndex = 17;
-            this.Telefone.Text = "Telefone";
-            // 
-            // Sexo
-            // 
-            this.Sexo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Sexo.AutoSize = true;
-            this.Sexo.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Sexo.Location = new System.Drawing.Point(921, 63);
-            this.Sexo.Name = "Sexo";
-            this.Sexo.Size = new System.Drawing.Size(58, 25);
-            this.Sexo.TabIndex = 16;
-            this.Sexo.Text = "Sexo";
-            this.Sexo.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // Endereco
-            // 
-            this.Endereco.AutoSize = true;
-            this.Endereco.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Endereco.Location = new System.Drawing.Point(32, 269);
-            this.Endereco.Name = "Endereco";
-            this.Endereco.Size = new System.Drawing.Size(96, 25);
-            this.Endereco.TabIndex = 15;
-            this.Endereco.Text = "Endereco";
-            // 
-            // Nascimento
-            // 
-            this.Nascimento.AutoSize = true;
-            this.Nascimento.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Nascimento.Location = new System.Drawing.Point(32, 163);
-            this.Nascimento.Name = "Nascimento";
-            this.Nascimento.Size = new System.Drawing.Size(115, 25);
-            this.Nascimento.TabIndex = 14;
-            this.Nascimento.Text = "Nascimento";
-            // 
-            // Nome
-            // 
-            this.Nome.AutoSize = true;
-            this.Nome.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Nome.Location = new System.Drawing.Point(32, 69);
-            this.Nome.Name = "Nome";
-            this.Nome.Size = new System.Drawing.Size(64, 25);
-            this.Nome.TabIndex = 13;
-            this.Nome.Text = "Nome";
-            // 
-            // textUF
-            // 
-            this.textUF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textUF.FormattingEnabled = true;
-            this.textUF.Items.AddRange(new object[] {
-            "BA",
-            "SE",
-            "RJ"});
-            this.textUF.Location = new System.Drawing.Point(1002, 263);
-            this.textUF.Name = "textUF";
-            this.textUF.Size = new System.Drawing.Size(121, 33);
-            this.textUF.TabIndex = 12;
-            // 
-            // textEndereco
-            // 
-            this.textEndereco.Location = new System.Drawing.Point(207, 269);
-            this.textEndereco.Name = "textEndereco";
-            this.textEndereco.Size = new System.Drawing.Size(470, 30);
-            this.textEndereco.TabIndex = 11;
-            // 
-            // Cancelar
-            // 
-            this.Cancelar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Cancelar.Location = new System.Drawing.Point(397, 488);
-            this.Cancelar.Name = "Cancelar";
-            this.Cancelar.Size = new System.Drawing.Size(131, 31);
-            this.Cancelar.TabIndex = 10;
-            this.Cancelar.Text = "Cancelar";
-            this.Cancelar.UseVisualStyleBackColor = true;
-            // 
-            // Cadastrar
-            // 
-            this.Cadastrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Cadastrar.Location = new System.Drawing.Point(662, 488);
-            this.Cadastrar.Name = "Cadastrar";
-            this.Cadastrar.Size = new System.Drawing.Size(131, 31);
-            this.Cadastrar.TabIndex = 9;
-            this.Cadastrar.Text = "Cadastrar";
-            this.Cadastrar.UseVisualStyleBackColor = true;
-            // 
-            // textNome
-            // 
-            this.textNome.Location = new System.Drawing.Point(207, 66);
-            this.textNome.Name = "textNome";
-            this.textNome.Size = new System.Drawing.Size(470, 30);
-            this.textNome.TabIndex = 8;
-            // 
-            // textCPF
-            // 
-            this.textCPF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textCPF.Location = new System.Drawing.Point(1002, 160);
-            this.textCPF.Mask = "000.009.999-99";
-            this.textCPF.Name = "textCPF";
-            this.textCPF.Size = new System.Drawing.Size(176, 30);
-            this.textCPF.TabIndex = 7;
-            // 
-            // textSexo
-            // 
-            this.textSexo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textSexo.FormattingEnabled = true;
-            this.textSexo.Items.AddRange(new object[] {
-            "Masculino",
-            "Feminino"});
-            this.textSexo.Location = new System.Drawing.Point(1002, 60);
-            this.textSexo.Name = "textSexo";
-            this.textSexo.Size = new System.Drawing.Size(121, 33);
-            this.textSexo.TabIndex = 6;
-            // 
-            // textCEP
-            // 
-            this.textCEP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textCEP.Location = new System.Drawing.Point(1002, 359);
-            this.textCEP.Name = "textCEP";
-            this.textCEP.Size = new System.Drawing.Size(176, 30);
-            this.textCEP.TabIndex = 5;
-            // 
-            // textNascimento
-            // 
-            this.textNascimento.Location = new System.Drawing.Point(207, 163);
-            this.textNascimento.Mask = "00/00/0000";
-            this.textNascimento.Name = "textNascimento";
-            this.textNascimento.Size = new System.Drawing.Size(176, 30);
-            this.textNascimento.TabIndex = 4;
-            this.textNascimento.ValidatingType = typeof(System.DateTime);
-            // 
-            // textTel
-            // 
-            this.textTel.Location = new System.Drawing.Point(207, 362);
-            this.textTel.Mask = "(99) 0000-0000";
-            this.textTel.Name = "textTel";
-            this.textTel.Size = new System.Drawing.Size(176, 30);
-            this.textTel.TabIndex = 3;
-            // 
-            // AreaMed
-            // 
-            this.AreaMed.HeaderText = "Area";
-            this.AreaMed.MinimumWidth = 6;
-            this.AreaMed.Name = "AreaMed";
-            this.AreaMed.Width = 125;
-            // 
             // iconPictureBox1
             // 
             this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
@@ -394,6 +119,286 @@
             this.iconPictureBox1.TabStop = false;
             this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
             // 
+            // ListarMedicos
+            // 
+            this.ListarMedicos.AllowUserToAddRows = false;
+            this.ListarMedicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ListarMedicos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.NomeMD,
+            this.EmailMD,
+            this.CRMmd,
+            this.TitUniMed,
+            this.AnoResidenciaMed});
+            this.ListarMedicos.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ListarMedicos.Location = new System.Drawing.Point(3, 3);
+            this.ListarMedicos.Name = "ListarMedicos";
+            this.ListarMedicos.RowHeadersWidth = 51;
+            this.ListarMedicos.RowTemplate.Height = 24;
+            this.ListarMedicos.Size = new System.Drawing.Size(1001, 563);
+            this.ListarMedicos.TabIndex = 2;
+            this.ListarMedicos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // AbasMedicos
+            // 
+            this.AbasMedicos.Controls.Add(this.Medicos);
+            this.AbasMedicos.Controls.Add(this.NovoMedico);
+            this.AbasMedicos.Controls.Add(this.Detalhes);
+            this.AbasMedicos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AbasMedicos.ItemSize = new System.Drawing.Size(64, 21);
+            this.AbasMedicos.Location = new System.Drawing.Point(0, 0);
+            this.AbasMedicos.Name = "AbasMedicos";
+            this.AbasMedicos.SelectedIndex = 0;
+            this.AbasMedicos.Size = new System.Drawing.Size(1258, 598);
+            this.AbasMedicos.TabIndex = 0;
+            // 
+            // NovoMedico
+            // 
+            this.NovoMedico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(74)))));
+            this.NovoMedico.Controls.Add(this.Email);
+            this.NovoMedico.Controls.Add(this.textEndereco);
+            this.NovoMedico.Controls.Add(this.Senha);
+            this.NovoMedico.Controls.Add(this.BoxSenha);
+            this.NovoMedico.Controls.Add(this.Cadastrar);
+            this.NovoMedico.Controls.Add(this.panelDesktop);
+            this.NovoMedico.Controls.Add(this.SalvarButton);
+            this.NovoMedico.Controls.Add(this.DocenteButton);
+            this.NovoMedico.Controls.Add(this.ResidenteButton);
+            this.NovoMedico.Controls.Add(this.CRM);
+            this.NovoMedico.Controls.Add(this.TitUni);
+            this.NovoMedico.Controls.Add(this.AnoResidencia);
+            this.NovoMedico.Controls.Add(this.Nome);
+            this.NovoMedico.Controls.Add(this.Cancelar);
+            this.NovoMedico.Controls.Add(this.textNome);
+            this.NovoMedico.Controls.Add(this.textCRM);
+            this.NovoMedico.Controls.Add(this.TituloUni);
+            this.NovoMedico.Controls.Add(this.textNascimento);
+            this.NovoMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NovoMedico.Location = new System.Drawing.Point(4, 25);
+            this.NovoMedico.Name = "NovoMedico";
+            this.NovoMedico.Padding = new System.Windows.Forms.Padding(3);
+            this.NovoMedico.Size = new System.Drawing.Size(1250, 569);
+            this.NovoMedico.TabIndex = 1;
+            this.NovoMedico.Text = "Novo Medico";
+            this.NovoMedico.Click += new System.EventHandler(this.NovoMedico_Click);
+            // 
+            // Senha
+            // 
+            this.Senha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Senha.AutoSize = true;
+            this.Senha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(69)))));
+            this.Senha.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Senha.Location = new System.Drawing.Point(739, 57);
+            this.Senha.Name = "Senha";
+            this.Senha.Size = new System.Drawing.Size(70, 25);
+            this.Senha.TabIndex = 20;
+            this.Senha.Text = "Senha";
+            // 
+            // CRM
+            // 
+            this.CRM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CRM.AutoSize = true;
+            this.CRM.ForeColor = System.Drawing.Color.Gainsboro;
+            this.CRM.Location = new System.Drawing.Point(739, 183);
+            this.CRM.Name = "CRM";
+            this.CRM.Size = new System.Drawing.Size(57, 25);
+            this.CRM.TabIndex = 18;
+            this.CRM.Text = "CRM";
+            // 
+            // TitUni
+            // 
+            this.TitUni.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TitUni.AutoSize = true;
+            this.TitUni.ForeColor = System.Drawing.Color.Gainsboro;
+            this.TitUni.Location = new System.Drawing.Point(28, 359);
+            this.TitUni.Name = "TitUni";
+            this.TitUni.Size = new System.Drawing.Size(151, 25);
+            this.TitUni.TabIndex = 16;
+            this.TitUni.Text = "Tit. Universitária";
+            this.TitUni.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // Email
+            // 
+            this.Email.AutoSize = true;
+            this.Email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(69)))));
+            this.Email.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Email.Location = new System.Drawing.Point(28, 57);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(60, 25);
+            this.Email.TabIndex = 15;
+            this.Email.Text = "Email";
+            // 
+            // AnoResidencia
+            // 
+            this.AnoResidencia.AutoSize = true;
+            this.AnoResidencia.ForeColor = System.Drawing.Color.Gainsboro;
+            this.AnoResidencia.Location = new System.Drawing.Point(481, 359);
+            this.AnoResidencia.Name = "AnoResidencia";
+            this.AnoResidencia.Size = new System.Drawing.Size(149, 25);
+            this.AnoResidencia.TabIndex = 14;
+            this.AnoResidencia.Text = "Ano Residência";
+            this.AnoResidencia.Click += new System.EventHandler(this.Nascimento_Click);
+            // 
+            // Nome
+            // 
+            this.Nome.AutoSize = true;
+            this.Nome.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Nome.Location = new System.Drawing.Point(28, 183);
+            this.Nome.Name = "Nome";
+            this.Nome.Size = new System.Drawing.Size(64, 25);
+            this.Nome.TabIndex = 13;
+            this.Nome.Text = "Nome";
+            // 
+            // textEndereco
+            // 
+            this.textEndereco.Location = new System.Drawing.Point(185, 58);
+            this.textEndereco.Name = "textEndereco";
+            this.textEndereco.Size = new System.Drawing.Size(470, 30);
+            this.textEndereco.TabIndex = 11;
+            // 
+            // Cancelar
+            // 
+            this.Cancelar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Cancelar.Location = new System.Drawing.Point(416, 488);
+            this.Cancelar.Name = "Cancelar";
+            this.Cancelar.Size = new System.Drawing.Size(131, 31);
+            this.Cancelar.TabIndex = 10;
+            this.Cancelar.Text = "Cancelar";
+            this.Cancelar.UseVisualStyleBackColor = true;
+            // 
+            // Cadastrar
+            // 
+            this.Cadastrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Cadastrar.Location = new System.Drawing.Point(1025, 58);
+            this.Cadastrar.Name = "Cadastrar";
+            this.Cadastrar.Size = new System.Drawing.Size(131, 31);
+            this.Cadastrar.TabIndex = 9;
+            this.Cadastrar.Text = "Cadastrar";
+            this.Cadastrar.UseVisualStyleBackColor = true;
+            // 
+            // textNome
+            // 
+            this.textNome.Location = new System.Drawing.Point(185, 183);
+            this.textNome.Name = "textNome";
+            this.textNome.Size = new System.Drawing.Size(470, 30);
+            this.textNome.TabIndex = 8;
+            // 
+            // textCRM
+            // 
+            this.textCRM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textCRM.Location = new System.Drawing.Point(815, 183);
+            this.textCRM.Name = "textCRM";
+            this.textCRM.Size = new System.Drawing.Size(176, 30);
+            this.textCRM.TabIndex = 7;
+            // 
+            // TituloUni
+            // 
+            this.TituloUni.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TituloUni.FormattingEnabled = true;
+            this.TituloUni.Items.AddRange(new object[] {
+            "Bacharel",
+            "Licenciado",
+            "Mestre",
+            "Doutor"});
+            this.TituloUni.Location = new System.Drawing.Point(185, 356);
+            this.TituloUni.Name = "TituloUni";
+            this.TituloUni.Size = new System.Drawing.Size(146, 33);
+            this.TituloUni.TabIndex = 6;
+            // 
+            // BoxSenha
+            // 
+            this.BoxSenha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BoxSenha.Location = new System.Drawing.Point(815, 57);
+            this.BoxSenha.Name = "BoxSenha";
+            this.BoxSenha.Size = new System.Drawing.Size(176, 30);
+            this.BoxSenha.TabIndex = 5;
+            // 
+            // textNascimento
+            // 
+            this.textNascimento.Location = new System.Drawing.Point(636, 354);
+            this.textNascimento.Mask = "00/00/0000";
+            this.textNascimento.Name = "textNascimento";
+            this.textNascimento.Size = new System.Drawing.Size(148, 30);
+            this.textNascimento.TabIndex = 4;
+            this.textNascimento.ValidatingType = typeof(System.DateTime);
+            // 
+            // ResidenteButton
+            // 
+            this.ResidenteButton.AutoSize = true;
+            this.ResidenteButton.ForeColor = System.Drawing.Color.Gainsboro;
+            this.ResidenteButton.Location = new System.Drawing.Point(486, 294);
+            this.ResidenteButton.Name = "ResidenteButton";
+            this.ResidenteButton.Size = new System.Drawing.Size(120, 29);
+            this.ResidenteButton.TabIndex = 22;
+            this.ResidenteButton.TabStop = true;
+            this.ResidenteButton.Text = "Residente";
+            this.ResidenteButton.UseVisualStyleBackColor = true;
+            this.ResidenteButton.CheckedChanged += new System.EventHandler(this.ResidenteButton_CheckedChanged);
+            // 
+            // DocenteButton
+            // 
+            this.DocenteButton.AutoSize = true;
+            this.DocenteButton.ForeColor = System.Drawing.Color.Gainsboro;
+            this.DocenteButton.Location = new System.Drawing.Point(33, 285);
+            this.DocenteButton.Name = "DocenteButton";
+            this.DocenteButton.Size = new System.Drawing.Size(106, 29);
+            this.DocenteButton.TabIndex = 23;
+            this.DocenteButton.TabStop = true;
+            this.DocenteButton.Text = "Docente";
+            this.DocenteButton.UseVisualStyleBackColor = true;
+            // 
+            // SalvarButton
+            // 
+            this.SalvarButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.SalvarButton.Location = new System.Drawing.Point(665, 488);
+            this.SalvarButton.Name = "SalvarButton";
+            this.SalvarButton.Size = new System.Drawing.Size(131, 31);
+            this.SalvarButton.TabIndex = 24;
+            this.SalvarButton.Text = "Salvar";
+            this.SalvarButton.UseVisualStyleBackColor = true;
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(69)))));
+            this.panelDesktop.Location = new System.Drawing.Point(0, 0);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(1256, 126);
+            this.panelDesktop.TabIndex = 25;
+            // 
+            // NomeMD
+            // 
+            this.NomeMD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NomeMD.HeaderText = "Nome";
+            this.NomeMD.MinimumWidth = 6;
+            this.NomeMD.Name = "NomeMD";
+            // 
+            // EmailMD
+            // 
+            this.EmailMD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.EmailMD.HeaderText = "Email";
+            this.EmailMD.MinimumWidth = 6;
+            this.EmailMD.Name = "EmailMD";
+            // 
+            // CRMmd
+            // 
+            this.CRMmd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CRMmd.HeaderText = "CRM";
+            this.CRMmd.MinimumWidth = 6;
+            this.CRMmd.Name = "CRMmd";
+            // 
+            // TitUniMed
+            // 
+            this.TitUniMed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TitUniMed.HeaderText = "Tit. Universitária";
+            this.TitUniMed.MinimumWidth = 6;
+            this.TitUniMed.Name = "TitUniMed";
+            // 
+            // AnoResidenciaMed
+            // 
+            this.AnoResidenciaMed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.AnoResidenciaMed.HeaderText = "Ano Residência";
+            this.AnoResidenciaMed.MinimumWidth = 6;
+            this.AnoResidenciaMed.Name = "AnoResidenciaMed";
+            // 
             // AdmTelaMed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -405,11 +410,11 @@
             this.Detalhes.ResumeLayout(false);
             this.Detalhes.PerformLayout();
             this.Medicos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ListarMedicos)).EndInit();
             this.AbasMedicos.ResumeLayout(false);
             this.NovoMedico.ResumeLayout(false);
             this.NovoMedico.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -420,31 +425,31 @@
         private System.Windows.Forms.TabPage Medicos;
         private System.Windows.Forms.TabControl AbasMedicos;
         private System.Windows.Forms.TabPage NovoMedico;
-        private System.Windows.Forms.Label Area;
-        private System.Windows.Forms.Label UF;
-        private System.Windows.Forms.Label CPF;
-        private System.Windows.Forms.Label Telefone;
-        private System.Windows.Forms.Label Sexo;
-        private System.Windows.Forms.Label Endereco;
-        private System.Windows.Forms.Label Nascimento;
+        private System.Windows.Forms.Label Senha;
+        private System.Windows.Forms.Label CRM;
+        private System.Windows.Forms.Label TitUni;
+        private System.Windows.Forms.Label Email;
+        private System.Windows.Forms.Label AnoResidencia;
         private System.Windows.Forms.Label Nome;
-        private System.Windows.Forms.ComboBox textUF;
         private System.Windows.Forms.TextBox textEndereco;
         private System.Windows.Forms.Button Cancelar;
         private System.Windows.Forms.Button Cadastrar;
         private System.Windows.Forms.TextBox textNome;
-        private System.Windows.Forms.MaskedTextBox textCPF;
-        private System.Windows.Forms.ComboBox textSexo;
-        private System.Windows.Forms.MaskedTextBox textCEP;
+        private System.Windows.Forms.MaskedTextBox textCRM;
+        private System.Windows.Forms.ComboBox TituloUni;
+        private System.Windows.Forms.MaskedTextBox BoxSenha;
         private System.Windows.Forms.MaskedTextBox textNascimento;
-        private System.Windows.Forms.MaskedTextBox textTel;
         private System.Windows.Forms.TextBox textDetalhes;
         private System.Windows.Forms.DataGridView ListarMedicos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NomeMD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TelefoneMD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CPFmd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SexoMD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AreaMed;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.Button SalvarButton;
+        private System.Windows.Forms.RadioButton DocenteButton;
+        private System.Windows.Forms.RadioButton ResidenteButton;
+        private System.Windows.Forms.Panel panelDesktop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomeMD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmailMD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CRMmd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TitUniMed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnoResidenciaMed;
     }
 }
