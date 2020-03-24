@@ -8,11 +8,13 @@ namespace Presentation.Administradores
     public partial class AdmTelaMed : Form
     {
         private readonly MedicosController _medicosController;
+        private readonly UsuariosController _usuariosController;
 
         public AdmTelaMed()
         {
             InitializeComponent();
             _medicosController = DependenciesResolve.Resolve<MedicosController>();
+            _usuariosController = DependenciesResolve.Resolve<UsuariosController>();
         }
 
         private void Medicos_Click(object sender, EventArgs e)

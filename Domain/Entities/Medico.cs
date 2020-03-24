@@ -15,14 +15,8 @@ namespace Domain.Entities
         }
 
         public int Id { get; private set; }
-        [Required]
-        [StringLength(30, MinimumLength = 1)]
         public string Nome { get; private set; }
-        [Required]
-        [MaxLength(10)]
         public string Crm { get; private set; }
-        [Required]
-        [Range(1, int.MaxValue)]
         public int IdUsuario { get; private set; }
 
         public virtual Usuario Usuario { get; private set; }
