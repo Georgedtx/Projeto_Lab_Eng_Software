@@ -52,16 +52,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Usuarios\Administradores\AdmMenuPrincipal.cs">
+    <Compile Include="Administradores\AdmMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Usuarios\Administradores\AdmMenuPrincipal.designer.cs">
+    <Compile Include="Administradores\AdmMenuPrincipal.designer.cs">
       <DependentUpon>AdmMenuPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios\Administradores\AdmTelaMed.cs">
+    <Compile Include="Administradores\AdmTelaMed.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Usuarios\Administradores\AdmTelaMed.designer.cs">
+    <Compile Include="Administradores\AdmTelaMed.designer.cs">
       <DependentUpon>AdmTelaMed.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -72,10 +72,10 @@
     <Compile Include="Usuarios\Login.designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Usuarios\Administradores\AdmMenuPrincipal.resx">
+    <EmbeddedResource Include="Administradores\AdmMenuPrincipal.resx">
       <DependentUpon>AdmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Usuarios\Administradores\AdmTelaMed.resx">
+    <EmbeddedResource Include="Administradores\AdmTelaMed.resx">
       <DependentUpon>AdmTelaMed.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

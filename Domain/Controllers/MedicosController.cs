@@ -1,6 +1,7 @@
 ﻿using Domain.Entities;
 using Domain.Interfaces.Uow;
 using Domain.Validations.Medicos;
+using Ninject;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,6 +11,7 @@ namespace Domain.Controllers
     {
         private readonly IUnitOfWork _unitOfWork;
 
+        [Inject()]
         public MedicosController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;

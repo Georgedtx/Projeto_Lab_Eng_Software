@@ -74,3 +74,5 @@ C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.csproj.CopyComplete
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.exe
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.pdb
+C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Usuarios.Administradores.AdmMenuPrincipal.resources
+C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Usuarios.Administradores.AdmTelaMed.resources

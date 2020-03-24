@@ -1,20 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Domain.Controllers;
+using Infra.IoC;
+using System;
 using System.Windows.Forms;
 
-namespace Presentation.Usuarios.Administradores
+namespace Presentation.Administradores
 {
     public partial class AdmTelaMed : Form
     {
+        private readonly MedicosController _medicosController;
+
         public AdmTelaMed()
         {
             InitializeComponent();
+            _medicosController = DependenciesResolve.Resolve<MedicosController>();
         }
 
         private void Medicos_Click(object sender, EventArgs e)

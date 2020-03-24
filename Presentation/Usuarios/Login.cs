@@ -1,9 +1,8 @@
 ﻿using Domain.Controllers;
 using Infra.IoC;
 using System;
-using System.Windows.Forms;
-using System.Text;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace Presentation.Usuarios
 {

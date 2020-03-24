@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Domain.Interfaces.Uow;
+using Ninject;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,6 +10,7 @@ namespace Domain.Controllers
     {
         private readonly IUnitOfWork _unitOfWork;
 
+        [Inject()]
         public ExamesController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;

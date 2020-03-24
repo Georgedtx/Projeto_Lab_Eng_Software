@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 
-namespace Presentation.Usuarios.Administradores
+namespace Presentation.Administradores
 {
     public partial class AdmMenuPrincipal : Form
     {

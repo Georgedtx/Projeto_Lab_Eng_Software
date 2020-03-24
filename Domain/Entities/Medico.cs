@@ -1,5 +1,5 @@
-﻿using DomainValidation.Validation;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Entities
 {
@@ -15,8 +15,14 @@ namespace Domain.Entities
         }
 
         public int Id { get; private set; }
+        [Required]
+        [StringLength(30, MinimumLength = 1)]
         public string Nome { get; private set; }
+        [Required]
+        [MaxLength(10)]
         public string Crm { get; private set; }
+        [Required]
+        [Range(1, int.MaxValue)]
         public int IdUsuario { get; private set; }
 
         public virtual Usuario Usuario { get; private set; }
@@ -24,6 +30,6 @@ namespace Domain.Entities
         public virtual Residente Residente { get; private set; }
         public virtual ICollection<PedidoExame> PedidosExames { get; private set; }
 
-        public ValidationResult Validation { get; set; }
+        public DomainValidation.Validation.ValidationResult Validation { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Presentation.Usuarios.Administradores
+﻿namespace Presentation.Administradores
 {
     partial class AdmMenuPrincipal
     {
