@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\Lab. Eng. de Software\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj": {}
+    "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj": {}
   },
   "projects": {
-    "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\Lab. Eng. de Software\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
+    "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\Lab. Eng. de Software\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\Lab. Eng. de Software\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\luisz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\Lab. Eng. de Software\\Projeto_Lab_Eng_Software\\Domain\\obj\\",
+        "projectPath": "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\gugam\\.nuget\\packages\\",
+        "outputPath": "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\luisz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gugam\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -69,17 +69,17 @@
         }
       }
     },
-    "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\Lab. Eng. de Software\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj": {
+    "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\Lab. Eng. de Software\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj",
+        "projectUniqueName": "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj",
         "projectName": "Infra",
-        "projectPath": "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\Lab. Eng. de Software\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj",
-        "packagesPath": "C:\\Users\\luisz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\Lab. Eng. de Software\\Projeto_Lab_Eng_Software\\Infra\\obj\\",
+        "projectPath": "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj",
+        "packagesPath": "C:\\Users\\gugam\\.nuget\\packages\\",
+        "outputPath": "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\Infra\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\luisz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gugam\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -92,8 +92,8 @@
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\Lab. Eng. de Software\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\Lab. Eng. de Software\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
+              "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
               }
             }
           }

@@ -41,5 +41,15 @@ namespace Presentation.Administradores
         {
 
         }
+
+        private void Nascimento_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ResidenteButton_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
