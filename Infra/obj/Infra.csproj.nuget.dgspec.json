@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj": {}
+    "E:\\Git\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj": {}
   },
   "projects": {
-    "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
+    "E:\\Git\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj",
+        "projectUniqueName": "E:\\Git\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\gugam\\.nuget\\packages\\",
-        "outputPath": "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\Domain\\obj\\",
+        "projectPath": "E:\\Git\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Pablo\\.nuget\\packages\\",
+        "outputPath": "E:\\Git\\Projeto_Lab_Eng_Software\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gugam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,21 +65,21 @@
               "version": "[3.3.4, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj": {
+    "E:\\Git\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj",
+        "projectUniqueName": "E:\\Git\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj",
         "projectName": "Infra",
-        "projectPath": "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj",
-        "packagesPath": "C:\\Users\\gugam\\.nuget\\packages\\",
-        "outputPath": "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\Infra\\obj\\",
+        "projectPath": "E:\\Git\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj",
+        "packagesPath": "C:\\Users\\Pablo\\.nuget\\packages\\",
+        "outputPath": "E:\\Git\\Projeto_Lab_Eng_Software\\Infra\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gugam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -92,8 +92,8 @@
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
+              "E:\\Git\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
+                "projectPath": "E:\\Git\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
               }
             }
           }
@@ -116,7 +116,7 @@
               "version": "[3.3.4, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

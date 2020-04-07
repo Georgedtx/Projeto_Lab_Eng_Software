@@ -51,5 +51,10 @@ namespace Presentation.Administradores
         {
 
         }
+
+        private void TituloUni_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
