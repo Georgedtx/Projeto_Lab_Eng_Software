@@ -64,6 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ListarMedicos)).BeginInit();
             this.AbasMedicos.SuspendLayout();
             this.NovoMedico.SuspendLayout();
+            this.panelDesktop.SuspendLayout();
             this.SuspendLayout();
             // 
             // Detalhes
@@ -72,10 +73,10 @@
             this.Detalhes.Controls.Add(this.textDetalhes);
             this.Detalhes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Detalhes.Location = new System.Drawing.Point(4, 25);
-            this.Detalhes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Detalhes.Margin = new System.Windows.Forms.Padding(2);
             this.Detalhes.Name = "Detalhes";
-            this.Detalhes.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Detalhes.Size = new System.Drawing.Size(936, 457);
+            this.Detalhes.Padding = new System.Windows.Forms.Padding(2);
+            this.Detalhes.Size = new System.Drawing.Size(779, 387);
             this.Detalhes.TabIndex = 2;
             this.Detalhes.Text = "Detalhes";
             // 
@@ -83,11 +84,11 @@
             // 
             this.textDetalhes.Dock = System.Windows.Forms.DockStyle.Top;
             this.textDetalhes.Location = new System.Drawing.Point(2, 2);
-            this.textDetalhes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textDetalhes.Margin = new System.Windows.Forms.Padding(2);
             this.textDetalhes.Multiline = true;
             this.textDetalhes.Name = "textDetalhes";
             this.textDetalhes.ReadOnly = true;
-            this.textDetalhes.Size = new System.Drawing.Size(932, 305);
+            this.textDetalhes.Size = new System.Drawing.Size(775, 305);
             this.textDetalhes.TabIndex = 0;
             // 
             // Medicos
@@ -97,10 +98,10 @@
             this.Medicos.Controls.Add(this.ListarMedicos);
             this.Medicos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Medicos.Location = new System.Drawing.Point(4, 25);
-            this.Medicos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Medicos.Margin = new System.Windows.Forms.Padding(2);
             this.Medicos.Name = "Medicos";
-            this.Medicos.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Medicos.Size = new System.Drawing.Size(936, 457);
+            this.Medicos.Padding = new System.Windows.Forms.Padding(2);
+            this.Medicos.Size = new System.Drawing.Size(779, 387);
             this.Medicos.TabIndex = 0;
             this.Medicos.Text = "Medicos";
             this.Medicos.Click += new System.EventHandler(this.Medicos_Click);
@@ -113,11 +114,11 @@
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Heartbeat;
             this.iconPictureBox1.IconColor = System.Drawing.Color.Gainsboro;
             this.iconPictureBox1.IconSize = 178;
-            this.iconPictureBox1.Location = new System.Drawing.Point(756, 2);
-            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.iconPictureBox1.Location = new System.Drawing.Point(599, 2);
+            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.iconPictureBox1.Size = new System.Drawing.Size(178, 453);
+            this.iconPictureBox1.Size = new System.Drawing.Size(178, 383);
             this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.iconPictureBox1.TabIndex = 5;
             this.iconPictureBox1.TabStop = false;
@@ -135,11 +136,11 @@
             this.AnoResidenciaMed});
             this.ListarMedicos.Dock = System.Windows.Forms.DockStyle.Left;
             this.ListarMedicos.Location = new System.Drawing.Point(2, 2);
-            this.ListarMedicos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ListarMedicos.Margin = new System.Windows.Forms.Padding(2);
             this.ListarMedicos.Name = "ListarMedicos";
             this.ListarMedicos.RowHeadersWidth = 51;
             this.ListarMedicos.RowTemplate.Height = 24;
-            this.ListarMedicos.Size = new System.Drawing.Size(751, 453);
+            this.ListarMedicos.Size = new System.Drawing.Size(593, 383);
             this.ListarMedicos.TabIndex = 2;
             this.ListarMedicos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -186,20 +187,15 @@
             this.AbasMedicos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AbasMedicos.ItemSize = new System.Drawing.Size(64, 21);
             this.AbasMedicos.Location = new System.Drawing.Point(0, 0);
-            this.AbasMedicos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AbasMedicos.Margin = new System.Windows.Forms.Padding(2);
             this.AbasMedicos.Name = "AbasMedicos";
             this.AbasMedicos.SelectedIndex = 0;
-            this.AbasMedicos.Size = new System.Drawing.Size(944, 486);
+            this.AbasMedicos.Size = new System.Drawing.Size(787, 416);
             this.AbasMedicos.TabIndex = 0;
             // 
             // NovoMedico
             // 
             this.NovoMedico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(74)))));
-            this.NovoMedico.Controls.Add(this.Email);
-            this.NovoMedico.Controls.Add(this.textEndereco);
-            this.NovoMedico.Controls.Add(this.Senha);
-            this.NovoMedico.Controls.Add(this.BoxSenha);
-            this.NovoMedico.Controls.Add(this.Cadastrar);
             this.NovoMedico.Controls.Add(this.panelDesktop);
             this.NovoMedico.Controls.Add(this.SalvarButton);
             this.NovoMedico.Controls.Add(this.DocenteButton);
@@ -215,10 +211,10 @@
             this.NovoMedico.Controls.Add(this.textNascimento);
             this.NovoMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NovoMedico.Location = new System.Drawing.Point(4, 25);
-            this.NovoMedico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NovoMedico.Margin = new System.Windows.Forms.Padding(2);
             this.NovoMedico.Name = "NovoMedico";
-            this.NovoMedico.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.NovoMedico.Size = new System.Drawing.Size(936, 457);
+            this.NovoMedico.Padding = new System.Windows.Forms.Padding(2);
+            this.NovoMedico.Size = new System.Drawing.Size(779, 387);
             this.NovoMedico.TabIndex = 1;
             this.NovoMedico.Text = "Novo Medico";
             this.NovoMedico.Click += new System.EventHandler(this.NovoMedico_Click);
@@ -228,7 +224,7 @@
             this.Email.AutoSize = true;
             this.Email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(69)))));
             this.Email.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Email.Location = new System.Drawing.Point(21, 46);
+            this.Email.Location = new System.Drawing.Point(50, 22);
             this.Email.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(48, 20);
@@ -237,8 +233,8 @@
             // 
             // textEndereco
             // 
-            this.textEndereco.Location = new System.Drawing.Point(139, 47);
-            this.textEndereco.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textEndereco.Location = new System.Drawing.Point(130, 19);
+            this.textEndereco.Margin = new System.Windows.Forms.Padding(2);
             this.textEndereco.Name = "textEndereco";
             this.textEndereco.Size = new System.Drawing.Size(354, 26);
             this.textEndereco.TabIndex = 11;
@@ -249,7 +245,7 @@
             this.Senha.AutoSize = true;
             this.Senha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(69)))));
             this.Senha.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Senha.Location = new System.Drawing.Point(554, 46);
+            this.Senha.Location = new System.Drawing.Point(42, 68);
             this.Senha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Senha.Name = "Senha";
             this.Senha.Size = new System.Drawing.Size(56, 20);
@@ -259,19 +255,19 @@
             // BoxSenha
             // 
             this.BoxSenha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BoxSenha.Location = new System.Drawing.Point(611, 46);
-            this.BoxSenha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BoxSenha.Location = new System.Drawing.Point(130, 68);
+            this.BoxSenha.Margin = new System.Windows.Forms.Padding(2);
             this.BoxSenha.Name = "BoxSenha";
-            this.BoxSenha.Size = new System.Drawing.Size(133, 26);
+            this.BoxSenha.Size = new System.Drawing.Size(354, 26);
             this.BoxSenha.TabIndex = 5;
             // 
             // Cadastrar
             // 
             this.Cadastrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Cadastrar.Location = new System.Drawing.Point(769, 47);
-            this.Cadastrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Cadastrar.Location = new System.Drawing.Point(593, 36);
+            this.Cadastrar.Margin = new System.Windows.Forms.Padding(2);
             this.Cadastrar.Name = "Cadastrar";
-            this.Cadastrar.Size = new System.Drawing.Size(98, 25);
+            this.Cadastrar.Size = new System.Drawing.Size(98, 37);
             this.Cadastrar.TabIndex = 9;
             this.Cadastrar.Text = "Cadastrar";
             this.Cadastrar.UseVisualStyleBackColor = true;
@@ -279,19 +275,25 @@
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(69)))));
+            this.panelDesktop.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelDesktop.Controls.Add(this.Email);
+            this.panelDesktop.Controls.Add(this.textEndereco);
+            this.panelDesktop.Controls.Add(this.Cadastrar);
+            this.panelDesktop.Controls.Add(this.BoxSenha);
+            this.panelDesktop.Controls.Add(this.Senha);
             this.panelDesktop.Location = new System.Drawing.Point(0, 0);
-            this.panelDesktop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelDesktop.Margin = new System.Windows.Forms.Padding(2);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(942, 102);
+            this.panelDesktop.Size = new System.Drawing.Size(779, 126);
             this.panelDesktop.TabIndex = 25;
             // 
             // SalvarButton
             // 
             this.SalvarButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.SalvarButton.Location = new System.Drawing.Point(499, 396);
-            this.SalvarButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SalvarButton.Location = new System.Drawing.Point(257, 325);
+            this.SalvarButton.Margin = new System.Windows.Forms.Padding(2);
             this.SalvarButton.Name = "SalvarButton";
-            this.SalvarButton.Size = new System.Drawing.Size(98, 25);
+            this.SalvarButton.Size = new System.Drawing.Size(122, 37);
             this.SalvarButton.TabIndex = 24;
             this.SalvarButton.Text = "Salvar";
             this.SalvarButton.UseVisualStyleBackColor = true;
@@ -300,8 +302,8 @@
             // 
             this.DocenteButton.AutoSize = true;
             this.DocenteButton.ForeColor = System.Drawing.Color.Gainsboro;
-            this.DocenteButton.Location = new System.Drawing.Point(25, 232);
-            this.DocenteButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DocenteButton.Location = new System.Drawing.Point(617, 160);
+            this.DocenteButton.Margin = new System.Windows.Forms.Padding(2);
             this.DocenteButton.Name = "DocenteButton";
             this.DocenteButton.Size = new System.Drawing.Size(88, 24);
             this.DocenteButton.TabIndex = 23;
@@ -313,8 +315,8 @@
             // 
             this.ResidenteButton.AutoSize = true;
             this.ResidenteButton.ForeColor = System.Drawing.Color.Gainsboro;
-            this.ResidenteButton.Location = new System.Drawing.Point(364, 239);
-            this.ResidenteButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ResidenteButton.Location = new System.Drawing.Point(615, 263);
+            this.ResidenteButton.Margin = new System.Windows.Forms.Padding(2);
             this.ResidenteButton.Name = "ResidenteButton";
             this.ResidenteButton.Size = new System.Drawing.Size(100, 24);
             this.ResidenteButton.TabIndex = 22;
@@ -328,7 +330,7 @@
             this.CRM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CRM.AutoSize = true;
             this.CRM.ForeColor = System.Drawing.Color.Gainsboro;
-            this.CRM.Location = new System.Drawing.Point(554, 149);
+            this.CRM.Location = new System.Drawing.Point(29, 243);
             this.CRM.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CRM.Name = "CRM";
             this.CRM.Size = new System.Drawing.Size(45, 20);
@@ -340,7 +342,7 @@
             this.TitUni.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TitUni.AutoSize = true;
             this.TitUni.ForeColor = System.Drawing.Color.Gainsboro;
-            this.TitUni.Location = new System.Drawing.Point(21, 292);
+            this.TitUni.Location = new System.Drawing.Point(-136, 292);
             this.TitUni.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TitUni.Name = "TitUni";
             this.TitUni.Size = new System.Drawing.Size(121, 20);
@@ -352,7 +354,7 @@
             // 
             this.AnoResidencia.AutoSize = true;
             this.AnoResidencia.ForeColor = System.Drawing.Color.Gainsboro;
-            this.AnoResidencia.Location = new System.Drawing.Point(361, 292);
+            this.AnoResidencia.Location = new System.Drawing.Point(478, 314);
             this.AnoResidencia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AnoResidencia.Name = "AnoResidencia";
             this.AnoResidencia.Size = new System.Drawing.Size(121, 20);
@@ -364,7 +366,7 @@
             // 
             this.Nome.AutoSize = true;
             this.Nome.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Nome.Location = new System.Drawing.Point(21, 149);
+            this.Nome.Location = new System.Drawing.Point(26, 176);
             this.Nome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Nome.Name = "Nome";
             this.Nome.Size = new System.Drawing.Size(51, 20);
@@ -374,18 +376,18 @@
             // Cancelar
             // 
             this.Cancelar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Cancelar.Location = new System.Drawing.Point(312, 396);
-            this.Cancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Cancelar.Location = new System.Drawing.Point(69, 325);
+            this.Cancelar.Margin = new System.Windows.Forms.Padding(2);
             this.Cancelar.Name = "Cancelar";
-            this.Cancelar.Size = new System.Drawing.Size(98, 25);
+            this.Cancelar.Size = new System.Drawing.Size(122, 37);
             this.Cancelar.TabIndex = 10;
             this.Cancelar.Text = "Cancelar";
             this.Cancelar.UseVisualStyleBackColor = true;
             // 
             // textNome
             // 
-            this.textNome.Location = new System.Drawing.Point(139, 149);
-            this.textNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textNome.Location = new System.Drawing.Point(105, 173);
+            this.textNome.Margin = new System.Windows.Forms.Padding(2);
             this.textNome.Name = "textNome";
             this.textNome.Size = new System.Drawing.Size(354, 26);
             this.textNome.TabIndex = 8;
@@ -393,8 +395,8 @@
             // textCRM
             // 
             this.textCRM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textCRM.Location = new System.Drawing.Point(611, 149);
-            this.textCRM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textCRM.Location = new System.Drawing.Point(105, 241);
+            this.textCRM.Margin = new System.Windows.Forms.Padding(2);
             this.textCRM.Name = "textCRM";
             this.textCRM.Size = new System.Drawing.Size(133, 26);
             this.textCRM.TabIndex = 7;
@@ -408,8 +410,8 @@
             "Licenciado",
             "Mestre",
             "Doutor"});
-            this.TituloUni.Location = new System.Drawing.Point(139, 289);
-            this.TituloUni.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TituloUni.Location = new System.Drawing.Point(617, 209);
+            this.TituloUni.Margin = new System.Windows.Forms.Padding(2);
             this.TituloUni.Name = "TituloUni";
             this.TituloUni.Size = new System.Drawing.Size(110, 28);
             this.TituloUni.TabIndex = 6;
@@ -417,21 +419,22 @@
             // 
             // textNascimento
             // 
-            this.textNascimento.Location = new System.Drawing.Point(477, 288);
-            this.textNascimento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textNascimento.Location = new System.Drawing.Point(615, 308);
+            this.textNascimento.Margin = new System.Windows.Forms.Padding(2);
             this.textNascimento.Mask = "00/00/0000";
             this.textNascimento.Name = "textNascimento";
             this.textNascimento.Size = new System.Drawing.Size(112, 26);
             this.textNascimento.TabIndex = 4;
             this.textNascimento.ValidatingType = typeof(System.DateTime);
+            this.textNascimento.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.textNascimento_MaskInputRejected);
             // 
             // AdmTelaMed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(944, 486);
+            this.ClientSize = new System.Drawing.Size(787, 416);
             this.Controls.Add(this.AbasMedicos);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdmTelaMed";
             this.Text = "telaMed";
             this.Detalhes.ResumeLayout(false);
@@ -442,6 +445,8 @@
             this.AbasMedicos.ResumeLayout(false);
             this.NovoMedico.ResumeLayout(false);
             this.NovoMedico.PerformLayout();
+            this.panelDesktop.ResumeLayout(false);
+            this.panelDesktop.PerformLayout();
             this.ResumeLayout(false);
 
         }

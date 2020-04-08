@@ -56,5 +56,10 @@ namespace Presentation.Administradores
         {
 
         }
+
+        private void textNascimento_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }

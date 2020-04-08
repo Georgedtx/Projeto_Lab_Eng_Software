@@ -1,4 +1,5 @@
 ﻿using Infra.IoC;
+using Presentation.Administradores;
 using Presentation.Usuarios;
 using System;
 using System.Windows.Forms;
@@ -17,7 +18,7 @@ namespace Presentation
             Application.SetCompatibleTextRenderingDefault(false);
 
             DependenciesResolve.Wire(Dependencies.Create());
-            Application.Run(new Login());
+            Application.Run(new AdmMenuPrincipal());
         }
     }
 }

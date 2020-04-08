@@ -6,7 +6,7 @@ namespace Domain.Entities
     {
         protected Recepcionista() { }
 
-        protected Recepcionista(string nome, DateTime nascimento, int idUsuario)
+        public Recepcionista(string nome, DateTime nascimento, int idUsuario)
         {
             this.Nome = nome;
             this.Nascimento = nascimento;

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Git\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {}
+    "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\Lab. Eng. de Software\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "E:\\Git\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
+    "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\Lab. Eng. de Software\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Git\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\Lab. Eng. de Software\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "E:\\Git\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Pablo\\.nuget\\packages\\",
-        "outputPath": "E:\\Git\\Projeto_Lab_Eng_Software\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\Lab. Eng. de Software\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\luisz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\Lab. Eng. de Software\\Projeto_Lab_Eng_Software\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\luisz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,7 +65,7 @@
               "version": "[3.3.4, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -125,3 +125,11 @@ E:\Git\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.pdb
 E:\Git\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Administradores.Exames.resources
 E:\Git\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Administradores.AdmTelaExames.resources
 E:\Git\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Administradores.Form1.resources
+C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Presentation\bin\Debug\NUnit3.TestAdapter.dll
+C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Presentation\bin\Debug\NUnit3.TestAdapter.pdb
+C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Presentation\bin\Debug\nunit.engine.dll
+C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Presentation\bin\Debug\nunit.engine.api.dll
+C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Presentation\bin\Debug\AutoMapper.dll
+C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Administradores.Exames.resources
+C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Administradores.AdmTelaExames.resources
+C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Administradores.Form1.resources
