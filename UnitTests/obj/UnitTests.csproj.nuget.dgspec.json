@@ -1,0 +1,235 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Luciano Douglas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Luciano Douglas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "DomainValidation": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.13.1, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.16.1, )"
+            },
+            "Ninject": {
+              "target": "Package",
+              "version": "[3.3.4, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj",
+        "projectName": "Infra",
+        "projectPath": "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj",
+        "packagesPath": "C:\\Users\\Luciano Douglas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Infra\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Luciano Douglas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Ninject": {
+              "target": "Package",
+              "version": "[3.3.4, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj",
+        "projectName": "Presentation",
+        "projectPath": "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
+              },
+              "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj": {
+                "projectPath": "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj",
+        "projectName": "UnitTests",
+        "projectPath": "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj",
+        "packagesPath": "C:\\Users\\Luciano Douglas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\UnitTests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Luciano Douglas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
+              },
+              "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj": {
+                "projectPath": "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj"
+              },
+              "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj": {
+                "projectPath": "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.13.1, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.1, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
