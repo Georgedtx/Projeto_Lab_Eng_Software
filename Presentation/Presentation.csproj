@@ -136,7 +136,7 @@
       <Name>Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\Infra\Infra.csproj">
-      <Project>{E5EAC393-54DB-4801-A0EB-9DD3505FD729}</Project>
+      <Project>{609d8f9f-5158-4227-9bac-7c1034758d35}</Project>
       <Name>Infra</Name>
     </ProjectReference>
   </ItemGroup>

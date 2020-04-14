@@ -41,5 +41,15 @@ namespace Presentation.Administradores
         {
 
         }
+
+        private void Cadastrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdmTelaRecepcionista_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

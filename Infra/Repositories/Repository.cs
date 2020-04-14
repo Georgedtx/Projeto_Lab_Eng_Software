@@ -1,6 +1,6 @@
 ﻿using Domain.Interfaces.Repositories;
 using Infra.Context;
-using Microsoft.EntityFrameworkCore;
+using System.Data.Entity;
 using System.Linq;
 
 namespace Infra.Repositories

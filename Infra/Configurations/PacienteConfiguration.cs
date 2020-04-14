@@ -1,32 +1,34 @@
 ﻿using Domain.Entities;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
+using System.Data.Entity.ModelConfiguration;
 
 namespace Infra.Configurations
 {
-    public class PacienteConfiguration : IEntityTypeConfiguration<Paciente>
+    public class PacienteConfiguration : EntityTypeConfiguration<Paciente>
     {
-        public void Configure(EntityTypeBuilder<Paciente> builder)
+        public PacienteConfiguration()
         {
-            builder.HasKey(p => p.Id);
+            ToTable("Paciente");
 
-            builder.Property(p => p.Cpf)
+            HasKey(p => p.Id);
+
+            Property(p => p.Cpf)
                 .HasMaxLength(11)
                 .IsRequired();
 
-            builder.Property(p => p.Nome)
+            Property(p => p.Nome)
                 .HasMaxLength(35)
                 .IsRequired();
 
-            builder.Property(p => p.Sexo)
+            Property(p => p.Sexo)
+                .HasMaxLength(1)
                 .IsRequired();
 
-            builder.Property(p => p.Cor)
+            Property(p => p.Cor)
                 .HasMaxLength(10)
                 .IsRequired();
 
-            builder.Property(p => p.Nascimento)
+            Property(p => p.Nascimento)
+                .HasColumnType("date")
                 .IsRequired();
         }
     }

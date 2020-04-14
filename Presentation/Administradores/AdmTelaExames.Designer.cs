@@ -46,7 +46,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmailMD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblErrorMessage = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -102,7 +101,7 @@
             // ListarMedicos
             // 
             this.ListarMedicos.AllowUserToAddRows = false;
-            this.ListarMedicos.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ListarMedicos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ListarMedicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ListarMedicos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NomeMD});
@@ -135,8 +134,7 @@
             // 
             // panelDesktop
             // 
-            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(69)))));
-            this.panelDesktop.Controls.Add(this.lblErrorMessage);
+            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.panelDesktop.Controls.Add(this.button2);
             this.panelDesktop.Controls.Add(this.textNomeExame);
             this.panelDesktop.Controls.Add(this.button1);
@@ -152,9 +150,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(533, 321);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(380, 278);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 44);
+            this.button2.Size = new System.Drawing.Size(119, 39);
             this.button2.TabIndex = 34;
             this.button2.Text = "Cadastrar";
             this.button2.UseVisualStyleBackColor = true;
@@ -163,18 +162,20 @@
             // textNomeExame
             // 
             this.textNomeExame.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textNomeExame.Location = new System.Drawing.Point(143, 126);
+            this.textNomeExame.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textNomeExame.Location = new System.Drawing.Point(162, 98);
             this.textNomeExame.Margin = new System.Windows.Forms.Padding(2);
             this.textNomeExame.Name = "textNomeExame";
-            this.textNomeExame.Size = new System.Drawing.Size(247, 20);
+            this.textNomeExame.Size = new System.Drawing.Size(359, 26);
             this.textNomeExame.TabIndex = 33;
             this.textNomeExame.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox2_MaskInputRejected);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(410, 321);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(197, 278);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 44);
+            this.button1.Size = new System.Drawing.Size(119, 39);
             this.button1.TabIndex = 32;
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = true;
@@ -200,10 +201,11 @@
             // textDescricao
             // 
             this.textDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textDescricao.Location = new System.Drawing.Point(143, 253);
+            this.textDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textDescricao.Location = new System.Drawing.Point(162, 177);
             this.textDescricao.Margin = new System.Windows.Forms.Padding(2);
             this.textDescricao.Name = "textDescricao";
-            this.textDescricao.Size = new System.Drawing.Size(247, 20);
+            this.textDescricao.Size = new System.Drawing.Size(444, 26);
             this.textDescricao.TabIndex = 21;
             this.textDescricao.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
@@ -211,11 +213,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(69)))));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(40, 260);
+            this.label2.Location = new System.Drawing.Point(52, 183);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.Size = new System.Drawing.Size(79, 16);
             this.label2.TabIndex = 20;
             this.label2.Text = "Descrição";
             // 
@@ -223,11 +226,12 @@
             // 
             this.Email.AutoSize = true;
             this.Email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(69)))));
+            this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Email.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Email.Location = new System.Drawing.Point(40, 133);
+            this.Email.Location = new System.Drawing.Point(42, 104);
             this.Email.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(70, 13);
+            this.Email.Size = new System.Drawing.Size(100, 16);
             this.Email.TabIndex = 16;
             this.Email.Text = "Nome Exame";
             this.Email.Click += new System.EventHandler(this.Email_Click);
@@ -246,7 +250,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -273,17 +277,6 @@
             this.EmailMD.HeaderText = "Descrição";
             this.EmailMD.MinimumWidth = 6;
             this.EmailMD.Name = "EmailMD";
-            // 
-            // lblErrorMessage
-            // 
-            this.lblErrorMessage.AutoSize = true;
-            this.lblErrorMessage.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblErrorMessage.Location = new System.Drawing.Point(143, 279);
-            this.lblErrorMessage.Name = "lblErrorMessage";
-            this.lblErrorMessage.Size = new System.Drawing.Size(59, 13);
-            this.lblErrorMessage.TabIndex = 35;
-            this.lblErrorMessage.Text = "Mensagem";
-            this.lblErrorMessage.Visible = false;
             // 
             // AdmTelaExames
             // 
@@ -327,6 +320,5 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.MaskedTextBox textNomeExame;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label lblErrorMessage;
     }
 }

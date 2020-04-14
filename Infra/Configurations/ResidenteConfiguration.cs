@@ -1,21 +1,22 @@
 ﻿using Domain.Entities;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.Data.Entity.ModelConfiguration;
 
 namespace Infra.Configurations
 {
-    public class ResidenteConfiguration : IEntityTypeConfiguration<Residente>
+    public class ResidenteConfiguration : EntityTypeConfiguration<Residente>
     {
-        public void Configure(EntityTypeBuilder<Residente> builder)
+        public ResidenteConfiguration()
         {
-            builder.HasKey(r => r.Id);
+            ToTable("Residente");
 
-            builder.Property(r => r.AnoResidencia)
+            HasKey(r => r.Id);
+
+            Property(r => r.AnoResidencia)
+                .HasColumnType("date")
                 .IsRequired();
 
-            builder.HasOne(r => r.Medico)
-                .WithOne(m => m.Residente)
-                .HasForeignKey<Residente>(r => r.IdMedico);
+            HasRequired(r => r.Medico)
+                .WithOptional(m => m.Residente);
         }
     }
 }

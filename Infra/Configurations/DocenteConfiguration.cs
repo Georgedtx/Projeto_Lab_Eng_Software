@@ -1,22 +1,22 @@
 ﻿using Domain.Entities;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.Data.Entity.ModelConfiguration;
 
 namespace Infra.Configurations
 {
-    public class DocenteConfiguration : IEntityTypeConfiguration<Docente>
+    public class DocenteConfiguration : EntityTypeConfiguration<Docente>
     {
-        public void Configure(EntityTypeBuilder<Docente> builder)
+        public DocenteConfiguration()
         {
-            builder.HasKey(d => d.Id);
+            ToTable("Docente");
 
-            builder.Property(d => d.TitUniversitaria)
+            HasKey(d => d.Id);
+
+            Property(d => d.TitUniversitaria)
                 .HasMaxLength(10)
                 .IsRequired();
 
-            builder.HasOne(d => d.Medico)
-                .WithOne(m => m.Docente)
-                .HasForeignKey<Docente>(d => d.IdMedico);
+            HasRequired(d => d.Medico)
+                .WithOptional(m => m.Docente);
         }
     }
 }

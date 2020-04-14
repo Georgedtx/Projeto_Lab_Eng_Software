@@ -77,10 +77,9 @@ namespace Presentation.Administradores
             }
             else msgError("Digite o nome");
         }
+
         private void msgError(String msg)
         {
-            lblErrorMessage.Text = " " + msg;
-            lblErrorMessage.Visible = true;
         }
         private void button1_Click_1(object sender, EventArgs e)
         {

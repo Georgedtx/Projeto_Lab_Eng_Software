@@ -152,8 +152,7 @@ namespace Presentation.Administradores
 
         private void msgError(String msg)
         {
-            lblErrorMessage.Text = " " + msg;
-            lblErrorMessage.Visible = true;
+
         }
         private void textEndereco_TextChanged_1(object sender, EventArgs e)
         {

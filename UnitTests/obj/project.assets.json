@@ -1827,7 +1827,9 @@
       },
       "Infra/1.0.0": {
         "type": "project",
-        "framework": ".NETFramework,Version=v4.7.2",
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Infra.dll": {}
         },
@@ -6200,7 +6202,6 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Domain >= 1.0.0",
-      "Infra >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "Moq >= 4.13.1",
       "Presentation >= 1.0.0",
@@ -6210,19 +6211,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\George\\.nuget\\packages\\": {}
+    "C:\\Users\\luisz\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj",
+      "projectUniqueName": "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\LabEngSoftware\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj",
       "projectName": "UnitTests",
-      "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj",
-      "packagesPath": "C:\\Users\\George\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\UnitTests\\obj\\",
+      "projectPath": "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\LabEngSoftware\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj",
+      "packagesPath": "C:\\Users\\luisz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\LabEngSoftware\\Projeto_Lab_Eng_Software\\UnitTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\George\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\luisz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6235,14 +6236,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
+            "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\LabEngSoftware\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\LabEngSoftware\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
             },
-            "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj": {
-              "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj"
-            },
-            "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj": {
-              "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj"
+            "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\LabEngSoftware\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj": {
+              "projectPath": "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\LabEngSoftware\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj"
             }
           }
         }

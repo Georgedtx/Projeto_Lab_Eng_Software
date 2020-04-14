@@ -1,28 +1,28 @@
 ﻿using Domain.Entities;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.Data.Entity.ModelConfiguration;
 
 namespace Infra.Configurations
 {
-    public class MedicoConfiguration : IEntityTypeConfiguration<Medico>
+    public class MedicoConfiguration : EntityTypeConfiguration<Medico>
     {
-        public void Configure(EntityTypeBuilder<Medico> builder)
+        public MedicoConfiguration()
         {
-            builder.HasKey(m => m.Id);
+            ToTable("Medico");
 
-            builder.Property(m => m.Nome)
+            HasKey(m => m.Id);
+
+            Property(m => m.Nome)
                 .HasMaxLength(30)
                 .IsRequired();
 
-            builder.HasIndex(m => m.Crm)
+            HasIndex(m => m.Crm)
                 .IsUnique();
-            builder.Property(m => m.Crm)
+            Property(m => m.Crm)
                 .HasMaxLength(10)
                 .IsRequired();
 
-            builder.HasOne(m => m.Usuario)
-                .WithOne(u => u.Medico)
-                .HasForeignKey<Medico>(m => m.IdUsuario);
+            HasRequired(m => m.Usuario)
+                .WithOptional(u => u.Medico);
         }
     }
 }

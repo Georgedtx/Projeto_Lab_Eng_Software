@@ -1,9 +1,9 @@
 ﻿using Domain.Controllers;
 using Infra.IoC;
+using Presentation.Administradores;
 using System;
-using System.Windows.Forms;
-using System.Text;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace Presentation.Usuarios
 {
@@ -40,9 +40,9 @@ namespace Presentation.Usuarios
                     var validLogin = _usuariosController.Autenticar(caixaUserAdm.Text, caixaSenhaAdm.Text);
                     if (validLogin != null)
                     {
-                        //FormPrincipal mainMenu = new FormPrincipal();
-                        //mainMenu.Show();
-                        //this.Hide();
+                        var mainMenu = new AdmMenuPrincipal();
+                        mainMenu.Show();
+                        this.Hide();
                     }
                     msgError("Nome de usuário ou senha digitados incorretos. \n Por favor tente novamente.");
                     caixaSenhaAdm.Clear();

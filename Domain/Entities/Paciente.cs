@@ -7,7 +7,7 @@ namespace Domain.Entities
     {
         protected Paciente() { }
 
-        public Paciente(string cpf, string nome, char sexo, string cor, DateTime nascimento)
+        public Paciente(string cpf, string nome, string sexo, string cor, DateTime nascimento)
         {
             this.Cpf = cpf;
             this.Nome = nome;
@@ -19,7 +19,7 @@ namespace Domain.Entities
         public int Id { get; private set; }
         public string Cpf { get; private set; }
         public string Nome { get; private set; }
-        public char Sexo { get; private set; }
+        public string Sexo { get; private set; }
         public string Cor { get; private set; }
         public DateTime Nascimento { get; private set; }
 

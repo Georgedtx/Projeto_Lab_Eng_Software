@@ -1,25 +1,26 @@
 ﻿using Domain.Entities;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.Data.Entity.ModelConfiguration;
 
 namespace Infra.Configurations
 {
-    public class RecepcionistaConfiguration : IEntityTypeConfiguration<Recepcionista>
+    public class RecepcionistaConfiguration : EntityTypeConfiguration<Recepcionista>
     {
-        public void Configure(EntityTypeBuilder<Recepcionista> builder)
+        public RecepcionistaConfiguration()
         {
-            builder.HasKey(r => r.Id);
+            ToTable("Recepcionista");
 
-            builder.Property(r => r.Nome)
+            HasKey(r => r.Id);
+
+            Property(r => r.Nome)
                 .HasMaxLength(30)
                 .IsRequired();
 
-            builder.Property(r => r.Nascimento)
+            Property(r => r.Nascimento)
+                .HasColumnType("date")
                 .IsRequired();
 
-            builder.HasOne(r => r.Usuario)
-                .WithOne(u => u.Recepcionista)
-                .HasForeignKey<Recepcionista>(r => r.IdUsuario);
+            HasRequired(r => r.Usuario)
+                .WithOptional(u => u.Recepcionista);
         }
     }
 }

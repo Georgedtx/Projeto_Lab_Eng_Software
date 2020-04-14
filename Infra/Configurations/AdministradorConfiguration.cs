@@ -1,22 +1,22 @@
 ﻿using Domain.Entities;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.Data.Entity.ModelConfiguration;
 
 namespace Infra.Configurations
 {
-    public class AdministradorConfiguration : IEntityTypeConfiguration<Administrador>
+    public class AdministradorConfiguration : EntityTypeConfiguration<Administrador>
     {
-        public void Configure(EntityTypeBuilder<Administrador> builder)
+        public AdministradorConfiguration()
         {
-            builder.HasKey(a => a.Id);
+            ToTable("Administrador");
 
-            builder.Property(a => a.Nome)
+            HasKey(a => a.Id);
+
+            Property(a => a.Nome)
                 .HasMaxLength(30)
                 .IsRequired();
 
-            builder.HasOne(a => a.Usuario)
-                .WithOne(u => u.Administrador)
-                .HasForeignKey<Administrador>(a => a.IdUsuario);
+            HasRequired(a => a.Usuario)
+                .WithOptional(u => u.Administrador);
         }
     }
 }

@@ -216,7 +216,7 @@
             // 
             // painelTitulo
             // 
-            this.painelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.painelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.painelTitulo.Controls.Add(this.minimizar);
             this.painelTitulo.Controls.Add(this.maximizar);
             this.painelTitulo.Controls.Add(this.fechar);
