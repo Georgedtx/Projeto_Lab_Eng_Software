@@ -1,6 +1,6 @@
 ﻿namespace Presentation.Administradores
 {
-    partial class Form1
+    partial class AdmTelaRecepcionista
     {
         /// <summary>
         /// Required designer variable.
@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -47,16 +48,15 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Nome1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -82,6 +82,23 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Usuários";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.iconPictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Heartbeat;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox1.IconSize = 178;
+            this.iconPictureBox1.Location = new System.Drawing.Point(602, 3);
+            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.iconPictureBox1.Size = new System.Drawing.Size(178, 386);
+            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.iconPictureBox1.TabIndex = 7;
+            this.iconPictureBox1.TabStop = false;
             // 
             // dataGridView1
             // 
@@ -223,6 +240,7 @@
             this.textEndereco.Name = "textEndereco";
             this.textEndereco.Size = new System.Drawing.Size(354, 20);
             this.textEndereco.TabIndex = 17;
+            this.textEndereco.TextChanged += new System.EventHandler(this.textEndereco_TextChanged);
             // 
             // Email
             // 
@@ -243,7 +261,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(788, 392);
+            this.tabPage3.Size = new System.Drawing.Size(783, 392);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Detalhes";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
@@ -266,33 +284,17 @@
             this.Nome1.HeaderText = "Nome";
             this.Nome1.Name = "Nome1";
             // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.iconPictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Heartbeat;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox1.IconSize = 178;
-            this.iconPictureBox1.Location = new System.Drawing.Point(602, 3);
-            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.iconPictureBox1.Size = new System.Drawing.Size(178, 386);
-            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.iconPictureBox1.TabIndex = 7;
-            this.iconPictureBox1.TabStop = false;
-            // 
-            // Form1
+            // AdmTelaRecepcionista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(787, 416);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "AdmTelaRecepcionista";
+            this.Text = "Recepcionistas";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -301,7 +303,6 @@
             this.panel4.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

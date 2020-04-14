@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Presentation.Administradores
 {
-    public partial class Exames : Form
+    public partial class AdmTelaAdministrador : Form
     {
         private TabPage tabPage3;
         private DataGridView dataGridView2;
@@ -33,7 +33,7 @@ namespace Presentation.Administradores
         private DataGridViewTextBoxColumn NomeMD;
         private TabControl tabControl1;
 
-        public Exames()
+        public AdmTelaAdministrador()
         {
             InitializeComponent();
         }
@@ -180,6 +180,7 @@ namespace Presentation.Administradores
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(780, 176);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Cadastrar
             // 
@@ -301,12 +302,13 @@ namespace Presentation.Administradores
             this.tabControl1.Size = new System.Drawing.Size(788, 416);
             this.tabControl1.TabIndex = 7;
             // 
-            // Exames
+            // AdmTelaAdministrador
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(787, 416);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Exames";
+            this.Name = "AdmTelaAdministrador";
+            this.Text = "Administradores";
             this.Load += new System.EventHandler(this.Exames_Load);
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -454,6 +456,11 @@ namespace Presentation.Administradores
         }
 
         private void Cadastrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

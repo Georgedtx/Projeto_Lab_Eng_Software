@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Domain.Controllers;
+using Domain.Entities;
+using Infra.IoC;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +15,11 @@ namespace Presentation.Administradores
 {
     public partial class AdmTelaExames : Form
     {
+        private readonly ExamesController _exameController;
         public AdmTelaExames()
         {
             InitializeComponent();
+            _exameController = DependenciesResolve.Resolve<ExamesController>();
         }
 
         private void Email_Click(object sender, EventArgs e)
@@ -48,6 +53,42 @@ namespace Presentation.Administradores
         }
 
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+       
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if ((textNomeExame.Text != string.Empty))
+            {
+                if (textDescricao.Text != string.Empty)
+                {
+                    Exame exame = new Exame(textNomeExame.Text,textDescricao.Text);                
+                    _exameController.Cadastrar(exame);
+                    textNomeExame.Clear();
+                    textDescricao.Clear();
+                }
+                else msgError("Digite a Descrição");
+            }
+            else msgError("Digite o nome");
+        }
+        private void msgError(String msg)
+        {
+            lblErrorMessage.Text = " " + msg;
+            lblErrorMessage.Visible = true;
+        }
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            textNomeExame.Clear();
+            textDescricao.Clear();
+        }
+
+        private void AdmTelaExames_Load(object sender, EventArgs e)
         {
 
         }

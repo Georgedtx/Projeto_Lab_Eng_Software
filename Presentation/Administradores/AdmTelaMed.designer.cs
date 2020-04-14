@@ -268,6 +268,7 @@
             this.textEndereco.Name = "textEndereco";
             this.textEndereco.Size = new System.Drawing.Size(354, 26);
             this.textEndereco.TabIndex = 11;
+            this.textEndereco.TextChanged += new System.EventHandler(this.textEndereco_TextChanged_1);
             // 
             // Cadastrar
             // 
@@ -454,7 +455,8 @@
             this.Controls.Add(this.AbasMedicos);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdmTelaMed";
-            this.Text = "telaMed";
+            this.Text = "Médicos";
+            this.Load += new System.EventHandler(this.AdmTelaMed_Load_1);
             this.Detalhes.ResumeLayout(false);
             this.Detalhes.PerformLayout();
             this.Medicos.ResumeLayout(false);

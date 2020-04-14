@@ -22,10 +22,12 @@ namespace Presentation.Administradores
             _medicosController = DependenciesResolve.Resolve<MedicosController>();
             _usuariosController = DependenciesResolve.Resolve<UsuariosController>();
         }
-        private void AdmTelaMed_Load(object sender, EventArgs e)
+
+        private void AdmTelaMed_Load_1(object sender, EventArgs e)
         {
-            MostrarMedico();
+            //MostrarMedico();
         }
+
         private void Medicos_Click(object sender, EventArgs e)
         {
 
@@ -38,7 +40,7 @@ namespace Presentation.Administradores
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            dataGridView1.DataSource = _medicosController.ObterTodos();
         }
 
         private void NovoMedico_Click(object sender, EventArgs e)
@@ -62,11 +64,6 @@ namespace Presentation.Administradores
         }
 
         private void TituloUni_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textEndereco_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -98,7 +95,7 @@ namespace Presentation.Administradores
 
         private void MostrarMedico()
         {
-            dataGridView1.DataSource = _medicosController.ObterTodos();
+            //dataGridView1.DataSource = _medicosController.ObterTodos();
         }
 
         private void Cadastrar_Click_1(object sender, EventArgs e)
@@ -158,5 +155,9 @@ namespace Presentation.Administradores
             lblErrorMessage.Text = " " + msg;
             lblErrorMessage.Visible = true;
         }
+        private void textEndereco_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }       
     }
 }

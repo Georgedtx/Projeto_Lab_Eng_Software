@@ -188,6 +188,6 @@ C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\AutoMapper.dll
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Administradores.AdmMenuPrincipal.resources
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Administradores.AdmTelaMed.resources
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Administradores.Exames.resources
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Administradores.AdmTelaExames.resources
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Administradores.Form1.resources
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Administradores.AdmTelaAdministrador.resources
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Administradores.AdmTelaRecepcionista.resources

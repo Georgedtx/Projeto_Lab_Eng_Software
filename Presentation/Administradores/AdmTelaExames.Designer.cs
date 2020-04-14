@@ -30,31 +30,32 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.ListarMedicos = new System.Windows.Forms.DataGridView();
             this.NomeMD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textNomeExame = new System.Windows.Forms.MaskedTextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.textDescricao = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Email = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmailMD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.lblErrorMessage = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ListarMedicos)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panelDesktop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -80,6 +81,23 @@
             this.tabPage1.Size = new System.Drawing.Size(786, 388);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Exames";
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.iconPictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Heartbeat;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox1.IconSize = 178;
+            this.iconPictureBox1.Location = new System.Drawing.Point(605, 3);
+            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.iconPictureBox1.Size = new System.Drawing.Size(178, 382);
+            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.iconPictureBox1.TabIndex = 7;
+            this.iconPictureBox1.TabStop = false;
             // 
             // ListarMedicos
             // 
@@ -118,11 +136,12 @@
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(69)))));
+            this.panelDesktop.Controls.Add(this.lblErrorMessage);
             this.panelDesktop.Controls.Add(this.button2);
-            this.panelDesktop.Controls.Add(this.maskedTextBox2);
+            this.panelDesktop.Controls.Add(this.textNomeExame);
             this.panelDesktop.Controls.Add(this.button1);
             this.panelDesktop.Controls.Add(this.iconPictureBox2);
-            this.panelDesktop.Controls.Add(this.maskedTextBox1);
+            this.panelDesktop.Controls.Add(this.textDescricao);
             this.panelDesktop.Controls.Add(this.label2);
             this.panelDesktop.Controls.Add(this.Email);
             this.panelDesktop.Location = new System.Drawing.Point(2, -10);
@@ -131,15 +150,62 @@
             this.panelDesktop.Size = new System.Drawing.Size(788, 410);
             this.panelDesktop.TabIndex = 26;
             // 
-            // maskedTextBox1
+            // button2
             // 
-            this.maskedTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(143, 253);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(247, 20);
-            this.maskedTextBox1.TabIndex = 21;
-            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            this.button2.Location = new System.Drawing.Point(533, 321);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(85, 44);
+            this.button2.TabIndex = 34;
+            this.button2.Text = "Cadastrar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // textNomeExame
+            // 
+            this.textNomeExame.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textNomeExame.Location = new System.Drawing.Point(143, 126);
+            this.textNomeExame.Margin = new System.Windows.Forms.Padding(2);
+            this.textNomeExame.Name = "textNomeExame";
+            this.textNomeExame.Size = new System.Drawing.Size(247, 20);
+            this.textNomeExame.TabIndex = 33;
+            this.textNomeExame.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox2_MaskInputRejected);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(410, 321);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(85, 44);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Cancelar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.iconPictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconPictureBox2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Heartbeat;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox2.IconSize = 138;
+            this.iconPictureBox2.Location = new System.Drawing.Point(650, 0);
+            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.iconPictureBox2.Size = new System.Drawing.Size(138, 410);
+            this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.iconPictureBox2.TabIndex = 31;
+            this.iconPictureBox2.TabStop = false;
+            // 
+            // textDescricao
+            // 
+            this.textDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textDescricao.Location = new System.Drawing.Point(143, 253);
+            this.textDescricao.Margin = new System.Windows.Forms.Padding(2);
+            this.textDescricao.Name = "textDescricao";
+            this.textDescricao.Size = new System.Drawing.Size(247, 20);
+            this.textDescricao.TabIndex = 21;
+            this.textDescricao.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
             // label2
             // 
@@ -194,40 +260,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(791, 382);
             this.dataGridView1.TabIndex = 3;
             // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.iconPictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Heartbeat;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox1.IconSize = 178;
-            this.iconPictureBox1.Location = new System.Drawing.Point(605, 3);
-            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.iconPictureBox1.Size = new System.Drawing.Size(178, 382);
-            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.iconPictureBox1.TabIndex = 7;
-            this.iconPictureBox1.TabStop = false;
-            // 
-            // iconPictureBox2
-            // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.iconPictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconPictureBox2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Heartbeat;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox2.IconSize = 138;
-            this.iconPictureBox2.Location = new System.Drawing.Point(650, 0);
-            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.iconPictureBox2.Size = new System.Drawing.Size(138, 410);
-            this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.iconPictureBox2.TabIndex = 31;
-            this.iconPictureBox2.TabStop = false;
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -242,32 +274,16 @@
             this.EmailMD.MinimumWidth = 6;
             this.EmailMD.Name = "EmailMD";
             // 
-            // button1
+            // lblErrorMessage
             // 
-            this.button1.Location = new System.Drawing.Point(410, 321);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 44);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maskedTextBox2.Location = new System.Drawing.Point(143, 126);
-            this.maskedTextBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(247, 20);
-            this.maskedTextBox2.TabIndex = 33;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(533, 321);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 44);
-            this.button2.TabIndex = 34;
-            this.button2.Text = "Cadastrar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.lblErrorMessage.AutoSize = true;
+            this.lblErrorMessage.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblErrorMessage.Location = new System.Drawing.Point(143, 279);
+            this.lblErrorMessage.Name = "lblErrorMessage";
+            this.lblErrorMessage.Size = new System.Drawing.Size(59, 13);
+            this.lblErrorMessage.TabIndex = 35;
+            this.lblErrorMessage.Text = "Mensagem";
+            this.lblErrorMessage.Visible = false;
             // 
             // AdmTelaExames
             // 
@@ -276,17 +292,18 @@
             this.ClientSize = new System.Drawing.Size(787, 416);
             this.Controls.Add(this.tabControl1);
             this.Name = "AdmTelaExames";
-            this.Text = "Form3";
+            this.Text = "Exames";
+            this.Load += new System.EventHandler(this.AdmTelaExames_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ListarMedicos)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.panelDesktop.ResumeLayout(false);
             this.panelDesktop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -298,7 +315,7 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Panel panelDesktop;
         private System.Windows.Forms.Label Email;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox textDescricao;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView ListarMedicos;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomeMD;
@@ -308,7 +325,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn EmailMD;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox textNomeExame;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblErrorMessage;
     }
 }

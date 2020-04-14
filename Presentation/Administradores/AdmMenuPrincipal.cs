@@ -116,9 +116,8 @@ namespace Presentation.Administradores
         private void Administrador_Click_1(object sender, EventArgs e)
         {
             ActivateButton(sender, CorRGB.cor2);
-        //    OpenChildForm(new Administrador());
-            //   telaAdm tAdm = new telaAdm();
-         //   tAdm.Show();
+            OpenChildForm(new AdmTelaAdministrador());
+            
         }
 
         private void Medico_Click_1(object sender, EventArgs e)
@@ -130,7 +129,7 @@ namespace Presentation.Administradores
         private void Recepcionista_Click_1(object sender, EventArgs e)
         {
             ActivateButton(sender, CorRGB.cor1);
-         //   OpenChildForm(new telaRecep());
+            OpenChildForm(new AdmTelaRecepcionista());
         }
         //logo
         private void iconPictureBox1_Click(object sender, EventArgs e)
@@ -181,7 +180,7 @@ namespace Presentation.Administradores
         private void Exames_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, CorRGB.cor6);
-         //   OpenChildForm(new ());
+            OpenChildForm(new AdmTelaExames());
         }
     }
 }
