@@ -1080,19 +1080,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Luciano Douglas\\.nuget\\packages\\": {}
+    "C:\\Users\\George\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj",
+      "projectUniqueName": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj",
       "projectName": "Infra",
-      "projectPath": "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj",
-      "packagesPath": "C:\\Users\\Luciano Douglas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Infra\\obj\\",
+      "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj",
+      "packagesPath": "C:\\Users\\George\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Infra\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Luciano Douglas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\George\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1105,8 +1105,8 @@
       "frameworks": {
         "net472": {
           "projectReferences": {
-            "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Luciano Douglas\\Source\\Repos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
+            "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
             }
           }
         }
@@ -1129,7 +1129,7 @@
             "version": "[3.3.4, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

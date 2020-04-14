@@ -36,12 +36,6 @@ C:\Users\luisz\OneDrive\Documentos\Faculdade\Lab. Eng. de Software\Projeto_Lab_E
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\Infra.dll
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\Infra.pdb
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\DomainValidation.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\System.Web.Mvc.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\System.Web.Razor.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\System.Web.Helpers.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\System.Web.WebPages.Deployment.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\System.Web.WebPages.Razor.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\System.Web.WebPages.dll
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\Microsoft.Bcl.HashCode.dll
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\Microsoft.EntityFrameworkCore.dll
@@ -57,7 +51,6 @@ C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\Microsoft.Extensions.Options.dll
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\Microsoft.Extensions.Primitives.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\Microsoft.Web.Infrastructure.dll
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\Ninject.dll
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\System.Buffers.dll
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\System.Collections.Immutable.dll
@@ -171,3 +164,11 @@ C:\Users\Luciano Douglas\Source\Repos\Projeto_Lab_Eng_Software\Infra\obj\Debug\n
 C:\Users\Luciano Douglas\Source\Repos\Projeto_Lab_Eng_Software\Infra\obj\Debug\net472\Infra.csproj.CopyComplete
 C:\Users\Luciano Douglas\Source\Repos\Projeto_Lab_Eng_Software\Infra\obj\Debug\net472\Infra.dll
 C:\Users\Luciano Douglas\Source\Repos\Projeto_Lab_Eng_Software\Infra\obj\Debug\net472\Infra.pdb
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\NUnit3.TestAdapter.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\NUnit3.TestAdapter.pdb
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\nunit.engine.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\nunit.engine.api.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\AutoMapper.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\Castle.Core.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\Moq.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Infra\bin\Debug\net472\nunit.framework.dll

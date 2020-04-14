@@ -32,7 +32,7 @@
             this.textDetalhes = new System.Windows.Forms.TextBox();
             this.Medicos = new System.Windows.Forms.TabPage();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.ListarMedicos = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.NomeMD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmailMD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CRMmd = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,12 +40,12 @@
             this.AnoResidenciaMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AbasMedicos = new System.Windows.Forms.TabControl();
             this.NovoMedico = new System.Windows.Forms.TabPage();
+            this.panelDesktop = new System.Windows.Forms.Panel();
             this.Email = new System.Windows.Forms.Label();
             this.textEndereco = new System.Windows.Forms.TextBox();
-            this.Senha = new System.Windows.Forms.Label();
-            this.BoxSenha = new System.Windows.Forms.MaskedTextBox();
             this.Cadastrar = new System.Windows.Forms.Button();
-            this.panelDesktop = new System.Windows.Forms.Panel();
+            this.BoxSenha = new System.Windows.Forms.MaskedTextBox();
+            this.Senha = new System.Windows.Forms.Label();
             this.SalvarButton = new System.Windows.Forms.Button();
             this.DocenteButton = new System.Windows.Forms.RadioButton();
             this.ResidenteButton = new System.Windows.Forms.RadioButton();
@@ -58,10 +58,11 @@
             this.textCRM = new System.Windows.Forms.MaskedTextBox();
             this.TituloUni = new System.Windows.Forms.ComboBox();
             this.textNascimento = new System.Windows.Forms.MaskedTextBox();
+            this.lblErrorMessage = new System.Windows.Forms.Label();
             this.Detalhes.SuspendLayout();
             this.Medicos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ListarMedicos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.AbasMedicos.SuspendLayout();
             this.NovoMedico.SuspendLayout();
             this.panelDesktop.SuspendLayout();
@@ -95,7 +96,7 @@
             // 
             this.Medicos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(74)))));
             this.Medicos.Controls.Add(this.iconPictureBox1);
-            this.Medicos.Controls.Add(this.ListarMedicos);
+            this.Medicos.Controls.Add(this.dataGridView1);
             this.Medicos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Medicos.Location = new System.Drawing.Point(4, 25);
             this.Medicos.Margin = new System.Windows.Forms.Padding(2);
@@ -124,25 +125,25 @@
             this.iconPictureBox1.TabStop = false;
             this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
             // 
-            // ListarMedicos
+            // dataGridView1
             // 
-            this.ListarMedicos.AllowUserToAddRows = false;
-            this.ListarMedicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ListarMedicos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NomeMD,
             this.EmailMD,
             this.CRMmd,
             this.TitUniMed,
             this.AnoResidenciaMed});
-            this.ListarMedicos.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ListarMedicos.Location = new System.Drawing.Point(2, 2);
-            this.ListarMedicos.Margin = new System.Windows.Forms.Padding(2);
-            this.ListarMedicos.Name = "ListarMedicos";
-            this.ListarMedicos.RowHeadersWidth = 51;
-            this.ListarMedicos.RowTemplate.Height = 24;
-            this.ListarMedicos.Size = new System.Drawing.Size(593, 383);
-            this.ListarMedicos.TabIndex = 2;
-            this.ListarMedicos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dataGridView1.Location = new System.Drawing.Point(2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(593, 383);
+            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // NomeMD
             // 
@@ -196,6 +197,7 @@
             // NovoMedico
             // 
             this.NovoMedico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(74)))));
+            this.NovoMedico.Controls.Add(this.lblErrorMessage);
             this.NovoMedico.Controls.Add(this.panelDesktop);
             this.NovoMedico.Controls.Add(this.SalvarButton);
             this.NovoMedico.Controls.Add(this.DocenteButton);
@@ -219,6 +221,21 @@
             this.NovoMedico.Text = "Novo Medico";
             this.NovoMedico.Click += new System.EventHandler(this.NovoMedico_Click);
             // 
+            // panelDesktop
+            // 
+            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(69)))));
+            this.panelDesktop.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelDesktop.Controls.Add(this.Email);
+            this.panelDesktop.Controls.Add(this.textEndereco);
+            this.panelDesktop.Controls.Add(this.Cadastrar);
+            this.panelDesktop.Controls.Add(this.BoxSenha);
+            this.panelDesktop.Controls.Add(this.Senha);
+            this.panelDesktop.Location = new System.Drawing.Point(0, 0);
+            this.panelDesktop.Margin = new System.Windows.Forms.Padding(2);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(779, 126);
+            this.panelDesktop.TabIndex = 25;
+            // 
             // Email
             // 
             this.Email.AutoSize = true;
@@ -239,6 +256,27 @@
             this.textEndereco.Size = new System.Drawing.Size(354, 26);
             this.textEndereco.TabIndex = 11;
             // 
+            // Cadastrar
+            // 
+            this.Cadastrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Cadastrar.Location = new System.Drawing.Point(593, 36);
+            this.Cadastrar.Margin = new System.Windows.Forms.Padding(2);
+            this.Cadastrar.Name = "Cadastrar";
+            this.Cadastrar.Size = new System.Drawing.Size(98, 37);
+            this.Cadastrar.TabIndex = 9;
+            this.Cadastrar.Text = "Cadastrar";
+            this.Cadastrar.UseVisualStyleBackColor = true;
+            this.Cadastrar.Click += new System.EventHandler(this.Cadastrar_Click_1);
+            // 
+            // BoxSenha
+            // 
+            this.BoxSenha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BoxSenha.Location = new System.Drawing.Point(130, 68);
+            this.BoxSenha.Margin = new System.Windows.Forms.Padding(2);
+            this.BoxSenha.Name = "BoxSenha";
+            this.BoxSenha.Size = new System.Drawing.Size(354, 26);
+            this.BoxSenha.TabIndex = 5;
+            // 
             // Senha
             // 
             this.Senha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -252,41 +290,6 @@
             this.Senha.TabIndex = 20;
             this.Senha.Text = "Senha";
             // 
-            // BoxSenha
-            // 
-            this.BoxSenha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BoxSenha.Location = new System.Drawing.Point(130, 68);
-            this.BoxSenha.Margin = new System.Windows.Forms.Padding(2);
-            this.BoxSenha.Name = "BoxSenha";
-            this.BoxSenha.Size = new System.Drawing.Size(354, 26);
-            this.BoxSenha.TabIndex = 5;
-            // 
-            // Cadastrar
-            // 
-            this.Cadastrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Cadastrar.Location = new System.Drawing.Point(593, 36);
-            this.Cadastrar.Margin = new System.Windows.Forms.Padding(2);
-            this.Cadastrar.Name = "Cadastrar";
-            this.Cadastrar.Size = new System.Drawing.Size(98, 37);
-            this.Cadastrar.TabIndex = 9;
-            this.Cadastrar.Text = "Cadastrar";
-            this.Cadastrar.UseVisualStyleBackColor = true;
-            // 
-            // panelDesktop
-            // 
-            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(69)))));
-            this.panelDesktop.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelDesktop.Controls.Add(this.Email);
-            this.panelDesktop.Controls.Add(this.textEndereco);
-            this.panelDesktop.Controls.Add(this.Cadastrar);
-            this.panelDesktop.Controls.Add(this.BoxSenha);
-            this.panelDesktop.Controls.Add(this.Senha);
-            this.panelDesktop.Location = new System.Drawing.Point(0, 0);
-            this.panelDesktop.Margin = new System.Windows.Forms.Padding(2);
-            this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(779, 126);
-            this.panelDesktop.TabIndex = 25;
-            // 
             // SalvarButton
             // 
             this.SalvarButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -297,6 +300,7 @@
             this.SalvarButton.TabIndex = 24;
             this.SalvarButton.Text = "Salvar";
             this.SalvarButton.UseVisualStyleBackColor = true;
+            this.SalvarButton.Click += new System.EventHandler(this.SalvarButton_Click);
             // 
             // DocenteButton
             // 
@@ -383,6 +387,7 @@
             this.Cancelar.TabIndex = 10;
             this.Cancelar.Text = "Cancelar";
             this.Cancelar.UseVisualStyleBackColor = true;
+            this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click_1);
             // 
             // textNome
             // 
@@ -428,6 +433,17 @@
             this.textNascimento.ValidatingType = typeof(System.DateTime);
             this.textNascimento.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.textNascimento_MaskInputRejected);
             // 
+            // lblErrorMessage
+            // 
+            this.lblErrorMessage.AutoSize = true;
+            this.lblErrorMessage.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblErrorMessage.Location = new System.Drawing.Point(105, 273);
+            this.lblErrorMessage.Name = "lblErrorMessage";
+            this.lblErrorMessage.Size = new System.Drawing.Size(88, 20);
+            this.lblErrorMessage.TabIndex = 26;
+            this.lblErrorMessage.Text = "Mensagem";
+            this.lblErrorMessage.Visible = false;
+            // 
             // AdmTelaMed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -441,7 +457,7 @@
             this.Detalhes.PerformLayout();
             this.Medicos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ListarMedicos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.AbasMedicos.ResumeLayout(false);
             this.NovoMedico.ResumeLayout(false);
             this.NovoMedico.PerformLayout();
@@ -472,7 +488,7 @@
         private System.Windows.Forms.MaskedTextBox BoxSenha;
         private System.Windows.Forms.MaskedTextBox textNascimento;
         private System.Windows.Forms.TextBox textDetalhes;
-        private System.Windows.Forms.DataGridView ListarMedicos;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Button SalvarButton;
         private System.Windows.Forms.RadioButton DocenteButton;
@@ -483,5 +499,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CRMmd;
         private System.Windows.Forms.DataGridViewTextBoxColumn TitUniMed;
         private System.Windows.Forms.DataGridViewTextBoxColumn AnoResidenciaMed;
+        private System.Windows.Forms.Label lblErrorMessage;
     }
 }

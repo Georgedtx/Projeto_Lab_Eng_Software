@@ -43,7 +43,6 @@ C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Infra.dll
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Ninject.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\DomainValidation.dll
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Microsoft.EntityFrameworkCore.dll
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
@@ -182,3 +181,13 @@ C:\Users\Luciano Douglas\Source\Repos\Projeto_Lab_Eng_Software\Presentation\obj\
 C:\Users\Luciano Douglas\Source\Repos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.csproj.CopyComplete
 C:\Users\Luciano Douglas\Source\Repos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.exe
 C:\Users\Luciano Douglas\Source\Repos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.pdb
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\NUnit3.TestAdapter.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\NUnit3.TestAdapter.pdb
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\nunit.engine.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\nunit.engine.api.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\AutoMapper.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Administradores.AdmMenuPrincipal.resources
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Administradores.AdmTelaMed.resources
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Administradores.Exames.resources
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Administradores.AdmTelaExames.resources
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Administradores.Form1.resources
