@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj": {}
+    "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
+    "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\George\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Pablo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\George\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,21 +65,21 @@
               "version": "[3.3.4, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj": {
+    "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj",
+        "projectUniqueName": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj",
         "projectName": "Infra",
-        "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj",
-        "packagesPath": "C:\\Users\\George\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Infra\\obj\\",
+        "projectPath": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj",
+        "packagesPath": "C:\\Users\\Pablo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Infra\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\George\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -92,8 +92,8 @@
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
+              "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
               }
             }
           }
@@ -116,24 +116,24 @@
               "version": "[3.3.4, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj": {
+    "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj",
+        "projectUniqueName": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj",
         "projectName": "Presentation",
-        "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj",
+        "projectPath": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
+              "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj": {
-                "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj"
+              "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj": {
+                "projectPath": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj"
               }
             }
           }
@@ -143,17 +143,17 @@
         "net472": {}
       }
     },
-    "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj": {
+    "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj",
+        "projectUniqueName": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj",
         "projectName": "UnitTests",
-        "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj",
-        "packagesPath": "C:\\Users\\George\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\UnitTests\\obj\\",
+        "projectPath": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj",
+        "packagesPath": "C:\\Users\\Pablo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\UnitTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\George\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -166,14 +166,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
+              "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj": {
-                "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj"
+              "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj": {
+                "projectPath": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj"
               },
-              "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj": {
-                "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj"
+              "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj": {
+                "projectPath": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj"
               }
             }
           }
@@ -227,7 +227,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

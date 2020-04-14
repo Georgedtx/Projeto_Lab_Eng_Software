@@ -40,6 +40,7 @@
             this.AnoResidenciaMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AbasMedicos = new System.Windows.Forms.TabControl();
             this.NovoMedico = new System.Windows.Forms.TabPage();
+            this.lblErrorMessage = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.Email = new System.Windows.Forms.Label();
             this.textEndereco = new System.Windows.Forms.TextBox();
@@ -58,7 +59,6 @@
             this.textCRM = new System.Windows.Forms.MaskedTextBox();
             this.TituloUni = new System.Windows.Forms.ComboBox();
             this.textNascimento = new System.Windows.Forms.MaskedTextBox();
-            this.lblErrorMessage = new System.Windows.Forms.Label();
             this.Detalhes.SuspendLayout();
             this.Medicos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -83,6 +83,7 @@
             // 
             // textDetalhes
             // 
+            this.textDetalhes.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textDetalhes.Dock = System.Windows.Forms.DockStyle.Top;
             this.textDetalhes.Location = new System.Drawing.Point(2, 2);
             this.textDetalhes.Margin = new System.Windows.Forms.Padding(2);
@@ -128,6 +129,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NomeMD,
@@ -220,6 +222,17 @@
             this.NovoMedico.TabIndex = 1;
             this.NovoMedico.Text = "Novo Medico";
             this.NovoMedico.Click += new System.EventHandler(this.NovoMedico_Click);
+            // 
+            // lblErrorMessage
+            // 
+            this.lblErrorMessage.AutoSize = true;
+            this.lblErrorMessage.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblErrorMessage.Location = new System.Drawing.Point(105, 273);
+            this.lblErrorMessage.Name = "lblErrorMessage";
+            this.lblErrorMessage.Size = new System.Drawing.Size(88, 20);
+            this.lblErrorMessage.TabIndex = 26;
+            this.lblErrorMessage.Text = "Mensagem";
+            this.lblErrorMessage.Visible = false;
             // 
             // panelDesktop
             // 
@@ -432,17 +445,6 @@
             this.textNascimento.TabIndex = 4;
             this.textNascimento.ValidatingType = typeof(System.DateTime);
             this.textNascimento.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.textNascimento_MaskInputRejected);
-            // 
-            // lblErrorMessage
-            // 
-            this.lblErrorMessage.AutoSize = true;
-            this.lblErrorMessage.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblErrorMessage.Location = new System.Drawing.Point(105, 273);
-            this.lblErrorMessage.Name = "lblErrorMessage";
-            this.lblErrorMessage.Size = new System.Drawing.Size(88, 20);
-            this.lblErrorMessage.TabIndex = 26;
-            this.lblErrorMessage.Text = "Mensagem";
-            this.lblErrorMessage.Visible = false;
             // 
             // AdmTelaMed
             // 

@@ -59,14 +59,14 @@
     <Compile Include="Administradores\AdmMenuPrincipal.designer.cs">
       <DependentUpon>AdmMenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administradores\AdmTelaAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Administradores\AdmTelaMed.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Administradores\AdmTelaMed.designer.cs">
       <DependentUpon>AdmTelaMed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administradores\AdmTelaAdministrador.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Administradores\AdmTelaExames.cs">
       <SubType>Form</SubType>
@@ -74,11 +74,11 @@
     <Compile Include="Administradores\AdmTelaExames.Designer.cs">
       <DependentUpon>AdmTelaExames.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administradores\Form1.cs">
+    <Compile Include="Administradores\AdmTelaRecepcionista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administradores\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Administradores\AdmTelaRecepcionista.Designer.cs">
+      <DependentUpon>AdmTelaRecepcionista.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,17 +91,17 @@
     <EmbeddedResource Include="Administradores\AdmMenuPrincipal.resx">
       <DependentUpon>AdmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administradores\AdmTelaMed.resx">
-      <DependentUpon>AdmTelaMed.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Administradores\AdmTelaAdministrador.resx">
       <DependentUpon>AdmTelaAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administradores\AdmTelaMed.resx">
+      <DependentUpon>AdmTelaMed.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administradores\AdmTelaExames.resx">
       <DependentUpon>AdmTelaExames.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administradores\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Administradores\AdmTelaRecepcionista.resx">
+      <DependentUpon>AdmTelaRecepcionista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

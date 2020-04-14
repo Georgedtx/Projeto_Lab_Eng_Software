@@ -2,7 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\Presentation",
-    "\\Presentation\\Administradores"
+    "\\Presentation\\Administradores",
+    "\\Presentation\\Properties",
+    "\\Relatorios"
   ],
+  "SelectedNode": "\\Presentation\\Administradores\\AdmMenuPrincipal.cs",
   "PreviewInSolutionExplorer": false
 }
