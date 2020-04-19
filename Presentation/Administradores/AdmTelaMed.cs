@@ -1,12 +1,11 @@
-﻿using Domain.Controllers;
+﻿using App.Controllers;
+using Domain.Entities;
+using Domain.ViewModels.Medicos;
 using Infra.IoC;
 using System;
-using System.Windows.Forms;
-using System.Text;
-using Domain.ViewModels.Medicos;
-using Domain.Entities;
 using System.Data;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace Presentation.Administradores
 {

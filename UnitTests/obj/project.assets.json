@@ -1815,9 +1815,20 @@
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
       },
+      "App/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/App.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/App.dll": {}
+        }
+      },
       "Domain/1.0.0": {
         "type": "project",
-        "framework": ".NETFramework,Version=v4.7.2",
         "compile": {
           "bin/placeholder/Domain.dll": {}
         },
@@ -1840,6 +1851,7 @@
       "Presentation/1.0.0": {
         "type": "project",
         "dependencies": {
+          "App": "1.0.0",
           "Domain": "1.0.0",
           "Infra": "1.0.0"
         },
@@ -6183,6 +6195,11 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
+    "App/1.0.0": {
+      "type": "project",
+      "path": "../App/App.csproj",
+      "msbuildProject": "../App/App.csproj"
+    },
     "Domain/1.0.0": {
       "type": "project",
       "path": "../Domain/Domain.csproj",
@@ -6201,7 +6218,6 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Domain >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "Moq >= 4.13.1",
       "Presentation >= 1.0.0",
@@ -6236,9 +6252,6 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\LabEngSoftware\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\LabEngSoftware\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
-            },
             "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\LabEngSoftware\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj": {
               "projectPath": "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\LabEngSoftware\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj"
             }

@@ -1,14 +1,7 @@
-﻿using Domain.Controllers;
+﻿using App.Controllers;
 using Domain.Entities;
 using Infra.IoC;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Presentation.Administradores

@@ -131,8 +131,12 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\App\App.csproj">
+      <Project>{43e15d96-ef54-4f93-93d6-1c65f408a16d}</Project>
+      <Name>App</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Domain\Domain.csproj">
-      <Project>{65BA5EF7-B1B3-4C9B-8470-6EA06EE7F869}</Project>
+      <Project>{4b5bc610-c715-46ab-9860-62e04afb35aa}</Project>
       <Name>Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\Infra\Infra.csproj">

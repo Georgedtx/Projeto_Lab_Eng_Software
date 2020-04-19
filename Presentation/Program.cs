@@ -1,5 +1,4 @@
 ﻿using Infra.IoC;
-using Presentation.Administradores;
 using Presentation.Usuarios;
 using System;
 using System.Windows.Forms;
