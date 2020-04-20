@@ -16,7 +16,7 @@ namespace Domain.Specifications.Medicos
 
         public bool IsSatisfiedBy(Medico medico)
         {
-            return _repository.Obter().Where(m => m.Crm.Equals(medico.Crm)).FirstOrDefault() == null;
+            return _repository.ObterTodos().Where(m => m.Crm.Equals(medico.Crm)).FirstOrDefault() == null;
         }
     }
 }

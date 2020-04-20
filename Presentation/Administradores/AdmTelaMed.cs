@@ -1,6 +1,5 @@
 ﻿using App.Controllers;
 using Domain.Entities;
-using Domain.ViewModels.Medicos;
 using Infra.IoC;
 using System;
 using System.Data;
@@ -24,7 +23,7 @@ namespace Presentation.Administradores
 
         private void AdmTelaMed_Load_1(object sender, EventArgs e)
         {
-            //MostrarMedico();
+            MostrarMedico();
         }
 
         private void Medicos_Click(object sender, EventArgs e)
@@ -94,7 +93,7 @@ namespace Presentation.Administradores
 
         private void MostrarMedico()
         {
-            //dataGridView1.DataSource = _medicosController.ObterTodos();
+            dataGridView1.DataSource = _medicosController.ObterTodos();
         }
 
         private void Cadastrar_Click_1(object sender, EventArgs e)
@@ -103,6 +102,7 @@ namespace Presentation.Administradores
             {
                 Usuario user = new Usuario(textEndereco.Text, BoxSenha.Text);
                 _usuariosController.Cadastrar(user);
+
                 if (!user.Validation.IsValid)
                 {
                     user.Validation.Erros.Select(erro => erro.Message);
@@ -118,27 +118,27 @@ namespace Presentation.Administradores
 
         private void SalvarButton_Click(object sender, EventArgs e)
         {
-            if ((textNome.Text != string.Empty))
-            {
-                if (textCRM.Text != string.Empty)
-                {
-                    MedicoViewModel medico = new MedicoViewModel();
-                    medico.Nome = textNome.Text;
-                    medico.Crm = textCRM.Text;
-                    medico.IdUsuario = idUser;
-                    string dateInput = textNascimento.Text;
-                    DateTime parsedDate = DateTime.Parse(dateInput);
-                    medico.AnoResidencia = parsedDate;
-                    medico.TitUniversitaria = TituloUni.Text;
-                    _medicosController.Cadastrar(medico);
-                    textNome.Clear();
-                    textCRM.Clear();
-                    textNascimento.Clear();
-                    TituloUni.Text = string.Empty;
-                }
-                else msgError("Digite o CRM");
-            }
-            else msgError("Digite o nome");
+            //if ((textNome.Text != string.Empty))
+            //{
+            //    if (textCRM.Text != string.Empty)
+            //    {
+            //        MedicoViewModel medico = new MedicoViewModel();
+            //        medico.Nome = textNome.Text;
+            //        medico.Crm = textCRM.Text;
+            //        medico.IdUsuario = idUser;
+            //        string dateInput = textNascimento.Text;
+            //        DateTime parsedDate = DateTime.Parse(dateInput);
+            //        medico.AnoResidencia = parsedDate;
+            //        medico.TitUniversitaria = TituloUni.Text;
+            //        _medicosController.Cadastrar(medico);
+            //        textNome.Clear();
+            //        textCRM.Clear();
+            //        textNascimento.Clear();
+            //        TituloUni.Text = string.Empty;
+            //    }
+            //    else msgError("Digite o CRM");
+            //}
+            //else msgError("Digite o nome");
         }
 
         private void Cancelar_Click_1(object sender, EventArgs e)

@@ -24,12 +24,14 @@ namespace App.Controllers
 
         public List<Administrador> ObterTodos()
         {
-            return _unitOfWork.RepositoryAdministrador.Obter().ToList();
+            //return _unitOfWork.RepositoryAdministrador.Obter().ToList();
+            return null;
         }
 
         public Administrador ObterPorId(int id)
         {
-            return _unitOfWork.RepositoryAdministrador.Obter().Where(a => a.Id == id).FirstOrDefault();
+            //return _unitOfWork.RepositoryAdministrador.Obter().Where(a => a.Id == id).FirstOrDefault();
+            return null;
         }
 
         public bool Excluir(int id)

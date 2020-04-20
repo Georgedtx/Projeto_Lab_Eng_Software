@@ -16,7 +16,7 @@ namespace Domain.Specifications.Usuarios
 
         public bool IsSatisfiedBy(Usuario usuario)
         {
-            return _repository.Obter().Where(u => u.Email.ToUpper().Equals(usuario.Email.ToUpper())).FirstOrDefault() == null;
+            return _repository.ObterTodos().Where(u => u.Email.ToUpper().Equals(usuario.Email.ToUpper())).FirstOrDefault() == null;
         }
     }
 }

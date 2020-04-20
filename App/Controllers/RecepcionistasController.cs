@@ -24,12 +24,14 @@ namespace App.Controllers
 
         public List<Recepcionista> ObterTodos()
         {
-            return _unitOfWork.RepositoryRecepcionista.Obter().ToList();
+            // return _unitOfWork.RepositoryRecepcionista.Obter().ToList();
+            return null;
         }
 
         public Recepcionista ObterPorId(int id)
         {
-            return _unitOfWork.RepositoryRecepcionista.Obter().Where(r => r.Id == id).FirstOrDefault();
+            //return _unitOfWork.RepositoryRecepcionista.Obter().Where(r => r.Id == id).FirstOrDefault();
+            return null;
         }
 
         public bool Excluir(int id)

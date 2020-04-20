@@ -236,7 +236,7 @@ C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Soft
 C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.xml
 C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\Ninject.xml
 C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\App.dll
-C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\App.pdb
+C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\AutoMapper.pdb
 C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\AutoMapper.xml

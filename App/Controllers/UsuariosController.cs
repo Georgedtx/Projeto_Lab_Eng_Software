@@ -38,17 +38,20 @@ namespace App.Controllers
 
         public Usuario Autenticar(string email, string senha)
         {
-            return _unitOfWork.RepositoryUsuario.Obter().Where(u => u.Email.Equals(email) && u.Senha.Equals(senha)).FirstOrDefault();
+            // return _unitOfWork.RepositoryUsuario.Obter().Where(u => u.Email.Equals(email) && u.Senha.Equals(senha)).FirstOrDefault();
+            return null;
         }
 
         public List<Usuario> ObterTodos()
         {
-            return _unitOfWork.RepositoryUsuario.Obter().ToList();
+            //return _unitOfWork.RepositoryUsuario.Obter().ToList();
+            return null;
         }
 
         public Usuario ObterPorId(int id)
         {
-            return _unitOfWork.RepositoryUsuario.Obter().Where(u => u.Id == id).FirstOrDefault();
+            //return _unitOfWork.RepositoryUsuario.Obter().Where(u => u.Id == id).FirstOrDefault();
+            return null;
         }
 
         public bool AlterarSenha(int id, string novaSenha)

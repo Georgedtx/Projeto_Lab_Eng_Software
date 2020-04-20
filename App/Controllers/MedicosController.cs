@@ -1,11 +1,12 @@
-﻿using AutoMapper;
+﻿using App.Mappers;
+using App.ViewModels;
+using App.ViewModels.Medicos;
 using Domain.Entities;
 using Domain.Interfaces.Uow;
 using Domain.Validations.Medicos;
-using Domain.ViewModels.Medicos;
 using Ninject;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace App.Controllers
 {
@@ -19,85 +20,86 @@ namespace App.Controllers
             _unitOfWork = unitOfWork;
         }
 
-        public Medico Cadastrar(MedicoViewModel medicoViewModel)
+        public Medico Cadastrar(Medico medico)
         {
-            var config = new MapperConfiguration(c =>
-            {
-                c.ShouldMapProperty = p => p.GetMethod.IsPublic || p.GetMethod.IsAssembly;
-                c.CreateMap<MedicoViewModel, Medico>();
-            });
-
-            var medico = config.CreateMapper().Map<MedicoViewModel, Medico>(medicoViewModel);
-
             medico.Validation = new MedicosValidarCadastro(_unitOfWork.RepositoryMedico).Validate(medico);
 
             if (medico.Validation.IsValid)
             {
                 _unitOfWork.RepositoryMedico.Adicionar(medico);
                 _unitOfWork.Commit();
-
-                if (!string.IsNullOrEmpty(medicoViewModel.TitUniversitaria))
-                {
-                    AdicionarDocente(new Docente(medicoViewModel.TitUniversitaria, medico.Id));
-                }
-                else if (medicoViewModel.AnoResidencia != null)
-                {
-                    AdicionarResidente(new Residente(medicoViewModel.AnoResidencia, medico.Id));
-                }
             }
 
             return medico;
         }
 
-        private void AdicionarDocente(Docente docente)
+        public void EspecializarMedico(AddEspecializacao especializacao)
         {
-            _unitOfWork.RepositoryDocente.Adicionar(docente);
+            if (especializacao.AnoResidencia != null)
+            {
+                var residente = MapperConfig<Residente, AddEspecializacao>.ConvertToEntity(especializacao);
+                _unitOfWork.RepositoryResidente.Adicionar(residente);
+            }
+            else
+            {
+                var docente = MapperConfig<Docente, AddEspecializacao>.ConvertToEntity(especializacao);
+                _unitOfWork.RepositoryDocente.Adicionar(docente);
+            }
+
             _unitOfWork.Commit();
         }
 
-        private void AdicionarResidente(Residente residente)
+        public List<Medico> ObterTodos()
         {
-            _unitOfWork.RepositoryResidente.Adicionar(residente);
-            _unitOfWork.Commit();
+            return _unitOfWork.RepositoryMedico.ObterTodos();
         }
 
-        public IEnumerable<Medico> ObterTodos()
+        public MedicoDetalhes ObterPorId(int id)
         {
-            return _unitOfWork.RepositoryMedico.Obter().ToList();
+            var medico = _unitOfWork.RepositoryMedico.ObterPorId(id);
+
+            if (medico != null)
+            {
+                return new MedicoDetalhes
+                {
+                    Id = medico.Id,
+                    Nome = medico.Nome,
+                    Crm = medico.Crm,
+                    Email = medico.Usuario.Email,
+
+                    IdDocente = medico.Docente != null ? medico.Docente.Id : 0,
+                    TitUniversitaria = medico.Docente != null ? medico.Docente.TitUniversitaria : null,
+
+                    IdResidente = medico.Residente != null ? medico.Residente.Id : 0,
+                    AnoResidencia = medico.Residente != null ? medico.Residente.AnoResidencia : new DateTime()
+                };
+            }
+
+            return null;
         }
 
-        public MedicoViewModel ObterPorId(int id)
+        public MedicoDetalhes ObterPorCrm(string crm)
         {
-            var medico = (from m in _unitOfWork.RepositoryMedico.Obter()
-                          where m.Id == id
-                          join d in _unitOfWork.RepositoryDocente.Obter() on m.Id equals d.IdMedico
-                          join r in _unitOfWork.RepositoryResidente.Obter() on m.Id equals r.IdMedico
-                          select new MedicoViewModel
-                          {
-                              Nome = m.Nome,
-                              Crm = m.Crm,
-                              TitUniversitaria = d.TitUniversitaria,
-                              AnoResidencia = r.AnoResidencia
-                          }).FirstOrDefault();
+            var medico = _unitOfWork.RepositoryMedico.ObterPorCrm(crm);
 
-            return medico;
-        }
+            if (medico != null)
+            {
+                return new MedicoDetalhes
+                {
+                    Id = medico.Id,
+                    Nome = medico.Nome,
+                    Crm = medico.Crm,
+                    Email = medico.Usuario.Email,
 
-        public MedicoViewModel ObterPorCrm(string crm)
-        {
-            var medico = (from m in _unitOfWork.RepositoryMedico.Obter()
-                          where m.Crm.Equals(crm)
-                          join d in _unitOfWork.RepositoryDocente.Obter() on m.Id equals d.IdMedico
-                          join r in _unitOfWork.RepositoryResidente.Obter() on m.Id equals r.IdMedico
-                          select new MedicoViewModel
-                          {
-                              Nome = m.Nome,
-                              Crm = m.Crm,
-                              TitUniversitaria = d.TitUniversitaria,
-                              AnoResidencia = r.AnoResidencia
-                          }).FirstOrDefault();
+                    IdDocente = medico.Docente != null ? medico.Docente.Id : 0,
+                    TitUniversitaria = medico.Docente != null ? medico.Docente.TitUniversitaria : null,
 
-            return medico;
+                    IdResidente = medico.Residente != null ? medico.Residente.Id : 0,
+                    AnoResidencia = medico.Residente != null ? medico.Residente.AnoResidencia : new DateTime()
+                };
+            }
+
+            return null;
         }
     }
 }

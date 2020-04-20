@@ -55,7 +55,10 @@
     <Compile Include="Controllers\MedicosController.cs" />
     <Compile Include="Controllers\RecepcionistasController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
+    <Compile Include="Mappers\MapperConfig.cs" />
+    <Compile Include="ViewModels\Medicos\MedicoDetalhes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\Medicos\AddEspecializacao.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

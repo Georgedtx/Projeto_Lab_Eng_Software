@@ -1,11 +1,11 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
 
 namespace Domain.Interfaces.Repositories
 {
     public interface IRepository<Entity>
     {
         void Adicionar(Entity entity);
-        IQueryable<Entity> Obter();
+        List<Entity> ObterTodos();
         void Atualizar(Entity entity);
         void Remover(Entity entity);
     }

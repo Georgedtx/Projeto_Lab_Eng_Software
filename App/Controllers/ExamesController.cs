@@ -24,12 +24,14 @@ namespace App.Controllers
 
         public IEnumerable<Exame> ObterTodos()
         {
-            return _unitOfWork.RepositoryExame.Obter().ToList();
+            // return _unitOfWork.RepositoryExame.Obter().ToList();
+            return null;
         }
 
         public Exame ObterPorId(int id)
         {
-            return _unitOfWork.RepositoryExame.Obter().Where(e => e.Id == id).FirstOrDefault();
+            // return _unitOfWork.RepositoryExame.Obter().Where(e => e.Id == id).FirstOrDefault();
+            return null;
         }
 
         public bool AlterarDescricao(int id, string novaDescricao)

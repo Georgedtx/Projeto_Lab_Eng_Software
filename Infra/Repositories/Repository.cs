@@ -1,5 +1,6 @@
 ﻿using Domain.Interfaces.Repositories;
 using Infra.Context;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 
@@ -26,9 +27,9 @@ namespace Infra.Repositories
             temp.State = EntityState.Modified;
         }
 
-        public IQueryable<Entity> Obter()
+        public List<Entity> ObterTodos()
         {
-            return _context.Set<Entity>().AsQueryable<Entity>();
+            return _context.Set<Entity>().ToList();
         }
 
         public void Remover(Entity entity)
