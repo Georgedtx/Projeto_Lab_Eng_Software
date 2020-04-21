@@ -37,20 +37,27 @@ namespace App.Controllers
 
         public Usuario Autenticar(string email, string senha)
         {
-            // return _unitOfWork.RepositoryUsuario.Obter().Where(u => u.Email.Equals(email) && u.Senha.Equals(senha)).FirstOrDefault();
-            return null;
+            var usuario = _unitOfWork.RepositoryUsuario.ObterPorEmail(email);
+
+            if (usuario != null) {
+
+                if (usuario.Senha.Equals(senha)) {
+                    return usuario;
+                } else {
+                    throw new System.Exception("Senha Incorreta");
+                }
+            }
+            throw new System.Exception("Email não encontrado");
         }
 
         public List<Usuario> ObterTodos()
         {
-            //return _unitOfWork.RepositoryUsuario.Obter().ToList();
-            return null;
+            return _unitOfWork.RepositoryUsuario.ObterTodos();
         }
 
         public Usuario ObterPorId(int id)
         {
-            //return _unitOfWork.RepositoryUsuario.Obter().Where(u => u.Id == id).FirstOrDefault();
-            return null;
+            return _unitOfWork.RepositoryUsuario.ObterPorId(id);
         }
 
         public bool AlterarSenha(int id, string novaSenha)
