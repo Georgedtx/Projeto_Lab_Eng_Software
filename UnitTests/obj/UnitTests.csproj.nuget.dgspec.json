@@ -119,6 +119,18 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Bogus": {
+              "target": "Package",
+              "version": "[29.0.2, )"
+            },
+            "DomainValidation": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[5.10.3, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.5.0, )"
@@ -126,6 +138,10 @@
             "Moq": {
               "target": "Package",
               "version": "[4.13.1, )"
+            },
+            "Moq.AutoMock": {
+              "target": "Package",
+              "version": "[2.0.0, )"
             },
             "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

@@ -19,7 +19,6 @@ namespace App.Controllers
 
         public Usuario Cadastrar(Usuario usuario)
         {
-            
             if (!usuario.IsValid())
             {
                 return usuario;

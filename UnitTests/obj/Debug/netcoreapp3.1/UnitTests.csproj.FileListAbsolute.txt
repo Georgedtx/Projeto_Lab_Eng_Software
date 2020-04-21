@@ -240,3 +240,9 @@ C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Soft
 C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\AutoMapper.pdb
 C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\AutoMapper.xml
+C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\Moq.AutoMock.dll
+C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\FluentAssertions.dll
+C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\Bogus.dll
