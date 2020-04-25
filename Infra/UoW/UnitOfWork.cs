@@ -16,7 +16,7 @@ namespace Infra.UoW
             _context = new ProjectContext();
         }
 
-        private Repository<Administrador> repositoryAdministrador;
+        private RepositoryAdministrador repositoryAdministrador;
         private Repository<Arquivo> repositoryArquivo;
         private Repository<Docente> repositoryDocente;
         private Repository<Exame> repositoryExame;
@@ -28,13 +28,13 @@ namespace Infra.UoW
         private Repository<Residente> repositoryResidente;
         private RepositoryUsuario repositoryUsuario;
 
-        public IRepository<Administrador> RepositoryAdministrador
+        public IRepositoryAdministrador RepositoryAdministrador
         {
             get
             {
                 if (repositoryAdministrador == null)
                 {
-                    repositoryAdministrador = new Repository<Administrador>(_context);
+                    repositoryAdministrador = new RepositoryAdministrador(_context);
                 }
                 return repositoryAdministrador;
             }
