@@ -28,12 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Detalhes = new System.Windows.Forms.TabPage();
             this.textDetalhes = new System.Windows.Forms.TextBox();
             this.Medicos = new System.Windows.Forms.TabPage();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.NomeMD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmailMD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CRMmd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TitUniMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnoResidenciaMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AbasMedicos = new System.Windows.Forms.TabControl();
             this.NovoMedico = new System.Windows.Forms.TabPage();
             this.panelDesktop = new System.Windows.Forms.Panel();
@@ -54,11 +59,8 @@
             this.textCRM = new System.Windows.Forms.MaskedTextBox();
             this.TituloUni = new System.Windows.Forms.ComboBox();
             this.textNascimento = new System.Windows.Forms.MaskedTextBox();
-            this.AnoResidenciaMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TitUniMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CRMmd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmailMD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeMD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Nome1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Detalhes.SuspendLayout();
             this.Medicos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -66,11 +68,13 @@
             this.AbasMedicos.SuspendLayout();
             this.NovoMedico.SuspendLayout();
             this.panelDesktop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // Detalhes
             // 
-            this.Detalhes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(74)))));
+            this.Detalhes.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.Detalhes.Controls.Add(this.dataGridView2);
             this.Detalhes.Controls.Add(this.textDetalhes);
             this.Detalhes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Detalhes.Location = new System.Drawing.Point(4, 25);
@@ -80,10 +84,11 @@
             this.Detalhes.Size = new System.Drawing.Size(779, 387);
             this.Detalhes.TabIndex = 2;
             this.Detalhes.Text = "Detalhes";
+            this.Detalhes.Click += new System.EventHandler(this.Detalhes_Click);
             // 
             // textDetalhes
             // 
-            this.textDetalhes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.textDetalhes.BackColor = System.Drawing.Color.LightSeaGreen;
             this.textDetalhes.Dock = System.Windows.Forms.DockStyle.Top;
             this.textDetalhes.Location = new System.Drawing.Point(2, 2);
             this.textDetalhes.Margin = new System.Windows.Forms.Padding(2);
@@ -95,7 +100,7 @@
             // 
             // Medicos
             // 
-            this.Medicos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(74)))));
+            this.Medicos.BackColor = System.Drawing.Color.LightSeaGreen;
             this.Medicos.Controls.Add(this.iconPictureBox1);
             this.Medicos.Controls.Add(this.dataGridView1);
             this.Medicos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -110,7 +115,7 @@
             // 
             // iconPictureBox1
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.iconPictureBox1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.iconPictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.iconPictureBox1.ForeColor = System.Drawing.Color.Gainsboro;
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Heartbeat;
@@ -129,15 +134,15 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightSeaGreen;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NomeMD,
@@ -155,6 +160,41 @@
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // NomeMD
+            // 
+            this.NomeMD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NomeMD.HeaderText = "Nome";
+            this.NomeMD.MinimumWidth = 6;
+            this.NomeMD.Name = "NomeMD";
+            // 
+            // EmailMD
+            // 
+            this.EmailMD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.EmailMD.HeaderText = "Email";
+            this.EmailMD.MinimumWidth = 6;
+            this.EmailMD.Name = "EmailMD";
+            // 
+            // CRMmd
+            // 
+            this.CRMmd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CRMmd.HeaderText = "CRM";
+            this.CRMmd.MinimumWidth = 6;
+            this.CRMmd.Name = "CRMmd";
+            // 
+            // TitUniMed
+            // 
+            this.TitUniMed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TitUniMed.HeaderText = "Tit. Universitária";
+            this.TitUniMed.MinimumWidth = 6;
+            this.TitUniMed.Name = "TitUniMed";
+            // 
+            // AnoResidenciaMed
+            // 
+            this.AnoResidenciaMed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.AnoResidenciaMed.HeaderText = "Ano Residência";
+            this.AnoResidenciaMed.MinimumWidth = 6;
+            this.AnoResidenciaMed.Name = "AnoResidenciaMed";
+            // 
             // AbasMedicos
             // 
             this.AbasMedicos.Controls.Add(this.Medicos);
@@ -171,7 +211,7 @@
             // 
             // NovoMedico
             // 
-            this.NovoMedico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.NovoMedico.BackColor = System.Drawing.Color.LightSeaGreen;
             this.NovoMedico.Controls.Add(this.panelDesktop);
             this.NovoMedico.Controls.Add(this.SalvarButton);
             this.NovoMedico.Controls.Add(this.DocenteButton);
@@ -197,7 +237,7 @@
             // 
             // panelDesktop
             // 
-            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panelDesktop.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panelDesktop.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelDesktop.Controls.Add(this.Email);
             this.panelDesktop.Controls.Add(this.textEndereco);
@@ -213,15 +253,16 @@
             // Email
             // 
             this.Email.AutoSize = true;
-            this.Email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(69)))));
+            this.Email.BackColor = System.Drawing.Color.LightSeaGreen;
             this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Email.ForeColor = System.Drawing.Color.Black;
             this.Email.Location = new System.Drawing.Point(50, 22);
             this.Email.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(44, 15);
             this.Email.TabIndex = 15;
             this.Email.Text = "Email";
+            this.Email.Click += new System.EventHandler(this.Email_Click);
             // 
             // textEndereco
             // 
@@ -260,10 +301,10 @@
             // 
             this.Senha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Senha.AutoSize = true;
-            this.Senha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(69)))));
+            this.Senha.BackColor = System.Drawing.Color.LightSeaGreen;
             this.Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Senha.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Senha.Location = new System.Drawing.Point(42, 68);
+            this.Senha.ForeColor = System.Drawing.Color.Black;
+            this.Senha.Location = new System.Drawing.Point(50, 73);
             this.Senha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Senha.Name = "Senha";
             this.Senha.Size = new System.Drawing.Size(48, 15);
@@ -287,7 +328,7 @@
             // 
             this.DocenteButton.AutoSize = true;
             this.DocenteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DocenteButton.ForeColor = System.Drawing.Color.Gainsboro;
+            this.DocenteButton.ForeColor = System.Drawing.Color.Black;
             this.DocenteButton.Location = new System.Drawing.Point(617, 160);
             this.DocenteButton.Margin = new System.Windows.Forms.Padding(2);
             this.DocenteButton.Name = "DocenteButton";
@@ -301,7 +342,7 @@
             // 
             this.ResidenteButton.AutoSize = true;
             this.ResidenteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResidenteButton.ForeColor = System.Drawing.Color.Gainsboro;
+            this.ResidenteButton.ForeColor = System.Drawing.Color.Black;
             this.ResidenteButton.Location = new System.Drawing.Point(615, 263);
             this.ResidenteButton.Margin = new System.Windows.Forms.Padding(2);
             this.ResidenteButton.Name = "ResidenteButton";
@@ -317,13 +358,14 @@
             this.CRM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CRM.AutoSize = true;
             this.CRM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CRM.ForeColor = System.Drawing.Color.Gainsboro;
-            this.CRM.Location = new System.Drawing.Point(29, 243);
+            this.CRM.ForeColor = System.Drawing.Color.Black;
+            this.CRM.Location = new System.Drawing.Point(52, 241);
             this.CRM.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CRM.Name = "CRM";
             this.CRM.Size = new System.Drawing.Size(38, 15);
             this.CRM.TabIndex = 18;
             this.CRM.Text = "CRM";
+            this.CRM.Click += new System.EventHandler(this.CRM_Click);
             // 
             // TitUni
             // 
@@ -342,7 +384,7 @@
             // 
             this.AnoResidencia.AutoSize = true;
             this.AnoResidencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AnoResidencia.ForeColor = System.Drawing.Color.Gainsboro;
+            this.AnoResidencia.ForeColor = System.Drawing.Color.Black;
             this.AnoResidencia.Location = new System.Drawing.Point(478, 314);
             this.AnoResidencia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AnoResidencia.Name = "AnoResidencia";
@@ -355,8 +397,8 @@
             // 
             this.Nome.AutoSize = true;
             this.Nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nome.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Nome.Location = new System.Drawing.Point(26, 176);
+            this.Nome.ForeColor = System.Drawing.Color.Black;
+            this.Nome.Location = new System.Drawing.Point(52, 176);
             this.Nome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Nome.Name = "Nome";
             this.Nome.Size = new System.Drawing.Size(45, 15);
@@ -378,7 +420,7 @@
             // 
             // textNome
             // 
-            this.textNome.Location = new System.Drawing.Point(105, 173);
+            this.textNome.Location = new System.Drawing.Point(132, 170);
             this.textNome.Margin = new System.Windows.Forms.Padding(2);
             this.textNome.Name = "textNome";
             this.textNome.Size = new System.Drawing.Size(354, 26);
@@ -387,7 +429,7 @@
             // textCRM
             // 
             this.textCRM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textCRM.Location = new System.Drawing.Point(105, 241);
+            this.textCRM.Location = new System.Drawing.Point(132, 241);
             this.textCRM.Margin = new System.Windows.Forms.Padding(2);
             this.textCRM.Name = "textCRM";
             this.textCRM.Size = new System.Drawing.Size(133, 26);
@@ -420,45 +462,30 @@
             this.textNascimento.ValidatingType = typeof(System.DateTime);
             this.textNascimento.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.textNascimento_MaskInputRejected);
             // 
-            // AnoResidenciaMed
+            // dataGridView2
             // 
-            this.AnoResidenciaMed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.AnoResidenciaMed.HeaderText = "Ano Residência";
-            this.AnoResidenciaMed.MinimumWidth = 6;
-            this.AnoResidenciaMed.Name = "AnoResidenciaMed";
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToOrderColumns = true;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.LightSeaGreen;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nome1});
+            this.dataGridView2.Location = new System.Drawing.Point(-5, 0);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(788, 387);
+            this.dataGridView2.TabIndex = 1;
             // 
-            // TitUniMed
+            // Nome1
             // 
-            this.TitUniMed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TitUniMed.HeaderText = "Tit. Universitária";
-            this.TitUniMed.MinimumWidth = 6;
-            this.TitUniMed.Name = "TitUniMed";
-            // 
-            // CRMmd
-            // 
-            this.CRMmd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CRMmd.HeaderText = "CRM";
-            this.CRMmd.MinimumWidth = 6;
-            this.CRMmd.Name = "CRMmd";
-            // 
-            // EmailMD
-            // 
-            this.EmailMD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.EmailMD.HeaderText = "Email";
-            this.EmailMD.MinimumWidth = 6;
-            this.EmailMD.Name = "EmailMD";
-            // 
-            // NomeMD
-            // 
-            this.NomeMD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NomeMD.HeaderText = "Nome";
-            this.NomeMD.MinimumWidth = 6;
-            this.NomeMD.Name = "NomeMD";
+            this.Nome1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nome1.HeaderText = "Nome";
+            this.Nome1.Name = "Nome1";
             // 
             // AdmTelaMed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(787, 416);
             this.Controls.Add(this.AbasMedicos);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -475,6 +502,7 @@
             this.NovoMedico.PerformLayout();
             this.panelDesktop.ResumeLayout(false);
             this.panelDesktop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -511,5 +539,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CRMmd;
         private System.Windows.Forms.DataGridViewTextBoxColumn TitUniMed;
         private System.Windows.Forms.DataGridViewTextBoxColumn AnoResidenciaMed;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome1;
     }
 }

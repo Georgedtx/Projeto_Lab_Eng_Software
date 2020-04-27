@@ -51,5 +51,10 @@ namespace Presentation.Administradores
         {
 
         }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -156,6 +156,21 @@ namespace Presentation.Administradores
         private void textEndereco_TextChanged_1(object sender, EventArgs e)
         {
 
-        }       
+        }
+
+        private void Email_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CRM_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Detalhes_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

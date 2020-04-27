@@ -53,7 +53,7 @@
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panelMenu.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panelMenu.Controls.Add(this.Exames);
             this.panelMenu.Controls.Add(this.Sair);
             this.panelMenu.Controls.Add(this.Recepcionista);
@@ -69,6 +69,7 @@
             // 
             // Exames
             // 
+            this.Exames.BackColor = System.Drawing.Color.LightSeaGreen;
             this.Exames.Dock = System.Windows.Forms.DockStyle.Top;
             this.Exames.FlatAppearance.BorderSize = 0;
             this.Exames.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -88,12 +89,13 @@
             this.Exames.Text = "Exames";
             this.Exames.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Exames.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Exames.UseVisualStyleBackColor = true;
+            this.Exames.UseVisualStyleBackColor = false;
             this.Exames.Click += new System.EventHandler(this.Exames_Click);
             // 
             // Sair
             // 
             this.Sair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Sair.BackColor = System.Drawing.Color.LightSeaGreen;
             this.Sair.FlatAppearance.BorderSize = 0;
             this.Sair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Sair.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
@@ -113,11 +115,12 @@
             this.Sair.Text = "Sair";
             this.Sair.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Sair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Sair.UseVisualStyleBackColor = true;
+            this.Sair.UseVisualStyleBackColor = false;
             this.Sair.Click += new System.EventHandler(this.Sair_Click);
             // 
             // Recepcionista
             // 
+            this.Recepcionista.BackColor = System.Drawing.Color.LightSeaGreen;
             this.Recepcionista.Dock = System.Windows.Forms.DockStyle.Top;
             this.Recepcionista.FlatAppearance.BorderSize = 0;
             this.Recepcionista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -137,11 +140,12 @@
             this.Recepcionista.Text = "Recepcionistas";
             this.Recepcionista.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Recepcionista.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Recepcionista.UseVisualStyleBackColor = true;
+            this.Recepcionista.UseVisualStyleBackColor = false;
             this.Recepcionista.Click += new System.EventHandler(this.Recepcionista_Click_1);
             // 
             // Medico
             // 
+            this.Medico.BackColor = System.Drawing.Color.LightSeaGreen;
             this.Medico.Dock = System.Windows.Forms.DockStyle.Top;
             this.Medico.FlatAppearance.BorderSize = 0;
             this.Medico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -161,11 +165,12 @@
             this.Medico.Text = "Médicos";
             this.Medico.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Medico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Medico.UseVisualStyleBackColor = true;
+            this.Medico.UseVisualStyleBackColor = false;
             this.Medico.Click += new System.EventHandler(this.Medico_Click_1);
             // 
             // Administrador
             // 
+            this.Administrador.BackColor = System.Drawing.Color.LightSeaGreen;
             this.Administrador.Dock = System.Windows.Forms.DockStyle.Top;
             this.Administrador.FlatAppearance.BorderSize = 0;
             this.Administrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -185,7 +190,7 @@
             this.Administrador.Text = "Administradores";
             this.Administrador.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Administrador.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Administrador.UseVisualStyleBackColor = true;
+            this.Administrador.UseVisualStyleBackColor = false;
             this.Administrador.Click += new System.EventHandler(this.Administrador_Click_1);
             // 
             // logoPainel
@@ -202,7 +207,7 @@
             // iconPictureBox2
             // 
             this.iconPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.iconPictureBox2.BackColor = System.Drawing.Color.LightSeaGreen;
             this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Heartbeat;
             this.iconPictureBox2.IconColor = System.Drawing.Color.White;
             this.iconPictureBox2.IconSize = 81;
@@ -216,7 +221,7 @@
             // 
             // painelTitulo
             // 
-            this.painelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.painelTitulo.BackColor = System.Drawing.Color.LightSeaGreen;
             this.painelTitulo.Controls.Add(this.minimizar);
             this.painelTitulo.Controls.Add(this.maximizar);
             this.painelTitulo.Controls.Add(this.fechar);
@@ -233,7 +238,7 @@
             // minimizar
             // 
             this.minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.minimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.minimizar.BackColor = System.Drawing.Color.LightSeaGreen;
             this.minimizar.FlatAppearance.BorderSize = 0;
             this.minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
@@ -253,11 +258,11 @@
             // maximizar
             // 
             this.maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maximizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.maximizar.BackColor = System.Drawing.Color.LightSeaGreen;
             this.maximizar.FlatAppearance.BorderSize = 0;
             this.maximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.maximizar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.maximizar.ForeColor = System.Drawing.SystemColors.Control;
+            this.maximizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.maximizar.IconChar = FontAwesome.Sharp.IconChar.WindowRestore;
             this.maximizar.IconColor = System.Drawing.Color.Gainsboro;
             this.maximizar.IconSize = 16;
@@ -273,7 +278,7 @@
             // fechar
             // 
             this.fechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.fechar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.fechar.BackColor = System.Drawing.Color.LightSeaGreen;
             this.fechar.FlatAppearance.BorderSize = 0;
             this.fechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fechar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
@@ -303,10 +308,10 @@
             // 
             // iconCurrentChildForm
             // 
-            this.iconCurrentChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.iconCurrentChildForm.ForeColor = System.Drawing.Color.BlueViolet;
+            this.iconCurrentChildForm.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.iconCurrentChildForm.ForeColor = System.Drawing.Color.Gainsboro;
             this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconCurrentChildForm.IconColor = System.Drawing.Color.BlueViolet;
+            this.iconCurrentChildForm.IconColor = System.Drawing.Color.Gainsboro;
             this.iconCurrentChildForm.IconSize = 29;
             this.iconCurrentChildForm.Location = new System.Drawing.Point(12, 17);
             this.iconCurrentChildForm.Margin = new System.Windows.Forms.Padding(2);
@@ -317,7 +322,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
+            this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(165, 65);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -327,7 +332,7 @@
             // 
             // panelDesktop
             // 
-            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(74)))));
+            this.panelDesktop.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(165, 71);
             this.panelDesktop.Margin = new System.Windows.Forms.Padding(2);
@@ -340,6 +345,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(968, 526);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panel1);

@@ -83,7 +83,7 @@
             // 
             // iconPictureBox1
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.iconPictureBox1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.iconPictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.iconPictureBox1.ForeColor = System.Drawing.Color.Gainsboro;
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Heartbeat;
@@ -101,7 +101,7 @@
             // ListarMedicos
             // 
             this.ListarMedicos.AllowUserToAddRows = false;
-            this.ListarMedicos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ListarMedicos.BackgroundColor = System.Drawing.Color.LightSeaGreen;
             this.ListarMedicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ListarMedicos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NomeMD});
@@ -113,6 +113,7 @@
             this.ListarMedicos.RowTemplate.Height = 24;
             this.ListarMedicos.Size = new System.Drawing.Size(598, 382);
             this.ListarMedicos.TabIndex = 3;
+            this.ListarMedicos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListarMedicos_CellContentClick);
             // 
             // NomeMD
             // 
@@ -134,7 +135,7 @@
             // 
             // panelDesktop
             // 
-            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panelDesktop.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panelDesktop.Controls.Add(this.button2);
             this.panelDesktop.Controls.Add(this.textNomeExame);
             this.panelDesktop.Controls.Add(this.button1);
@@ -183,7 +184,7 @@
             // 
             // iconPictureBox2
             // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.iconPictureBox2.BackColor = System.Drawing.Color.LightSeaGreen;
             this.iconPictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.iconPictureBox2.ForeColor = System.Drawing.Color.Gainsboro;
             this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Heartbeat;
@@ -212,10 +213,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(69)))));
+            this.label2.BackColor = System.Drawing.Color.LightSeaGreen;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(52, 183);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(42, 183);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 16);
@@ -225,9 +226,9 @@
             // Email
             // 
             this.Email.AutoSize = true;
-            this.Email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(69)))));
+            this.Email.BackColor = System.Drawing.Color.LightSeaGreen;
             this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Email.ForeColor = System.Drawing.Color.Black;
             this.Email.Location = new System.Drawing.Point(42, 104);
             this.Email.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Email.Name = "Email";
@@ -250,7 +251,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightSeaGreen;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,

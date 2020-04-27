@@ -84,5 +84,10 @@ namespace Presentation.Administradores
         {
 
         }
+
+        private void ListarMedicos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
