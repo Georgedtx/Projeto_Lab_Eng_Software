@@ -1,4 +1,5 @@
 ﻿using App.Controllers;
+using App.ViewModels.Medicos;
 using Domain.Entities;
 using Infra.IoC;
 using System;
@@ -13,6 +14,7 @@ namespace Presentation.Administradores
         private readonly MedicosController _medicosController;
         private readonly UsuariosController _usuariosController;
         int idUser;
+        int idMedico;
 
         public AdmTelaMed()
         {
@@ -38,7 +40,7 @@ namespace Presentation.Administradores
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            dataGridView1.DataSource = _medicosController.ObterTodos();
+            //dataGridView1.DataSource = _medicosController.ObterPorCrm(Crm.Text);
         }
 
         private void NovoMedico_Click(object sender, EventArgs e)
@@ -117,28 +119,54 @@ namespace Presentation.Administradores
         }
 
         private void SalvarButton_Click(object sender, EventArgs e)
-        {
-            //if ((textNome.Text != string.Empty))
-            //{
-            //    if (textCRM.Text != string.Empty)
-            //    {
-            //        MedicoViewModel medico = new MedicoViewModel();
-            //        medico.Nome = textNome.Text;
-            //        medico.Crm = textCRM.Text;
-            //        medico.IdUsuario = idUser;
-            //        string dateInput = textNascimento.Text;
-            //        DateTime parsedDate = DateTime.Parse(dateInput);
-            //        medico.AnoResidencia = parsedDate;
-            //        medico.TitUniversitaria = TituloUni.Text;
-            //        _medicosController.Cadastrar(medico);
-            //        textNome.Clear();
-            //        textCRM.Clear();
-            //        textNascimento.Clear();
-            //        TituloUni.Text = string.Empty;
-            //    }
-            //    else msgError("Digite o CRM");
-            //}
-            //else msgError("Digite o nome");
+        {           
+            if ((textNome.Text != String.Empty) && (textCRM.Text != String.Empty))
+            {
+                Medico medico = new Medico(textNome.Text, textCRM.Text, idMedico);
+                _medicosController.Cadastrar(medico);
+                if ((textNascimento.Text != String.Empty)|(TituloUni.Text != String.Empty))
+                {
+                    AddEspecializacao especializacao = new AddEspecializacao();
+                    string dateInput = textNascimento.Text;
+                    DateTime parsedDate = DateTime.Parse(dateInput);
+                    especializacao.AnoResidencia = parsedDate;
+                    especializacao.TitUniversitaria = TituloUni.Text;
+                    especializacao.IdMedico = idMedico;
+                    _medicosController.EspecializarMedico(especializacao);
+                }
+
+                if (!medico.Validation.IsValid)
+                {
+                    medico.Validation.Erros.Select(erro => erro.Message);
+                    textNome.Text = string.Empty;
+                    textCRM.Text = string.Empty;
+                }
+                else
+                {
+                    idMedico = medico.Id;
+                }
+            }
+            /*if ((textNome.Text != string.Empty))
+            {
+                if (textCRM.Text != string.Empty)
+                {
+                    MedicoViewModel medico = new MedicoViewModel();
+                    medico.Nome = textNome.Text;
+                    medico.Crm = textCRM.Text;
+                    medico.IdUsuario = idUser;
+                    string dateInput = textNascimento.Text;
+                    DateTime parsedDate = DateTime.Parse(dateInput);
+                    medico.AnoResidencia = parsedDate;
+                    medico.TitUniversitaria = TituloUni.Text;
+                    _medicosController.Cadastrar(medico);
+                    textNome.Clear();
+                    textCRM.Clear();
+                   textNascimento.Clear();
+                   TituloUni.Text = string.Empty;
+                }
+               else msgError("Digite o CRM");
+            }
+            else msgError("Digite o nome");*/
         }
 
         private void Cancelar_Click_1(object sender, EventArgs e)

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+using Presentation.Usuarios;
 
 namespace Presentation.Administradores
 {
@@ -169,7 +170,9 @@ namespace Presentation.Administradores
 
         private void Sair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            var mainMenu = new Login();
+            mainMenu.Show();
+            this.Hide();
         }
 
         private void MenuPrincipal_Load(object sender, EventArgs e)

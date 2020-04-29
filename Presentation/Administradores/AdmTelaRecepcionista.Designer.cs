@@ -157,6 +157,7 @@
             this.button5.TabIndex = 24;
             this.button5.Text = "Cancelar ";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -169,6 +170,7 @@
             this.button4.TabIndex = 23;
             this.button4.Text = "Finalizar";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // textBox1
             // 
@@ -178,6 +180,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(354, 26);
             this.textBox1.TabIndex = 17;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label5
             // 
@@ -228,6 +231,7 @@
             this.BoxSenha.Name = "BoxSenha";
             this.BoxSenha.Size = new System.Drawing.Size(354, 26);
             this.BoxSenha.TabIndex = 22;
+            this.BoxSenha.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.BoxSenha_MaskInputRejected);
             // 
             // Senha
             // 

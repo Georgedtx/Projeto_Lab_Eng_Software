@@ -12,3 +12,6 @@ C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Soft
 C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\App\obj\Debug\App.csproj.CopyComplete
 C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\App\obj\Debug\App.dll
 C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\App\obj\Debug\App.pdb
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\App\obj\Debug\App.csprojAssemblyReference.cache
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\App\obj\Debug\App.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\App\obj\Debug\App.pdb

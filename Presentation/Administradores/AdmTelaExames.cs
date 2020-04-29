@@ -57,6 +57,22 @@ namespace Presentation.Administradores
        
         private void button2_Click(object sender, EventArgs e)
         {
+            /*if ((textNomeExame.Text != String.Empty) && (textDescricao.Text != String.Empty))
+            {
+                Exame exame = new Exame(textNomeExame.Text, textDescricao.Text);
+                _exameController.Cadastrar(exame);
+
+                if (!exame.)
+                {
+                    user.Validation.Erros.Select(erro => erro.Message);
+                    textEndereco.Text = string.Empty;
+                    BoxSenha.Text = string.Empty;
+                }
+                else
+                {
+                    idUser = user.Id;
+                }
+            }*/
             if ((textNomeExame.Text != string.Empty))
             {
                 if (textDescricao.Text != string.Empty)

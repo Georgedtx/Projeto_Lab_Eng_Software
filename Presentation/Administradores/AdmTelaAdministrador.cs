@@ -1,4 +1,6 @@
-﻿using System;
+﻿using App.Controllers;
+using Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,8 @@ namespace Presentation.Administradores
 {
     public partial class AdmTelaAdministrador : Form
     {
+        private readonly UsuariosController _usuariosController;
+        private readonly AdministradoresController _administradoresController;
         private TabPage tabPage3;
         private DataGridView dataGridView2;
         private DataGridViewTextBoxColumn Nome1;
@@ -32,6 +36,7 @@ namespace Presentation.Administradores
         private DataGridView ListarMedicos;
         private DataGridViewTextBoxColumn NomeMD;
         private TabControl tabControl1;
+        private int idUser;
 
         public AdmTelaAdministrador()
         {
@@ -138,6 +143,7 @@ namespace Presentation.Administradores
             this.button2.TabIndex = 25;
             this.button2.Text = "Salvar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -160,6 +166,7 @@ namespace Presentation.Administradores
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(354, 26);
             this.textBox3.TabIndex = 22;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label2
             // 
@@ -209,6 +216,7 @@ namespace Presentation.Administradores
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(354, 26);
             this.textBox1.TabIndex = 23;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textEndereco
             // 
@@ -459,7 +467,9 @@ namespace Presentation.Administradores
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            textEndereco.Clear();
+            textBox3.Clear();
+            textBox1.Clear();
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -469,6 +479,47 @@ namespace Presentation.Administradores
 
         private void Cadastrar_Click(object sender, EventArgs e)
         {
+            if ((textEndereco.Text != String.Empty) && (textBox1.Text != String.Empty))
+            {
+                Usuario user = new Usuario(textEndereco.Text, textBox1.Text);
+                _usuariosController.Cadastrar(user);
+
+                if (!user.Validation.IsValid)
+                {
+                    user.Validation.Erros.Select(erro => erro.Message);
+                    textEndereco.Text = string.Empty;
+                    textBox1.Text = string.Empty;
+                }
+                else
+                {
+                    idUser = user.Id;
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if ((textBox3.Text != string.Empty))
+            {
+                Administrador administrador = new Administrador(textBox3.Text, idUser);
+                _administradoresController.Cadastrar(administrador);               
+            }
+            //else msgError("Digite o nome");
+            /*if (textBox3.Text != String.Empty)
+            {
+                Administrador administrador = new Administrador(textBox3.Text, idUser);
+                _administradoresController.Cadastrar(administrador);
+
+                if (!administrador.Validation.IsValid)
+                {
+                    administrador.Validation.Erros.Select(erro => erro.Message);
+                    textBox3.Text = string.Empty;
+                }
+                else
+                {
+                    idUser = user.Id;
+                }
+            }*/
 
         }
 
@@ -481,5 +532,15 @@ namespace Presentation.Administradores
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }      
     }
 }

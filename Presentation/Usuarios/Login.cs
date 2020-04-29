@@ -49,7 +49,9 @@ namespace Presentation.Usuarios
                         mainMenu.Show();
                         this.Hide();
                     }
+                    //MessageBox.Show("Nome de usuário ou senha digitados incorretos. \n Por favor tente novamente.");
                     msgError("Nome de usuário ou senha digitados incorretos. \n Por favor tente novamente.");
+                    
                     caixaSenhaAdm.Clear();
                     caixaUserAdm.Focus();
                 }
