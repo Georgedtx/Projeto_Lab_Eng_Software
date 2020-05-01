@@ -1,9 +1,9 @@
 ﻿using Domain.Entities;
+using Domain.Entities.Validations;
 using Domain.Interfaces.Uow;
-using Domain.Validations.Usuarios;
 using Ninject;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace App.Controllers
 {
@@ -17,37 +17,15 @@ namespace App.Controllers
             _unitOfWork = unitOfWork;
         }
 
-        public Usuario Cadastrar(Usuario usuario)
-        {
-            if (!usuario.IsValid())
-            {
-                return usuario;
-            }
-
-            usuario.Validation = new UsuarioValidarCadastro(_unitOfWork.RepositoryUsuario).Validate(usuario);
-
-            if (usuario.Validation.IsValid)
-            {
-                _unitOfWork.RepositoryUsuario.Adicionar(usuario);
-                _unitOfWork.Commit();
-            }
-
-            return usuario;
-        }
-
         public Usuario Autenticar(string email, string senha)
         {
             var usuario = _unitOfWork.RepositoryUsuario.ObterPorEmail(email);
 
-            if (usuario != null) {
+            if (usuario == null) throw new Exception("ERRO! Email sem usuário definido");
 
-                if (usuario.Senha.Equals(senha)) {
-                    return usuario;
-                } else {
-                    throw new System.Exception("Senha Incorreta");
-                }
-            }
-            throw new System.Exception("Email não encontrado");
+            if (!usuario.Senha.Equals(senha)) throw new Exception("Senha incorreta!");
+
+            return usuario;
         }
 
         public List<Usuario> ObterTodos()
@@ -55,16 +33,18 @@ namespace App.Controllers
             return _unitOfWork.RepositoryUsuario.ObterTodos();
         }
 
-        public Usuario ObterPorId(int id)
+        public Usuario ObterPorEmail(string email)
         {
-            return _unitOfWork.RepositoryUsuario.ObterPorId(id);
+            return _unitOfWork.RepositoryUsuario.ObterPorEmail(email);
         }
 
-        public bool AlterarSenha(int id, string novaSenha)
+        public bool AlterarSenha(Guid id, string novaSenha)
         {
-            var usuario = ObterPorId(id);
+            var usuario = _unitOfWork.RepositoryUsuario.ObterPorId(id);
 
-            if (usuario != null && SenhaValidation.Validate(novaSenha))
+            if (usuario == null) throw new Exception("Usuário não encontrado");
+
+            if (SenhaValidation.Validate(novaSenha))
             {
                 usuario.AlterarSenha(novaSenha);
                 _unitOfWork.RepositoryUsuario.Atualizar(usuario);

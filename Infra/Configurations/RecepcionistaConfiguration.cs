@@ -20,7 +20,8 @@ namespace Infra.Configurations
                 .IsRequired();
 
             HasRequired(r => r.Usuario)
-                .WithOptional(u => u.Recepcionista);
+                .WithOptional(u => u.Recepcionista)
+                .Map(config => config.MapKey("Usuario_Id"));
         }
     }
 }

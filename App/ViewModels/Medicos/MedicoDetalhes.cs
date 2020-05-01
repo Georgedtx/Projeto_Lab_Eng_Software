@@ -4,15 +4,15 @@ namespace App.ViewModels
 {
     public class MedicoDetalhes
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Nome { get; set; }
         public string Crm { get; set; }
         public string Email { get; set; }
         
-        public int IdDocente { get; set; }
+        public Guid IdDocente { get; set; }
         public string TitUniversitaria { get; set; }
 
-        public int IdResidente { get; set; }
-        public DateTime AnoResidencia { get; set; }
+        public Guid IdResidente { get; set; }
+        public int AnoResidencia { get; set; }
     }
 }

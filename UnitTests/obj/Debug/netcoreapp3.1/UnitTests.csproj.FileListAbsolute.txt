@@ -216,7 +216,6 @@ C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Soft
 C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\Domain.dll
 C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\Infra.dll
 C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\Presentation.exe
-C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\DomainValidation.dll
 C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\Ninject.dll
 C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\FontAwesome.Sharp.dll
 C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\Domain.pdb
@@ -246,3 +245,4 @@ C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Soft
 C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\Bogus.dll
+C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\UnitTests\bin\Debug\netcoreapp3.1\FluentValidation.dll

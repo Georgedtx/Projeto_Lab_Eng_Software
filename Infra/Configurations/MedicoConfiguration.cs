@@ -22,7 +22,8 @@ namespace Infra.Configurations
                 .IsRequired();
 
             HasRequired(m => m.Usuario)
-                .WithOptional(u => u.Medico);
+                .WithOptional(u => u.Medico)
+                .Map(config => config.MapKey("Usuario_Id"));
         }
     }
 }

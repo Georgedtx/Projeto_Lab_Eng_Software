@@ -18,6 +18,10 @@ namespace Infra.Configurations
             Property(re => re.Status)
                 .IsRequired();
 
+            HasRequired(re => re.PedidoExame)
+                .WithRequiredPrincipal(pe => pe.RegistroExame)
+                .Map(config => config.MapKey("PedidoExame_Id"));
+
             HasRequired(re => re.Residente)
                 .WithMany(r => r.RegistrosExames)
                 .HasForeignKey(re => re.IdResidente);

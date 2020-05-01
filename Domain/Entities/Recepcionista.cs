@@ -6,17 +6,19 @@ namespace Domain.Entities
     {
         protected Recepcionista() { }
 
-        public Recepcionista(string nome, DateTime nascimento, int idUsuario)
+        public Recepcionista(string nome, DateTime nascimento, Guid idUsuario)
         {
+            this.Id = Guid.NewGuid();
             this.Nome = nome;
             this.Nascimento = nascimento;
             this.IdUsuario = idUsuario;
         }
 
-        public int Id { get; private set; }
+        public Guid Id { get; private set; }
         public string Nome { get; private set; }
         public DateTime Nascimento { get; private set; }
-        public int IdUsuario { get; private set; }
+        
+        public Guid IdUsuario { get; private set; }
         public virtual Usuario Usuario { get; private set; }
     }
 }

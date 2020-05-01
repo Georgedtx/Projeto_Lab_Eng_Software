@@ -1,122 +1,71 @@
 ﻿using App.Controllers;
-using Domain.Entities;
+using App.ExtensionsMethods;
+using App.ViewModels.Recepcionistas;
+using Infra.IoC;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Presentation.Administradores
 {
     public partial class AdmTelaRecepcionista : Form
     {
-        private readonly UsuariosController _usuariosController;
         private readonly RecepcionistasController _recepcionistasController;
-        private int idUser;
 
         public AdmTelaRecepcionista()
         {
             InitializeComponent();
-        }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+            _recepcionistasController = DependenciesResolve.Resolve<RecepcionistasController>();
 
         }
 
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void btnAdicionar_Click(object sender, System.EventArgs e)
         {
-
-        }
-
-        private void tabPage3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textEndereco_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        //txtendereço.focus();
-        private void Cadastrar_Click(object sender, EventArgs e)
-        {
-            if ((textEndereco.Text != String.Empty) && (textBox1.Text != String.Empty))
+            var recepcionista = new RecepcionistaAdicionar
             {
-                Usuario user = new Usuario(textEndereco.Text, textBox1.Text);
-                _usuariosController.Cadastrar(user);
+                Email = txtEmail.Text,
+                Senha = txtSenha.Text,
+                RepetirSenha = txtMesmaSenha.Text,
+                Nome = txtNome.Text,
+                Nascimento = ObterDataNascimento()
+            };
 
-                if (!user.Validation.IsValid)
-                {
-                    user.Validation.Erros.Select(erro => erro.Message);
-                    textEndereco.Text = string.Empty;
-                    textBox1.Text = string.Empty;
-                }
-                else
-                {
-                    idUser = user.Id;
-                }
+            var result = _recepcionistasController.Cadastrar(recepcionista);
+
+            if (!result.IsValid)
+            {
+                MessageBox.Show(result.Errors.Select(v =>
+                                v.ErrorMessage).Concatenar());
+
+                return;
             }
+
+            MessageBox.Show("Recepcionista cadastrado(a) com sucesso");
+            LimparCampos();
         }
 
-        private void AdmTelaRecepcionista_Load(object sender, EventArgs e)
+        private DateTime ObterDataNascimento()
         {
-
-        }
-
-        private void iconPictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BoxSenha_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            textEndereco.Clear();
-            BoxSenha.Clear();
-            textBox1.Clear();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            if ((textBox1.Text != string.Empty))
+            if (txtNascimento.Text.Length == 10)
             {
-                //Recepcionista recepcionista = new Recepcionista(textBox3.Text, idUser);
-                //_recepcionistasController.Cadastrar(recepcionista);
+                var dia = Convert.ToInt16(txtNascimento.Text.Substring(0, 2));
+                var mes = Convert.ToInt16(txtNascimento.Text.Substring(3, 2));
+                var ano = Convert.ToInt16(txtNascimento.Text.Substring(6, 4));
+
+                return new DateTime(ano, mes, dia);
             }
-            /*if (textBox1.Text != String.Empty)
-            {
-                Recepcionista recepcionista = new Recepcionista(textBox3.Text, idUser);
-                _recepcionistasController.Cadastrar(recepcionista);
 
-                if (!recepcionista.Validation.IsValid)
-                {
-                    recepcionista.Validation.Erros.Select(erro => erro.Message);
-                    textBox1.Text = string.Empty;
-                }
-                else
-                {
-                    idUser = user.Id;
-                }
-            }*/
+            return new DateTime();
+        }
+
+        private void LimparCampos()
+        {
+            txtEmail.Clear();
+            txtSenha.Clear();
+            txtMesmaSenha.Clear();
+            txtNome.Clear();
+            txtNascimento.Clear();
         }
     }
 }

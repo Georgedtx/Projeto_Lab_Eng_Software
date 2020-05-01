@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using FontAwesome.Sharp;
+﻿using FontAwesome.Sharp;
 using Presentation.Usuarios;
+using System;
+using System.Drawing;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace Presentation.Administradores
 {
@@ -32,47 +26,34 @@ namespace Presentation.Administradores
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
-        // estrutura
-        private struct CorRGB
-        {
-            public static Color cor1 = Color.FromArgb(172, 126, 241);
-            public static Color cor2 = Color.FromArgb(249, 118, 176);
-            public static Color cor3 = Color.FromArgb(253, 138, 114);
-            public static Color cor4 = Color.FromArgb(95, 77, 221);
-            public static Color cor5 = Color.FromArgb(249, 88, 155);
-            public static Color cor6 = Color.FromArgb(24, 161, 251);
-        }
-
+        
         // metodos
-        private void ActivateButton(object senderBtn, Color cor)
+        private void ActivateButton(object senderBtn)
         {
             if (senderBtn != null)
             {
                 DisableButton();
                 //Button
-                currentBtn = (IconButton)senderBtn;               
-                currentBtn.BackColor = Color.FromArgb(37,36,81);
-                currentBtn.ForeColor = cor;
+                currentBtn = (IconButton)senderBtn;
+                currentBtn.BackColor = Color.Teal;
+                currentBtn.ForeColor = Color.DarkSlateGray;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
-                currentBtn.IconColor = cor;
+                currentBtn.IconColor = Color.DarkSlateGray;
                 currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
                 currentBtn.ImageAlign = ContentAlignment.MiddleRight;
+
                 // borda esquerda butao
-                leftBorderBtn.BackColor = cor;
+                leftBorderBtn.BackColor = Color.DarkSlateGray;
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
-                // Icone do filho atual
-                iconCurrentChildForm.IconChar = currentBtn.IconChar;
-                iconCurrentChildForm.IconColor = cor;
-
             }
         }
         private void DisableButton()
         {
             if (currentBtn != null)
             {
-                currentBtn.BackColor = Color.FromArgb(31, 30, 68);
+                currentBtn.BackColor = Color.LightSeaGreen;
                 currentBtn.ForeColor = Color.Gainsboro;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
                 currentBtn.IconColor = Color.Gainsboro;
@@ -97,39 +78,30 @@ namespace Presentation.Administradores
             panelDesktop.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            lblTitleChildForm.Text = childForm.Text;
         }
 
         private void Reset()
         {
             DisableButton();
             leftBorderBtn.Visible = false;
-            iconCurrentChildForm.IconChar = IconChar.Home;
-            iconCurrentChildForm.IconColor = Color.BlueViolet;
             lblTitleChildForm.Text = "Home";
-        }
-
-        private void panelDesktop_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void Administrador_Click_1(object sender, EventArgs e)
         {
-            ActivateButton(sender, CorRGB.cor2);
+            ActivateButton(sender);
             OpenChildForm(new AdmTelaAdministrador());
-            
         }
 
         private void Medico_Click_1(object sender, EventArgs e)
         {
-            ActivateButton(sender, CorRGB.cor3);
+            ActivateButton(sender);
             OpenChildForm(new AdmTelaMed());
         }
 
         private void Recepcionista_Click_1(object sender, EventArgs e)
         {
-            ActivateButton(sender, CorRGB.cor1);
+            ActivateButton(sender);
             OpenChildForm(new AdmTelaRecepcionista());
         }
         //logo
@@ -175,15 +147,17 @@ namespace Presentation.Administradores
             this.Hide();
         }
 
-        private void MenuPrincipal_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void Exames_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, CorRGB.cor6);
+            ActivateButton(sender);
             OpenChildForm(new AdmTelaExames());
+        }
+
+        private void btnGerenciar_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            OpenChildForm(new AdmGerenciarUsers());
         }
     }
 }

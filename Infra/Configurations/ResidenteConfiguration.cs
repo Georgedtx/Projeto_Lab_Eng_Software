@@ -12,11 +12,12 @@ namespace Infra.Configurations
             HasKey(r => r.Id);
 
             Property(r => r.AnoResidencia)
-                .HasColumnType("date")
                 .IsRequired();
 
             HasRequired(r => r.Medico)
-                .WithOptional(m => m.Residente);
+                .WithOptional(m => m.Residente)
+                .Map(config => config.MapKey("Medico_Id"));
+
         }
     }
 }

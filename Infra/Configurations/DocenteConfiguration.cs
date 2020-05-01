@@ -16,7 +16,8 @@ namespace Infra.Configurations
                 .IsRequired();
 
             HasRequired(d => d.Medico)
-                .WithOptional(m => m.Docente);
+                .WithOptional(m => m.Docente)
+                .Map(config => config.MapKey("Medico_Id"));
         }
     }
 }

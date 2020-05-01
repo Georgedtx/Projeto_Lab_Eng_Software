@@ -1,9 +1,8 @@
-﻿using App.Mappers;
-using App.ViewModels;
+﻿using App.ViewModels;
 using App.ViewModels.Medicos;
 using Domain.Entities;
 using Domain.Interfaces.Uow;
-using Domain.Validations.Medicos;
+using FluentValidation.Results;
 using Ninject;
 using System;
 using System.Collections.Generic;
@@ -20,33 +19,70 @@ namespace App.Controllers
             _unitOfWork = unitOfWork;
         }
 
-        public Medico Cadastrar(Medico medico)
+        public ValidationResult Cadastrar(MedicoAdicionar medicoAdicionar)
         {
-            medico.Validation = new MedicosValidarCadastro(_unitOfWork.RepositoryMedico).Validate(medico);
+            if (!medicoAdicionar.IsValid()) return medicoAdicionar.Validation;
 
-            if (medico.Validation.IsValid)
+            medicoAdicionar.Validation = new MedicoVerification(_unitOfWork).Validate(medicoAdicionar);
+
+            if (medicoAdicionar.Validation.IsValid)
             {
+                var usuario = new Usuario(medicoAdicionar.Email, medicoAdicionar.Senha);
+                _unitOfWork.RepositoryUsuario.Adicionar(usuario);
+
+                var medico = new Medico(medicoAdicionar.Nome, medicoAdicionar.Crm, usuario.Id);
                 _unitOfWork.RepositoryMedico.Adicionar(medico);
+
                 _unitOfWork.Commit();
             }
 
-            return medico;
+            return medicoAdicionar.Validation;
         }
 
-        public void EspecializarMedico(AddEspecializacao especializacao)
+        public ValidationResult CadastrarDocente(DocenteAdicionar docenteAdicionar)
         {
-            if (especializacao.AnoResidencia != null)
+            if (!docenteAdicionar.IsValid()) return docenteAdicionar.Validation;
+
+            docenteAdicionar.Validation = new DocenteVerification(_unitOfWork).Validate(docenteAdicionar);
+
+            if (docenteAdicionar.Validation.IsValid)
             {
-                var residente = MapperConfig<Residente, AddEspecializacao>.ConvertToEntity(especializacao);
-                _unitOfWork.RepositoryResidente.Adicionar(residente);
-            }
-            else
-            {
-                var docente = MapperConfig<Docente, AddEspecializacao>.ConvertToEntity(especializacao);
+                var usuario = new Usuario(docenteAdicionar.Email, docenteAdicionar.Senha);
+                _unitOfWork.RepositoryUsuario.Adicionar(usuario);
+
+                var medico = new Medico(docenteAdicionar.Nome, docenteAdicionar.Crm, usuario.Id);
+                _unitOfWork.RepositoryMedico.Adicionar(medico);
+
+                var docente = new Docente(docenteAdicionar.TitUniversitaria, medico.Id);
                 _unitOfWork.RepositoryDocente.Adicionar(docente);
+
+                _unitOfWork.Commit();
             }
 
-            _unitOfWork.Commit();
+            return docenteAdicionar.Validation;
+        }
+
+        public ValidationResult CadastrarResidente(ResidenteAdicionar residenteAdicionar)
+        {
+            if (!residenteAdicionar.IsValid()) return residenteAdicionar.Validation;
+
+            residenteAdicionar.Validation = new ResidenteVerification(_unitOfWork).Validate(residenteAdicionar);
+
+            if (residenteAdicionar.Validation.IsValid)
+            {
+                var usuario = new Usuario(residenteAdicionar.Email, residenteAdicionar.Senha);
+                _unitOfWork.RepositoryUsuario.Adicionar(usuario);
+
+                var medico = new Medico(residenteAdicionar.Nome, residenteAdicionar.Crm, usuario.Id);
+                _unitOfWork.RepositoryMedico.Adicionar(medico);
+
+                var residente = new Residente(residenteAdicionar.AnoResidencia, medico.Id);
+                _unitOfWork.RepositoryResidente.Adicionar(residente);
+
+                _unitOfWork.Commit();
+            }
+
+            return residenteAdicionar.Validation;
         }
 
         public List<Medico> ObterTodos()
@@ -54,52 +90,46 @@ namespace App.Controllers
             return _unitOfWork.RepositoryMedico.ObterTodos();
         }
 
-        public MedicoDetalhes ObterPorId(int id)
+        public MedicoDetalhes ObterPorId(Guid id)
         {
             var medico = _unitOfWork.RepositoryMedico.ObterPorId(id);
 
-            if (medico != null)
+            if (medico == null) throw new Exception("Médico não encontrado!");
+
+            return new MedicoDetalhes
             {
-                return new MedicoDetalhes
-                {
-                    Id = medico.Id,
-                    Nome = medico.Nome,
-                    Crm = medico.Crm,
-                    Email = medico.Usuario.Email,
+                Id = medico.Id,
+                Nome = medico.Nome,
+                Crm = medico.Crm,
+                Email = medico.Usuario.Email,
 
-                    IdDocente = medico.Docente != null ? medico.Docente.Id : 0,
-                    TitUniversitaria = medico.Docente != null ? medico.Docente.TitUniversitaria : null,
+                IdDocente = medico.Docente != null ? medico.Docente.Id : Guid.Empty,
+                TitUniversitaria = medico.Docente != null ? medico.Docente.TitUniversitaria : null,
 
-                    IdResidente = medico.Residente != null ? medico.Residente.Id : 0,
-                    AnoResidencia = medico.Residente != null ? medico.Residente.AnoResidencia : new DateTime()
-                };
-            }
-
-            return null;
+                IdResidente = medico.Residente != null ? medico.Residente.Id : Guid.Empty,
+                AnoResidencia = medico.Residente != null ? medico.Residente.AnoResidencia : 0
+            };
         }
 
         public MedicoDetalhes ObterPorCrm(string crm)
         {
             var medico = _unitOfWork.RepositoryMedico.ObterPorCrm(crm);
 
-            if (medico != null)
+            if (medico == null) throw new Exception("Médico não encontrado!");
+
+            return new MedicoDetalhes
             {
-                return new MedicoDetalhes
-                {
-                    Id = medico.Id,
-                    Nome = medico.Nome,
-                    Crm = medico.Crm,
-                    Email = medico.Usuario.Email,
+                Id = medico.Id,
+                Nome = medico.Nome,
+                Crm = medico.Crm,
+                Email = medico.Usuario.Email,
 
-                    IdDocente = medico.Docente != null ? medico.Docente.Id : 0,
-                    TitUniversitaria = medico.Docente != null ? medico.Docente.TitUniversitaria : null,
+                IdDocente = medico.Docente != null ? medico.Docente.Id : Guid.Empty,
+                TitUniversitaria = medico.Docente != null ? medico.Docente.TitUniversitaria : null,
 
-                    IdResidente = medico.Residente != null ? medico.Residente.Id : 0,
-                    AnoResidencia = medico.Residente != null ? medico.Residente.AnoResidencia : new DateTime()
-                };
-            }
-
-            return null;
+                IdResidente = medico.Residente != null ? medico.Residente.Id : Guid.Empty,
+                AnoResidencia = medico.Residente != null ? medico.Residente.AnoResidencia : 0
+            };
         }
     }
 }

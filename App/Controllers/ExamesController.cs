@@ -1,8 +1,9 @@
 ﻿using Domain.Entities;
 using Domain.Interfaces.Uow;
+using Domain.Validations.Verifications;
 using Ninject;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace App.Controllers
 {
@@ -16,10 +17,19 @@ namespace App.Controllers
             _unitOfWork = unitOfWork;
         }
 
-        public void Cadastrar(Exame exame)
+        public Exame Cadastrar(Exame exame)
         {
-            _unitOfWork.RepositoryExame.Adicionar(exame);
-            _unitOfWork.Commit();
+            if (!exame.IsValid()) return exame;
+
+            exame.Validation = new ExameVerification(_unitOfWork.RepositoryExame).Validate(exame);
+
+            if (exame.Validation.IsValid)
+            {
+                _unitOfWork.RepositoryExame.Adicionar(exame);
+                _unitOfWork.Commit();
+            }
+
+            return exame;
         }
 
         public IEnumerable<Exame> ObterTodos()
@@ -27,26 +37,29 @@ namespace App.Controllers
             return _unitOfWork.RepositoryExame.ObterTodos();
         }
 
-        public Exame ObterPorId(int id)
+        public Exame ObterPorId(Guid id)
         {
             return _unitOfWork.RepositoryExame.ObterPorId(id);
         }
 
-        public bool AlterarDescricao(int id, string novaDescricao)
+        public Exame AlterarDescricao(Guid id, string novaDescricao)
         {
             var exame = ObterPorId(id);
 
-            if (exame != null)
+            if (exame != null) throw new Exception("Exame não encontrado");
+
+            exame.Atualizar(novaDescricao);
+
+            if (exame.IsValid())
             {
-                exame.Atualizar(novaDescricao);
                 _unitOfWork.RepositoryExame.Atualizar(exame);
                 _unitOfWork.Commit();
-                return true;
             }
-            return false;
+
+            return exame;
         }
 
-        public bool Excluir(int id)
+        public bool Excluir(Guid id)
         {
             var exame = ObterPorId(id);
 

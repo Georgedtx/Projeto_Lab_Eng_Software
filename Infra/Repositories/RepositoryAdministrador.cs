@@ -1,6 +1,7 @@
 using Domain.Entities;
 using Domain.Interfaces.Repositories;
 using Infra.Context;
+using System;
 using System.Linq;
 
 namespace Infra.Repositories
@@ -14,9 +15,9 @@ namespace Infra.Repositories
             _projectContext = projectContext;
         }
 
-        public Administrador ObterPorId(int id)
+        public Administrador ObterPorId(Guid id)
         {
-            return _projectContext.Administradores.Include("Administrador").Where(a => a.Id == id).FirstOrDefault();
+            return _projectContext.Administradores.Include("Usuario").Where(a => a.Id == id).FirstOrDefault();
         }
     }
 }

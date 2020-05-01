@@ -1,5 +1,5 @@
 ﻿using Domain.Entities;
-using DomainValidation.Validation;
+using FluentValidation.Results;
 using Infra.Configurations;
 using System.Data.Entity;
 using System.Data.Entity.SqlServer;
@@ -8,7 +8,7 @@ namespace Infra.Context
 {
     public class ProjectContext : DbContext
     {
-        public ProjectContext() : base("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\LabEngSoftware\\DbHospital.mdf;Integrated Security=True;Connect Timeout=30")
+        public ProjectContext() : base(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\DbHospital.mdf;Integrated Security=True;Connect Timeout=30")
         {
             var instance = SqlProviderServices.Instance;
         }
@@ -27,7 +27,6 @@ namespace Infra.Context
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Ignore<ValidationResult>();
-            modelBuilder.Ignore<ValidationError>();
 
             modelBuilder.Configurations.Add(new AdministradorConfiguration());
             modelBuilder.Configurations.Add(new ArquivoConfiguration());

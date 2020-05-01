@@ -1,6 +1,7 @@
 using Domain.Entities;
 using Domain.Interfaces.Repositories;
 using Infra.Context;
+using System;
 using System.Linq;
 
 namespace Infra.Repositories 
@@ -14,9 +15,9 @@ namespace Infra.Repositories
             _projectContext = projectContext;
         }
 
-        public Recepcionista ObterPorId(int id)
+        public Recepcionista ObterPorId(Guid id)
         {
-            return _projectContext.Recepcionistas.Include("Recepcionista").Where(r => r.Id == id).FirstOrDefault();
+            return _projectContext.Recepcionistas.Include("Usuario").Where(r => r.Id == id).FirstOrDefault();
         }
     }
 

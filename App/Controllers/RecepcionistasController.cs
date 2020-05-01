@@ -1,8 +1,10 @@
+using App.ViewModels.Recepcionistas;
 using Domain.Entities;
 using Domain.Interfaces.Uow;
+using FluentValidation.Results;
 using Ninject;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace App.Controllers
 {
@@ -16,10 +18,24 @@ namespace App.Controllers
             _unitOfWork = unitOfWork;
         }
 
-        public void Cadastrar(Recepcionista recepcionista)
+        public ValidationResult Cadastrar(RecepcionistaAdicionar recepcionistaAdicionar)
         {
-            _unitOfWork.RepositoryRecepcionista.Adicionar(recepcionista);
-            _unitOfWork.Commit();
+            if (!recepcionistaAdicionar.IsValid()) return recepcionistaAdicionar.Validation;
+
+            recepcionistaAdicionar.Validation = new RecepcionistaVerification(_unitOfWork).Validate(recepcionistaAdicionar);
+
+            if (recepcionistaAdicionar.Validation.IsValid)
+            {
+                var usuario = new Usuario(recepcionistaAdicionar.Email, recepcionistaAdicionar.Senha);
+                _unitOfWork.RepositoryUsuario.Adicionar(usuario);
+
+                var recepcionista = new Recepcionista(recepcionistaAdicionar.Nome, recepcionistaAdicionar.Nascimento, usuario.Id);
+                _unitOfWork.RepositoryRecepcionista.Adicionar(recepcionista);
+
+                _unitOfWork.Commit();
+            }
+
+            return recepcionistaAdicionar.Validation;
         }
 
         public List<Recepcionista> ObterTodos()
@@ -27,20 +43,22 @@ namespace App.Controllers
             return _unitOfWork.RepositoryRecepcionista.ObterTodos();
         }
 
-        public Recepcionista ObterPorId(int id)
+        public Recepcionista ObterPorId(Guid id)
         {
             return _unitOfWork.RepositoryRecepcionista.ObterPorId(id);
         }
 
-        public bool Excluir(int id)
+        public bool Excluir(Guid id)
         {
             var recepcionista = ObterPorId(id);
+
             if (recepcionista != null)
             {
                 _unitOfWork.RepositoryRecepcionista.Remover(recepcionista);
                 _unitOfWork.Commit();
                 return true;
             }
+
             return false;
         }
     }

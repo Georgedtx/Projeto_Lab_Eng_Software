@@ -31,10 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DomainValidation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DomainValidation.1.0.0\lib\net453\DomainValidation.dll</HintPath>
+    <Reference Include="FluentValidation, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.8.6.2\lib\net45\FluentValidation.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.4.1\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -56,21 +60,23 @@
     <Compile Include="Entities\Residente.cs" />
     <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Interfaces\Repositories\IRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IRepositoryAdministrador.cs" />
+    <Compile Include="Interfaces\Repositories\IRepositoryExame.cs" />
     <Compile Include="Interfaces\Repositories\IRepositoryMedico.cs" />
+    <Compile Include="Interfaces\Repositories\IRepositoryRecepcionista.cs" />
+    <Compile Include="Interfaces\Repositories\IRepositoryUsuario.cs" />
     <Compile Include="Interfaces\UoW\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Specifications\Medicos\MedicoDeveTerCrmUnico.cs" />
-    <Compile Include="Specifications\Usuarios\UsuarioDeveTerEmailUnico.cs" />
-    <Compile Include="Specifications\Usuarios\UsuarioDeveTerEmailValido.cs" />
-    <Compile Include="Specifications\Usuarios\UsuarioDeveTerSenhaValida.cs" />
-    <Compile Include="Validations\Medicos\MedicosValidarCadastro.cs" />
-    <Compile Include="Validations\Usuarios\EmailValidation.cs" />
-    <Compile Include="Validations\Usuarios\SenhaValidation.cs" />
-    <Compile Include="Validations\Usuarios\UsuarioValidarCadastro.cs" />
-    <Compile Include="Validations\Usuarios\UsuarioValidarDados.cs" />
+    <Compile Include="Validations\Entities\EmailValidation.cs" />
+    <Compile Include="Validations\Entities\ExameValidation.cs" />
+    <Compile Include="Validations\Entities\PacienteValidation.cs" />
+    <Compile Include="Validations\Entities\PedidoExameValidation.cs" />
+    <Compile Include="Validations\Entities\SenhaValidation.cs" />
+    <Compile Include="Validations\Verifications\ExameVerification.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

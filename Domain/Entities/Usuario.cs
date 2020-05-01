@@ -1,4 +1,4 @@
-﻿using Domain.Validations.Usuarios;
+﻿using System;
 
 namespace Domain.Entities
 {
@@ -8,15 +8,14 @@ namespace Domain.Entities
 
         public Usuario(string Email, string Senha)
         {
+            this.Id = Guid.NewGuid();
             this.Email = Email;
             this.Senha = Senha;
         }
 
-        public int Id { get; private set; }
+        public Guid Id { get; private set; }
         public string Email { get; set; }
         public string Senha { get; set; }
-
-        public DomainValidation.Validation.ValidationResult Validation { get; set; }
 
         public virtual Administrador Administrador { get; private set; }
         public virtual Medico Medico { get; private set; }
@@ -25,12 +24,6 @@ namespace Domain.Entities
         public void AlterarSenha(string novaSenha)
         {
             Senha = novaSenha;
-        }
-
-        public bool IsValid()
-        {
-            Validation = new UsuarioValidarDados().Validate(this);
-            return Validation.IsValid;
         }
     }
 }

@@ -1,9 +1,9 @@
 ﻿using App.Controllers;
+using App.ExtensionsMethods;
 using App.ViewModels.Medicos;
-using Domain.Entities;
+using FluentValidation.Results;
 using Infra.IoC;
 using System;
-using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -12,193 +12,123 @@ namespace Presentation.Administradores
     public partial class AdmTelaMed : Form
     {
         private readonly MedicosController _medicosController;
-        private readonly UsuariosController _usuariosController;
-        int idUser;
-        int idMedico;
 
         public AdmTelaMed()
         {
             InitializeComponent();
             _medicosController = DependenciesResolve.Resolve<MedicosController>();
-            _usuariosController = DependenciesResolve.Resolve<UsuariosController>();
+
+            AtualizarDataGrid();
         }
 
-        private void AdmTelaMed_Load_1(object sender, EventArgs e)
+        private void AtualizarDataGrid()
         {
-            MostrarMedico();
+           // listaMedicos.DataSource = _medicosController.ObterTodos()
+             //                           .Select(m => new { Crm = m.Crm, Nome = m.Nome });
         }
 
-        private void Medicos_Click(object sender, EventArgs e)
+        private void checkResidente_CheckedChanged(object sender, EventArgs e)
         {
-
+            checkDocente.Checked = false;
+            txtTitulo.Enabled = false;
+            txtAnoResidencia.Enabled = true;
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void checkDocente_CheckedChanged(object sender, EventArgs e)
         {
-
+            checkResidente.Checked = false;
+            txtTitulo.Enabled = true;
+            txtAnoResidencia.Enabled = false;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnAdicionar_Click(object sender, EventArgs e)
         {
-            //dataGridView1.DataSource = _medicosController.ObterPorCrm(Crm.Text);
-        }
+            ValidationResult validation;
 
-        private void NovoMedico_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iconPictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Nascimento_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ResidenteButton_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TituloUni_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BoxSenha_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void textNascimento_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-    
-        private void textNome_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textCRM_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void DocenteButton_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MostrarMedico()
-        {
-            dataGridView1.DataSource = _medicosController.ObterTodos();
-        }
-
-        private void Cadastrar_Click_1(object sender, EventArgs e)
-        {
-            if ((textEndereco.Text != String.Empty) && (BoxSenha.Text != String.Empty))
+            if(checkDocente.Checked && txtTitulo.SelectedItem != null)
             {
-                Usuario user = new Usuario(textEndereco.Text, BoxSenha.Text);
-                _usuariosController.Cadastrar(user);
-
-                if (!user.Validation.IsValid)
-                {
-                    user.Validation.Erros.Select(erro => erro.Message);
-                    textEndereco.Text = string.Empty;
-                    BoxSenha.Text = string.Empty;
-                }
-                else
-                {
-                    idUser = user.Id;
-                }
+                validation = AdicionarDocente();
             }
-        }
-
-        private void SalvarButton_Click(object sender, EventArgs e)
-        {           
-            if ((textNome.Text != String.Empty) && (textCRM.Text != String.Empty))
+            else if (checkResidente.Checked && txtAnoResidencia != null)
             {
-                Medico medico = new Medico(textNome.Text, textCRM.Text, idMedico);
-                _medicosController.Cadastrar(medico);
-                if ((textNascimento.Text != String.Empty)|(TituloUni.Text != String.Empty))
-                {
-                    AddEspecializacao especializacao = new AddEspecializacao();
-                    string dateInput = textNascimento.Text;
-                    DateTime parsedDate = DateTime.Parse(dateInput);
-                    especializacao.AnoResidencia = parsedDate;
-                    especializacao.TitUniversitaria = TituloUni.Text;
-                    especializacao.IdMedico = idMedico;
-                    _medicosController.EspecializarMedico(especializacao);
-                }
-
-                if (!medico.Validation.IsValid)
-                {
-                    medico.Validation.Erros.Select(erro => erro.Message);
-                    textNome.Text = string.Empty;
-                    textCRM.Text = string.Empty;
-                }
-                else
-                {
-                    idMedico = medico.Id;
-                }
+                validation = AdicionarResidente();
             }
-            /*if ((textNome.Text != string.Empty))
+            else
             {
-                if (textCRM.Text != string.Empty)
-                {
-                    MedicoViewModel medico = new MedicoViewModel();
-                    medico.Nome = textNome.Text;
-                    medico.Crm = textCRM.Text;
-                    medico.IdUsuario = idUser;
-                    string dateInput = textNascimento.Text;
-                    DateTime parsedDate = DateTime.Parse(dateInput);
-                    medico.AnoResidencia = parsedDate;
-                    medico.TitUniversitaria = TituloUni.Text;
-                    _medicosController.Cadastrar(medico);
-                    textNome.Clear();
-                    textCRM.Clear();
-                   textNascimento.Clear();
-                   TituloUni.Text = string.Empty;
-                }
-               else msgError("Digite o CRM");
+                validation = AdicionarMedico();
             }
-            else msgError("Digite o nome");*/
+
+            if (!validation.IsValid)
+            {
+                MessageBox.Show(validation.Errors.Select(v => v.ErrorMessage).Concatenar());
+                return;
+            }
+
+            MessageBox.Show("Médico adicionado com sucesso");
+            LimparCampos();
+            AtualizarDataGrid();
         }
 
-        private void Cancelar_Click_1(object sender, EventArgs e)
+        private ValidationResult AdicionarMedico()
         {
-            textNome.Clear();
-            textCRM.Clear();
-            textNascimento.Clear();
-            TituloUni.Text = string.Empty;
+            var medico = new MedicoAdicionar
+            {
+                Email = txtEmail.Text,
+                Senha = txtSenha.Text,
+                RepetirSenha = txtMesmaSenha.Text,
+                Nome = txtNome.Text,
+                Crm = txtCrm.Text
+            };
+
+            var result = _medicosController.Cadastrar(medico);
+
+            return result;
         }
 
-        private void msgError(String msg)
+        private ValidationResult AdicionarResidente()
         {
+            var residente = new ResidenteAdicionar
+            {
+                Email = txtEmail.Text,
+                Senha = txtSenha.Text,
+                RepetirSenha = txtMesmaSenha.Text,
+                Nome = txtNome.Text,
+                Crm = txtCrm.Text,
+                AnoResidencia = Convert.ToInt32(txtAnoResidencia.Text)
+            };
 
-        }
-        private void textEndereco_TextChanged_1(object sender, EventArgs e)
-        {
+            var result = _medicosController.CadastrarResidente(residente);
 
-        }
-
-        private void Email_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CRM_Click(object sender, EventArgs e)
-        {
-
+            return result;
         }
 
-        private void Detalhes_Click(object sender, EventArgs e)
+        private ValidationResult AdicionarDocente()
         {
+            var docente = new DocenteAdicionar
+            {
+                Email = txtEmail.Text,
+                Senha = txtSenha.Text,
+                RepetirSenha = txtMesmaSenha.Text,
+                Nome = txtNome.Text,
+                Crm = txtCrm.Text,
+                TitUniversitaria = txtTitulo.SelectedItem.ToString()
+            };
 
+            var result = _medicosController.CadastrarDocente(docente);
+
+            return result;
+        }
+
+        private void LimparCampos()
+        {
+            txtEmail.Clear();
+            txtSenha.Clear();
+            txtMesmaSenha.Clear();
+            txtNome.Clear();
+            txtCrm.Clear();
+            checkDocente.Checked = false;
+            checkResidente.Checked = false;
+            txtAnoResidencia.Clear();
         }
     }
 }

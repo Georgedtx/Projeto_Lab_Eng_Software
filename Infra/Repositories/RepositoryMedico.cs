@@ -1,6 +1,7 @@
 ﻿using Domain.Entities;
 using Domain.Interfaces.Repositories;
 using Infra.Context;
+using System;
 using System.Linq;
 
 namespace Infra.Repositories
@@ -24,7 +25,7 @@ namespace Infra.Repositories
                 .FirstOrDefault();
         }
 
-        public Medico ObterPorId(int id)
+        public Medico ObterPorId(Guid id)
         {
             return _projectContext.Medicos
                 .Include("Usuario")

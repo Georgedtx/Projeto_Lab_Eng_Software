@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 
 namespace Infra.Configurations
@@ -12,8 +13,8 @@ namespace Infra.Configurations
             HasKey(pe => pe.Id);
 
             Property(pe => pe.DataEmissao)
-                .HasColumnType("date")
-                .IsRequired();
+                    .HasColumnType("date")
+                    .IsRequired();
 
             Property(pe => pe.DataRealizacao)
                 .HasColumnType("date")
@@ -21,9 +22,6 @@ namespace Infra.Configurations
 
             Property(pe => pe.Hipotese)
                 .IsRequired();
-
-            HasRequired(p => p.RegistroExame)
-                .WithRequiredPrincipal(r => r.PedidoExame);
 
             HasRequired(pe => pe.Paciente)
                 .WithMany(p => p.PedidosExames)

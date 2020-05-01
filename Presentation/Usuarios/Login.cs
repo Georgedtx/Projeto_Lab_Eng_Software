@@ -10,12 +10,18 @@ namespace Presentation.Usuarios
 {
     public partial class Login : Form
     {
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
         private readonly UsuariosController _usuariosController;
         private readonly MedicosController medicosController;
 
         public Login()
         {
             InitializeComponent();
+
             _usuariosController = DependenciesResolve.Resolve<UsuariosController>();
             medicosController = DependenciesResolve.Resolve<MedicosController>();
 
@@ -26,11 +32,6 @@ namespace Presentation.Usuarios
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
         private void fechar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -38,42 +39,28 @@ namespace Presentation.Usuarios
 
         private void EntrarLogin_Click(object sender, EventArgs e)
         {
-            if (caixaUserAdm.Text != string.Empty)
+            if (txtUsuario.Text != string.Empty && txtSenha.Text != string.Empty)
             {
-                if (caixaSenhaAdm.Text != string.Empty)
+                try
                 {
-                    var validLogin = _usuariosController.Autenticar(caixaUserAdm.Text, caixaSenhaAdm.Text);
-                    if (validLogin != null)
-                    {
-                        var mainMenu = new AdmMenuPrincipal();
-                        mainMenu.Show();
-                        this.Hide();
-                    }
-                    //MessageBox.Show("Nome de usuário ou senha digitados incorretos. \n Por favor tente novamente.");
-                    msgError("Nome de usuário ou senha digitados incorretos. \n Por favor tente novamente.");
-                    
-                    caixaSenhaAdm.Clear();
-                    caixaUserAdm.Focus();
+                    var usuario = _usuariosController.Autenticar(txtUsuario.Text, txtSenha.Text);
+                    new AdmMenuPrincipal().Show();
+                    this.Hide();
                 }
-                else msgError("Digite a senha");
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+                txtUsuario.Clear();
+                txtSenha.Clear();
             }
-            else msgError("Digite o usuário");
-        }
-
-        private void msgError(String msg)
-        {
-            lblErrorMessage.Text = " " + msg;
-            lblErrorMessage.Visible = true;
-        }
-
-        void panelDesktop_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void iconPictureBox1_Click(object sender, EventArgs e)
-        {
-
+            else
+            {
+                MessageBox.Show("Campo Usuáio e Senha são obrigatórios");
+                txtUsuario.Clear();
+                txtSenha.Clear();
+            }
         }
 
         private void panelDesktop_MouseDown(object sender, MouseEventArgs e)
@@ -86,11 +73,6 @@ namespace Presentation.Usuarios
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void caixaUserAdm_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

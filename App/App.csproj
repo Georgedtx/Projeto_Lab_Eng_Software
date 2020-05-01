@@ -34,13 +34,17 @@
     <Reference Include="AutoMapper, Version=9.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <HintPath>..\packages\AutoMapper.9.0.0\lib\net461\AutoMapper.dll</HintPath>
     </Reference>
-    <Reference Include="DomainValidation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DomainValidation.1.0.0\lib\net453\DomainValidation.dll</HintPath>
+    <Reference Include="FluentValidation, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.8.6.2\lib\net45\FluentValidation.dll</HintPath>
     </Reference>
     <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.4.1\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -55,10 +59,15 @@
     <Compile Include="Controllers\MedicosController.cs" />
     <Compile Include="Controllers\RecepcionistasController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
+    <Compile Include="ExtensionsMethods\ExtensionMethod.cs" />
     <Compile Include="Mappers\MapperConfig.cs" />
+    <Compile Include="ViewModels\Administradores\AdministradorAdicionar.cs" />
+    <Compile Include="ViewModels\Medicos\DocenteAdicionar.cs" />
     <Compile Include="ViewModels\Medicos\MedicoDetalhes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\Medicos\AddEspecializacao.cs" />
+    <Compile Include="ViewModels\Medicos\MedicoAdicionar.cs" />
+    <Compile Include="ViewModels\Medicos\ResidenteAdicionar.cs" />
+    <Compile Include="ViewModels\Recepcionistas\RecepcionistaAdicionar.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
