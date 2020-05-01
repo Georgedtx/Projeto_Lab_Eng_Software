@@ -328,7 +328,7 @@
             this.btnGerenciar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnGerenciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGerenciar.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnGerenciar.IconChar = FontAwesome.Sharp.IconChar.Vial;
+            this.btnGerenciar.IconChar = FontAwesome.Sharp.IconChar.UsersCog;
             this.btnGerenciar.IconColor = System.Drawing.Color.Gainsboro;
             this.btnGerenciar.IconSize = 50;
             this.btnGerenciar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
