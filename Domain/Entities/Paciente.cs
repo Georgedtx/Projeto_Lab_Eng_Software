@@ -1,6 +1,4 @@
-﻿using Domain.Entities.Validations;
-using FluentValidation.Results;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace Domain.Entities
@@ -26,13 +24,5 @@ namespace Domain.Entities
         public string Cor { get; private set; }
         public DateTime Nascimento { get; private set; }
         public virtual ICollection<PedidoExame> PedidosExames { get; private set; }
-
-        public ValidationResult Validation { get; set; }
-
-        public bool IsValid()
-        {
-            Validation = new PacienteValidation().Validate(this);
-            return Validation.IsValid;
-        }
     }
 }

@@ -9,7 +9,7 @@ namespace Infra.Repositories
     public class Repository<Entity> : IRepository<Entity>
         where Entity : class
     {
-        private readonly ProjectContext _context;
+        protected readonly ProjectContext _context;
 
         public Repository(ProjectContext context)
         {

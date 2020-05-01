@@ -1318,14 +1318,6 @@
           }
         }
       },
-      "DomainValidation/1.0.0.0": {
-        "runtime": {
-          "DomainValidation.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
       "Ninject/3.3.4.0": {
         "runtime": {
           "Ninject.dll": {
@@ -2157,11 +2149,6 @@
       "sha512": ""
     },
     "FontAwesome.Sharp/5.12.1.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DomainValidation/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

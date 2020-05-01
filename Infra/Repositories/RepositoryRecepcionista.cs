@@ -8,16 +8,11 @@ namespace Infra.Repositories
 {
     public class RepositoryRecepcionista : Repository<Recepcionista>, IRepositoryRecepcionista
     {
-        private readonly ProjectContext _projectContext;
-
-        public RepositoryRecepcionista(ProjectContext projectContext) : base(projectContext)
-        {
-            _projectContext = projectContext;
-        }
+        public RepositoryRecepcionista(ProjectContext _context) : base(_context) { }
 
         public Recepcionista ObterPorId(Guid id)
         {
-            return _projectContext.Recepcionistas.Include("Usuario").Where(r => r.Id == id).FirstOrDefault();
+            return _context.Recepcionistas.Include("Usuario").Where(r => r.Id == id).FirstOrDefault();
         }
     }
 

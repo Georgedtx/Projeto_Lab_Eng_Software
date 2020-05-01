@@ -140,9 +140,9 @@ namespace Presentation.Administradores
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(145, 160);
+            this.txtEmail.Location = new System.Drawing.Point(81, 160);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(225, 24);
+            this.txtEmail.Size = new System.Drawing.Size(289, 24);
             this.txtEmail.TabIndex = 3;
             // 
             // label4
@@ -171,7 +171,7 @@ namespace Presentation.Administradores
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(45, 88);
+            this.label3.Location = new System.Drawing.Point(22, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 16);
             this.label3.TabIndex = 7;
@@ -193,7 +193,7 @@ namespace Presentation.Administradores
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(73, 162);
+            this.label1.Location = new System.Drawing.Point(22, 164);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 5;
@@ -225,7 +225,7 @@ namespace Presentation.Administradores
             // 
             this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(104, 85);
+            this.txtNome.Location = new System.Drawing.Point(81, 88);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(289, 24);
             this.txtNome.TabIndex = 2;

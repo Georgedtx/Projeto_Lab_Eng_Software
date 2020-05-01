@@ -8,16 +8,11 @@ namespace Infra.Repositories
 {
     public class RepositoryAdministrador : Repository<Administrador>, IRepositoryAdministrador
     {
-        private readonly ProjectContext _projectContext;
-
-        public RepositoryAdministrador(ProjectContext projectContext) : base(projectContext)
-        {
-            _projectContext = projectContext;
-        }
+        public RepositoryAdministrador(ProjectContext _context) : base(_context) { }
 
         public Administrador ObterPorId(Guid id)
         {
-            return _projectContext.Administradores.Include("Usuario").Where(a => a.Id == id).FirstOrDefault();
+            return _context.Administradores.Include("Usuario").Where(a => a.Id == id).FirstOrDefault();
         }
     }
 }

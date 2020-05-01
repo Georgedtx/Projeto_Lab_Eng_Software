@@ -1,6 +1,6 @@
 ﻿using App.Controllers;
 using App.ExtensionsMethods;
-using Domain.Entities;
+using App.ViewModels.Exames;
 using Infra.IoC;
 using System;
 using System.Linq;
@@ -11,7 +11,7 @@ namespace Presentation.Administradores
     public partial class AdmTelaExames : Form
     {
         private readonly ExamesController _exameController;
-       
+
         public AdmTelaExames()
         {
             InitializeComponent();
@@ -23,15 +23,13 @@ namespace Presentation.Administradores
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-            var exame = new Exame(txtNome.Text, txtDescricao.Text);
-            
+            var exame = new ExameAdicionar { Nome = txtNome.Text, Descricao = txtDescricao.Text };
+
             var result = _exameController.Cadastrar(exame);
 
-            if (!result.Validation.IsValid)
+            if (!result.IsValid)
             {
-                MessageBox.Show(result.Validation
-                    .Errors.Select(v => v.ErrorMessage).Concatenar());
-
+                MessageBox.Show(result.Errors.Select(v => v.ErrorMessage).Concatenar());
                 return;
             }
 

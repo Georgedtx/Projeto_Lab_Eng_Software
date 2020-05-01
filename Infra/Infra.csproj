@@ -79,6 +79,7 @@
     <Compile Include="Repositories\RepositoryAdministrador.cs" />
     <Compile Include="Repositories\RepositoryExame.cs" />
     <Compile Include="Repositories\RepositoryMedico.cs" />
+    <Compile Include="Repositories\RepositoryPaciente.cs" />
     <Compile Include="Repositories\RepositoryRecepcionista.cs" />
     <Compile Include="Repositories\RepositoryUsuario.cs" />
     <Compile Include="UoW\UnitOfWork.cs" />

@@ -8,16 +8,11 @@ namespace Infra.Repositories
 {
     public class RepositoryMedico : Repository<Medico>, IRepositoryMedico
     {
-        private readonly ProjectContext _projectContext;
-
-        public RepositoryMedico(ProjectContext projectContext) : base(projectContext)
-        {
-            _projectContext = projectContext;
-        }
+        public RepositoryMedico(ProjectContext _context) : base(_context) { }
 
         public Medico ObterPorCrm(string crm)
         {
-            return _projectContext.Medicos
+            return _context.Medicos
                 .Include("Usuario")
                 .Include("Residente")
                 .Include("Docente")
@@ -27,7 +22,7 @@ namespace Infra.Repositories
 
         public Medico ObterPorId(Guid id)
         {
-            return _projectContext.Medicos
+            return _context.Medicos
                 .Include("Usuario")
                 .Include("Residente")
                 .Include("Docente")

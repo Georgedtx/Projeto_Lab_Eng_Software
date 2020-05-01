@@ -62,11 +62,13 @@
     <Compile Include="ExtensionsMethods\ExtensionMethod.cs" />
     <Compile Include="Mappers\MapperConfig.cs" />
     <Compile Include="ViewModels\Administradores\AdministradorAdicionar.cs" />
+    <Compile Include="ViewModels\Exames\ExameAdicionar.cs" />
     <Compile Include="ViewModels\Medicos\DocenteAdicionar.cs" />
     <Compile Include="ViewModels\Medicos\MedicoDetalhes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\Medicos\MedicoAdicionar.cs" />
     <Compile Include="ViewModels\Medicos\ResidenteAdicionar.cs" />
+    <Compile Include="ViewModels\Pacientes\PacienteAdicionar.cs" />
     <Compile Include="ViewModels\Recepcionistas\RecepcionistaAdicionar.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -8,21 +8,16 @@ namespace Infra.Repositories
 {
     public class RepositoryExame : Repository<Exame>, IRepositoryExame
     {
-        private readonly ProjectContext _projectContext;
-
-        public RepositoryExame(ProjectContext projectContext) : base(projectContext)
-        {
-            _projectContext = projectContext;
-        }
+        public RepositoryExame(ProjectContext _context) : base(_context) { }
 
         public Exame ObterPorId(Guid id)
         {
-            return _projectContext.Exames.Where(e => e.Id == id).FirstOrDefault();
+            return _context.Exames.Where(e => e.Id == id).FirstOrDefault();
         }
 
         public Exame ObterPorNome(string nome)
         {
-            return _projectContext.Exames.Where(e => e.Nome.ToLower().Equals(nome.ToLower())).FirstOrDefault();
+            return _context.Exames.Where(e => e.Nome.ToLower().Equals(nome.ToLower())).FirstOrDefault();
         }
     }
 }

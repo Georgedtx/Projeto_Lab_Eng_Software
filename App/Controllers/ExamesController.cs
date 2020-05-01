@@ -1,6 +1,7 @@
-﻿using Domain.Entities;
+﻿using App.ViewModels.Exames;
+using Domain.Entities;
 using Domain.Interfaces.Uow;
-using Domain.Validations.Verifications;
+using FluentValidation.Results;
 using Ninject;
 using System;
 using System.Collections.Generic;
@@ -17,19 +18,20 @@ namespace App.Controllers
             _unitOfWork = unitOfWork;
         }
 
-        public Exame Cadastrar(Exame exame)
+        public ValidationResult Cadastrar(ExameAdicionar exameAdicionar)
         {
-            if (!exame.IsValid()) return exame;
+            if (!exameAdicionar.IsValid()) return exameAdicionar.Validation;
 
-            exame.Validation = new ExameVerification(_unitOfWork.RepositoryExame).Validate(exame);
+            exameAdicionar.Validation = new ExameVerification(_unitOfWork).Validate(exameAdicionar);
 
-            if (exame.Validation.IsValid)
+            if (exameAdicionar.Validation.IsValid)
             {
+                var exame = new Exame(exameAdicionar.Nome, exameAdicionar.Descricao);
                 _unitOfWork.RepositoryExame.Adicionar(exame);
                 _unitOfWork.Commit();
             }
 
-            return exame;
+            return exameAdicionar.Validation;
         }
 
         public IEnumerable<Exame> ObterTodos()
@@ -42,21 +44,19 @@ namespace App.Controllers
             return _unitOfWork.RepositoryExame.ObterPorId(id);
         }
 
-        public Exame AlterarDescricao(Guid id, string novaDescricao)
+        public bool AlterarDescricao(Guid id, string novaDescricao)
         {
+            if (novaDescricao.Length > 200) throw new Exception("Descrição deve ter até 200 caracteres");
+
             var exame = ObterPorId(id);
 
             if (exame != null) throw new Exception("Exame não encontrado");
 
             exame.Atualizar(novaDescricao);
-
-            if (exame.IsValid())
-            {
                 _unitOfWork.RepositoryExame.Atualizar(exame);
                 _unitOfWork.Commit();
-            }
 
-            return exame;
+            return true;
         }
 
         public bool Excluir(Guid id)

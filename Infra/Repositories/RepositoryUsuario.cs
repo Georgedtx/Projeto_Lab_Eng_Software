@@ -8,22 +8,16 @@ namespace Infra.Repositories
 {
     public class RepositoryUsuario : Repository<Usuario>, IRepositoryUsuario
     {
-        private readonly ProjectContext _projectContext;
-
-        public RepositoryUsuario(ProjectContext projectContext) : base(projectContext) {
-            
-            _projectContext = projectContext;
-        }
+        public RepositoryUsuario(ProjectContext _context) : base(_context) { }
 
         public Usuario ObterPorId(Guid id) {
 
-            return _projectContext.Usuarios.Include("Usuario").Where(u => u.Id == id).FirstOrDefault();
-
+            return _context.Usuarios.Include("Usuario").Where(u => u.Id == id).FirstOrDefault();
         }
 
         public Usuario ObterPorEmail(string email) {
 
-            return _projectContext.Usuarios.Where(u => u.Email.ToLower().Equals(email.ToLower())).FirstOrDefault();
+            return _context.Usuarios.Where(u => u.Email.ToLower().Equals(email.ToLower())).FirstOrDefault();
         }
     }
 }
