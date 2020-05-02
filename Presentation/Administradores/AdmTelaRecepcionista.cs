@@ -17,7 +17,14 @@ namespace Presentation.Administradores
             InitializeComponent();
 
             _recepcionistasController = DependenciesResolve.Resolve<RecepcionistasController>();
+            
+            AtualizarDataGrid();
+        }
 
+        private void AtualizarDataGrid()
+        {
+            //listaRecepcionista.DataSource = _recepcionistasController.ObterTodos()
+                                       //.Select(m => new { Nome = m.Nome });
         }
 
         private void btnAdicionar_Click(object sender, System.EventArgs e)
@@ -43,6 +50,7 @@ namespace Presentation.Administradores
 
             MessageBox.Show("Recepcionista cadastrado(a) com sucesso");
             LimparCampos();
+            AtualizarDataGrid();
         }
 
         private DateTime ObterDataNascimento()

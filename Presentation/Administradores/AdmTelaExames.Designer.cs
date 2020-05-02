@@ -39,6 +39,7 @@
             this.listaExames = new System.Windows.Forms.DataGridView();
             this.NomeMD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.BtnEditar = new System.Windows.Forms.Button();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaExames)).BeginInit();
@@ -60,6 +61,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.BtnEditar);
             this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.btnAdicionar);
             this.groupBox1.Controls.Add(this.txtDescricao);
@@ -78,7 +80,7 @@
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCancelar.Location = new System.Drawing.Point(245, 383);
+            this.btnCancelar.Location = new System.Drawing.Point(275, 382);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(106, 37);
             this.btnCancelar.TabIndex = 5;
@@ -90,7 +92,7 @@
             // 
             this.btnAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdicionar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAdicionar.Location = new System.Drawing.Point(76, 383);
+            this.btnAdicionar.Location = new System.Drawing.Point(51, 383);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(106, 37);
             this.btnAdicionar.TabIndex = 4;
@@ -170,6 +172,18 @@
             this.tabControl1.Size = new System.Drawing.Size(903, 495);
             this.tabControl1.TabIndex = 17;
             // 
+            // BtnEditar
+            // 
+            this.BtnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.BtnEditar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnEditar.Location = new System.Drawing.Point(163, 383);
+            this.BtnEditar.Name = "BtnEditar";
+            this.BtnEditar.Size = new System.Drawing.Size(106, 37);
+            this.BtnEditar.TabIndex = 6;
+            this.BtnEditar.Text = "Editar";
+            this.BtnEditar.UseVisualStyleBackColor = true;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
+            // 
             // AdmTelaExames
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,5 +214,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAdicionar;
+        private System.Windows.Forms.Button BtnEditar;
     }
 }

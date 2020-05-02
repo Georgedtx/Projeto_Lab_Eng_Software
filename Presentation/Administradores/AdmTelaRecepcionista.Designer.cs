@@ -43,12 +43,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.listaRecepcionista = new System.Windows.Forms.DataGridView();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaRecepcionista)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -65,7 +65,7 @@
             // 
             this.tabPage1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.Controls.Add(this.listaRecepcionista);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -215,18 +215,18 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Email:";
             // 
-            // dataGridView1
+            // listaRecepcionista
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.listaRecepcionista.AllowUserToAddRows = false;
+            this.listaRecepcionista.BackgroundColor = System.Drawing.Color.White;
+            this.listaRecepcionista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listaRecepcionista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nome});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dataGridView1.Location = new System.Drawing.Point(414, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(478, 463);
-            this.dataGridView1.TabIndex = 0;
+            this.listaRecepcionista.Dock = System.Windows.Forms.DockStyle.Right;
+            this.listaRecepcionista.Location = new System.Drawing.Point(414, 3);
+            this.listaRecepcionista.Name = "listaRecepcionista";
+            this.listaRecepcionista.Size = new System.Drawing.Size(478, 463);
+            this.listaRecepcionista.TabIndex = 0;
             // 
             // Nome
             // 
@@ -248,7 +248,7 @@
             this.tabPage1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaRecepcionista)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -256,7 +256,7 @@
         #endregion
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView listaRecepcionista;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
