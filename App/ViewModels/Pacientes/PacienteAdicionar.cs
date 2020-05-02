@@ -12,6 +12,14 @@ namespace App.ViewModels.Pacientes
         public string Sexo { get; set; }
         public string Cor { get; set; }
         public DateTime Nascimento { get; set; }
+
+        public ValidationResult Validation { get; set; }
+
+        public bool IsValid()
+        {
+            Validation = new PacienteValidation().Validate(this);
+            return Validation.IsValid;
+        }
     }
 
     public class PacienteValidation : AbstractValidator<PacienteAdicionar>
