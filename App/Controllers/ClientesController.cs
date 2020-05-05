@@ -9,12 +9,12 @@ using System.Collections.Generic;
 
 namespace App.Controllers
 {
-    public class ClientesController
+    public class PacientesController
     {
         private readonly IUnitOfWork _unitOfWork;
 
         [Inject()]
-        public ClientesController(IUnitOfWork unitOfWork)
+        public PacientesController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
