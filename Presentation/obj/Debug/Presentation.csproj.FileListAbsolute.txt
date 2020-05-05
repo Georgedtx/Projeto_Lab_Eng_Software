@@ -43,30 +43,10 @@ C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Infra.dll
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Ninject.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Microsoft.EntityFrameworkCore.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Microsoft.Bcl.HashCode.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\System.Collections.Immutable.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Microsoft.Extensions.Logging.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Microsoft.Extensions.Options.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Microsoft.Extensions.Primitives.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\System.Memory.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\System.Buffers.dll
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Domain.pdb
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Infra.pdb
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Ninject.xml
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.csprojAssemblyReference.cache
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.exe.config
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Properties.Resources.resources
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Usuarios.Login.resources
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.csproj.GenerateResource.cache
@@ -181,10 +161,6 @@ C:\Users\Luciano Douglas\Source\Repos\Projeto_Lab_Eng_Software\Presentation\obj\
 C:\Users\Luciano Douglas\Source\Repos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.csproj.CopyComplete
 C:\Users\Luciano Douglas\Source\Repos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.exe
 C:\Users\Luciano Douglas\Source\Repos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.pdb
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\NUnit3.TestAdapter.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\NUnit3.TestAdapter.pdb
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\nunit.engine.dll
-C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\nunit.engine.api.dll
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\AutoMapper.dll
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Administradores.AdmMenuPrincipal.resources
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Administradores.AdmTelaMed.resources
@@ -227,3 +203,18 @@ C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Soft
 C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\Presentation\bin\Debug\System.ComponentModel.Annotations.dll
 C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\Presentation\bin\Debug\FluentValidation.xml
 C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Administradores.AdmGerenciarUsers.resources
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Administradores.AdmGerenciarUsers.resources
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Recepcionista.RecMenuPrincipal.resources
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Recepcionista.RegistroExamesPopUp.resources
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\App.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\FluentValidation.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\EntityFramework.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\App.pdb
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Infra.dll.config
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\FluentValidation.xml
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\AutoMapper.pdb
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\AutoMapper.xml
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\EntityFramework.xml
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\EntityFramework.SqlServer.xml

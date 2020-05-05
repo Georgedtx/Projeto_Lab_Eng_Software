@@ -24,7 +24,7 @@ namespace Presentation.Administradores
         private void AtualizarDataGrid()
         {
             //listaRecepcionista.DataSource = _recepcionistasController.ObterTodos()
-                                       //.Select(m => new { Nome = m.Nome });
+            //.Select(m => new { Nome = m.Nome });           
         }
 
         private void btnAdicionar_Click(object sender, System.EventArgs e)

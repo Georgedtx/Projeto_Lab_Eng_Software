@@ -8,7 +8,12 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using App.Controllers;
+using App.ExtensionsMethods;
+using App.ViewModels.Pacientes;
+using FluentValidation.Results;
 using FontAwesome.Sharp;
+using Infra.IoC;
 
 namespace Presentation.Recepcionista
 
@@ -19,6 +24,7 @@ namespace Presentation.Recepcionista
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
+        private readonly PacientesController _pacientesController;
 
         public RecMenuPrincipal()
         {
@@ -31,7 +37,81 @@ namespace Presentation.Recepcionista
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            _pacientesController = DependenciesResolve.Resolve<PacientesController>();
+
+            AtualizarDataGrid();
         }
+
+        private void AtualizarDataGrid()
+        {
+            //listaPacientes.DataSource = _pacientesController.ObterTodos()
+            //.Select(m => new { Nome = m.Nome });
+            //listaPacientes2.DataSource = _pacientesController.ObterTodos()
+            //.Select(m => new { Nome = m.Nome });
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            var paciente = new PacienteAdicionar
+            {
+                Nome = CampoNome.Text,
+                Cor = CampoCor.Text,
+                Cpf = CampoCPF.Text,
+                Sexo = CampoSexo.Text,
+                Nascimento = ObterDataNascimento()
+            };
+
+            var result = _pacientesController.Cadastrar(paciente);
+
+            if (!result.IsValid)
+            {
+                MessageBox.Show(result.Errors.Select(v =>
+                                v.ErrorMessage).Concatenar());
+
+                return;
+            }
+
+            MessageBox.Show("Paciente cadastrado(a) com sucesso");
+            LimparCampos();
+            AtualizarDataGrid();
+        }
+
+        private void Buscar_Click(object sender, EventArgs e)
+        {
+
+            var paciente = _pacientesController.ObterPorCpf(BuscarCPF.Text);
+            CampoNome2.Text = Nome.ToString();
+            CampoSexo2.Text = paciente.Sexo;
+            CampoNasc2.Text = paciente.Nascimento.ToString();
+            CampoCor2.Text = paciente.Cor;
+            CampoCpf2.Text = paciente.Cpf;
+
+        }
+
+        private DateTime ObterDataNascimento()
+        {
+            if (CampoNasc.Text.Length == 10)
+            {
+                var dia = Convert.ToInt16(CampoNasc.Text.Substring(0, 2));
+                var mes = Convert.ToInt16(CampoNasc.Text.Substring(3, 2));
+                var ano = Convert.ToInt16(CampoNasc.Text.Substring(6, 4));
+
+                return new DateTime(ano, mes, dia);
+            }
+
+            return new DateTime();
+        }
+
+        private void LimparCampos()
+        {
+            CampoCPF.Clear();
+            CampoCor.Clear();
+            CampoNome.Clear();
+            CampoSexo.Clear();
+            CampoNasc.Clear();
+        }
+
         // estrutura
         private struct CorRGB
         {
@@ -215,5 +295,7 @@ namespace Presentation.Recepcionista
         {
 
         }
+
+        
     }
 }

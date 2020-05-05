@@ -1,5 +1,6 @@
 ﻿using Domain.Interfaces.Uow;
 using Domain.Validations;
+using FluentValidation;
 using FluentValidation.Results;
 using System;
 

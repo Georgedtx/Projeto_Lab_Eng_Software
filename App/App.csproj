@@ -57,6 +57,7 @@
     <Compile Include="Controllers\AdministradoresController.cs" />
     <Compile Include="Controllers\ExamesController.cs" />
     <Compile Include="Controllers\MedicosController.cs" />
+    <Compile Include="Controllers\PacientesController.cs" />
     <Compile Include="Controllers\RecepcionistasController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="ExtensionsMethods\ExtensionMethod.cs" />

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj": {}
+    "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\App\\App.csproj": {
+    "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\App\\App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\App\\App.csproj",
+        "projectUniqueName": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\App\\App.csproj",
         "projectName": "App",
-        "projectPath": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\App\\App.csproj",
+        "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\App\\App.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
+              "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
               }
             }
           }
@@ -24,28 +24,28 @@
         "net472": {}
       }
     },
-    "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
+    "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
+        "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
       },
       "frameworks": {
         "net472": {}
       }
     },
-    "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj": {
+    "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj",
+        "projectUniqueName": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj",
         "projectName": "Infra",
-        "projectPath": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj",
+        "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
+              "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
               }
             }
           }
@@ -55,23 +55,23 @@
         "net472": {}
       }
     },
-    "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj": {
+    "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj",
+        "projectUniqueName": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj",
         "projectName": "Presentation",
-        "projectPath": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj",
+        "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\App\\App.csproj": {
-                "projectPath": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\App\\App.csproj"
+              "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\App\\App.csproj": {
+                "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\App\\App.csproj"
               },
-              "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
+              "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj": {
-                "projectPath": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj"
+              "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj": {
+                "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Infra\\Infra.csproj"
               }
             }
           }
@@ -81,17 +81,17 @@
         "net472": {}
       }
     },
-    "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj": {
+    "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj",
+        "projectUniqueName": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj",
         "projectName": "UnitTests",
-        "projectPath": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj",
-        "packagesPath": "C:\\Users\\Pablo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\UnitTests\\obj\\",
+        "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj",
+        "packagesPath": "C:\\Users\\George\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\UnitTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\George\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -104,8 +104,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj": {
-                "projectPath": "C:\\Users\\Pablo\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj"
+              "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj": {
+                "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj"
               }
             }
           }
@@ -175,7 +175,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
