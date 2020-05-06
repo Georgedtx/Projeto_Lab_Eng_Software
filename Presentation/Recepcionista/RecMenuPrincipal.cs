@@ -52,13 +52,12 @@ namespace Presentation.Recepcionista
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             var paciente = new PacienteAdicionar
             {
                 Nome = CampoNome.Text,
                 Cor = CampoCor.Text,
                 Cpf = CampoCPF.Text,
-                Sexo = CampoSexo.Text,
+                Sexo = CampoSexo.SelectedItem.ToString(),
                 Nascimento = ObterDataNascimento()
             };
 
@@ -68,7 +67,6 @@ namespace Presentation.Recepcionista
             {
                 MessageBox.Show(result.Errors.Select(v =>
                                 v.ErrorMessage).Concatenar());
-
                 return;
             }
 
@@ -79,14 +77,18 @@ namespace Presentation.Recepcionista
 
         private void Buscar_Click(object sender, EventArgs e)
         {
-
             var paciente = _pacientesController.ObterPorCpf(BuscarCPF.Text);
+
+            if(paciente == null)
+            {
+                MessageBox.Show("Não há cadastro para o paciente!");
+                return;
+            }
+
             CampoNome2.Text = Nome.ToString();
             CampoSexo2.Text = paciente.Sexo;
             CampoNasc2.Text = paciente.Nascimento.ToString();
             CampoCor2.Text = paciente.Cor;
-            CampoCpf2.Text = paciente.Cpf;
-
         }
 
         private DateTime ObterDataNascimento()
@@ -106,9 +108,7 @@ namespace Presentation.Recepcionista
         private void LimparCampos()
         {
             CampoCPF.Clear();
-            CampoCor.Clear();
             CampoNome.Clear();
-            CampoSexo.Clear();
             CampoNasc.Clear();
         }
 
@@ -189,13 +189,6 @@ namespace Presentation.Recepcionista
             lblTitleChildForm.Text = "Home";
         }
 
-        private void panelDesktop_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-  
-
         //logo
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
@@ -237,25 +230,10 @@ namespace Presentation.Recepcionista
             Application.Exit();
         }
 
-        private void MenuPrincipal_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void Exames_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, CorRGB.cor6);
         //    OpenChildForm(new AdmTelaExames());
-        }
-
-        private void iconCurrentChildForm_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void dataGridView2_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -266,36 +244,9 @@ namespace Presentation.Recepcionista
             reg.ShowDialog();
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            LimparCampos();
         }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Senha_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        
     }
 }

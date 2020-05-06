@@ -64,7 +64,7 @@
             // lblErrorMessage
             // 
             this.lblErrorMessage.AutoSize = true;
-            this.lblErrorMessage.Location = new System.Drawing.Point(114, 337);
+            this.lblErrorMessage.Location = new System.Drawing.Point(102, 346);
             this.lblErrorMessage.Name = "lblErrorMessage";
             this.lblErrorMessage.Size = new System.Drawing.Size(0, 13);
             this.lblErrorMessage.TabIndex = 21;
@@ -92,29 +92,29 @@
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(114, 265);
+            this.txtUsuario.Location = new System.Drawing.Point(40, 274);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(201, 26);
+            this.txtUsuario.Size = new System.Drawing.Size(263, 26);
             this.txtUsuario.TabIndex = 1;
             // 
             // txtSenha
             // 
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(114, 330);
+            this.txtSenha.Location = new System.Drawing.Point(40, 339);
             this.txtSenha.Margin = new System.Windows.Forms.Padding(2);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(201, 26);
+            this.txtSenha.Size = new System.Drawing.Size(263, 26);
             this.txtSenha.TabIndex = 2;
             this.txtSenha.UseSystemPasswordChar = true;
             // 
             // EntrarLogin
             // 
             this.EntrarLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EntrarLogin.Location = new System.Drawing.Point(100, 414);
+            this.EntrarLogin.Location = new System.Drawing.Point(95, 410);
             this.EntrarLogin.Margin = new System.Windows.Forms.Padding(2);
             this.EntrarLogin.Name = "EntrarLogin";
-            this.EntrarLogin.Size = new System.Drawing.Size(142, 35);
+            this.EntrarLogin.Size = new System.Drawing.Size(142, 45);
             this.EntrarLogin.TabIndex = 3;
             this.EntrarLogin.Text = "Entrar";
             this.EntrarLogin.UseVisualStyleBackColor = true;
@@ -128,7 +128,7 @@
             this.Senha.AutoSize = true;
             this.Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Senha.ForeColor = System.Drawing.Color.Linen;
-            this.Senha.Location = new System.Drawing.Point(33, 333);
+            this.Senha.Location = new System.Drawing.Point(41, 317);
             this.Senha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Senha.MaximumSize = new System.Drawing.Size(75, 81);
             this.Senha.Name = "Senha";
@@ -144,7 +144,7 @@
             this.Usuário.AutoSize = true;
             this.Usuário.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Usuário.ForeColor = System.Drawing.Color.Linen;
-            this.Usuário.Location = new System.Drawing.Point(25, 268);
+            this.Usuário.Location = new System.Drawing.Point(41, 252);
             this.Usuário.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Usuário.Name = "Usuário";
             this.Usuário.Size = new System.Drawing.Size(71, 20);
@@ -158,12 +158,13 @@
             this.iconPictureBox1.ForeColor = System.Drawing.Color.Gainsboro;
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Heartbeat;
             this.iconPictureBox1.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox1.IconSize = 142;
-            this.iconPictureBox1.Location = new System.Drawing.Point(100, 32);
+            this.iconPictureBox1.IconSize = 210;
+            this.iconPictureBox1.Location = new System.Drawing.Point(73, 26);
             this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(8, 2, 8, 2);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.iconPictureBox1.Size = new System.Drawing.Size(142, 172);
+            this.iconPictureBox1.Size = new System.Drawing.Size(210, 224);
+            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.iconPictureBox1.TabIndex = 5;
             this.iconPictureBox1.TabStop = false;
             this.iconPictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.iconPictureBox1_MouseDown);
@@ -176,6 +177,7 @@
             this.Controls.Add(this.panelDesktop);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login";
+            this.Opacity = 0.8D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.panelDesktop.ResumeLayout(false);
