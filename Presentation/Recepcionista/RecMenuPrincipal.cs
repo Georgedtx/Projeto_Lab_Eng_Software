@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using App.Controllers;
+using App.ExtensionsMethods;
+using App.ViewModels.Pacientes;
+using FontAwesome.Sharp;
+using Infra.IoC;
+using System;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using App.Controllers;
-using App.ExtensionsMethods;
-using App.ViewModels.Pacientes;
-using FluentValidation.Results;
-using FontAwesome.Sharp;
-using Infra.IoC;
 
 namespace Presentation.Recepcionista
 
@@ -77,18 +72,18 @@ namespace Presentation.Recepcionista
 
         private void Buscar_Click(object sender, EventArgs e)
         {
-            var paciente = _pacientesController.ObterPorCpf(BuscarCPF.Text);
-
-            if(paciente == null)
+            try
             {
-                MessageBox.Show("Não há cadastro para o paciente!");
-                return;
+                var paciente = _pacientesController.ObterPorCpf(BuscarCPF.Text);
+                CampoNome2.Text = Nome.ToString();
+                CampoSexo2.Text = paciente.Sexo;
+                CampoNasc2.Text = paciente.Nascimento.ToString();
+                CampoCor2.Text = paciente.Cor;
             }
-
-            CampoNome2.Text = Nome.ToString();
-            CampoSexo2.Text = paciente.Sexo;
-            CampoNasc2.Text = paciente.Nascimento.ToString();
-            CampoCor2.Text = paciente.Cor;
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private DateTime ObterDataNascimento()
@@ -130,8 +125,8 @@ namespace Presentation.Recepcionista
             {
                 DisableButton();
                 //Button
-                currentBtn = (IconButton)senderBtn;               
-                currentBtn.BackColor = Color.FromArgb(37,36,81);
+                currentBtn = (IconButton)senderBtn;
+                currentBtn.BackColor = Color.FromArgb(37, 36, 81);
                 currentBtn.ForeColor = cor;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = cor;
@@ -233,7 +228,7 @@ namespace Presentation.Recepcionista
         private void Exames_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, CorRGB.cor6);
-        //    OpenChildForm(new AdmTelaExames());
+            //    OpenChildForm(new AdmTelaExames());
         }
 
         private void dataGridView2_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)

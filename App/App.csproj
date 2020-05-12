@@ -58,6 +58,7 @@
     <Compile Include="Controllers\ExamesController.cs" />
     <Compile Include="Controllers\MedicosController.cs" />
     <Compile Include="Controllers\PacientesController.cs" />
+    <Compile Include="Controllers\PedidosExamesController.cs" />
     <Compile Include="Controllers\RecepcionistasController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="ExtensionsMethods\ExtensionMethod.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="ViewModels\Medicos\MedicoAdicionar.cs" />
     <Compile Include="ViewModels\Medicos\ResidenteAdicionar.cs" />
     <Compile Include="ViewModels\Pacientes\PacienteAdicionar.cs" />
+    <Compile Include="ViewModels\PedidosExames\PedidoExameAdicionar.cs" />
     <Compile Include="ViewModels\Recepcionistas\RecepcionistaAdicionar.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -81,5 +83,6 @@
       <Name>Domain</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

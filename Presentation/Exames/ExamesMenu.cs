@@ -1,19 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using App.Controllers;
-using App.ExtensionsMethods;
-using App.ViewModels.Pacientes;
-using FluentValidation.Results;
+﻿using App.Controllers;
 using FontAwesome.Sharp;
 using Infra.IoC;
+using System;
+using System.Drawing;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace Presentation.Exames
 
@@ -24,7 +15,6 @@ namespace Presentation.Exames
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
-        private readonly PacientesController _pacientesController;
 
         public ExamesMenu()
         {
@@ -37,7 +27,6 @@ namespace Presentation.Exames
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            _pacientesController = DependenciesResolve.Resolve<PacientesController>();
 
             AtualizarDataGrid();
         }
@@ -48,28 +37,6 @@ namespace Presentation.Exames
             //.Select(m => new { Nome = m.Nome });
             //listaPacientes2.DataSource = _pacientesController.ObterTodos()
             //.Select(m => new { Nome = m.Nome });
-        }
-
-
-        private DateTime ObterDataNascimento()
-        {
-            if (CampoNasc.Text.Length == 10)
-            {
-                var dia = Convert.ToInt16(CampoNasc.Text.Substring(0, 2));
-                var mes = Convert.ToInt16(CampoNasc.Text.Substring(3, 2));
-                var ano = Convert.ToInt16(CampoNasc.Text.Substring(6, 4));
-
-                return new DateTime(ano, mes, dia);
-            }
-
-            return new DateTime();
-        }
-
-        private void LimparCampos()
-        {
-            CampoCPF.Clear();
-            CampoNome.Clear();
-            CampoNasc.Clear();
         }
 
         // estrutura
@@ -202,21 +169,6 @@ namespace Presentation.Exames
             //   reg.caixaStatus.Text =
             //   reg.caixaData.Mask =
         //    reg.ShowDialog();
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            LimparCampos();
-        }
-
-        private void dataExame_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

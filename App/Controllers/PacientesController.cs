@@ -46,7 +46,11 @@ namespace App.Controllers
 
         public Paciente ObterPorCpf(String cpf)
         {
-            return _unitOfWork.RepositoryPaciente.ObterPorCpf(cpf);
+            var paciente = _unitOfWork.RepositoryPaciente.ObterPorCpf(cpf);
+
+            if (paciente == null) throw new Exception("Cpf inválido ou paciente sem registro");
+
+            return paciente;
         }
 
         public IEnumerable<PedidoExame> ObterPedidosPorIdCliente(Guid id)

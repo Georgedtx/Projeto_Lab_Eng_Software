@@ -41,18 +41,19 @@
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.CampoCor = new System.Windows.Forms.ComboBox();
-            this.CampoSexo = new System.Windows.Forms.ComboBox();
-            this.CampoNasc = new System.Windows.Forms.MaskedTextBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.CampoNome = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.CampoSexo = new System.Windows.Forms.ComboBox();
+            this.CampoCor = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.CampoNasc = new System.Windows.Forms.MaskedTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.CampoNome = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.CampoCPF = new System.Windows.Forms.MaskedTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.listaPacientes = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -70,9 +71,8 @@
             this.Buscar = new System.Windows.Forms.Button();
             this.BuscarCPF = new System.Windows.Forms.MaskedTextBox();
             this.listaPacientes2 = new System.Windows.Forms.DataGridView();
-            this.Nome1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Nome1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelMenu.SuspendLayout();
             this.logoPainel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
@@ -81,12 +81,12 @@
             this.panelDesktop.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaPacientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.CampoNome2.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaPacientes2)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -291,6 +291,56 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Pacientes";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.CampoSexo);
+            this.groupBox1.Controls.Add(this.CampoCor);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.CampoNasc);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.CampoNome);
+            this.groupBox1.Controls.Add(this.btnCancelar);
+            this.groupBox1.Controls.Add(this.CampoCPF);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.btnCadastrar);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(398, 429);
+            this.groupBox1.TabIndex = 42;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Novo Paciente";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(68, 74);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(45, 16);
+            this.label10.TabIndex = 30;
+            this.label10.Text = "CPF :";
+            // 
+            // CampoSexo
+            // 
+            this.CampoSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CampoSexo.FormattingEnabled = true;
+            this.CampoSexo.Items.AddRange(new object[] {
+            "Masculino",
+            "Feminino",
+            "Outro"});
+            this.CampoSexo.Location = new System.Drawing.Point(117, 295);
+            this.CampoSexo.Name = "CampoSexo";
+            this.CampoSexo.Size = new System.Drawing.Size(143, 26);
+            this.CampoSexo.TabIndex = 5;
+            // 
             // CampoCor
             // 
             this.CampoCor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -310,18 +360,31 @@
             this.CampoCor.Size = new System.Drawing.Size(142, 26);
             this.CampoCor.TabIndex = 4;
             // 
-            // CampoSexo
+            // label9
             // 
-            this.CampoSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CampoSexo.FormattingEnabled = true;
-            this.CampoSexo.Items.AddRange(new object[] {
-            "Masculino",
-            "Feminino",
-            "Outro"});
-            this.CampoSexo.Location = new System.Drawing.Point(117, 295);
-            this.CampoSexo.Name = "CampoSexo";
-            this.CampoSexo.Size = new System.Drawing.Size(143, 26);
-            this.CampoSexo.TabIndex = 5;
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(56, 129);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(57, 16);
+            this.label9.TabIndex = 32;
+            this.label9.Text = "Nome :";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(13, 184);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(98, 16);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "Nascimento :";
             // 
             // CampoNasc
             // 
@@ -332,6 +395,29 @@
             this.CampoNasc.Size = new System.Drawing.Size(142, 24);
             this.CampoNasc.TabIndex = 3;
             this.CampoNasc.ValidatingType = typeof(System.DateTime);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(69, 245);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 16);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "Cor :";
+            // 
+            // CampoNome
+            // 
+            this.CampoNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CampoNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.CampoNome.Location = new System.Drawing.Point(117, 125);
+            this.CampoNome.Margin = new System.Windows.Forms.Padding(2);
+            this.CampoNome.Name = "CampoNome";
+            this.CampoNome.Size = new System.Drawing.Size(256, 24);
+            this.CampoNome.TabIndex = 2;
             // 
             // btnCancelar
             // 
@@ -347,18 +433,16 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // label6
+            // CampoCPF
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(69, 245);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 16);
-            this.label6.TabIndex = 38;
-            this.label6.Text = "Cor :";
+            this.CampoCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.CampoCPF.Location = new System.Drawing.Point(117, 69);
+            this.CampoCPF.Margin = new System.Windows.Forms.Padding(2);
+            this.CampoCPF.Mask = "000.000.000-00";
+            this.CampoCPF.Name = "CampoCPF";
+            this.CampoCPF.Size = new System.Drawing.Size(144, 24);
+            this.CampoCPF.TabIndex = 1;
+            this.CampoCPF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
@@ -373,55 +457,6 @@
             this.label7.TabIndex = 36;
             this.label7.Text = "Sexo :";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(13, 184);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 16);
-            this.label8.TabIndex = 34;
-            this.label8.Text = "Nascimento :";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(56, 129);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 16);
-            this.label9.TabIndex = 32;
-            this.label9.Text = "Nome :";
-            // 
-            // CampoNome
-            // 
-            this.CampoNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CampoNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.CampoNome.Location = new System.Drawing.Point(117, 125);
-            this.CampoNome.Margin = new System.Windows.Forms.Padding(2);
-            this.CampoNome.Name = "CampoNome";
-            this.CampoNome.Size = new System.Drawing.Size(256, 24);
-            this.CampoNome.TabIndex = 2;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(68, 74);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(45, 16);
-            this.label10.TabIndex = 30;
-            this.label10.Text = "CPF :";
-            // 
             // btnCadastrar
             // 
             this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Default;
@@ -435,17 +470,6 @@
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // CampoCPF
-            // 
-            this.CampoCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.CampoCPF.Location = new System.Drawing.Point(117, 69);
-            this.CampoCPF.Margin = new System.Windows.Forms.Padding(2);
-            this.CampoCPF.Mask = "000.000.000-00";
-            this.CampoCPF.Name = "CampoCPF";
-            this.CampoCPF.Size = new System.Drawing.Size(144, 24);
-            this.CampoCPF.TabIndex = 1;
-            this.CampoCPF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // listaPacientes
             // 
@@ -665,13 +689,6 @@
             this.listaPacientes2.TabIndex = 1;
             this.listaPacientes2.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentDoubleClick);
             // 
-            // Nome1
-            // 
-            this.Nome1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nome1.HeaderText = "Nome";
-            this.Nome1.MinimumWidth = 6;
-            this.Nome1.Name = "Nome1";
-            // 
             // Nome
             // 
             this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -679,29 +696,12 @@
             this.Nome.MinimumWidth = 6;
             this.Nome.Name = "Nome";
             // 
-            // groupBox1
+            // Nome1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.CampoSexo);
-            this.groupBox1.Controls.Add(this.CampoCor);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.CampoNasc);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.CampoNome);
-            this.groupBox1.Controls.Add(this.btnCancelar);
-            this.groupBox1.Controls.Add(this.CampoCPF);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.btnCadastrar);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(398, 429);
-            this.groupBox1.TabIndex = 42;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Novo Paciente";
+            this.Nome1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nome1.HeaderText = "Pedidos de Exame do Paciente";
+            this.Nome1.MinimumWidth = 6;
+            this.Nome1.Name = "Nome1";
             // 
             // RecMenuPrincipal
             // 
@@ -724,14 +724,14 @@
             this.panelDesktop.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaPacientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.CampoNome2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaPacientes2)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -755,7 +755,6 @@
         private System.Windows.Forms.MaskedTextBox BuscarCPF;
         private System.Windows.Forms.Button Buscar;
         private System.Windows.Forms.DataGridView listaPacientes2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
@@ -783,6 +782,7 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.ComboBox CampoCor;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome1;
     }
 }
 

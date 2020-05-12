@@ -1,6 +1,4 @@
-﻿using Domain.Entities.Validations;
-using FluentValidation.Results;
-using System;
+﻿using System;
 
 namespace Domain.Entities
 {
@@ -31,14 +29,6 @@ namespace Domain.Entities
         public virtual Medico Medico { get; private set; }
         public virtual Paciente Paciente { get; private set; }
         public virtual RegistroExame RegistroExame { get; private set; }
-
-        public ValidationResult Validation { get; set; }
-
-        public bool IsValid()
-        {
-            Validation = new PedidoExameValidation().Validate(this);
-            return Validation.IsValid;
-        }
 
         public void Remarcar(DateTime novaData) => this.DataRealizacao = novaData;
     }
