@@ -55,8 +55,8 @@ namespace Presentation.Administradores
 
         private void AtualizarDataGrid()
         {
-           // listaAdmins.DataSource = _administradoresController.ObterTodos()
-               // .Select(a => new { Id = a.Id, Nome = a.Nome });
+            // listaAdmins.DataSource = _administradoresController.ObterTodos()
+            // .Select(a => new { Id = a.Id, Nome = a.Nome });
         }
 
         private TabPage tabPage1;

@@ -6718,19 +6718,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\luisz\\.nuget\\packages\\": {}
+    "C:\\Users\\George\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\LabEngSoftware\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj",
+      "projectUniqueName": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj",
       "projectName": "UnitTests",
-      "projectPath": "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\LabEngSoftware\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj",
-      "packagesPath": "C:\\Users\\luisz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\LabEngSoftware\\Projeto_Lab_Eng_Software\\UnitTests\\obj\\",
+      "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj",
+      "packagesPath": "C:\\Users\\George\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\UnitTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\luisz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\George\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6743,8 +6743,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\LabEngSoftware\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj": {
-              "projectPath": "C:\\Users\\luisz\\OneDrive\\Documentos\\Faculdade\\LabEngSoftware\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj"
+            "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj": {
+              "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj"
             }
           }
         }

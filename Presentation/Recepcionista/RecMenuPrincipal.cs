@@ -72,18 +72,26 @@ namespace Presentation.Recepcionista
 
         private void Buscar_Click(object sender, EventArgs e)
         {
-            try
+            if (BuscarCPF.Text != string.Empty)
             {
-                var paciente = _pacientesController.ObterPorCpf(BuscarCPF.Text);
-                CampoNome2.Text = Nome.ToString();
-                CampoSexo2.Text = paciente.Sexo;
-                CampoNasc2.Text = paciente.Nascimento.ToString();
-                CampoCor2.Text = paciente.Cor;
+                try
+                {
+                    var paciente = _pacientesController.ObterPorCpf(BuscarCPF.Text);
+                    CampoNome2.Text = paciente.Nome.ToString();
+                    CampoSexo2.Text = paciente.Sexo;
+                    CampoNasc2.Text = paciente.Nascimento.ToString();
+                    CampoCor2.Text = paciente.Cor;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Digite o CPF");
             }
+            
         }
 
         private DateTime ObterDataNascimento()

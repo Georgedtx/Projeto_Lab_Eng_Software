@@ -23,8 +23,8 @@ namespace Presentation.Administradores
 
         private void AtualizarDataGrid()
         {
-           // listaMedicos.DataSource = _medicosController.ObterTodos()
-             //                           .Select(m => new { Crm = m.Crm, Nome = m.Nome });
+            // listaMedicos.DataSource = _medicosController.ObterTodos()
+            //                           .Select(m => new { Crm = m.Crm, Nome = m.Nome });
         }
 
         private void checkResidente_CheckedChanged(object sender, EventArgs e)

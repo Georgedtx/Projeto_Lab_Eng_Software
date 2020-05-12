@@ -1,8 +1,11 @@
 ﻿using App.Controllers;
+using App.ExtensionsMethods;
+using App.ViewModels.PedidosExames;
 using FontAwesome.Sharp;
 using Infra.IoC;
 using System;
 using System.Drawing;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -15,6 +18,11 @@ namespace Presentation.Exames
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
+        private readonly PedidosExamesController _pedidosExamesController;
+        private readonly PacientesController _pacientesController;
+        private readonly ExamesController _examesController;
+        private Guid IdPaciente;
+        private Guid IdExame;
 
         public ExamesMenu()
         {
@@ -27,18 +35,174 @@ namespace Presentation.Exames
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-
+            _pedidosExamesController = DependenciesResolve.Resolve<PedidosExamesController>();
+            _pacientesController = DependenciesResolve.Resolve<PacientesController>();
+            _examesController = DependenciesResolve.Resolve<ExamesController>();
             AtualizarDataGrid();
         }
 
         private void AtualizarDataGrid()
         {
-            //listaPacientes.DataSource = _pacientesController.ObterTodos()
-            //.Select(m => new { Nome = m.Nome });
-            //listaPacientes2.DataSource = _pacientesController.ObterTodos()
-            //.Select(m => new { Nome = m.Nome });
+            //listaExames.DataSource = _exameController.ObterTodos()
+            //    .Select(e => new { Id = e.Id, Nome = e.Nome });
+            //ListaPedidosExame.DataSource = _pedidosExamesController.ObterPedidosExamesDoPaciente(BuscarCPF.Text)
+                //.Select(m => new { Exame = m.Exame , Hipótese = m.Hipotese}); 
         }
+        private void Emitir_Click(object sender, EventArgs e)
+        {
+                var pedido = new PedidoExameAdicionar
+                {
+                    DataRealizacao = ObterData(),
+                    Crm = CampoCrm.Text,
+                    IdPaciente = IdPaciente,
+                    Hipotese = CampoHipotese.Text,
+                    IdExame = IdExame
+                };
+                var result = _pedidosExamesController.EmitirPedidoExame(pedido);
 
+                if (!result.IsValid)
+                {
+                    MessageBox.Show(result.Errors.Select(v =>
+                                    v.ErrorMessage).Concatenar());
+                    return;
+                }
+                LimparCampos();
+                AtualizarDataGrid();
+                MessageBox.Show("Pedido cadastrado com sucesso");       
+        }
+        private void CampoCPF_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((CampoCPF.Text != string.Empty) && (e.KeyChar == (char)Keys.Enter))
+            {
+                try
+                {
+                    var paciente = _pacientesController.ObterPorCpf(CampoCPF.Text);
+                    CampoNome.Text = paciente.Nome.ToString();
+                    CampoSexo.Text = paciente.Sexo;
+                    CampoIdade.Text = IdadePaciente(paciente.Nascimento);
+                    CampoCor.Text = paciente.Cor;
+                    IdPaciente = paciente.Id;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Digite o CPF");
+            }
+        }
+        private void listaExames_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (listaExames.SelectedRows.Count > 0)
+            {
+                CampoExame.Text = listaExames.CurrentRow.Cells["Nome"].Value.ToString();
+                string stringGuid = listaExames.CurrentRow.Cells["Id"].Value.ToString();
+                IdExame = Guid.Parse(stringGuid);
+            }
+            else
+            {
+                MessageBox.Show("Selecione uma linha.");
+            }
+        }               
+        private string IdadePaciente(DateTime nascimento)
+        {
+            int idade = DateTime.Now.Year - nascimento.Year;
+            if (DateTime.Now.DayOfYear < nascimento.DayOfYear) idade--;
+            return idade.ToString();
+        }
+        private void buttonAtualizar_Click(object sender, EventArgs e)
+        {
+            if (BuscarCPF.Text != string.Empty)
+            {
+                if (CampoData2.Text != string.Empty)
+                {
+                    _pedidosExamesController.RemarcarConsulta(IdExame, NovaData());
+                    LimparCampos2();
+                    AtualizarDataGrid();
+                    MessageBox.Show("Pedido atualizado com sucesso");
+                } else MessageBox.Show("Digite a Data");
+
+            } else MessageBox.Show("Digite o CPF");          
+        }
+        private void BuscarCPF_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((BuscarCPF.Text != string.Empty) && (e.KeyChar == (char)Keys.Enter))
+            {
+                try
+                {
+                    var paciente = _pacientesController.ObterPorCpf(BuscarCPF.Text);
+                    CampoNome.Text = paciente.Nome.ToString();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Digite o CPF");
+            }
+        }
+        private void ListaPedidosExame_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (ListaPedidosExame.SelectedRows.Count > 0)
+            {
+                CampoExame2.Text = ListaPedidosExame.CurrentRow.Cells["Exame"].Value.ToString();
+                CampoHipotese2.Text = ListaPedidosExame.CurrentRow.Cells["Hipótese"].Value.ToString();              
+            }
+            else
+            {
+                MessageBox.Show("Selecione uma linha.");
+            }
+        }
+        private DateTime NovaData()
+        {
+            if (CampoData2.Text.Length == 10)
+            {
+                var dia = Convert.ToInt16(CampoData2.Text.Substring(0, 2));
+                var mes = Convert.ToInt16(CampoData2.Text.Substring(3, 2));
+                var ano = Convert.ToInt16(CampoData2.Text.Substring(6, 4));
+
+                return new DateTime(ano, mes, dia);
+            }
+
+            return new DateTime();
+        }
+        private DateTime ObterData()
+        {
+            if (CampoDataRealizacao.Text.Length == 10)
+            {
+                var dia = Convert.ToInt16(CampoDataRealizacao.Text.Substring(0, 2));
+                var mes = Convert.ToInt16(CampoDataRealizacao.Text.Substring(3, 2));
+                var ano = Convert.ToInt16(CampoDataRealizacao.Text.Substring(6, 4));
+
+                return new DateTime(ano, mes, dia);
+            }
+
+            return new DateTime();
+        }
+        private void LimparCampos()
+        {
+            CampoCPF.Clear();
+            CampoCor.Clear();
+            CampoSexo.Clear();
+            CampoNome.Clear();
+            CampoIdade.Clear();
+            CampoExame.Clear();
+            CampoDataRealizacao.Clear();
+            CampoCrm.Clear();
+            CampoHipotese.Clear();
+        }
+        private void LimparCampos2()
+        {
+            CampoCPF.Clear();
+            CampoNome.Clear();
+            CampoExame.Clear();
+            CampoData2.Clear();
+            CampoHipotese.Clear();
+        }
         // estrutura
         private struct CorRGB
         {
@@ -170,5 +334,15 @@ namespace Presentation.Exames
             //   reg.caixaData.Mask =
         //    reg.ShowDialog();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LimparCampos2();
+        }  
     }
 }

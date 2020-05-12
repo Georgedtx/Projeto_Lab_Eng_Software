@@ -45,7 +45,7 @@
             this.CampoCor = new System.Windows.Forms.TextBox();
             this.CampoSexo = new System.Windows.Forms.TextBox();
             this.CampoIdade = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.CampoHipotese = new System.Windows.Forms.TextBox();
             this.hipoteseD = new System.Windows.Forms.Label();
             this.nomeExame = new System.Windows.Forms.Label();
             this.dataExame = new System.Windows.Forms.Label();
@@ -67,14 +67,14 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.CampoNome2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.CampoHipotese2 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CampoExame2 = new System.Windows.Forms.TextBox();
             this.buttonAtualizar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.CampoData2 = new System.Windows.Forms.MaskedTextBox();
             this.labelNome = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.CPF = new System.Windows.Forms.Label();
@@ -306,7 +306,7 @@
             this.groupBox1.Controls.Add(this.CampoCor);
             this.groupBox1.Controls.Add(this.CampoSexo);
             this.groupBox1.Controls.Add(this.CampoIdade);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.CampoHipotese);
             this.groupBox1.Controls.Add(this.hipoteseD);
             this.groupBox1.Controls.Add(this.nomeExame);
             this.groupBox1.Controls.Add(this.dataExame);
@@ -365,16 +365,16 @@
             this.CampoIdade.Size = new System.Drawing.Size(157, 24);
             this.CampoIdade.TabIndex = 61;
             // 
-            // textBox4
+            // CampoHipotese
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.textBox4.Location = new System.Drawing.Point(117, 259);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(402, 103);
-            this.textBox4.TabIndex = 4;
+            this.CampoHipotese.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CampoHipotese.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.CampoHipotese.Location = new System.Drawing.Point(117, 259);
+            this.CampoHipotese.Margin = new System.Windows.Forms.Padding(2);
+            this.CampoHipotese.Multiline = true;
+            this.CampoHipotese.Name = "CampoHipotese";
+            this.CampoHipotese.Size = new System.Drawing.Size(402, 103);
+            this.CampoHipotese.TabIndex = 4;
             // 
             // hipoteseD
             // 
@@ -471,6 +471,7 @@
             this.Emitir.TabIndex = 5;
             this.Emitir.Text = "Emitir";
             this.Emitir.UseVisualStyleBackColor = true;
+            this.Emitir.Click += new System.EventHandler(this.Emitir_Click);
             // 
             // label10
             // 
@@ -547,6 +548,7 @@
             this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // CampoCPF
             // 
@@ -558,6 +560,7 @@
             this.CampoCPF.Size = new System.Drawing.Size(158, 24);
             this.CampoCPF.TabIndex = 1;
             this.CampoCPF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CampoCPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CampoCPF_KeyPress);
             // 
             // label7
             // 
@@ -585,6 +588,7 @@
             this.listaExames.RowHeadersWidth = 51;
             this.listaExames.Size = new System.Drawing.Size(286, 429);
             this.listaExames.TabIndex = 10;
+            this.listaExames.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.listaExames_CellDoubleClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -622,14 +626,14 @@
             this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.CampoHipotese2);
             this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.CampoExame2);
             this.panel2.Controls.Add(this.buttonAtualizar);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.maskedTextBox2);
+            this.panel2.Controls.Add(this.CampoData2);
             this.panel2.Controls.Add(this.labelNome);
             this.panel2.Controls.Add(this.textBox2);
             this.panel2.Controls.Add(this.CPF);
@@ -641,18 +645,18 @@
             this.panel2.Size = new System.Drawing.Size(548, 429);
             this.panel2.TabIndex = 18;
             // 
-            // textBox3
+            // CampoHipotese2
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Enabled = false;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.textBox3.Location = new System.Drawing.Point(117, 210);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(402, 142);
-            this.textBox3.TabIndex = 3;
+            this.CampoHipotese2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CampoHipotese2.Enabled = false;
+            this.CampoHipotese2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.CampoHipotese2.Location = new System.Drawing.Point(117, 210);
+            this.CampoHipotese2.Margin = new System.Windows.Forms.Padding(2);
+            this.CampoHipotese2.Multiline = true;
+            this.CampoHipotese2.Name = "CampoHipotese2";
+            this.CampoHipotese2.ReadOnly = true;
+            this.CampoHipotese2.Size = new System.Drawing.Size(402, 142);
+            this.CampoHipotese2.TabIndex = 3;
             // 
             // label13
             // 
@@ -667,16 +671,16 @@
             this.label13.TabIndex = 66;
             this.label13.Text = "Exame :";
             // 
-            // textBox1
+            // CampoExame2
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.textBox1.Location = new System.Drawing.Point(364, 153);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(156, 24);
-            this.textBox1.TabIndex = 65;
+            this.CampoExame2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CampoExame2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.CampoExame2.Location = new System.Drawing.Point(364, 153);
+            this.CampoExame2.Margin = new System.Windows.Forms.Padding(2);
+            this.CampoExame2.Name = "CampoExame2";
+            this.CampoExame2.ReadOnly = true;
+            this.CampoExame2.Size = new System.Drawing.Size(156, 24);
+            this.CampoExame2.TabIndex = 65;
             // 
             // buttonAtualizar
             // 
@@ -690,6 +694,7 @@
             this.buttonAtualizar.TabIndex = 4;
             this.buttonAtualizar.Text = "Atualizar";
             this.buttonAtualizar.UseVisualStyleBackColor = true;
+            this.buttonAtualizar.Click += new System.EventHandler(this.buttonAtualizar_Click);
             // 
             // button2
             // 
@@ -703,6 +708,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -730,16 +736,16 @@
             this.label2.TabIndex = 60;
             this.label2.Text = "Data :";
             // 
-            // maskedTextBox2
+            // CampoData2
             // 
-            this.maskedTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox2.Location = new System.Drawing.Point(117, 152);
-            this.maskedTextBox2.Mask = "00/00/0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(156, 24);
-            this.maskedTextBox2.SkipLiterals = false;
-            this.maskedTextBox2.TabIndex = 2;
-            this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
+            this.CampoData2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CampoData2.Location = new System.Drawing.Point(117, 152);
+            this.CampoData2.Mask = "00/00/0000";
+            this.CampoData2.Name = "CampoData2";
+            this.CampoData2.Size = new System.Drawing.Size(156, 24);
+            this.CampoData2.SkipLiterals = false;
+            this.CampoData2.TabIndex = 2;
+            this.CampoData2.ValidatingType = typeof(System.DateTime);
             // 
             // labelNome
             // 
@@ -789,6 +795,7 @@
             this.BuscarCPF.Size = new System.Drawing.Size(143, 26);
             this.BuscarCPF.TabIndex = 4;
             this.BuscarCPF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BuscarCPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BuscarCPF_KeyPress);
             // 
             // ListaPedidosExame
             // 
@@ -806,6 +813,7 @@
             this.ListaPedidosExame.Size = new System.Drawing.Size(286, 429);
             this.ListaPedidosExame.TabIndex = 1;
             this.ListaPedidosExame.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentDoubleClick);
+            this.ListaPedidosExame.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListaPedidosExame_CellDoubleClick);
             // 
             // Nome1
             // 
@@ -901,12 +909,12 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox CampoData2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome1;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox CampoExame2;
+        private System.Windows.Forms.TextBox CampoHipotese;
+        private System.Windows.Forms.TextBox CampoHipotese2;
         private System.Windows.Forms.TextBox CampoCor;
         private System.Windows.Forms.TextBox CampoSexo;
         private System.Windows.Forms.TextBox CampoIdade;

@@ -6,13 +6,12 @@ namespace App.ViewModels.PedidosExames
 {
     public class PedidoExameAdicionar 
     {
-        public Guid Id { get; set; }
-        public DateTime DataEmissao { get; set; }
         public DateTime DataRealizacao { get; set; }
         public string Hipotese { get; set; }
         public Guid IdPaciente { get; set; }
         public Guid IdExame { get; set; }
         public Guid IdMedico { get; set; }
+        public string Crm { get; set; }
 
         public ValidationResult Validation { get; set; }
 
@@ -26,11 +25,6 @@ namespace App.ViewModels.PedidosExames
         {
             public PedidoExameValidation()
             {
-                RuleFor(pe => pe.DataEmissao)
-                    .NotEqual(new DateTime())
-                    .NotNull()
-                    .WithMessage("Data de Emissão deve ser informada");
-
                 RuleFor(pe => pe.DataRealizacao)
                     .NotEqual(new DateTime())
                     .NotNull()
@@ -51,6 +45,9 @@ namespace App.ViewModels.PedidosExames
 
                 RuleFor(pe => pe.IdMedico)
                     .NotEqual(Guid.Empty)
+                    .WithMessage("Médico solicitante deve ser informado");
+                RuleFor(pe => pe.Crm)
+                    .NotEmpty()
                     .WithMessage("Médico solicitante deve ser informado");
 
             }
