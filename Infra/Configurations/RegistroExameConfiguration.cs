@@ -1,32 +1,30 @@
 ﻿using Domain.Entities;
-using System.Data.Entity.ModelConfiguration;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Infra.Configurations
 {
-    public class RegistroExameConfiguration : EntityTypeConfiguration<RegistroExame>
+    public class RegistroExameConfiguration : IEntityTypeConfiguration<RegistroExame>
     {
-        public RegistroExameConfiguration()
+        public void Configure(EntityTypeBuilder<RegistroExame> builder)
         {
-            ToTable("RegistroExame");
+            builder.HasKey(re => re.Id);
 
-            HasKey(re => re.Id);
-
-            Property(re => re.Data)
-                .HasColumnType("date")
+            builder.Property(re => re.Data)
                 .IsRequired();
 
-            Property(re => re.Status)
+            builder.Property(re => re.Status)
                 .IsRequired();
 
-            HasRequired(re => re.PedidoExame)
-                .WithRequiredPrincipal(pe => pe.RegistroExame)
-                .Map(config => config.MapKey("PedidoExame_Id"));
+            builder.HasOne(re => re.PedidoExame)
+                .WithOne(p => p.RegistroExame)
+                .HasForeignKey<RegistroExame>(re => re.IdPedidoExame);
 
-            HasRequired(re => re.Residente)
+            builder.HasOne(re => re.Residente)
                 .WithMany(r => r.RegistrosExames)
                 .HasForeignKey(re => re.IdResidente);
 
-            HasRequired(re => re.Docente)
+            builder.HasOne(re => re.Docente)
                 .WithMany(d => d.RegistrosExames)
                 .HasForeignKey(re => re.IdDocente);
         }

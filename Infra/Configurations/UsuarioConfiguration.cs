@@ -1,20 +1,21 @@
 ﻿using Domain.Entities;
-using System.Data.Entity.ModelConfiguration;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Infra.Configurations
 {
-    public class UsuarioConfiguration : EntityTypeConfiguration<Usuario>
+    public class UsuarioConfiguration : IEntityTypeConfiguration<Usuario>
     {
-        public UsuarioConfiguration()
+        public void Configure(EntityTypeBuilder<Usuario> builder)
         {
-            ToTable("Usuario");
+            builder.HasKey(u => u.Id);
 
-            HasKey(u => u.Id);
-
-            Property(u => u.Email)
+            builder.HasIndex(u => u.Email)
+                .IsUnique();
+            builder.Property(u => u.Email)
                 .IsRequired();
 
-            Property(u => u.Senha)
+            builder.Property(u => u.Senha)
                 .HasMaxLength(10)
                 .IsRequired();
         }

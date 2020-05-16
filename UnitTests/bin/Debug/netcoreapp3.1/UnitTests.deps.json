@@ -1294,6 +1294,7 @@
       },
       "Infra/1.0.0": {
         "dependencies": {
+          "App": "1.0.0",
           "Domain": "1.0.0"
         },
         "runtime": {
@@ -1331,6 +1332,14 @@
           "AutoMapper.dll": {
             "assemblyVersion": "9.0.0.0",
             "fileVersion": "9.0.0.0"
+          }
+        }
+      },
+      "itextsharp/5.5.13.1": {
+        "runtime": {
+          "itextsharp.dll": {
+            "assemblyVersion": "5.5.13.1",
+            "fileVersion": "5.5.13.1"
           }
         }
       },
@@ -2159,6 +2168,11 @@
       "sha512": ""
     },
     "AutoMapper/9.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "itextsharp/5.5.13.1": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

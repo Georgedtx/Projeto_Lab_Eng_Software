@@ -1,39 +1,35 @@
 ﻿using Domain.Entities;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity.ModelConfiguration;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Infra.Configurations
 {
-    public class PedidoExameConfiguration : EntityTypeConfiguration<PedidoExame>
+    public class PedidoExameConfiguration : IEntityTypeConfiguration<PedidoExame>
     {
-        public PedidoExameConfiguration()
+        public void Configure(EntityTypeBuilder<PedidoExame> builder)
         {
-            ToTable("PedidoExame");
+            builder.HasKey(pe => pe.Id);
 
-            HasKey(pe => pe.Id);
-
-            Property(pe => pe.DataEmissao)
-                    .HasColumnType("date")
-                    .IsRequired();
-
-            Property(pe => pe.DataRealizacao)
-                .HasColumnType("date")
+            builder.Property(pe => pe.DataEmissao)
                 .IsRequired();
 
-            Property(pe => pe.Hipotese)
+            builder.Property(pe => pe.DataRealizacao)
                 .IsRequired();
 
-            HasRequired(pe => pe.Paciente)
+            builder.Property(pe => pe.Hipotese)
+                .IsRequired();
+
+            builder.HasOne(pe => pe.Paciente)
                 .WithMany(p => p.PedidosExames)
                 .HasForeignKey(pe => pe.IdPaciente);
 
-            HasRequired(pe => pe.Exame)
-                .WithMany(e => e.PedidosExames)
-                .HasForeignKey(pe => pe.IdExame);
+            builder.HasOne(pe => pe.Exame)
+            .WithMany(e => e.PedidosExames)
+            .HasForeignKey(pe => pe.IdExame);
 
-            HasRequired(pe => pe.Medico)
-                .WithMany(m => m.PedidosExames)
-                .HasForeignKey(pe => pe.IdMedico);
+            builder.HasOne(pe => pe.Medico)
+            .WithMany(m => m.PedidosExames)
+            .HasForeignKey(pe => pe.IdMedico);
         }
     }
 }

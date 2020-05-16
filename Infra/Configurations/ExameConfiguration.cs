@@ -1,21 +1,20 @@
 ﻿using Domain.Entities;
-using System.Data.Entity.ModelConfiguration;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Infra.Configurations
 {
-    public class ExameConfiguration : EntityTypeConfiguration<Exame>
+    public class ExameConfiguration : IEntityTypeConfiguration<Exame>
     {
-        public ExameConfiguration()
+        public void Configure(EntityTypeBuilder<Exame> builder)
         {
-            ToTable("Exame");
+            builder.HasKey(e => e.Id);
 
-            HasKey(e => e.Id);
-
-            Property(e => e.Nome)
+            builder.Property(e => e.Nome)
                 .HasMaxLength(25)
                 .IsRequired();
 
-            Property(e => e.Descricao)
+            builder.Property(e => e.Descricao)
                 .HasMaxLength(200)
                 .IsRequired();
         }

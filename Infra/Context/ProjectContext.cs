@@ -1,17 +1,13 @@
 ﻿using Domain.Entities;
 using FluentValidation.Results;
 using Infra.Configurations;
-using System.Data.Entity;
-using System.Data.Entity.SqlServer;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infra.Context
 {
     public class ProjectContext : DbContext
     {
-        public ProjectContext() : base(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\luisz\OneDrive\Documentos\Faculdade\LabEngSoftware\DbHospital.mdf;Integrated Security=True;Connect Timeout=30")
-        {
-            var instance = SqlProviderServices.Instance;
-        }
+        public ProjectContext() : base() { }
 
         public DbSet<Administrador> Administradores { get; set; }
         public DbSet<Docente> Docentes { get; set; }
@@ -24,22 +20,28 @@ namespace Infra.Context
         public DbSet<Residente> Residentes { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Ignore<ValidationResult>();
 
-            modelBuilder.Configurations.Add(new AdministradorConfiguration());
-            modelBuilder.Configurations.Add(new ArquivoConfiguration());
-            modelBuilder.Configurations.Add(new DocenteConfiguration());
-            modelBuilder.Configurations.Add(new ExameConfiguration());
-            modelBuilder.Configurations.Add(new MedicoConfiguration());
-            modelBuilder.Configurations.Add(new PacienteConfiguration());
-            modelBuilder.Configurations.Add(new PedidoExameConfiguration());
-            modelBuilder.Configurations.Add(new RecepcionistaConfiguration());
-            modelBuilder.Configurations.Add(new ResidenteConfiguration());
-            modelBuilder.Configurations.Add(new UsuarioConfiguration());
+            modelBuilder.ApplyConfiguration(new AdministradorConfiguration());
+            modelBuilder.ApplyConfiguration(new ArquivoConfiguration());
+            modelBuilder.ApplyConfiguration(new DocenteConfiguration());
+            modelBuilder.ApplyConfiguration(new ExameConfiguration());
+            modelBuilder.ApplyConfiguration(new MedicoConfiguration());
+            modelBuilder.ApplyConfiguration(new PacienteConfiguration());
+            modelBuilder.ApplyConfiguration(new PedidoExameConfiguration());
+            modelBuilder.ApplyConfiguration(new RecepcionistaConfiguration());
+            modelBuilder.ApplyConfiguration(new ResidenteConfiguration());
+            modelBuilder.ApplyConfiguration(new UsuarioConfiguration());
 
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.BuildDefaultData();
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseMySql("server=localhost;user=root;password=passMySql1997;database=DbHospital");
         }
     }
 }

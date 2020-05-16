@@ -1,6 +1,7 @@
 ﻿using App.ViewModels.PedidosExames;
 using Domain.Entities;
 using Domain.Interfaces.Uow;
+using Domain.Relatorios;
 using FluentValidation.Results;
 using Ninject;
 using System;
@@ -22,15 +23,42 @@ namespace App.Controllers
         {
             if (!pedidoExame.IsValid()) return pedidoExame.Validation;
 
-            var pedido = new PedidoExame(pedidoExame.DataRealizacao,
+            pedidoExame.Validation = new PedidoExameVerification(_unitOfWork).Validate(pedidoExame);
+
+            if (!pedidoExame.Validation.IsValid) return pedidoExame.Validation;
+
+            var medico = BuscarMedicoPorCrm(pedidoExame.Crm);
+
+            var pedido = new PedidoExame(pedidoExame.DataEmissao,
+                                         pedidoExame.DataRealizacao,
                                          pedidoExame.Hipotese,
                                          pedidoExame.IdPaciente,
                                          pedidoExame.IdExame,
-                                         pedidoExame.IdMedico);
+                                         medico.Id);
 
             _unitOfWork.RepositoryPedidoExame.Adicionar(pedido);
-            _unitOfWork.Commit();
+
+            if (_unitOfWork.Commit())
+            {
+                GerarRelatorio.Gerar(new Relatorio
+                {
+                    Nome = pedidoExame.NomePaciente,
+                    Idade = pedidoExame.IdadePaciente,
+                    Sexo = pedidoExame.SexoPaciente,
+                    Exame = pedidoExame.Exame,
+                    DataRealizacao = pedidoExame.DataRealizacao,
+                    DataEmissao = pedido.DataEmissao,
+                    Recomendacoes = pedidoExame.Recomendacoes
+                }
+                );
+            }
+
             return pedidoExame.Validation;
+        }
+
+        private Medico BuscarMedicoPorCrm(string crm)
+        {
+            return _unitOfWork.RepositoryMedico.ObterPorCrm(crm);
         }
 
         public Paciente BuscarPacientePorCpf(string cpf)

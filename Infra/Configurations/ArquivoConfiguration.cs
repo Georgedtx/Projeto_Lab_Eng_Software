@@ -1,24 +1,23 @@
 ﻿using Domain.Entities;
-using System.Data.Entity.ModelConfiguration;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Infra.Configurations
 {
-    public class ArquivoConfiguration : EntityTypeConfiguration<Arquivo>
+    public class ArquivoConfiguration : IEntityTypeConfiguration<Arquivo>
     {
-        public ArquivoConfiguration()
+        public void Configure(EntityTypeBuilder<Arquivo> builder)
         {
-            ToTable("Arquivo");
+            builder.HasKey(a => a.Id);
 
-            HasKey(a => a.Id);
-
-            Property(a => a.Nome)
+            builder.Property(a => a.Nome)
                 .IsRequired();
 
-            Property(a => a.Caminho)
+            builder.Property(a => a.Caminho)
                 .IsRequired();
 
-            HasRequired(a => a.RegistroExame)
-                .WithMany(r => r.Arquivos)
+            builder.HasOne(a => a.RegistroExame)
+                .WithMany(re => re.Arquivos)
                 .HasForeignKey(a => a.IdRegistroExame);
         }
     }

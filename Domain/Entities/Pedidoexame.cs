@@ -6,10 +6,10 @@ namespace Domain.Entities
     {
         protected PedidoExame() { }
 
-        public PedidoExame(DateTime dataRealizacao, string hipotese, Guid idPaciente, Guid idExame, Guid idMedico)
+        public PedidoExame(DateTime dataEmissao, DateTime dataRealizacao, string hipotese, Guid idPaciente, Guid idExame, Guid idMedico)
         {
             this.Id = Guid.NewGuid();
-            this.DataEmissao = DateTime.Now;
+            this.DataEmissao = dataEmissao;
             this.DataRealizacao = dataRealizacao;
             this.Hipotese = hipotese;
             this.IdPaciente = idPaciente;

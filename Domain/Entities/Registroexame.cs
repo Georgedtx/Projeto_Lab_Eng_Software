@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Entities
 {
@@ -22,6 +23,7 @@ namespace Domain.Entities
         public bool Status { get; private set; }
         public Guid? IdDocente { get; private set; }
         public Guid? IdResidente { get; private set; }
+        [ForeignKey("PedidoExame")]
         public Guid IdPedidoExame { get; private set; }
 
         public virtual ICollection<Arquivo> Arquivos { get; private set; }

@@ -1,7 +1,7 @@
 ﻿using Domain.Interfaces.Repositories;
 using Infra.Context;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 
 namespace Infra.Repositories
