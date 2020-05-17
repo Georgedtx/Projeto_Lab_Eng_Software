@@ -51,7 +51,7 @@ namespace Presentation.Recepcionista
             {
                 Nome = CampoNome.Text,
                 Cor = CampoCor.Text,
-                Cpf = CampoCPF.Text,
+                Cpf = removerMascaraCPF(CampoCPF.Text),
                 Sexo = CampoSexo.SelectedItem.ToString(),
                 Nascimento = ObterDataNascimento()
             };
@@ -72,12 +72,13 @@ namespace Presentation.Recepcionista
 
         private void Buscar_Click(object sender, EventArgs e)
         {
-            if (BuscarCPF.Text != string.Empty)
+            string campCPF = removerMascaraCPF(BuscarCPF.Text);
+            if (campCPF != string.Empty)
             {
                 try
                 {
-                    var paciente = _pacientesController.ObterPorCpf(BuscarCPF.Text);
-                    CampoNome2.Text = paciente.Nome.ToString();
+                    var paciente = _pacientesController.ObterPorCpf(campCPF);
+                    CampoNome3.Text = paciente.Nome.ToString();
                     CampoSexo2.Text = paciente.Sexo;
                     CampoNasc2.Text = paciente.Nascimento.ToString();
                     CampoCor2.Text = paciente.Cor;
@@ -93,7 +94,22 @@ namespace Presentation.Recepcionista
             }
             
         }
+        private string removerMascaraCPF(string cpf)
+        {
+            if (cpf.Length == 14)
+            {
+                cpf = cpf.Remove(3, 1);
+                cpf = cpf.Remove(6, 1);
+                cpf = cpf.Remove(9, 1);
+                return cpf;
 
+            }
+            else
+            {
+                cpf = string.Empty;
+                return cpf;
+            }
+        }
         private DateTime ObterDataNascimento()
         {
             if (CampoNasc.Text.Length == 10)

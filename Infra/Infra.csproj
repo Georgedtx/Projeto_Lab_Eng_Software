@@ -155,9 +155,9 @@
     <Compile Include="Context\ProjectContext.cs" />
     <Compile Include="IoC\Dependencies.cs" />
     <Compile Include="IoC\DependenciesResolve.cs" />
-    <Compile Include="Migrations\20200516012539_First.cs" />
-    <Compile Include="Migrations\20200516012539_First.designer.cs">
-      <DependentUpon>20200516012539_First.cs</DependentUpon>
+    <Compile Include="Migrations\20200517200927_First.cs" />
+    <Compile Include="Migrations\20200517200927_First.designer.cs">
+      <DependentUpon>20200517200927_First.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ProjectContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

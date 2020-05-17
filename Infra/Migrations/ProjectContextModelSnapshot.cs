@@ -41,8 +41,8 @@ namespace Infra.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("67c4e8d9-a021-431f-8741-121f0ba42e60"),
-                            IdUsuario = new Guid("0c4dd7b9-b00b-4bd8-bf7b-41943e197ae8"),
+                            Id = new Guid("2caae95b-6626-4413-b2f8-b0ce08f2fafd"),
+                            IdUsuario = new Guid("4bf1edf3-c813-4478-859c-545e48bf882d"),
                             Nome = "Administrador"
                         });
                 });
@@ -323,7 +323,7 @@ namespace Infra.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("0c4dd7b9-b00b-4bd8-bf7b-41943e197ae8"),
+                            Id = new Guid("4bf1edf3-c813-4478-859c-545e48bf882d"),
                             Email = "admin@hotmail.com",
                             Senha = "Admin2020"
                         });

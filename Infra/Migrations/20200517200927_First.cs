@@ -241,12 +241,12 @@ namespace Infra.Migrations
             migrationBuilder.InsertData(
                 table: "Usuarios",
                 columns: new[] { "Id", "Email", "Senha" },
-                values: new object[] { new Guid("0c4dd7b9-b00b-4bd8-bf7b-41943e197ae8"), "admin@hotmail.com", "Admin2020" });
+                values: new object[] { new Guid("4bf1edf3-c813-4478-859c-545e48bf882d"), "admin@hotmail.com", "Admin2020" });
 
             migrationBuilder.InsertData(
                 table: "Administradores",
                 columns: new[] { "Id", "IdUsuario", "Nome" },
-                values: new object[] { new Guid("67c4e8d9-a021-431f-8741-121f0ba42e60"), new Guid("0c4dd7b9-b00b-4bd8-bf7b-41943e197ae8"), "Administrador" });
+                values: new object[] { new Guid("2caae95b-6626-4413-b2f8-b0ce08f2fafd"), new Guid("4bf1edf3-c813-4478-859c-545e48bf882d"), "Administrador" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Administradores_IdUsuario",

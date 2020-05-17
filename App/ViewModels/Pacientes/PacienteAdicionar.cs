@@ -46,7 +46,7 @@ namespace App.ViewModels.Pacientes
             RuleFor(p => p.Sexo)
                 .NotNull()
                 .NotEmpty()
-                .Length(1)
+                .Length(1,10)
                 .WithMessage("Sexo é obrigatório");
 
             RuleFor(p => p.Cor)

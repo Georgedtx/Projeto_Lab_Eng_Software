@@ -41,7 +41,7 @@ namespace Infra.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySql("server=localhost;user=root;password=passMySql1997;database=DbHospital");
+            optionsBuilder.UseMySql("server=localhost;user=root;password=13057122;database=DbHospital");
         }
     }
 }

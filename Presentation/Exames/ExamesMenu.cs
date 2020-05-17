@@ -82,14 +82,14 @@ namespace Presentation.Exames
         }
         private void CampoCPF_KeyPress(object sender, KeyPressEventArgs e)
         {
-            string campCPF = removerMascaraCPF(BuscarCPF.Text);
+            string campCPF = removerMascaraCPF(CampoCPF.Text);
             if (e.KeyChar == (char)Keys.Enter)
             {
                 if (campCPF != string.Empty)
                 {
                     try
                     {
-                        var paciente = _pacientesController.ObterPorCpf(CampoCPF.Text);
+                        var paciente = _pacientesController.ObterPorCpf(campCPF);
                         CampoNome.Text = paciente.Nome.ToString();
                         CampoSexo.Text = paciente.Sexo;
                         CampoIdade.Text = IdadePaciente(paciente.Nascimento);
