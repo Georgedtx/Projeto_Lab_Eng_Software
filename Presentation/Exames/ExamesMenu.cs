@@ -82,26 +82,30 @@ namespace Presentation.Exames
         }
         private void CampoCPF_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((CampoCPF.Text != string.Empty) && (e.KeyChar == (char)Keys.Enter))
+            string campCPF = removerMascaraCPF(BuscarCPF.Text);
+            if (e.KeyChar == (char)Keys.Enter)
             {
-                try
+                if (campCPF != string.Empty)
                 {
-                    var paciente = _pacientesController.ObterPorCpf(CampoCPF.Text);
-                    CampoNome.Text = paciente.Nome.ToString();
-                    CampoSexo.Text = paciente.Sexo;
-                    CampoIdade.Text = IdadePaciente(paciente.Nascimento);
-                    CampoCor.Text = paciente.Cor;
-                    IdPaciente = paciente.Id;
+                    try
+                    {
+                        var paciente = _pacientesController.ObterPorCpf(CampoCPF.Text);
+                        CampoNome.Text = paciente.Nome.ToString();
+                        CampoSexo.Text = paciente.Sexo;
+                        CampoIdade.Text = IdadePaciente(paciente.Nascimento);
+                        CampoCor.Text = paciente.Cor;
+                        IdPaciente = paciente.Id;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Digite o CPF");
                 }
-            }
-            else
-            {
-                MessageBox.Show("Digite o CPF");
-            }
+            }           
         }
         private void listaExames_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -114,6 +118,22 @@ namespace Presentation.Exames
             else
             {
                 MessageBox.Show("Selecione uma linha.");
+            }
+        }
+        private string removerMascaraCPF(string cpf)
+        {
+            if (cpf.Length == 14)
+            {
+                cpf = cpf.Remove(3, 1);
+                cpf = cpf.Remove(6, 1);
+                cpf = cpf.Remove(9, 1);
+                return cpf;
+
+            }
+            else
+            {
+                cpf = string.Empty;
+                return cpf;
             }
         }
         private string IdadePaciente(DateTime nascimento)
@@ -140,22 +160,26 @@ namespace Presentation.Exames
         }
         private void BuscarCPF_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((BuscarCPF.Text != string.Empty) && (e.KeyChar == (char)Keys.Enter))
+            string campCPF = removerMascaraCPF(BuscarCPF.Text);
+            if (e.KeyChar == (char)Keys.Enter)
             {
-                try
+                if (campCPF != string.Empty)
                 {
-                    var paciente = _pacientesController.ObterPorCpf(BuscarCPF.Text);
-                    CampoNome.Text = paciente.Nome.ToString();
+                    try
+                    {
+                        var paciente = _pacientesController.ObterPorCpf(BuscarCPF.Text);
+                        CampoNome.Text = paciente.Nome.ToString();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Digite o CPF");
                 }
-            }
-            else
-            {
-                MessageBox.Show("Digite o CPF");
-            }
+            }           
         }
         private void ListaPedidosExame_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {

@@ -589,6 +589,7 @@
             this.CampoCPF.Size = new System.Drawing.Size(158, 24);
             this.CampoCPF.TabIndex = 1;
             this.CampoCPF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CampoCPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CampoCPF_KeyPress);
             // 
             // label7
             // 
