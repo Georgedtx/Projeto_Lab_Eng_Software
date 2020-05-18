@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Medicos = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.txtTitulo = new System.Windows.Forms.ComboBox();
-            this.txtAnoResidencia = new System.Windows.Forms.TextBox();
             this.checkResidente = new System.Windows.Forms.CheckBox();
             this.checkDocente = new System.Windows.Forms.CheckBox();
             this.txtCrm = new System.Windows.Forms.TextBox();
@@ -53,6 +52,7 @@
             this.NomeMD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CRMmd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AbasMedicos = new System.Windows.Forms.TabControl();
+            this.txtAnoResidencia = new System.Windows.Forms.TextBox();
             this.Medicos.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaMedicos)).BeginInit();
@@ -75,10 +75,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtAnoResidencia);
             this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.btnAdicionar);
             this.groupBox1.Controls.Add(this.txtTitulo);
-            this.groupBox1.Controls.Add(this.txtAnoResidencia);
             this.groupBox1.Controls.Add(this.checkResidente);
             this.groupBox1.Controls.Add(this.checkDocente);
             this.groupBox1.Controls.Add(this.txtCrm);
@@ -136,16 +136,6 @@
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.Size = new System.Drawing.Size(121, 23);
             this.txtTitulo.TabIndex = 18;
-            // 
-            // txtAnoResidencia
-            // 
-            this.txtAnoResidencia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAnoResidencia.Enabled = false;
-            this.txtAnoResidencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnoResidencia.Location = new System.Drawing.Point(29, 362);
-            this.txtAnoResidencia.Name = "txtAnoResidencia";
-            this.txtAnoResidencia.Size = new System.Drawing.Size(115, 24);
-            this.txtAnoResidencia.TabIndex = 19;
             // 
             // checkResidente
             // 
@@ -292,14 +282,14 @@
             // 
             this.listaMedicos.AllowUserToAddRows = false;
             this.listaMedicos.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.listaMedicos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.listaMedicos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.listaMedicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listaMedicos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NomeMD,
@@ -316,6 +306,7 @@
             // NomeMD
             // 
             this.NomeMD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NomeMD.DataPropertyName = "Nome";
             this.NomeMD.HeaderText = "Nome";
             this.NomeMD.MinimumWidth = 6;
             this.NomeMD.Name = "NomeMD";
@@ -323,6 +314,7 @@
             // CRMmd
             // 
             this.CRMmd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CRMmd.DataPropertyName = "CRM";
             this.CRMmd.HeaderText = "CRM";
             this.CRMmd.MinimumWidth = 6;
             this.CRMmd.Name = "CRMmd";
@@ -338,6 +330,16 @@
             this.AbasMedicos.SelectedIndex = 0;
             this.AbasMedicos.Size = new System.Drawing.Size(903, 495);
             this.AbasMedicos.TabIndex = 0;
+            // 
+            // txtAnoResidencia
+            // 
+            this.txtAnoResidencia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAnoResidencia.Enabled = false;
+            this.txtAnoResidencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnoResidencia.Location = new System.Drawing.Point(31, 361);
+            this.txtAnoResidencia.Name = "txtAnoResidencia";
+            this.txtAnoResidencia.Size = new System.Drawing.Size(121, 24);
+            this.txtAnoResidencia.TabIndex = 19;
             // 
             // AdmTelaMed
             // 
@@ -371,17 +373,17 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NomeMD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CRMmd;
         private System.Windows.Forms.TextBox txtCrm;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtMesmaSenha;
         private System.Windows.Forms.ComboBox txtTitulo;
-        private System.Windows.Forms.TextBox txtAnoResidencia;
         private System.Windows.Forms.CheckBox checkResidente;
         private System.Windows.Forms.CheckBox checkDocente;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAdicionar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomeMD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CRMmd;
+        private System.Windows.Forms.TextBox txtAnoResidencia;
     }
 }

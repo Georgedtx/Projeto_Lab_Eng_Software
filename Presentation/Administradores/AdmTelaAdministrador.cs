@@ -55,13 +55,17 @@ namespace Presentation.Administradores
 
         private void AtualizarDataGrid()
         {
-             listaAdmins.DataSource = _administradoresController.ObterTodos()
-             .Select(a => new { Id = a.Id, Nome = a.Nome });
+            var data = from info in _administradoresController.ObterTodos()
+                       orderby info.Nome
+                       select new
+                       {
+                           Nome = info.Nome
+                       };
+            listaAdmins.DataSource = data.ToList();
         }
 
         private TabPage tabPage1;
         private DataGridView listaAdmins;
-        private DataGridViewTextBoxColumn NomeMD;
         private TabControl tabControl1;
         private DataGridViewTextBoxColumn Nome1;
         private GroupBox groupBox1;
@@ -74,12 +78,13 @@ namespace Presentation.Administradores
         private TextBox txtSenha;
         private Label label4;
         private TextBox txtMesmaSenha;
+        private DataGridViewTextBoxColumn NomeMD;
         private TextBox txtEmail;
 
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -93,9 +98,9 @@ namespace Presentation.Administradores
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.listaAdmins = new System.Windows.Forms.DataGridView();
-            this.NomeMD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Nome1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeMD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaAdmins)).BeginInit();
@@ -245,17 +250,17 @@ namespace Presentation.Administradores
             this.listaAdmins.AllowUserToAddRows = false;
             this.listaAdmins.AllowUserToResizeColumns = false;
             this.listaAdmins.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            this.listaAdmins.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.listaAdmins.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.listaAdmins.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.listaAdmins.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.listaAdmins.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.listaAdmins.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listaAdmins.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NomeMD});
@@ -267,13 +272,6 @@ namespace Presentation.Administradores
             this.listaAdmins.RowTemplate.Height = 24;
             this.listaAdmins.Size = new System.Drawing.Size(448, 464);
             this.listaAdmins.TabIndex = 9;
-            // 
-            // NomeMD
-            // 
-            this.NomeMD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NomeMD.HeaderText = "Nome";
-            this.NomeMD.MinimumWidth = 6;
-            this.NomeMD.Name = "NomeMD";
             // 
             // tabControl1
             // 
@@ -295,6 +293,14 @@ namespace Presentation.Administradores
             this.Nome1.HeaderText = "Nome";
             this.Nome1.MinimumWidth = 6;
             this.Nome1.Name = "Nome1";
+            // 
+            // NomeMD
+            // 
+            this.NomeMD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NomeMD.DataPropertyName = "Nome";
+            this.NomeMD.HeaderText = "Nome";
+            this.NomeMD.MinimumWidth = 6;
+            this.NomeMD.Name = "NomeMD";
             // 
             // AdmTelaAdministrador
             // 

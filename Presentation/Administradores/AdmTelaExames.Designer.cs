@@ -38,8 +38,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.listaExames = new System.Windows.Forms.DataGridView();
-            this.NomeMD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdExames = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaExames)).BeginInit();
@@ -156,7 +157,8 @@
             this.listaExames.BackgroundColor = System.Drawing.Color.White;
             this.listaExames.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listaExames.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NomeMD});
+            this.Nome,
+            this.IdExames});
             this.listaExames.Dock = System.Windows.Forms.DockStyle.Right;
             this.listaExames.GridColor = System.Drawing.Color.White;
             this.listaExames.Location = new System.Drawing.Point(433, 3);
@@ -167,13 +169,6 @@
             this.listaExames.Size = new System.Drawing.Size(459, 463);
             this.listaExames.TabIndex = 3;
             // 
-            // NomeMD
-            // 
-            this.NomeMD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NomeMD.HeaderText = "Nome";
-            this.NomeMD.MinimumWidth = 6;
-            this.NomeMD.Name = "NomeMD";
-            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -183,6 +178,24 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(903, 495);
             this.tabControl1.TabIndex = 17;
+            // 
+            // Nome
+            // 
+            this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nome.DataPropertyName = "Nome";
+            this.Nome.FillWeight = 121.8274F;
+            this.Nome.HeaderText = "Nome";
+            this.Nome.MinimumWidth = 6;
+            this.Nome.Name = "Nome";
+            // 
+            // IdExames
+            // 
+            this.IdExames.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.IdExames.DataPropertyName = "Id";
+            this.IdExames.FillWeight = 78.17259F;
+            this.IdExames.HeaderText = "Id";
+            this.IdExames.MinimumWidth = 6;
+            this.IdExames.Name = "IdExames";
             // 
             // AdmTelaExames
             // 
@@ -205,7 +218,6 @@
         #endregion
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView listaExames;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NomeMD;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RichTextBox txtDescricao;
@@ -215,5 +227,7 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAdicionar;
         private System.Windows.Forms.Button BtnEditar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdExames;
     }
 }

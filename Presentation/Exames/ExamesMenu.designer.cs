@@ -65,7 +65,6 @@
             this.CampoCPF = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.listaExames = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.CampoNome2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -84,6 +83,8 @@
             this.ListaPedidosExame = new System.Windows.Forms.DataGridView();
             this.Nome1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Exame = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelMenu.SuspendLayout();
             this.logoPainel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
@@ -610,7 +611,8 @@
             this.listaExames.BackgroundColor = System.Drawing.Color.White;
             this.listaExames.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listaExames.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1});
+            this.Exame,
+            this.Id});
             this.listaExames.Dock = System.Windows.Forms.DockStyle.Right;
             this.listaExames.Location = new System.Drawing.Point(550, 3);
             this.listaExames.Name = "listaExames";
@@ -618,13 +620,6 @@
             this.listaExames.Size = new System.Drawing.Size(286, 429);
             this.listaExames.TabIndex = 10;
             this.listaExames.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.listaExames_CellDoubleClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Exames";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // dataGridView1
             // 
@@ -855,6 +850,22 @@
             this.Nome.MinimumWidth = 6;
             this.Nome.Name = "Nome";
             // 
+            // Exame
+            // 
+            this.Exame.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Exame.DataPropertyName = "Nome";
+            this.Exame.HeaderText = "Exames";
+            this.Exame.MinimumWidth = 6;
+            this.Exame.Name = "Exame";
+            // 
+            // Id
+            // 
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            // 
             // ExamesMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -923,7 +934,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button Emitir;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.MaskedTextBox CampoDataRealizacao;
         private System.Windows.Forms.TextBox CampoExame;
         private System.Windows.Forms.Label label4;
@@ -946,6 +956,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox CampoHipotese2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Exame;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
     }
 }
 

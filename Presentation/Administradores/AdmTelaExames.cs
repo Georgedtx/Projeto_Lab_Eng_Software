@@ -65,7 +65,7 @@ namespace Presentation.Administradores
             {
                 Editar = true;
                 txtNome.Text = listaExames.CurrentRow.Cells["Nome"].Value.ToString();
-                string stringGuid = listaExames.CurrentRow.Cells["Id"].Value.ToString();
+                string stringGuid = listaExames.CurrentRow.Cells["IdExames"].Value.ToString();
                 Id = Guid.Parse(stringGuid);               
             }
             else
@@ -74,14 +74,21 @@ namespace Presentation.Administradores
 
         private void AtualizarDataGrid()
         {
-            //listaExames.DataSource = _exameController.ObterTodos()
-            //    .Select(e => new { Id = e.Id, Nome = e.Nome });
+            var data = from info in _exameController.ObterTodos()
+                       orderby info.Nome
+                       select new
+                       {
+                           Nome = info.Nome,
+                           Id = info.Id
+                       };
+            listaExames.DataSource = data.ToList();
         }
 
         private void LimparCampos()
         {
             txtNome.Clear();
             txtDescricao.Clear();
+            Editar = false;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

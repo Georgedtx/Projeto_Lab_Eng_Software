@@ -43,10 +43,30 @@ namespace Presentation.Exames
 
         private void AtualizarDataGrid()
         {
+            var data = from info in _examesController.ObterTodos()
+                       orderby info.Nome
+                       select new
+                       {
+                           Nome = info.Nome,
+                           Id = info.Id
+                       };
+            listaExames.DataSource = data.ToList();
+            
             //listaExames.DataSource = _exameController.ObterTodos()
             //    .Select(e => new { Id = e.Id, Nome = e.Nome });
             //ListaPedidosExame.DataSource = _pedidosExamesController.ObterPedidosExamesDoPaciente(BuscarCPF.Text)
             //.Select(m => new { Exame = m.Exame , Hipótese = m.Hipotese}); 
+        }
+        private void AtualizarDataGridPaciente()//pensar no que vai aparecer na tela de pedidos 
+        {
+            var data2 = from info in _pedidosExamesController.ObterPedidosExamesDoPaciente(removerMascaraCPF(CampoCPF.Text))
+                        orderby info.Exame
+                        select new
+                        {
+                            Exame = info.Exame,
+                            Id = info.IdExame                           
+                        };
+            ListaPedidosExame.DataSource = data2.ToList();
         }
         private void Emitir_Click(object sender, EventArgs e)
         {
@@ -111,7 +131,7 @@ namespace Presentation.Exames
         {
             if (listaExames.SelectedRows.Count > 0)
             {
-                CampoExame.Text = listaExames.CurrentRow.Cells["Nome"].Value.ToString();
+                CampoExame.Text = listaExames.CurrentRow.Cells["Exame"].Value.ToString();
                 string stringGuid = listaExames.CurrentRow.Cells["Id"].Value.ToString();
                 IdExame = Guid.Parse(stringGuid);
             }

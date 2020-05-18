@@ -23,6 +23,13 @@ namespace Presentation.Administradores
 
         private void AtualizarDataGrid()
         {
+            var data = from info in _recepcionistasController.ObterTodos()
+                       orderby info.Nome
+                       select new
+                       {
+                           Nome = info.Nome
+                       };
+            listaRecepcionista.DataSource = data.ToList();
             //listaRecepcionista.DataSource = _recepcionistasController.ObterTodos()
             //.Select(m => new { Nome = m.Nome });
         }
