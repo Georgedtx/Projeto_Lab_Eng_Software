@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnGerenciar = new FontAwesome.Sharp.IconButton();
             this.Exames = new FontAwesome.Sharp.IconButton();
             this.Sair = new FontAwesome.Sharp.IconButton();
             this.Recepcionista = new FontAwesome.Sharp.IconButton();
@@ -42,11 +43,12 @@
             this.fechar = new FontAwesome.Sharp.IconButton();
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.btnGerenciar = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.logoPainel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.painelTitulo.SuspendLayout();
+            this.panelDesktop.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -65,6 +67,31 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(165, 611);
             this.panelMenu.TabIndex = 2;
+            // 
+            // btnGerenciar
+            // 
+            this.btnGerenciar.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnGerenciar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGerenciar.FlatAppearance.BorderSize = 0;
+            this.btnGerenciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGerenciar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnGerenciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGerenciar.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnGerenciar.IconChar = FontAwesome.Sharp.IconChar.UsersCog;
+            this.btnGerenciar.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnGerenciar.IconSize = 50;
+            this.btnGerenciar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGerenciar.Location = new System.Drawing.Point(0, 359);
+            this.btnGerenciar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGerenciar.Name = "btnGerenciar";
+            this.btnGerenciar.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.btnGerenciar.Rotation = 0D;
+            this.btnGerenciar.Size = new System.Drawing.Size(165, 72);
+            this.btnGerenciar.TabIndex = 6;
+            this.btnGerenciar.Text = "Gerenciar Usuários";
+            this.btnGerenciar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGerenciar.UseVisualStyleBackColor = false;
+            this.btnGerenciar.Click += new System.EventHandler(this.btnGerenciar_Click);
             // 
             // Exames
             // 
@@ -312,6 +339,7 @@
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panelDesktop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelDesktop.Controls.Add(this.label1);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(165, 77);
             this.panelDesktop.Margin = new System.Windows.Forms.Padding(2);
@@ -319,30 +347,18 @@
             this.panelDesktop.Size = new System.Drawing.Size(919, 534);
             this.panelDesktop.TabIndex = 5;
             // 
-            // btnGerenciar
+            // label1
             // 
-            this.btnGerenciar.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnGerenciar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnGerenciar.FlatAppearance.BorderSize = 0;
-            this.btnGerenciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGerenciar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnGerenciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerenciar.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnGerenciar.IconChar = FontAwesome.Sharp.IconChar.UsersCog;
-            this.btnGerenciar.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnGerenciar.IconSize = 50;
-            this.btnGerenciar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGerenciar.Location = new System.Drawing.Point(0, 359);
-            this.btnGerenciar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGerenciar.Name = "btnGerenciar";
-            this.btnGerenciar.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.btnGerenciar.Rotation = 0D;
-            this.btnGerenciar.Size = new System.Drawing.Size(165, 72);
-            this.btnGerenciar.TabIndex = 6;
-            this.btnGerenciar.Text = "Gerenciar Usuários";
-            this.btnGerenciar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGerenciar.UseVisualStyleBackColor = false;
-            this.btnGerenciar.Click += new System.EventHandler(this.btnGerenciar_Click);
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.label1.Location = new System.Drawing.Point(24, 24);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 16);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Nome :";
             // 
             // AdmMenuPrincipal
             // 
@@ -361,6 +377,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.painelTitulo.ResumeLayout(false);
             this.painelTitulo.PerformLayout();
+            this.panelDesktop.ResumeLayout(false);
+            this.panelDesktop.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -382,6 +400,7 @@
         private FontAwesome.Sharp.IconButton Exames;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private FontAwesome.Sharp.IconButton btnGerenciar;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -28,16 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelMenu = new System.Windows.Forms.Panel();
-            this.Sair = new FontAwesome.Sharp.IconButton();
-            this.logoPainel = new System.Windows.Forms.Panel();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.painelTitulo = new System.Windows.Forms.Panel();
-            this.minimizar = new FontAwesome.Sharp.IconButton();
-            this.maximizar = new FontAwesome.Sharp.IconButton();
-            this.fechar = new FontAwesome.Sharp.IconButton();
-            this.lblTitleChildForm = new System.Windows.Forms.Label();
-            this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -83,18 +73,8 @@
             this.CPF = new System.Windows.Forms.Label();
             this.BuscarCPF = new System.Windows.Forms.MaskedTextBox();
             this.ListaPedidosExame = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNomePaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnData = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pedidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panelMenu.SuspendLayout();
-            this.logoPainel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
-            this.painelTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelDesktop.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -104,198 +84,28 @@
             this.CampoNome2.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ListaPedidosExame)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panelMenu
-            // 
-            this.panelMenu.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.panelMenu.Controls.Add(this.Sair);
-            this.panelMenu.Controls.Add(this.logoPainel);
-            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
-            this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(121, 526);
-            this.panelMenu.TabIndex = 2;
-            // 
-            // Sair
-            // 
-            this.Sair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Sair.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.Sair.FlatAppearance.BorderSize = 0;
-            this.Sair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Sair.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.Sair.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Sair.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
-            this.Sair.IconColor = System.Drawing.Color.Gainsboro;
-            this.Sair.IconSize = 50;
-            this.Sair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Sair.Location = new System.Drawing.Point(0, 442);
-            this.Sair.Margin = new System.Windows.Forms.Padding(2);
-            this.Sair.Name = "Sair";
-            this.Sair.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Sair.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Sair.Rotation = 0D;
-            this.Sair.Size = new System.Drawing.Size(121, 84);
-            this.Sair.TabIndex = 4;
-            this.Sair.Text = "Sair";
-            this.Sair.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Sair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Sair.UseVisualStyleBackColor = false;
-            this.Sair.Click += new System.EventHandler(this.Sair_Click);
-            // 
-            // logoPainel
-            // 
-            this.logoPainel.Controls.Add(this.iconPictureBox2);
-            this.logoPainel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.logoPainel.Location = new System.Drawing.Point(0, 0);
-            this.logoPainel.Margin = new System.Windows.Forms.Padding(2);
-            this.logoPainel.Name = "logoPainel";
-            this.logoPainel.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.logoPainel.Size = new System.Drawing.Size(121, 81);
-            this.logoPainel.TabIndex = 0;
-            // 
-            // iconPictureBox2
-            // 
-            this.iconPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.iconPictureBox2.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Heartbeat;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.White;
-            this.iconPictureBox2.IconSize = 81;
-            this.iconPictureBox2.Location = new System.Drawing.Point(0, 2);
-            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.iconPictureBox2.Size = new System.Drawing.Size(121, 81);
-            this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.iconPictureBox2.TabIndex = 8;
-            this.iconPictureBox2.TabStop = false;
-            // 
-            // painelTitulo
-            // 
-            this.painelTitulo.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.painelTitulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.painelTitulo.Controls.Add(this.minimizar);
-            this.painelTitulo.Controls.Add(this.maximizar);
-            this.painelTitulo.Controls.Add(this.fechar);
-            this.painelTitulo.Controls.Add(this.lblTitleChildForm);
-            this.painelTitulo.Controls.Add(this.iconCurrentChildForm);
-            this.painelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.painelTitulo.Location = new System.Drawing.Point(121, 0);
-            this.painelTitulo.Margin = new System.Windows.Forms.Padding(2);
-            this.painelTitulo.Name = "painelTitulo";
-            this.painelTitulo.Size = new System.Drawing.Size(847, 65);
-            this.painelTitulo.TabIndex = 3;
-            this.painelTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.painelTitulo_MouseDown);
-            // 
-            // minimizar
-            // 
-            this.minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.minimizar.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.minimizar.FlatAppearance.BorderSize = 0;
-            this.minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.minimizar.ForeColor = System.Drawing.SystemColors.Control;
-            this.minimizar.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.minimizar.IconColor = System.Drawing.Color.Gainsboro;
-            this.minimizar.IconSize = 16;
-            this.minimizar.Location = new System.Drawing.Point(749, 0);
-            this.minimizar.Margin = new System.Windows.Forms.Padding(2);
-            this.minimizar.Name = "minimizar";
-            this.minimizar.Rotation = 0D;
-            this.minimizar.Size = new System.Drawing.Size(27, 19);
-            this.minimizar.TabIndex = 4;
-            this.minimizar.UseVisualStyleBackColor = false;
-            this.minimizar.Click += new System.EventHandler(this.minimizar_Click);
-            // 
-            // maximizar
-            // 
-            this.maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maximizar.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.maximizar.FlatAppearance.BorderSize = 0;
-            this.maximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.maximizar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.maximizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.maximizar.IconChar = FontAwesome.Sharp.IconChar.WindowRestore;
-            this.maximizar.IconColor = System.Drawing.Color.Gainsboro;
-            this.maximizar.IconSize = 16;
-            this.maximizar.Location = new System.Drawing.Point(780, 0);
-            this.maximizar.Margin = new System.Windows.Forms.Padding(2);
-            this.maximizar.Name = "maximizar";
-            this.maximizar.Rotation = 0D;
-            this.maximizar.Size = new System.Drawing.Size(34, 19);
-            this.maximizar.TabIndex = 3;
-            this.maximizar.UseVisualStyleBackColor = false;
-            this.maximizar.Click += new System.EventHandler(this.maximizar_Click);
-            // 
-            // fechar
-            // 
-            this.fechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.fechar.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.fechar.FlatAppearance.BorderSize = 0;
-            this.fechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.fechar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.fechar.ForeColor = System.Drawing.SystemColors.Control;
-            this.fechar.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.fechar.IconColor = System.Drawing.Color.Gainsboro;
-            this.fechar.IconSize = 16;
-            this.fechar.Location = new System.Drawing.Point(818, 0);
-            this.fechar.Margin = new System.Windows.Forms.Padding(2);
-            this.fechar.Name = "fechar";
-            this.fechar.Rotation = 0D;
-            this.fechar.Size = new System.Drawing.Size(26, 19);
-            this.fechar.TabIndex = 2;
-            this.fechar.UseVisualStyleBackColor = false;
-            this.fechar.Click += new System.EventHandler(this.fechar_Click);
-            // 
-            // lblTitleChildForm
-            // 
-            this.lblTitleChildForm.AutoSize = true;
-            this.lblTitleChildForm.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblTitleChildForm.Location = new System.Drawing.Point(46, 25);
-            this.lblTitleChildForm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(35, 13);
-            this.lblTitleChildForm.TabIndex = 1;
-            this.lblTitleChildForm.Text = "Home";
-            // 
-            // iconCurrentChildForm
-            // 
-            this.iconCurrentChildForm.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.iconCurrentChildForm.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconCurrentChildForm.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconCurrentChildForm.IconSize = 29;
-            this.iconCurrentChildForm.Location = new System.Drawing.Point(12, 17);
-            this.iconCurrentChildForm.Margin = new System.Windows.Forms.Padding(2);
-            this.iconCurrentChildForm.Name = "iconCurrentChildForm";
-            this.iconCurrentChildForm.Size = new System.Drawing.Size(29, 33);
-            this.iconCurrentChildForm.TabIndex = 0;
-            this.iconCurrentChildForm.TabStop = false;
             // 
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.White;
             this.panelDesktop.Controls.Add(this.tabControl1);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(121, 65);
+            this.panelDesktop.Location = new System.Drawing.Point(0, 0);
             this.panelDesktop.Margin = new System.Windows.Forms.Padding(2);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(847, 461);
+            this.panelDesktop.Size = new System.Drawing.Size(903, 495);
             this.panelDesktop.TabIndex = 5;
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.CampoNome2);
-            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(847, 461);
+            this.tabControl1.Size = new System.Drawing.Size(903, 495);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -307,7 +117,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(839, 435);
+            this.tabPage1.Size = new System.Drawing.Size(895, 469);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Pedido de Exame";
             // 
@@ -340,7 +150,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(544, 429);
+            this.groupBox1.Size = new System.Drawing.Size(548, 463);
             this.groupBox1.TabIndex = 42;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pedido de Exame";
@@ -454,11 +264,12 @@
             // 
             this.CampoDataRealizacao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CampoDataRealizacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CampoDataRealizacao.Location = new System.Drawing.Point(360, 184);
+            this.CampoDataRealizacao.Location = new System.Drawing.Point(382, 184);
             this.CampoDataRealizacao.Mask = "00/00/0000";
             this.CampoDataRealizacao.Name = "CampoDataRealizacao";
-            this.CampoDataRealizacao.Size = new System.Drawing.Size(157, 24);
+            this.CampoDataRealizacao.Size = new System.Drawing.Size(135, 24);
             this.CampoDataRealizacao.TabIndex = 4;
+            this.CampoDataRealizacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CampoDataRealizacao.ValidatingType = typeof(System.DateTime);
             // 
             // CampoExame
@@ -621,11 +432,10 @@
             this.listaExames.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Exame,
             this.Id});
-            this.listaExames.Dock = System.Windows.Forms.DockStyle.Right;
-            this.listaExames.Location = new System.Drawing.Point(550, 3);
+            this.listaExames.Location = new System.Drawing.Point(557, 0);
             this.listaExames.Name = "listaExames";
             this.listaExames.RowHeadersWidth = 51;
-            this.listaExames.Size = new System.Drawing.Size(286, 429);
+            this.listaExames.Size = new System.Drawing.Size(335, 469);
             this.listaExames.TabIndex = 10;
             this.listaExames.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.listaExames_CellDoubleClick);
             // 
@@ -654,18 +464,18 @@
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(833, 429);
+            this.dataGridView1.Size = new System.Drawing.Size(889, 463);
             this.dataGridView1.TabIndex = 0;
             // 
             // CampoNome2
             // 
-            this.CampoNome2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.CampoNome2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.CampoNome2.Controls.Add(this.panel2);
             this.CampoNome2.Controls.Add(this.ListaPedidosExame);
             this.CampoNome2.Location = new System.Drawing.Point(4, 22);
             this.CampoNome2.Name = "CampoNome2";
             this.CampoNome2.Padding = new System.Windows.Forms.Padding(3);
-            this.CampoNome2.Size = new System.Drawing.Size(839, 435);
+            this.CampoNome2.Size = new System.Drawing.Size(895, 469);
             this.CampoNome2.TabIndex = 2;
             this.CampoNome2.Text = "Atualizar Exame";
             // 
@@ -690,7 +500,7 @@
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(3);
-            this.panel2.Size = new System.Drawing.Size(548, 429);
+            this.panel2.Size = new System.Drawing.Size(547, 463);
             this.panel2.TabIndex = 18;
             // 
             // CampoHipotese2
@@ -790,6 +600,7 @@
             this.CampoData2.Size = new System.Drawing.Size(156, 24);
             this.CampoData2.SkipLiterals = false;
             this.CampoData2.TabIndex = 2;
+            this.CampoData2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CampoData2.ValidatingType = typeof(System.DateTime);
             // 
             // labelNome
@@ -847,77 +658,18 @@
             this.ListaPedidosExame.AllowUserToAddRows = false;
             this.ListaPedidosExame.AllowUserToOrderColumns = true;
             this.ListaPedidosExame.BackgroundColor = System.Drawing.Color.White;
+            this.ListaPedidosExame.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ListaPedidosExame.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ListaPedidosExame.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Pedidos});
-            this.ListaPedidosExame.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ListaPedidosExame.Location = new System.Drawing.Point(550, 3);
+            this.ListaPedidosExame.Location = new System.Drawing.Point(549, 0);
             this.ListaPedidosExame.Name = "ListaPedidosExame";
             this.ListaPedidosExame.RowHeadersWidth = 51;
             this.ListaPedidosExame.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ListaPedidosExame.Size = new System.Drawing.Size(286, 429);
+            this.ListaPedidosExame.Size = new System.Drawing.Size(343, 469);
             this.ListaPedidosExame.TabIndex = 1;
             this.ListaPedidosExame.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentDoubleClick);
             this.ListaPedidosExame.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListaPedidosExame_CellDoubleClick);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(839, 435);
-            this.tabPage2.TabIndex = 3;
-            this.tabPage2.Text = "Listagem exames";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AllowUserToOrderColumns = true;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnNome,
-            this.ColumnNomePaciente,
-            this.ColumnData});
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(833, 429);
-            this.dataGridView2.TabIndex = 3;
-            // 
-            // ColumnNome
-            // 
-            this.ColumnNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnNome.HeaderText = "Exame";
-            this.ColumnNome.Name = "ColumnNome";
-            this.ColumnNome.ReadOnly = true;
-            // 
-            // ColumnNomePaciente
-            // 
-            this.ColumnNomePaciente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnNomePaciente.HeaderText = "Nome";
-            this.ColumnNomePaciente.Name = "ColumnNomePaciente";
-            this.ColumnNomePaciente.ReadOnly = true;
-            // 
-            // ColumnData
-            // 
-            this.ColumnData.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnData.HeaderText = "Data";
-            this.ColumnData.Name = "ColumnData";
-            this.ColumnData.ReadOnly = true;
-            // 
-            // Nome
-            // 
-            this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nome.HeaderText = "Nome";
-            this.Nome.MinimumWidth = 6;
-            this.Nome.Name = "Nome";
             // 
             // Pedidos
             // 
@@ -927,24 +679,23 @@
             this.Pedidos.MinimumWidth = 6;
             this.Pedidos.Name = "Pedidos";
             // 
+            // Nome
+            // 
+            this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nome.HeaderText = "Nome";
+            this.Nome.MinimumWidth = 6;
+            this.Nome.Name = "Nome";
+            // 
             // ExamesMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.ClientSize = new System.Drawing.Size(968, 526);
+            this.ClientSize = new System.Drawing.Size(903, 495);
             this.Controls.Add(this.panelDesktop);
-            this.Controls.Add(this.painelTitulo);
-            this.Controls.Add(this.panelMenu);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ExamesMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.panelMenu.ResumeLayout(false);
-            this.logoPainel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
-            this.painelTitulo.ResumeLayout(false);
-            this.painelTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
             this.panelDesktop.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -956,25 +707,12 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ListaPedidosExame)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Panel logoPainel;
-        private System.Windows.Forms.Panel painelTitulo;
-        private FontAwesome.Sharp.IconPictureBox iconCurrentChildForm;
-        private System.Windows.Forms.Label lblTitleChildForm;
         private System.Windows.Forms.Panel panelDesktop;
-        private FontAwesome.Sharp.IconButton minimizar;
-        private FontAwesome.Sharp.IconButton maximizar;
-        private FontAwesome.Sharp.IconButton fechar;
-        private FontAwesome.Sharp.IconButton Sair;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage CampoNome2;
         private System.Windows.Forms.Label CPF;
@@ -1020,11 +758,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Exame;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNomePaciente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnData;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pedidos;
     }
 }
