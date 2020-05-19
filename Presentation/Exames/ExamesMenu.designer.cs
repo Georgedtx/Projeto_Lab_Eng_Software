@@ -79,17 +79,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.CampoData2 = new System.Windows.Forms.MaskedTextBox();
             this.labelNome = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.CampoNome3 = new System.Windows.Forms.TextBox();
             this.CPF = new System.Windows.Forms.Label();
             this.BuscarCPF = new System.Windows.Forms.MaskedTextBox();
             this.ListaPedidosExame = new System.Windows.Forms.DataGridView();
-            this.Nome1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNomePaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnData = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pedidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelMenu.SuspendLayout();
             this.logoPainel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
@@ -683,7 +683,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.CampoData2);
             this.panel2.Controls.Add(this.labelNome);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.CampoNome3);
             this.panel2.Controls.Add(this.CPF);
             this.panel2.Controls.Add(this.BuscarCPF);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -805,17 +805,17 @@
             this.labelNome.TabIndex = 19;
             this.labelNome.Text = "Nome :";
             // 
-            // textBox2
+            // CampoNome3
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Enabled = false;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.textBox2.Location = new System.Drawing.Point(116, 113);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(402, 24);
-            this.textBox2.TabIndex = 18;
+            this.CampoNome3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CampoNome3.Enabled = false;
+            this.CampoNome3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.CampoNome3.Location = new System.Drawing.Point(116, 113);
+            this.CampoNome3.Margin = new System.Windows.Forms.Padding(2);
+            this.CampoNome3.Name = "CampoNome3";
+            this.CampoNome3.ReadOnly = true;
+            this.CampoNome3.Size = new System.Drawing.Size(402, 24);
+            this.CampoNome3.TabIndex = 18;
             // 
             // CPF
             // 
@@ -849,7 +849,7 @@
             this.ListaPedidosExame.BackgroundColor = System.Drawing.Color.White;
             this.ListaPedidosExame.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ListaPedidosExame.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nome1});
+            this.Pedidos});
             this.ListaPedidosExame.Dock = System.Windows.Forms.DockStyle.Right;
             this.ListaPedidosExame.Location = new System.Drawing.Point(550, 3);
             this.ListaPedidosExame.Name = "ListaPedidosExame";
@@ -859,20 +859,6 @@
             this.ListaPedidosExame.TabIndex = 1;
             this.ListaPedidosExame.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentDoubleClick);
             this.ListaPedidosExame.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListaPedidosExame_CellDoubleClick);
-            // 
-            // Nome1
-            // 
-            this.Nome1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nome1.HeaderText = "Pedidos";
-            this.Nome1.MinimumWidth = 6;
-            this.Nome1.Name = "Nome1";
-            // 
-            // Nome
-            // 
-            this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nome.HeaderText = "Nome";
-            this.Nome.MinimumWidth = 6;
-            this.Nome.Name = "Nome";
             // 
             // tabPage2
             // 
@@ -925,6 +911,21 @@
             this.ColumnData.HeaderText = "Data";
             this.ColumnData.Name = "ColumnData";
             this.ColumnData.ReadOnly = true;
+            // 
+            // Nome
+            // 
+            this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nome.HeaderText = "Nome";
+            this.Nome.MinimumWidth = 6;
+            this.Nome.Name = "Nome";
+            // 
+            // Pedidos
+            // 
+            this.Pedidos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Pedidos.DataPropertyName = "Pedidos";
+            this.Pedidos.HeaderText = "Pedidos";
+            this.Pedidos.MinimumWidth = 6;
+            this.Pedidos.Name = "Pedidos";
             // 
             // ExamesMenu
             // 
@@ -982,7 +983,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox CampoNome3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridView listaExames;
         private System.Windows.Forms.Label labelNome;
@@ -1007,7 +1008,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox CampoData2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox CampoExame2;
         private System.Windows.Forms.TextBox CampoRecomendacoes;
@@ -1025,6 +1025,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNomePaciente;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnData;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pedidos;
     }
 }
 

@@ -1,6 +1,7 @@
 ﻿using App.Controllers;
 using Infra.IoC;
 using Presentation.Administradores;
+using Presentation.Recepcionista;
 using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -17,6 +18,7 @@ namespace Presentation.Usuarios
 
         private readonly UsuariosController _usuariosController;
         private readonly MedicosController medicosController;
+        private readonly RecepcionistasController _recepcionistasController;
 
         public Login()
         {
@@ -24,6 +26,7 @@ namespace Presentation.Usuarios
 
             _usuariosController = DependenciesResolve.Resolve<UsuariosController>();
             medicosController = DependenciesResolve.Resolve<MedicosController>();
+            _recepcionistasController = DependenciesResolve.Resolve<RecepcionistasController>();
 
             //esconde barra
             this.Text = string.Empty;
@@ -41,6 +44,14 @@ namespace Presentation.Usuarios
         {
             if (txtUsuario.Text != string.Empty && txtSenha.Text != string.Empty)
             {
+                //var usu = _usuariosController.ObterPorEmail(txtUsuario.Text);
+                ////;
+                ////var recepcionista = _recepcionistasController.ObterPorId(usu.Recepcionista.Id);
+                //if (usu.Recepcionista.IdUsuario == usu.Id)
+                //{
+                //    new RecMenuPrincipal().Show();
+                //    this.Hide();
+                //}
                 try
                 {
                     var usuario = _usuariosController.Autenticar(txtUsuario.Text, txtSenha.Text);

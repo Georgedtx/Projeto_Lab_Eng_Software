@@ -51,20 +51,19 @@ namespace Presentation.Exames
                            Id = info.Id
                        };
             listaExames.DataSource = data.ToList();
-            
-            //listaExames.DataSource = _exameController.ObterTodos()
-            //    .Select(e => new { Id = e.Id, Nome = e.Nome });
-            //ListaPedidosExame.DataSource = _pedidosExamesController.ObterPedidosExamesDoPaciente(BuscarCPF.Text)
-            //.Select(m => new { Exame = m.Exame , Hipótese = m.Hipotese}); 
         }
-        private void AtualizarDataGridPaciente()//pensar no que vai aparecer na tela de pedidos 
+        private void AtualizarDataGridPaciente(string cpf)//falta colocar o nome 
         {
-            var data2 = from info in _pedidosExamesController.ObterPedidosExamesDoPaciente(removerMascaraCPF(CampoCPF.Text))
+            //var pedidos = _pedidosExamesController.BuscarPacientePorCpf(cpf);
+            //IdPaciente = pedidos.Id;
+            //var nomeExame = _examesController.ObterPorId(IdExame);
+            //nomeExame.Nome;
+            var data2 = from info in _pedidosExamesController.ObterPedidosExamesDoPaciente(cpf)
                         orderby info.Exame
                         select new
                         {
-                            Exame = info.Exame,
-                            Id = info.IdExame                           
+                            //Pedidos = info.Exame.Nome.ToString(),
+                            Hipótese = info.Hipotese                           
                         };
             ListaPedidosExame.DataSource = data2.ToList();
         }
@@ -187,8 +186,11 @@ namespace Presentation.Exames
                 {
                     try
                     {
-                        var paciente = _pacientesController.ObterPorCpf(BuscarCPF.Text);
-                        CampoNome.Text = paciente.Nome.ToString();
+                        var paciente = _pacientesController.ObterPorCpf(campCPF);
+                        var pedido = _pedidosExamesController.ObterPedidosExamesDoPaciente(campCPF);
+                        CampoNome3.Text = paciente.Nome.ToString();
+                        //CampoHipotese2.Text = pedido.
+                        AtualizarDataGridPaciente(campCPF);
                     }
                     catch (Exception ex)
                     {
@@ -205,7 +207,7 @@ namespace Presentation.Exames
         {
             if (ListaPedidosExame.SelectedRows.Count > 0)
             {
-                CampoExame2.Text = ListaPedidosExame.CurrentRow.Cells["Exame"].Value.ToString();
+                //CampoExame2.Text = ListaPedidosExame.CurrentRow.Cells["Exame"].Value.ToString();
                 CampoHipotese2.Text = ListaPedidosExame.CurrentRow.Cells["Hipótese"].Value.ToString();
             }
             else
@@ -250,14 +252,16 @@ namespace Presentation.Exames
             CampoDataRealizacao.Clear();
             CampoCrm.Clear();
             CampoRecomendacoes.Clear();
+            CampoHipotese.Clear();
         }
         private void LimparCampos2()
         {
-            CampoCPF.Clear();
-            CampoNome.Clear();
+            BuscarCPF.Clear();
+            CampoNome3.Clear();
             CampoExame.Clear();
             CampoData2.Clear();
             CampoRecomendacoes.Clear();
+            CampoHipotese2.Clear();
         }
         // estrutura
         private struct CorRGB

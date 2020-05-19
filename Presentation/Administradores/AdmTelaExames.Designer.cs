@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.listaExames = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -37,21 +39,20 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.listaExames = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdExames = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaExames)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.listaExames);
+            this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.ForeColor = System.Drawing.Color.White;
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -59,6 +60,31 @@
             this.tabPage1.Size = new System.Drawing.Size(895, 469);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Exames";
+            // 
+            // listaExames
+            // 
+            this.listaExames.AllowUserToAddRows = false;
+            this.listaExames.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.listaExames.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.listaExames.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listaExames.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nome,
+            this.IdExames});
+            this.listaExames.Dock = System.Windows.Forms.DockStyle.Right;
+            this.listaExames.Location = new System.Drawing.Point(433, 3);
+            this.listaExames.Margin = new System.Windows.Forms.Padding(2);
+            this.listaExames.Name = "listaExames";
+            this.listaExames.RowHeadersWidth = 51;
+            this.listaExames.RowTemplate.Height = 24;
+            this.listaExames.Size = new System.Drawing.Size(459, 463);
+            this.listaExames.TabIndex = 13;
             // 
             // groupBox1
             // 
@@ -152,23 +178,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome:";
             // 
-            // listaExames
-            // 
-            this.listaExames.BackgroundColor = System.Drawing.Color.White;
-            this.listaExames.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.listaExames.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nome,
-            this.IdExames});
-            this.listaExames.Dock = System.Windows.Forms.DockStyle.Right;
-            this.listaExames.GridColor = System.Drawing.Color.White;
-            this.listaExames.Location = new System.Drawing.Point(433, 3);
-            this.listaExames.Margin = new System.Windows.Forms.Padding(2);
-            this.listaExames.Name = "listaExames";
-            this.listaExames.RowHeadersWidth = 51;
-            this.listaExames.RowTemplate.Height = 24;
-            this.listaExames.Size = new System.Drawing.Size(459, 463);
-            this.listaExames.TabIndex = 3;
-            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -183,7 +192,6 @@
             // 
             this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Nome.DataPropertyName = "Nome";
-            this.Nome.FillWeight = 121.8274F;
             this.Nome.HeaderText = "Nome";
             this.Nome.MinimumWidth = 6;
             this.Nome.Name = "Nome";
@@ -192,7 +200,6 @@
             // 
             this.IdExames.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.IdExames.DataPropertyName = "Id";
-            this.IdExames.FillWeight = 78.17259F;
             this.IdExames.HeaderText = "Id";
             this.IdExames.MinimumWidth = 6;
             this.IdExames.Name = "IdExames";
@@ -207,9 +214,9 @@
             this.Name = "AdmTelaExames";
             this.Text = "Exames";
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.listaExames)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listaExames)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -217,7 +224,6 @@
 
         #endregion
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.DataGridView listaExames;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RichTextBox txtDescricao;
@@ -227,6 +233,7 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAdicionar;
         private System.Windows.Forms.Button BtnEditar;
+        private System.Windows.Forms.DataGridView listaExames;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdExames;
     }

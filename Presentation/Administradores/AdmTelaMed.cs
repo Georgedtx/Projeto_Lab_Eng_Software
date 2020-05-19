@@ -32,26 +32,23 @@ namespace Presentation.Administradores
                        };
             listaMedicos.DataSource = data.ToList();          
         }
-
         private void checkResidente_CheckedChanged(object sender, EventArgs e)
         {
-            checkDocente.Checked = false;
+            checkResidente.Checked = false;
             txtTitulo.Enabled = false;
             txtAnoResidencia.Enabled = true;
         }
-
         private void checkDocente_CheckedChanged(object sender, EventArgs e)
         {
-            checkResidente.Checked = false;
+            checkDocente.Checked = false;
             txtTitulo.Enabled = true;
             txtAnoResidencia.Enabled = false;
         }
-
-        private void btnAdicionar_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             ValidationResult validation;
 
-            if(checkDocente.Checked && txtTitulo.SelectedItem != null)
+            if (checkResidente.Checked && txtTitulo.SelectedItem != null)
             {
                 validation = AdicionarDocente();
             }
@@ -74,7 +71,6 @@ namespace Presentation.Administradores
             LimparCampos();
             AtualizarDataGrid();
         }
-
         private ValidationResult AdicionarMedico()
         {
             var medico = new MedicoAdicionar
@@ -132,14 +128,13 @@ namespace Presentation.Administradores
             txtMesmaSenha.Clear();
             txtNome.Clear();
             txtCrm.Clear();
-            checkDocente.Checked = false;
+            checkResidente.Checked = false;
             checkResidente.Checked = false;
             txtAnoResidencia.Clear();
         }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            LimparCampos();
         }
     }
 }
