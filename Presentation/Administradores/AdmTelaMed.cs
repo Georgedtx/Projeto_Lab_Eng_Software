@@ -136,5 +136,10 @@ namespace Presentation.Administradores
             checkResidente.Checked = false;
             txtAnoResidencia.Clear();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
