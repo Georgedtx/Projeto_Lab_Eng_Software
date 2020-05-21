@@ -37,15 +37,15 @@
             this.panelMenu = new System.Windows.Forms.Panel();
             this.Exames = new FontAwesome.Sharp.IconButton();
             this.Sair = new FontAwesome.Sharp.IconButton();
-            this.Recepcionista = new FontAwesome.Sharp.IconButton();
+            this.PedidoExames = new FontAwesome.Sharp.IconButton();
             this.logoPainel = new System.Windows.Forms.Panel();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.txtAnoResidencia = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.Medico = new FontAwesome.Sharp.IconButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtAnoResidencia = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.painelTitulo.SuspendLayout();
             this.panelMenu.SuspendLayout();
@@ -83,6 +83,7 @@
             this.painelTitulo.Name = "painelTitulo";
             this.painelTitulo.Size = new System.Drawing.Size(915, 77);
             this.painelTitulo.TabIndex = 10;
+            this.painelTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.painelTitulo_MouseDown_1);
             // 
             // minimizar
             // 
@@ -103,6 +104,7 @@
             this.minimizar.Size = new System.Drawing.Size(30, 19);
             this.minimizar.TabIndex = 4;
             this.minimizar.UseVisualStyleBackColor = false;
+            this.minimizar.Click += new System.EventHandler(this.minimizar_Click);
             // 
             // maximizar
             // 
@@ -122,6 +124,7 @@
             this.maximizar.Size = new System.Drawing.Size(30, 19);
             this.maximizar.TabIndex = 3;
             this.maximizar.UseVisualStyleBackColor = false;
+            this.maximizar.Click += new System.EventHandler(this.maximizar_Click);
             // 
             // fechar
             // 
@@ -141,6 +144,7 @@
             this.fechar.Size = new System.Drawing.Size(30, 19);
             this.fechar.TabIndex = 2;
             this.fechar.UseVisualStyleBackColor = false;
+            this.fechar.Click += new System.EventHandler(this.fechar_Click);
             // 
             // lblTitleChildForm
             // 
@@ -159,7 +163,7 @@
             this.panelMenu.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panelMenu.Controls.Add(this.Exames);
             this.panelMenu.Controls.Add(this.Sair);
-            this.panelMenu.Controls.Add(this.Recepcionista);
+            this.panelMenu.Controls.Add(this.PedidoExames);
             this.panelMenu.Controls.Add(this.logoPainel);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -167,6 +171,7 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(165, 611);
             this.panelMenu.TabIndex = 11;
+            this.panelMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMenu_MouseDown);
             // 
             // Exames
             // 
@@ -191,6 +196,7 @@
             this.Exames.Text = "Lista de Exames";
             this.Exames.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Exames.UseVisualStyleBackColor = false;
+            this.Exames.Click += new System.EventHandler(this.Exames_Click);
             // 
             // Sair
             // 
@@ -216,30 +222,32 @@
             this.Sair.Text = "Sair";
             this.Sair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Sair.UseVisualStyleBackColor = false;
+            this.Sair.Click += new System.EventHandler(this.Sair_Click);
             // 
-            // Recepcionista
+            // PedidoExames
             // 
-            this.Recepcionista.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.Recepcionista.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Recepcionista.FlatAppearance.BorderSize = 0;
-            this.Recepcionista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Recepcionista.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.Recepcionista.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Recepcionista.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Recepcionista.IconChar = FontAwesome.Sharp.IconChar.NotesMedical;
-            this.Recepcionista.IconColor = System.Drawing.Color.Gainsboro;
-            this.Recepcionista.IconSize = 50;
-            this.Recepcionista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Recepcionista.Location = new System.Drawing.Point(0, 77);
-            this.Recepcionista.Margin = new System.Windows.Forms.Padding(2);
-            this.Recepcionista.Name = "Recepcionista";
-            this.Recepcionista.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Recepcionista.Rotation = 0D;
-            this.Recepcionista.Size = new System.Drawing.Size(165, 72);
-            this.Recepcionista.TabIndex = 3;
-            this.Recepcionista.Text = "Pedido de Exames";
-            this.Recepcionista.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Recepcionista.UseVisualStyleBackColor = false;
+            this.PedidoExames.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.PedidoExames.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PedidoExames.FlatAppearance.BorderSize = 0;
+            this.PedidoExames.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PedidoExames.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.PedidoExames.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PedidoExames.ForeColor = System.Drawing.Color.Gainsboro;
+            this.PedidoExames.IconChar = FontAwesome.Sharp.IconChar.NotesMedical;
+            this.PedidoExames.IconColor = System.Drawing.Color.Gainsboro;
+            this.PedidoExames.IconSize = 50;
+            this.PedidoExames.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.PedidoExames.Location = new System.Drawing.Point(0, 77);
+            this.PedidoExames.Margin = new System.Windows.Forms.Padding(2);
+            this.PedidoExames.Name = "PedidoExames";
+            this.PedidoExames.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PedidoExames.Rotation = 0D;
+            this.PedidoExames.Size = new System.Drawing.Size(165, 72);
+            this.PedidoExames.TabIndex = 3;
+            this.PedidoExames.Text = "Pedido de Exames";
+            this.PedidoExames.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.PedidoExames.UseVisualStyleBackColor = false;
+            this.PedidoExames.Click += new System.EventHandler(this.Recepcionista_Click);
             // 
             // logoPainel
             // 
@@ -267,6 +275,7 @@
             this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.iconPictureBox1.TabIndex = 8;
             this.iconPictureBox1.TabStop = false;
+            this.iconPictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.iconPictureBox1_MouseDown);
             // 
             // panelDesktop
             // 
@@ -281,52 +290,6 @@
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(919, 534);
             this.panelDesktop.TabIndex = 12;
-            // 
-            // txtAnoResidencia
-            // 
-            this.txtAnoResidencia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAnoResidencia.Enabled = false;
-            this.txtAnoResidencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnoResidencia.Location = new System.Drawing.Point(393, 270);
-            this.txtAnoResidencia.Name = "txtAnoResidencia";
-            this.txtAnoResidencia.Size = new System.Drawing.Size(121, 24);
-            this.txtAnoResidencia.TabIndex = 20;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label1.Location = new System.Drawing.Point(426, 237);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 16);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Nome :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label2.Location = new System.Drawing.Point(426, 319);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 16);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "CRM :";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(393, 363);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 24);
-            this.textBox1.TabIndex = 23;
             // 
             // Medico
             // 
@@ -351,6 +314,52 @@
             this.Medico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Medico.UseVisualStyleBackColor = false;
             // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(393, 363);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(121, 24);
+            this.textBox1.TabIndex = 23;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.label2.Location = new System.Drawing.Point(426, 319);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 16);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "CRM :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.label1.Location = new System.Drawing.Point(426, 237);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 16);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Nome :";
+            // 
+            // txtAnoResidencia
+            // 
+            this.txtAnoResidencia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAnoResidencia.Enabled = false;
+            this.txtAnoResidencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnoResidencia.Location = new System.Drawing.Point(393, 270);
+            this.txtAnoResidencia.Name = "txtAnoResidencia";
+            this.txtAnoResidencia.Size = new System.Drawing.Size(121, 24);
+            this.txtAnoResidencia.TabIndex = 20;
+            // 
             // TelaMedPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -361,7 +370,6 @@
             this.Controls.Add(this.painelTitulo);
             this.Controls.Add(this.iconPictureBox2);
             this.Name = "TelaMedPrincipal";
-            this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.painelTitulo.ResumeLayout(false);
             this.painelTitulo.PerformLayout();
@@ -385,7 +393,7 @@
         private System.Windows.Forms.Panel panelMenu;
         private FontAwesome.Sharp.IconButton Exames;
         private FontAwesome.Sharp.IconButton Sair;
-        private FontAwesome.Sharp.IconButton Recepcionista;
+        private FontAwesome.Sharp.IconButton PedidoExames;
         private System.Windows.Forms.Panel logoPainel;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Panel panelDesktop;

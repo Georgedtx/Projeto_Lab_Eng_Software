@@ -435,7 +435,7 @@
             this.listaExames.Location = new System.Drawing.Point(557, 0);
             this.listaExames.Name = "listaExames";
             this.listaExames.RowHeadersWidth = 51;
-            this.listaExames.Size = new System.Drawing.Size(335, 469);
+            this.listaExames.Size = new System.Drawing.Size(362, 504);
             this.listaExames.TabIndex = 10;
             this.listaExames.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.listaExames_CellDoubleClick);
             // 
@@ -666,9 +666,8 @@
             this.ListaPedidosExame.Name = "ListaPedidosExame";
             this.ListaPedidosExame.RowHeadersWidth = 51;
             this.ListaPedidosExame.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ListaPedidosExame.Size = new System.Drawing.Size(343, 469);
+            this.ListaPedidosExame.Size = new System.Drawing.Size(375, 503);
             this.ListaPedidosExame.TabIndex = 1;
-            this.ListaPedidosExame.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentDoubleClick);
             this.ListaPedidosExame.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListaPedidosExame_CellDoubleClick);
             // 
             // Pedidos
@@ -695,7 +694,7 @@
             this.Controls.Add(this.panelDesktop);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ExamesMenu";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Pedido de Exames";
             this.panelDesktop.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

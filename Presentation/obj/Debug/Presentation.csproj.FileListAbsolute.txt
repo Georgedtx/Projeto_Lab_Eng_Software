@@ -326,3 +326,5 @@ C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\itextsharp.xml
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\MySqlConnector.xml
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Newtonsoft.Json.xml
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Médico.ListagemExames.resources
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Médico.TelaMedPrincipal.resources

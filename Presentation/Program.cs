@@ -1,6 +1,7 @@
 ﻿using Infra.IoC;
 using Presentation.Administradores;
 using Presentation.Exames;
+using Presentation.Médico;
 using Presentation.Recepcionista;
 using Presentation.Usuarios;
 using System;
@@ -20,7 +21,7 @@ namespace Presentation
             Application.SetCompatibleTextRenderingDefault(false);
 
             DependenciesResolve.Wire(Dependencies.Create());
-            Application.Run(new Login());
+            Application.Run(new TelaMedPrincipal());
         }
     }
 }

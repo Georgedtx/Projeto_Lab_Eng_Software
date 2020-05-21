@@ -172,11 +172,11 @@
     <Compile Include="Exames\ExamesMenu.designer.cs">
       <DependentUpon>ExamesMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Médico\Form1.cs">
+    <Compile Include="Médico\ListagemExames.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Médico\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Médico\ListagemExames.Designer.cs">
+      <DependentUpon>ListagemExames.cs</DependentUpon>
     </Compile>
     <Compile Include="Médico\TelaMedPrincipal.cs">
       <SubType>Form</SubType>
@@ -225,8 +225,8 @@
     <EmbeddedResource Include="Exames\ExamesMenu.resx">
       <DependentUpon>ExamesMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Médico\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Médico\ListagemExames.resx">
+      <DependentUpon>ListagemExames.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Médico\TelaMedPrincipal.resx">
       <DependentUpon>TelaMedPrincipal.cs</DependentUpon>
