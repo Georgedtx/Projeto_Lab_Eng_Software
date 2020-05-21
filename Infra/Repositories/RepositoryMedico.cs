@@ -30,5 +30,15 @@ namespace Infra.Repositories
                 .Where(m => m.Id == id)
                 .FirstOrDefault();
         }
+
+        public Medico ObterPorEmail(string email)
+        {
+            return _context.Medicos
+                .Include("Usuario")
+                .Include("Residente")
+                .Include("Docente")
+                .Where(m => m.Email.ToLower().Equals(email.ToLower()))
+                .FirstOrDefault();
+        }
     }
 }

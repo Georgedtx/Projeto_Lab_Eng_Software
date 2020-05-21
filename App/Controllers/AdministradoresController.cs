@@ -48,6 +48,11 @@ namespace App.Controllers
             return _unitOfWork.RepositoryAdministrador.ObterPorId(id);
         }
 
+        public Administrador ObterPorEmail(string email)
+        {
+            return _unitOfWork.RepositoryAdministrador.ObterPorEmail(email);
+        }
+
         public bool Excluir(Guid id)
         {
             var administrador = ObterPorId(id);

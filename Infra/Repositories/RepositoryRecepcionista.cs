@@ -15,6 +15,11 @@ namespace Infra.Repositories
         {
             return _context.Recepcionistas.Include("Usuario").Where(r => r.Id == id).FirstOrDefault();
         }
+
+        public Recepcionista ObterPorEmail(string email)
+        {
+            return _context.Recepcionista.Where(r => r.Email.ToLower().Equals(email.ToLower())).FirstOrDefault();
+        }
     }
 
 }

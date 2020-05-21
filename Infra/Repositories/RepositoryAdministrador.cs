@@ -15,5 +15,9 @@ namespace Infra.Repositories
         {
             return _context.Administradores.Include("Usuario").Where(a => a.Id == id).FirstOrDefault();
         }
+
+        public Administrador ObterPorEmail(String email) {
+            return _context.Administrador.Where(A => A.Email.ToLower().Equals(email.ToLower())).FirstOrDefault();
+        } 
     }
 }

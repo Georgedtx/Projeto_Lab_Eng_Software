@@ -48,6 +48,11 @@ namespace App.Controllers
             return _unitOfWork.RepositoryRecepcionista.ObterPorId(id);
         }
 
+        public Recepcionista ObterPorEmail(string email)
+        {
+            return _unitOfWork.RepositoryRecepcionista.ObterPorEmail(email);
+        }
+
         public bool Excluir(Guid id)
         {
             var recepcionista = ObterPorId(id);

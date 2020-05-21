@@ -75,6 +75,10 @@ namespace App.Controllers
             return _unitOfWork.RepositoryPedidoExame.ObterPedidosPorCpfDoCliente(cpf);
         }
 
+        public List<PedidoExame> ObterTodos() {
+            return _unitOfWork.RepositoryPedidoExame.ObterTodos();
+        }
+
         public bool RemarcarConsulta(Guid pedidoExameId, DateTime novaData)
         {
             var pedido = _unitOfWork.RepositoryPedidoExame.ObterPorId(pedidoExameId);

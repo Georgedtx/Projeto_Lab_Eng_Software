@@ -131,5 +131,26 @@ namespace App.Controllers
                 AnoResidencia = medico.Residente != null ? medico.Residente.AnoResidencia : 0
             };
         }
+
+        public MedicoDetalhes ObterPorEmail(string email)
+        {
+            var medico = _unitOfWork.RepositoryMedico.ObterPorEmail(email);
+
+            if (medico == null) throw new Exception("Médico não encontrado!");
+
+            return new MedicoDetalhes
+            {
+                Id = medico.Id,
+                Nome = medico.Nome,
+                Crm = medico.Crm,
+                Email = medico.Usuario.Email,
+
+                IdDocente = medico.Docente != null ? medico.Docente.Id : Guid.Empty,
+                TitUniversitaria = medico.Docente != null ? medico.Docente.TitUniversitaria : null,
+
+                IdResidente = medico.Residente != null ? medico.Residente.Id : Guid.Empty,
+                AnoResidencia = medico.Residente != null ? medico.Residente.AnoResidencia : 0
+            };
+        }
     }
 }
