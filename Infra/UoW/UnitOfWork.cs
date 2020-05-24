@@ -24,7 +24,7 @@ namespace Infra.UoW
         private RepositoryPaciente repositoryPaciente;
         private RepositoryPedidoExame repositoryPedidoExame;
         private RepositoryRecepcionista repositoryRecepcionista;
-        private Repository<RegistroExame> repositoryRegistroExame;
+        private RepositoryRegistroExame repositoryRegistroExame;
         private Repository<Residente> repositoryResidente;
         private RepositoryUsuario repositoryUsuario;
 
@@ -124,13 +124,13 @@ namespace Infra.UoW
             }
         }
 
-        public IRepository<RegistroExame> RepositoryRegistroExame
+        public IRepositoryRegistroExame RepositoryRegistroExame
         {
             get
             {
                 if (repositoryRegistroExame == null)
                 {
-                    repositoryRegistroExame = new Repository<RegistroExame>(_context);
+                    repositoryRegistroExame = new RepositoryRegistroExame(_context);
                 }
                 return repositoryRegistroExame;
             }

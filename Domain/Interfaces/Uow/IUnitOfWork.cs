@@ -14,7 +14,7 @@ namespace Domain.Interfaces.Uow
         IRepositoryPaciente RepositoryPaciente { get; }
         IRepositoryPedidoExame RepositoryPedidoExame { get; }
         IRepositoryRecepcionista RepositoryRecepcionista { get; }
-        IRepository<RegistroExame> RepositoryRegistroExame { get; }
+        IRepositoryRegistroExame RepositoryRegistroExame { get; }
         IRepository<Residente> RepositoryResidente { get; }
         IRepositoryUsuario RepositoryUsuario { get; }
 
