@@ -26,7 +26,20 @@ namespace Presentation.Administradores
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
-        
+        public AdmMenuPrincipal(string nome)
+        {
+            InitializeComponent(); 
+            leftBorderBtn = new Panel();
+            leftBorderBtn.Size = new Size(7, 60);
+            panelMenu.Controls.Add(leftBorderBtn);
+            //esconde barra
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            NomeTelaPrincipal.Text = nome;
+        }
+
         // metodos
         private void ActivateButton(object senderBtn)
         {

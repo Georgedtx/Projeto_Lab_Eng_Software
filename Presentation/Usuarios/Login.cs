@@ -49,24 +49,30 @@ namespace Presentation.Usuarios
                 try
                 {
                     var usuario = _usuariosController.Autenticar(txtUsuario.Text, txtSenha.Text);
-                    var recepcionista = _recepcionistasController.ObterPorEmail(txtUsuario.Text);
-                    if (recepcionista != null)
-                    {
-                        new RecMenuPrincipal().Show();
-                        this.Hide();
-                    }
-                    var medico = _medicosController.ObterPorEmail(txtUsuario.Text);
-                    if (medico != null)
-                    {
-                        new TelaMedPrincipal().Show();
-                        this.Hide();
-                    }
                     var adm = _administradoresController.ObterPorEmail(txtUsuario.Text);
                     if (adm != null)
                     {
-                        new AdmMenuPrincipal().Show();
+                        new AdmMenuPrincipal(adm.Nome).Show();
                         this.Hide();
-                    }
+                    }else
+                    {
+                        var recepcionista = _recepcionistasController.ObterPorEmail(txtUsuario.Text);
+                        if (recepcionista != null)
+                        {
+                            new RecMenuPrincipal().Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            var medico = _medicosController.ObterPorEmail(txtUsuario.Text);
+                            if (medico != null)
+                            {
+                                new TelaMedPrincipal(medico.Nome,medico.Crm).Show();
+                                this.Hide();
+                            }
+                        }
+                        
+                    } 
                 }
                 catch (Exception ex)
                 {

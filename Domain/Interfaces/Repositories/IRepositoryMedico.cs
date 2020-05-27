@@ -7,6 +7,6 @@ namespace Domain.Interfaces.Repositories
     {
         Medico ObterPorId(Guid id);
         Medico ObterPorCrm(string crm);
-        object ObterPorEmail(string email);
+        Medico ObterPorEmail(string email);
     }
 }

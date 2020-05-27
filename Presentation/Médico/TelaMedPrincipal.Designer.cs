@@ -42,10 +42,10 @@
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.Medico = new FontAwesome.Sharp.IconButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CrmTelaPrincipal = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtAnoResidencia = new System.Windows.Forms.TextBox();
+            this.NomeTelaPrincipal = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.painelTitulo.SuspendLayout();
             this.panelMenu.SuspendLayout();
@@ -281,10 +281,10 @@
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panelDesktop.Controls.Add(this.Medico);
-            this.panelDesktop.Controls.Add(this.textBox1);
+            this.panelDesktop.Controls.Add(this.CrmTelaPrincipal);
             this.panelDesktop.Controls.Add(this.label2);
             this.panelDesktop.Controls.Add(this.label1);
-            this.panelDesktop.Controls.Add(this.txtAnoResidencia);
+            this.panelDesktop.Controls.Add(this.NomeTelaPrincipal);
             this.panelDesktop.Location = new System.Drawing.Point(164, 77);
             this.panelDesktop.Margin = new System.Windows.Forms.Padding(2);
             this.panelDesktop.Name = "panelDesktop";
@@ -314,15 +314,17 @@
             this.Medico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Medico.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // CrmTelaPrincipal
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(393, 363);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 24);
-            this.textBox1.TabIndex = 23;
+            this.CrmTelaPrincipal.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.CrmTelaPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CrmTelaPrincipal.Enabled = false;
+            this.CrmTelaPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CrmTelaPrincipal.Location = new System.Drawing.Point(393, 363);
+            this.CrmTelaPrincipal.Name = "CrmTelaPrincipal";
+            this.CrmTelaPrincipal.Size = new System.Drawing.Size(121, 24);
+            this.CrmTelaPrincipal.TabIndex = 23;
+            this.CrmTelaPrincipal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -350,15 +352,17 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "Nome :";
             // 
-            // txtAnoResidencia
+            // NomeTelaPrincipal
             // 
-            this.txtAnoResidencia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAnoResidencia.Enabled = false;
-            this.txtAnoResidencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnoResidencia.Location = new System.Drawing.Point(393, 270);
-            this.txtAnoResidencia.Name = "txtAnoResidencia";
-            this.txtAnoResidencia.Size = new System.Drawing.Size(121, 24);
-            this.txtAnoResidencia.TabIndex = 20;
+            this.NomeTelaPrincipal.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.NomeTelaPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NomeTelaPrincipal.Enabled = false;
+            this.NomeTelaPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NomeTelaPrincipal.Location = new System.Drawing.Point(393, 270);
+            this.NomeTelaPrincipal.Name = "NomeTelaPrincipal";
+            this.NomeTelaPrincipal.Size = new System.Drawing.Size(121, 24);
+            this.NomeTelaPrincipal.TabIndex = 20;
+            this.NomeTelaPrincipal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TelaMedPrincipal
             // 
@@ -399,8 +403,8 @@
         private System.Windows.Forms.Panel panelDesktop;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        protected System.Windows.Forms.TextBox txtAnoResidencia;
-        protected System.Windows.Forms.TextBox textBox1;
+        protected System.Windows.Forms.TextBox NomeTelaPrincipal;
+        protected System.Windows.Forms.TextBox CrmTelaPrincipal;
         private FontAwesome.Sharp.IconButton Medico;
     }
 }

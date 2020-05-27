@@ -32,7 +32,20 @@ namespace Presentation.Médico
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
-
+        public TelaMedPrincipal(string nome , string crm)
+        {
+            InitializeComponent();
+            leftBorderBtn = new Panel();
+            leftBorderBtn.Size = new Size(7, 60);
+            panelMenu.Controls.Add(leftBorderBtn);
+            //esconde barra
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            NomeTelaPrincipal.Text = nome;
+            CrmTelaPrincipal.Text = crm;
+        }
         private void Recepcionista_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);

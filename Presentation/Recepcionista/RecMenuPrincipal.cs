@@ -3,6 +3,7 @@ using App.ExtensionsMethods;
 using App.ViewModels.Pacientes;
 using FontAwesome.Sharp;
 using Infra.IoC;
+using Presentation.Usuarios;
 using System;
 using System.Data;
 using System.Drawing;
@@ -246,7 +247,9 @@ namespace Presentation.Recepcionista
 
         private void Sair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            var mainMenu = new Login();
+            mainMenu.Show();
+            this.Hide();
         }
 
         private void Exames_Click(object sender, EventArgs e)
