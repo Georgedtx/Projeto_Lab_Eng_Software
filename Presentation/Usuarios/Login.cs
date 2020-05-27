@@ -1,6 +1,7 @@
 ﻿using App.Controllers;
 using Infra.IoC;
 using Presentation.Administradores;
+using Presentation.Médico;
 using Presentation.Recepcionista;
 using System;
 using System.Runtime.InteropServices;
@@ -17,16 +18,17 @@ namespace Presentation.Usuarios
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
         private readonly UsuariosController _usuariosController;
-        private readonly MedicosController medicosController;
+        private readonly MedicosController _medicosController;
         private readonly RecepcionistasController _recepcionistasController;
-
+        private readonly AdministradoresController _administradoresController;
         public Login()
         {
             InitializeComponent();
 
             _usuariosController = DependenciesResolve.Resolve<UsuariosController>();
-            medicosController = DependenciesResolve.Resolve<MedicosController>();
+            _medicosController = DependenciesResolve.Resolve<MedicosController>();
             _recepcionistasController = DependenciesResolve.Resolve<RecepcionistasController>();
+            _administradoresController = DependenciesResolve.Resolve<AdministradoresController>();
 
             //esconde barra
             this.Text = string.Empty;
@@ -43,20 +45,28 @@ namespace Presentation.Usuarios
         private void EntrarLogin_Click(object sender, EventArgs e)
         {
             if (txtUsuario.Text != string.Empty && txtSenha.Text != string.Empty)
-            {
-                //var usu = _usuariosController.ObterPorEmail(txtUsuario.Text);
-                ////;
-                ////var recepcionista = _recepcionistasController.ObterPorId(usu.Recepcionista.Id);
-                //if (usu.Recepcionista.IdUsuario == usu.Id)
-                //{
-                //    new RecMenuPrincipal().Show();
-                //    this.Hide();
-                //}
+            {             
                 try
                 {
                     var usuario = _usuariosController.Autenticar(txtUsuario.Text, txtSenha.Text);
-                    new AdmMenuPrincipal().Show();
-                    this.Hide();
+                    var recepcionista = _recepcionistasController.ObterPorEmail(txtUsuario.Text);
+                    if (recepcionista != null)
+                    {
+                        new RecMenuPrincipal().Show();
+                        this.Hide();
+                    }
+                    var medico = _medicosController.ObterPorEmail(txtUsuario.Text);
+                    if (medico != null)
+                    {
+                        new TelaMedPrincipal().Show();
+                        this.Hide();
+                    }
+                    var adm = _administradoresController.ObterPorEmail(txtUsuario.Text);
+                    if (adm != null)
+                    {
+                        new AdmMenuPrincipal().Show();
+                        this.Hide();
+                    }
                 }
                 catch (Exception ex)
                 {

@@ -168,6 +168,7 @@
     <Compile Include="Repositories\RepositoryPaciente.cs" />
     <Compile Include="Repositories\RepositoryPedidoExame.cs" />
     <Compile Include="Repositories\RepositoryRecepcionista.cs" />
+    <Compile Include="Repositories\RepositoryRegistroExame.cs" />
     <Compile Include="Repositories\RepositoryUsuario.cs" />
     <Compile Include="UoW\UnitOfWork.cs" />
   </ItemGroup>

@@ -18,7 +18,7 @@ namespace Infra.Repositories
 
         public Recepcionista ObterPorEmail(string email)
         {
-            return _context.Recepcionista.Where(r => r.Email.ToLower().Equals(email.ToLower())).FirstOrDefault();
+            return _context.Recepcionistas.Where(r => r.Usuario.Email.ToLower().Equals(email.ToLower())).FirstOrDefault();
         }
     }
 

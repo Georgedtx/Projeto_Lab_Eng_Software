@@ -37,7 +37,7 @@ namespace Infra.Repositories
                 .Include("Usuario")
                 .Include("Residente")
                 .Include("Docente")
-                .Where(m => m.Email.ToLower().Equals(email.ToLower()))
+                .Where(m => m.Usuario.Email.ToLower().Equals(email.ToLower()))
                 .FirstOrDefault();
         }
     }
