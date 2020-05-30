@@ -15,7 +15,7 @@ namespace Domain.Interfaces.Uow
         IRepositoryPedidoExame RepositoryPedidoExame { get; }
         IRepositoryRecepcionista RepositoryRecepcionista { get; }
         IRepositoryRegistroExame RepositoryRegistroExame { get; }
-        IRepository<Residente> RepositoryResidente { get; }
+        IRepositoryResidente RepositoryResidente { get; }
         IRepositoryUsuario RepositoryUsuario { get; }
 
         bool Commit();
