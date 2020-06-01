@@ -60,12 +60,12 @@
             this.iconPictureBox2.BackColor = System.Drawing.Color.LightSeaGreen;
             this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Heartbeat;
             this.iconPictureBox2.IconColor = System.Drawing.Color.White;
-            this.iconPictureBox2.IconSize = 77;
+            this.iconPictureBox2.IconSize = 95;
             this.iconPictureBox2.Location = new System.Drawing.Point(-1, 0);
-            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.iconPictureBox2.Size = new System.Drawing.Size(174, 77);
+            this.iconPictureBox2.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.iconPictureBox2.Size = new System.Drawing.Size(232, 95);
             this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.iconPictureBox2.TabIndex = 9;
             this.iconPictureBox2.TabStop = false;
@@ -78,10 +78,10 @@
             this.painelTitulo.Controls.Add(this.maximizar);
             this.painelTitulo.Controls.Add(this.fechar);
             this.painelTitulo.Controls.Add(this.lblTitleChildForm);
-            this.painelTitulo.Location = new System.Drawing.Point(168, 0);
-            this.painelTitulo.Margin = new System.Windows.Forms.Padding(2);
+            this.painelTitulo.Location = new System.Drawing.Point(224, 0);
+            this.painelTitulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.painelTitulo.Name = "painelTitulo";
-            this.painelTitulo.Size = new System.Drawing.Size(915, 77);
+            this.painelTitulo.Size = new System.Drawing.Size(1220, 95);
             this.painelTitulo.TabIndex = 10;
             this.painelTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.painelTitulo_MouseDown_1);
             // 
@@ -97,11 +97,11 @@
             this.minimizar.IconColor = System.Drawing.Color.Gainsboro;
             this.minimizar.IconSize = 16;
             this.minimizar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.minimizar.Location = new System.Drawing.Point(808, 2);
-            this.minimizar.Margin = new System.Windows.Forms.Padding(2);
+            this.minimizar.Location = new System.Drawing.Point(1077, 2);
+            this.minimizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.minimizar.Name = "minimizar";
             this.minimizar.Rotation = 0D;
-            this.minimizar.Size = new System.Drawing.Size(30, 19);
+            this.minimizar.Size = new System.Drawing.Size(40, 23);
             this.minimizar.TabIndex = 4;
             this.minimizar.UseVisualStyleBackColor = false;
             this.minimizar.Click += new System.EventHandler(this.minimizar_Click);
@@ -117,11 +117,11 @@
             this.maximizar.IconChar = FontAwesome.Sharp.IconChar.WindowRestore;
             this.maximizar.IconColor = System.Drawing.Color.Gainsboro;
             this.maximizar.IconSize = 16;
-            this.maximizar.Location = new System.Drawing.Point(846, 2);
-            this.maximizar.Margin = new System.Windows.Forms.Padding(2);
+            this.maximizar.Location = new System.Drawing.Point(1128, 2);
+            this.maximizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maximizar.Name = "maximizar";
             this.maximizar.Rotation = 0D;
-            this.maximizar.Size = new System.Drawing.Size(30, 19);
+            this.maximizar.Size = new System.Drawing.Size(40, 23);
             this.maximizar.TabIndex = 3;
             this.maximizar.UseVisualStyleBackColor = false;
             this.maximizar.Click += new System.EventHandler(this.maximizar_Click);
@@ -137,11 +137,11 @@
             this.fechar.IconChar = FontAwesome.Sharp.IconChar.Times;
             this.fechar.IconColor = System.Drawing.Color.Gainsboro;
             this.fechar.IconSize = 16;
-            this.fechar.Location = new System.Drawing.Point(884, 2);
-            this.fechar.Margin = new System.Windows.Forms.Padding(2);
+            this.fechar.Location = new System.Drawing.Point(1179, 2);
+            this.fechar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fechar.Name = "fechar";
             this.fechar.Rotation = 0D;
-            this.fechar.Size = new System.Drawing.Size(30, 19);
+            this.fechar.Size = new System.Drawing.Size(40, 23);
             this.fechar.TabIndex = 2;
             this.fechar.UseVisualStyleBackColor = false;
             this.fechar.Click += new System.EventHandler(this.fechar_Click);
@@ -151,10 +151,9 @@
             this.lblTitleChildForm.AutoSize = true;
             this.lblTitleChildForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleChildForm.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblTitleChildForm.Location = new System.Drawing.Point(24, 29);
-            this.lblTitleChildForm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitleChildForm.Location = new System.Drawing.Point(32, 36);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(49, 16);
+            this.lblTitleChildForm.Size = new System.Drawing.Size(58, 20);
             this.lblTitleChildForm.TabIndex = 1;
             this.lblTitleChildForm.Text = "Home";
             // 
@@ -167,9 +166,9 @@
             this.panelMenu.Controls.Add(this.logoPainel);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(165, 611);
+            this.panelMenu.Size = new System.Drawing.Size(220, 752);
             this.panelMenu.TabIndex = 11;
             this.panelMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMenu_MouseDown);
             // 
@@ -186,12 +185,12 @@
             this.Exames.IconColor = System.Drawing.Color.Gainsboro;
             this.Exames.IconSize = 50;
             this.Exames.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Exames.Location = new System.Drawing.Point(0, 149);
-            this.Exames.Margin = new System.Windows.Forms.Padding(2);
+            this.Exames.Location = new System.Drawing.Point(0, 184);
+            this.Exames.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Exames.Name = "Exames";
-            this.Exames.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Exames.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.Exames.Rotation = 0D;
-            this.Exames.Size = new System.Drawing.Size(165, 72);
+            this.Exames.Size = new System.Drawing.Size(220, 89);
             this.Exames.TabIndex = 5;
             this.Exames.Text = "Lista de Exames";
             this.Exames.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -211,13 +210,13 @@
             this.Sair.IconColor = System.Drawing.Color.Gainsboro;
             this.Sair.IconSize = 50;
             this.Sair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Sair.Location = new System.Drawing.Point(0, 539);
-            this.Sair.Margin = new System.Windows.Forms.Padding(2);
+            this.Sair.Location = new System.Drawing.Point(0, 663);
+            this.Sair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Sair.Name = "Sair";
-            this.Sair.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Sair.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.Sair.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Sair.Rotation = 0D;
-            this.Sair.Size = new System.Drawing.Size(165, 72);
+            this.Sair.Size = new System.Drawing.Size(220, 89);
             this.Sair.TabIndex = 4;
             this.Sair.Text = "Sair";
             this.Sair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -237,12 +236,12 @@
             this.PedidoExames.IconColor = System.Drawing.Color.Gainsboro;
             this.PedidoExames.IconSize = 50;
             this.PedidoExames.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.PedidoExames.Location = new System.Drawing.Point(0, 77);
-            this.PedidoExames.Margin = new System.Windows.Forms.Padding(2);
+            this.PedidoExames.Location = new System.Drawing.Point(0, 95);
+            this.PedidoExames.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PedidoExames.Name = "PedidoExames";
-            this.PedidoExames.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PedidoExames.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.PedidoExames.Rotation = 0D;
-            this.PedidoExames.Size = new System.Drawing.Size(165, 72);
+            this.PedidoExames.Size = new System.Drawing.Size(220, 89);
             this.PedidoExames.TabIndex = 3;
             this.PedidoExames.Text = "Pedido de Exames";
             this.PedidoExames.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -254,10 +253,10 @@
             this.logoPainel.Controls.Add(this.iconPictureBox1);
             this.logoPainel.Dock = System.Windows.Forms.DockStyle.Top;
             this.logoPainel.Location = new System.Drawing.Point(0, 0);
-            this.logoPainel.Margin = new System.Windows.Forms.Padding(2);
+            this.logoPainel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logoPainel.Name = "logoPainel";
-            this.logoPainel.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.logoPainel.Size = new System.Drawing.Size(165, 77);
+            this.logoPainel.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.logoPainel.Size = new System.Drawing.Size(220, 95);
             this.logoPainel.TabIndex = 0;
             // 
             // iconPictureBox1
@@ -266,12 +265,12 @@
             this.iconPictureBox1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Heartbeat;
             this.iconPictureBox1.IconColor = System.Drawing.Color.White;
-            this.iconPictureBox1.IconSize = 77;
+            this.iconPictureBox1.IconSize = 95;
             this.iconPictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.iconPictureBox1.Size = new System.Drawing.Size(165, 77);
+            this.iconPictureBox1.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.iconPictureBox1.Size = new System.Drawing.Size(220, 95);
             this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.iconPictureBox1.TabIndex = 8;
             this.iconPictureBox1.TabStop = false;
@@ -285,10 +284,10 @@
             this.panelDesktop.Controls.Add(this.label2);
             this.panelDesktop.Controls.Add(this.label1);
             this.panelDesktop.Controls.Add(this.NomeTelaPrincipal);
-            this.panelDesktop.Location = new System.Drawing.Point(164, 77);
-            this.panelDesktop.Margin = new System.Windows.Forms.Padding(2);
+            this.panelDesktop.Location = new System.Drawing.Point(219, 95);
+            this.panelDesktop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(919, 534);
+            this.panelDesktop.Size = new System.Drawing.Size(1225, 657);
             this.panelDesktop.TabIndex = 12;
             // 
             // Medico
@@ -304,12 +303,12 @@
             this.Medico.IconColor = System.Drawing.Color.LightSeaGreen;
             this.Medico.IconSize = 150;
             this.Medico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Medico.Location = new System.Drawing.Point(369, 72);
-            this.Medico.Margin = new System.Windows.Forms.Padding(2);
+            this.Medico.Location = new System.Drawing.Point(524, 89);
+            this.Medico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Medico.Name = "Medico";
-            this.Medico.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Medico.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.Medico.Rotation = 0D;
-            this.Medico.Size = new System.Drawing.Size(185, 163);
+            this.Medico.Size = new System.Drawing.Size(161, 201);
             this.Medico.TabIndex = 24;
             this.Medico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Medico.UseVisualStyleBackColor = false;
@@ -320,9 +319,10 @@
             this.CrmTelaPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CrmTelaPrincipal.Enabled = false;
             this.CrmTelaPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CrmTelaPrincipal.Location = new System.Drawing.Point(393, 363);
+            this.CrmTelaPrincipal.Location = new System.Drawing.Point(524, 447);
+            this.CrmTelaPrincipal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CrmTelaPrincipal.Name = "CrmTelaPrincipal";
-            this.CrmTelaPrincipal.Size = new System.Drawing.Size(121, 24);
+            this.CrmTelaPrincipal.Size = new System.Drawing.Size(161, 29);
             this.CrmTelaPrincipal.TabIndex = 23;
             this.CrmTelaPrincipal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -332,10 +332,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label2.Location = new System.Drawing.Point(426, 319);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(568, 393);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 16);
+            this.label2.Size = new System.Drawing.Size(62, 20);
             this.label2.TabIndex = 22;
             this.label2.Text = "CRM :";
             // 
@@ -345,10 +344,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label1.Location = new System.Drawing.Point(426, 237);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(568, 292);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 16);
+            this.label1.Size = new System.Drawing.Size(69, 20);
             this.label1.TabIndex = 21;
             this.label1.Text = "Nome :";
             // 
@@ -358,21 +356,23 @@
             this.NomeTelaPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NomeTelaPrincipal.Enabled = false;
             this.NomeTelaPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NomeTelaPrincipal.Location = new System.Drawing.Point(393, 270);
+            this.NomeTelaPrincipal.Location = new System.Drawing.Point(524, 332);
+            this.NomeTelaPrincipal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NomeTelaPrincipal.Name = "NomeTelaPrincipal";
-            this.NomeTelaPrincipal.Size = new System.Drawing.Size(121, 24);
+            this.NomeTelaPrincipal.Size = new System.Drawing.Size(161, 29);
             this.NomeTelaPrincipal.TabIndex = 20;
             this.NomeTelaPrincipal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TelaMedPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1084, 611);
+            this.ClientSize = new System.Drawing.Size(1445, 752);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.painelTitulo);
             this.Controls.Add(this.iconPictureBox2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TelaMedPrincipal";
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.painelTitulo.ResumeLayout(false);
