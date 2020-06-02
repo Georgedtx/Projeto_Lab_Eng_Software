@@ -1,4 +1,4 @@
-using App.ViewModels.PedidosExames;
+using App.ViewModels.RegistrosExames;
 using Domain.Entities;
 using Domain.Interfaces.Uow;
 using Domain.Relatorios;
@@ -23,7 +23,7 @@ namespace App.Controllers
         {
             if (!registroExame.IsValid()) return registroExame.Validation;
 
-            registroExame.Validation = new registroExameVerification(_unitOfWork).Validate(registroExame);
+            registroExame.Validation = new RegistroExameVerification(_unitOfWork).Validate(registroExame);
 
             if (registroExame.Validation.IsValid)
             {
@@ -41,11 +41,11 @@ namespace App.Controllers
 
         public RegistroExame EmitirLaudo(string CrmMedico, Guid IdExame, string laudo)
         {
-            exame = BuscarPedidoExamePorId(IdExame);
+            var exame = BuscarPedidoExamePorId(IdExame);
 
             if (exame == null) throw new Exception("Exame não Encontrado");
 
-            medico = BuscarMedicoPorCrm(CrmMedico);
+            var medico = BuscarMedicoPorCrm(CrmMedico);
 
             if (medico == null) throw new Exception("Médico não encontrado"); 
 

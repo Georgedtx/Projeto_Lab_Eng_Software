@@ -21,7 +21,7 @@ namespace App.Controllers
 
         public MedicoDetalhes ObterPorId(Guid id)
         {
-            var medico = _unitOfWork.RepositoryResidentes.ObterPorId(id);
+            var medico = _unitOfWork.RepositoryResidente.ObterPorId(id);
 
             if (medico == null) throw new Exception("Residente não encontrado!");
 
@@ -42,7 +42,7 @@ namespace App.Controllers
 
         public List<Residente> ObterTodos()
         {
-            return _unitOfWork.RepositoryResidentes.ObterTodos();
+            return _unitOfWork.RepositoryResidente.ObterTodos();
         }
     }
 }

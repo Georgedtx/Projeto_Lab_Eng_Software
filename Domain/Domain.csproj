@@ -70,6 +70,7 @@
     <Compile Include="Interfaces\Repositories\IRepositoryPedidoExame.cs" />
     <Compile Include="Interfaces\Repositories\IRepositoryRecepcionista.cs" />
     <Compile Include="Interfaces\Repositories\IRepositoryRegistroExame.cs" />
+    <Compile Include="Interfaces\Repositories\IRepositoryResidente.cs" />
     <Compile Include="Interfaces\Repositories\IRepositoryUsuario.cs" />
     <Compile Include="Interfaces\UoW\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -31,33 +31,33 @@ namespace App.ViewModels.RegistrosExames
             RuleFor(re => re.Data)
                 .NotEqual(new DateTime())
                 .NotNull()
-                .withMessage("Data deve ser informada");
+                .WithMessage("Data deve ser informada");
 
             RuleFor(re => re.Id)
                 .NotEqual(Guid.Empty)
-                .withMessage("Id deve ser informado");
+                .WithMessage("Id deve ser informado");
 
             RuleFor(re => re.Laudo)
                 .NotNull()
                 .NotEmpty()
-                .withMessage("Laudo deve ser informado");
+                .WithMessage("Laudo deve ser informado");
 
             RuleFor(re => re.Status)
                 .NotNull()
                 .NotEmpty()
-                .withMessage("Status deve ser informado");
+                .WithMessage("Status deve ser informado");
 
             RuleFor(re => re.IdDocente)
                 .NotEqual(Guid.Empty)
-                .withMessage("Docente deve ser informado");
+                .WithMessage("Docente deve ser informado");
                 
             RuleFor(re => re.IdResidente)
                 .NotEqual(Guid.Empty)
-                .withMessage("Residente deve ser informado");
+                .WithMessage("Residente deve ser informado");
 
             RuleFor(re => re.IdPedidoExame)
                 .NotEqual(Guid.Empty)
-                .withMessage("Pedido de exame deve ser informado");
+                .WithMessage("Pedido de exame deve ser informado");
 
         }
     }
@@ -68,7 +68,7 @@ namespace App.ViewModels.RegistrosExames
         {
             RuleFor(re => unitOfWork.RepositoryPedidoExame.ObterPorId(re.IdPedidoExame))
                 .NotNull()
-                .withMessage("Id não encontrado");
+                .WithMessage("Id não encontrado");
         }
     }
 }

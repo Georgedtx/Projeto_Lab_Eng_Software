@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace Infra.Repositories
 {
-    public class RepositoryResidente : RepositoryResidente<Residente>, IRepositoryResidente
+    public class RepositoryResidente : Repository<Residente>, IRepositoryResidente
     {
         public RepositoryResidente(ProjectContext _context) : base(_context) { }
 
@@ -17,7 +17,7 @@ namespace Infra.Repositories
                 .Include("Usuario")
                 .Include("Residente")
                 .Where(r => r.Id == id)
-                .FirstOrDefaul();
+                .FirstOrDefault();
         }
     }
 }
