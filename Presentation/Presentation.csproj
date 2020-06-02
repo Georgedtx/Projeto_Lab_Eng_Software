@@ -166,6 +166,12 @@
     <Compile Include="Administradores\AdmTelaRecepcionista.Designer.cs">
       <DependentUpon>AdmTelaRecepcionista.cs</DependentUpon>
     </Compile>
+    <Compile Include="Médico\Novolaudo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Médico\Novolaudo.Designer.cs">
+      <DependentUpon>Novolaudo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Exames\ExamesMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administradores\AdmTelaRecepcionista.resx">
       <DependentUpon>AdmTelaRecepcionista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Médico\Novolaudo.resx">
+      <DependentUpon>Novolaudo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Exames\ExamesMenu.resx">
       <DependentUpon>ExamesMenu.cs</DependentUpon>
