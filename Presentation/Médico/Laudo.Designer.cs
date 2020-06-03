@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Criar = new System.Windows.Forms.Button();
             this.Visualizar = new System.Windows.Forms.Button();
             this.Emitir = new System.Windows.Forms.Button();
             this.listaExames = new System.Windows.Forms.DataGridView();
-            this.Criar = new System.Windows.Forms.Button();
             this.check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Exame = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +60,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Menu";
             // 
+            // Criar
+            // 
+            this.Criar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Criar.FlatAppearance.BorderSize = 0;
+            this.Criar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.Criar.Location = new System.Drawing.Point(520, 69);
+            this.Criar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Criar.Name = "Criar";
+            this.Criar.Size = new System.Drawing.Size(164, 53);
+            this.Criar.TabIndex = 65;
+            this.Criar.Text = "Novo Laudo";
+            this.Criar.UseVisualStyleBackColor = true;
+            // 
             // Visualizar
             // 
             this.Visualizar.Cursor = System.Windows.Forms.Cursors.Default;
@@ -84,7 +97,7 @@
             this.Emitir.Name = "Emitir";
             this.Emitir.Size = new System.Drawing.Size(164, 53);
             this.Emitir.TabIndex = 8;
-            this.Emitir.Text = "Emitir";
+            this.Emitir.Text = "Confirmar";
             this.Emitir.UseVisualStyleBackColor = true;
             // 
             // listaExames
@@ -105,19 +118,6 @@
             this.listaExames.RowHeadersWidth = 51;
             this.listaExames.Size = new System.Drawing.Size(1202, 408);
             this.listaExames.TabIndex = 44;
-            // 
-            // Criar
-            // 
-            this.Criar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Criar.FlatAppearance.BorderSize = 0;
-            this.Criar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.Criar.Location = new System.Drawing.Point(520, 69);
-            this.Criar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Criar.Name = "Criar";
-            this.Criar.Size = new System.Drawing.Size(164, 53);
-            this.Criar.TabIndex = 65;
-            this.Criar.Text = "Novo Laudo";
-            this.Criar.UseVisualStyleBackColor = true;
             // 
             // check
             // 
