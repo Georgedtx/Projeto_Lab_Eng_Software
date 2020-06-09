@@ -8,7 +8,7 @@ namespace Domain.Interfaces.Uow
     {
         IRepositoryAdministrador RepositoryAdministrador { get;}
         IRepository<Arquivo> RepositoryArquivo { get; }
-        IRepository<Docente> RepositoryDocente { get; }
+        IRepositoryDocente RepositoryDocente { get; }
         IRepositoryExame RepositoryExame { get; }
         IRepositoryMedico RepositoryMedico { get; }
         IRepositoryPaciente RepositoryPaciente { get; }
