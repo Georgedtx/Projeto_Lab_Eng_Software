@@ -36,6 +36,7 @@ namespace Presentation.Recepcionista
             _pacientesController = DependenciesResolve.Resolve<PacientesController>();
 
             AtualizarDataGrid();
+            AtualizarDataGrid2();
         }
 
         private void AtualizarDataGrid()
@@ -44,6 +45,24 @@ namespace Presentation.Recepcionista
             //.Select(m => new { Nome = m.Nome });
             //listaPacientes2.DataSource = _pacientesController.ObterTodos()
             //.Select(m => new { Nome = m.Nome });
+            var data = from info in _pacientesController.ObterTodos()
+                       orderby info.Nome
+                       select new
+                       {
+                           Nome = info.Nome
+                       };
+            listaPacientes.DataSource = data.ToList();
+        }
+        private void AtualizarDataGrid2()
+        {
+
+            //var data = from info in _pacientesController.ObterTodos()
+            //           orderby info.Nome
+            //           select new
+            //           {
+            //               Nome = info.Nome
+            //           };
+            //listaPacientes2.DataSource = data.ToList();
         }
 
         private void button1_Click(object sender, EventArgs e)

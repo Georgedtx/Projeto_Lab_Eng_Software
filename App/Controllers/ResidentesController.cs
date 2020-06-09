@@ -19,26 +19,26 @@ namespace App.Controllers
             _unitOfWork = unitOfWork;
         }
 
-        public MedicoDetalhes ObterPorId(Guid id)
-        {
-            var medico = _unitOfWork.RepositoryResidente.ObterPorId(id);
+        //public MedicoDetalhes ObterPorId(Guid id)
+        //{
+        //    var medico = _unitOfWork.RepositoryResidente.ObterPorId(id);
 
-            if (medico == null) throw new Exception("Residente não encontrado!");
+        //    if (medico == null) throw new Exception("Residente não encontrado!");
 
-            return new MedicoDetalhes
-            {
-                Id = medico.Id,
-                Nome = medico.Nome,
-                Crm = medico.Crm,
-                Email = medico.Usuario.Email,
+        //    return new MedicoDetalhes
+        //    {
+        //        Id = medico.Id,
+        //        Nome = medico.Nome,
+        //        Crm = medico.Crm,
+        //        Email = medico.Usuario.Email,
 
-                IdDocente = medico.Docente != null ? medico.Docente.Id : Guid.Empty,
-                TitUniversitaria = medico.Docente != null ? medico.Docente.TitUniversitaria : null,
+        //        IdDocente = medico.Docente != null ? medico.Docente.Id : Guid.Empty,
+        //        TitUniversitaria = medico.Docente != null ? medico.Docente.TitUniversitaria : null,
 
-                IdResidente = medico.Residente != null ? medico.Residente.Id : Guid.Empty,
-                AnoResidencia = medico.Residente != null ? medico.Residente.AnoResidencia : 0
-            };
-        }
+        //        IdResidente = medico.Residente != null ? medico.Residente.Id : Guid.Empty,
+        //        AnoResidencia = medico.Residente != null ? medico.Residente.AnoResidencia : 0
+        //    };
+        //}
 
         public List<Residente> ObterTodos()
         {

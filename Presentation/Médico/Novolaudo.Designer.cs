@@ -1,6 +1,6 @@
 ﻿namespace Presentation.Administradores
 {
-    partial class Form1
+    partial class Novolaudo
     {
         /// <summary>
         /// Required designer variable.
@@ -31,18 +31,18 @@
             this.listaExames = new System.Windows.Forms.DataGridView();
             this.Exame = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.hipoteseD = new System.Windows.Forms.Label();
+            this.CampoRecomendacoes = new System.Windows.Forms.TextBox();
+            this.CampoExame = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.CampoData = new System.Windows.Forms.MaskedTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.CampoMedico = new System.Windows.Forms.TextBox();
+            this.labelNome = new System.Windows.Forms.Label();
+            this.CampoNome = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.Emitir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.CampoNome = new System.Windows.Forms.TextBox();
-            this.labelNome = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.CampoData2 = new System.Windows.Forms.MaskedTextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.CampoExame2 = new System.Windows.Forms.TextBox();
-            this.CampoRecomendacoes = new System.Windows.Forms.TextBox();
-            this.hipoteseD = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listaExames)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -73,11 +73,11 @@
             this.groupBox1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.groupBox1.Controls.Add(this.hipoteseD);
             this.groupBox1.Controls.Add(this.CampoRecomendacoes);
-            this.groupBox1.Controls.Add(this.CampoExame2);
+            this.groupBox1.Controls.Add(this.CampoExame);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.CampoData2);
+            this.groupBox1.Controls.Add(this.CampoData);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.CampoMedico);
             this.groupBox1.Controls.Add(this.labelNome);
             this.groupBox1.Controls.Add(this.CampoNome);
             this.groupBox1.Controls.Add(this.label9);
@@ -92,79 +92,66 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Laudo Médico";
             // 
-            // Emitir
+            // hipoteseD
             // 
-            this.Emitir.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Emitir.FlatAppearance.BorderSize = 0;
-            this.Emitir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.Emitir.Location = new System.Drawing.Point(122, 422);
-            this.Emitir.Margin = new System.Windows.Forms.Padding(2);
-            this.Emitir.Name = "Emitir";
-            this.Emitir.Size = new System.Drawing.Size(123, 43);
-            this.Emitir.TabIndex = 7;
-            this.Emitir.Text = "Emitir";
-            this.Emitir.UseVisualStyleBackColor = true;
+            this.hipoteseD.AutoSize = true;
+            this.hipoteseD.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.hipoteseD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.hipoteseD.ForeColor = System.Drawing.Color.Black;
+            this.hipoteseD.Location = new System.Drawing.Point(221, 242);
+            this.hipoteseD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.hipoteseD.Name = "hipoteseD";
+            this.hipoteseD.Size = new System.Drawing.Size(134, 16);
+            this.hipoteseD.TabIndex = 70;
+            this.hipoteseD.Text = "Recomendações :";
             // 
-            // btnCancelar
+            // CampoRecomendacoes
             // 
-            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnCancelar.Location = new System.Drawing.Point(335, 422);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(123, 43);
-            this.btnCancelar.TabIndex = 8;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.CampoRecomendacoes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CampoRecomendacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.CampoRecomendacoes.Location = new System.Drawing.Point(89, 269);
+            this.CampoRecomendacoes.Margin = new System.Windows.Forms.Padding(2);
+            this.CampoRecomendacoes.Multiline = true;
+            this.CampoRecomendacoes.Name = "CampoRecomendacoes";
+            this.CampoRecomendacoes.Size = new System.Drawing.Size(402, 136);
+            this.CampoRecomendacoes.TabIndex = 69;
             // 
-            // label9
+            // CampoExame
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(28, 62);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 16);
-            this.label9.TabIndex = 33;
-            this.label9.Text = "Nome :";
+            this.CampoExame.BackColor = System.Drawing.SystemColors.Window;
+            this.CampoExame.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CampoExame.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.CampoExame.Location = new System.Drawing.Point(349, 121);
+            this.CampoExame.Margin = new System.Windows.Forms.Padding(2);
+            this.CampoExame.Name = "CampoExame";
+            this.CampoExame.ReadOnly = true;
+            this.CampoExame.Size = new System.Drawing.Size(156, 24);
+            this.CampoExame.TabIndex = 36;
             // 
-            // CampoNome
+            // label13
             // 
-            this.CampoNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CampoNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.CampoNome.Location = new System.Drawing.Point(89, 58);
-            this.CampoNome.Margin = new System.Windows.Forms.Padding(2);
-            this.CampoNome.Name = "CampoNome";
-            this.CampoNome.ReadOnly = true;
-            this.CampoNome.Size = new System.Drawing.Size(434, 24);
-            this.CampoNome.TabIndex = 34;
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(272, 125);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(63, 16);
+            this.label13.TabIndex = 67;
+            this.label13.Text = "Exame :";
             // 
-            // labelNome
+            // CampoData
             // 
-            this.labelNome.AutoSize = true;
-            this.labelNome.BackColor = System.Drawing.Color.Transparent;
-            this.labelNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.labelNome.ForeColor = System.Drawing.Color.Black;
-            this.labelNome.Location = new System.Drawing.Point(18, 121);
-            this.labelNome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelNome.Name = "labelNome";
-            this.labelNome.Size = new System.Drawing.Size(67, 16);
-            this.labelNome.TabIndex = 35;
-            this.labelNome.Text = "Médico :";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.textBox1.Location = new System.Drawing.Point(89, 121);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(434, 24);
-            this.textBox1.TabIndex = 36;
+            this.CampoData.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CampoData.Location = new System.Drawing.Point(89, 190);
+            this.CampoData.Mask = "00/00/0000";
+            this.CampoData.Name = "CampoData";
+            this.CampoData.Size = new System.Drawing.Size(156, 24);
+            this.CampoData.SkipLiterals = false;
+            this.CampoData.TabIndex = 62;
+            this.CampoData.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CampoData.ValidatingType = typeof(System.DateTime);
             // 
             // label2
             // 
@@ -179,75 +166,92 @@
             this.label2.TabIndex = 61;
             this.label2.Text = "Data :";
             // 
-            // CampoData2
+            // CampoMedico
             // 
-            this.CampoData2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CampoData2.Location = new System.Drawing.Point(89, 190);
-            this.CampoData2.Mask = "00/00/0000";
-            this.CampoData2.Name = "CampoData2";
-            this.CampoData2.Size = new System.Drawing.Size(156, 24);
-            this.CampoData2.SkipLiterals = false;
-            this.CampoData2.TabIndex = 62;
-            this.CampoData2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.CampoData2.ValidatingType = typeof(System.DateTime);
+            this.CampoMedico.BackColor = System.Drawing.SystemColors.Window;
+            this.CampoMedico.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CampoMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.CampoMedico.Location = new System.Drawing.Point(89, 121);
+            this.CampoMedico.Margin = new System.Windows.Forms.Padding(2);
+            this.CampoMedico.Name = "CampoMedico";
+            this.CampoMedico.ReadOnly = true;
+            this.CampoMedico.Size = new System.Drawing.Size(156, 24);
+            this.CampoMedico.TabIndex = 36;
             // 
-            // label13
+            // labelNome
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(283, 195);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(63, 16);
-            this.label13.TabIndex = 67;
-            this.label13.Text = "Exame :";
+            this.labelNome.AutoSize = true;
+            this.labelNome.BackColor = System.Drawing.Color.Transparent;
+            this.labelNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.labelNome.ForeColor = System.Drawing.Color.Black;
+            this.labelNome.Location = new System.Drawing.Point(28, 125);
+            this.labelNome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelNome.Name = "labelNome";
+            this.labelNome.Size = new System.Drawing.Size(49, 16);
+            this.labelNome.TabIndex = 35;
+            this.labelNome.Text = "CRM :";
             // 
-            // CampoExame2
+            // CampoNome
             // 
-            this.CampoExame2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CampoExame2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.CampoExame2.Location = new System.Drawing.Point(367, 192);
-            this.CampoExame2.Margin = new System.Windows.Forms.Padding(2);
-            this.CampoExame2.Name = "CampoExame2";
-            this.CampoExame2.ReadOnly = true;
-            this.CampoExame2.Size = new System.Drawing.Size(156, 24);
-            this.CampoExame2.TabIndex = 68;
+            this.CampoNome.BackColor = System.Drawing.SystemColors.Window;
+            this.CampoNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CampoNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.CampoNome.Location = new System.Drawing.Point(89, 58);
+            this.CampoNome.Margin = new System.Windows.Forms.Padding(2);
+            this.CampoNome.Name = "CampoNome";
+            this.CampoNome.ReadOnly = true;
+            this.CampoNome.Size = new System.Drawing.Size(434, 24);
+            this.CampoNome.TabIndex = 34;
             // 
-            // CampoRecomendacoes
+            // label9
             // 
-            this.CampoRecomendacoes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CampoRecomendacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.CampoRecomendacoes.Location = new System.Drawing.Point(89, 269);
-            this.CampoRecomendacoes.Margin = new System.Windows.Forms.Padding(2);
-            this.CampoRecomendacoes.Multiline = true;
-            this.CampoRecomendacoes.Name = "CampoRecomendacoes";
-            this.CampoRecomendacoes.Size = new System.Drawing.Size(402, 136);
-            this.CampoRecomendacoes.TabIndex = 69;
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(28, 62);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(57, 16);
+            this.label9.TabIndex = 33;
+            this.label9.Text = "Nome :";
             // 
-            // hipoteseD
+            // Emitir
             // 
-            this.hipoteseD.AutoSize = true;
-            this.hipoteseD.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.hipoteseD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.hipoteseD.ForeColor = System.Drawing.Color.Black;
-            this.hipoteseD.Location = new System.Drawing.Point(221, 242);
-            this.hipoteseD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.hipoteseD.Name = "hipoteseD";
-            this.hipoteseD.Size = new System.Drawing.Size(134, 16);
-            this.hipoteseD.TabIndex = 70;
-            this.hipoteseD.Text = "Recomendações :";
+            this.Emitir.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Emitir.FlatAppearance.BorderSize = 0;
+            this.Emitir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.Emitir.Location = new System.Drawing.Point(122, 422);
+            this.Emitir.Margin = new System.Windows.Forms.Padding(2);
+            this.Emitir.Name = "Emitir";
+            this.Emitir.Size = new System.Drawing.Size(123, 43);
+            this.Emitir.TabIndex = 7;
+            this.Emitir.Text = "Emitir";
+            this.Emitir.UseVisualStyleBackColor = true;
+            this.Emitir.Click += new System.EventHandler(this.Emitir_Click);
             // 
-            // Form1
+            // btnCancelar
+            // 
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.Location = new System.Drawing.Point(335, 422);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(123, 43);
+            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // Novolaudo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 495);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listaExames);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Novolaudo";
             ((System.ComponentModel.ISupportInitialize)(this.listaExames)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -263,12 +267,12 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox CampoNome;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox CampoMedico;
         private System.Windows.Forms.Label labelNome;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox CampoData2;
+        private System.Windows.Forms.MaskedTextBox CampoData;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox CampoExame2;
+        private System.Windows.Forms.TextBox CampoExame;
         private System.Windows.Forms.TextBox CampoRecomendacoes;
         private System.Windows.Forms.Label hipoteseD;
     }

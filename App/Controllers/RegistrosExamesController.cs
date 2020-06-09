@@ -27,11 +27,11 @@ namespace App.Controllers
 
             if (registroExame.Validation.IsValid)
             {
-                var registro = new PedidoExame (registroExame.Id);
-                registro.IdResidente = registroExame.IdResidente;
-                registro.Laudo = registroExame.Laudo;
-                _unitOfWork.RepositoryRegistroExame.Adicionar(registro);
-                _unitOfWork.Commit();
+                //var registro = new PedidoExame (registroExame.Id);
+                //registro.IdResidente = registroExame.IdResidente;
+                //registro.Laudo = registroExame.Laudo;
+                //_unitOfWork.RepositoryRegistroExame.Adicionar(registro);
+                //_unitOfWork.Commit();
             }
 
             return registroExame.Validation;

@@ -6719,19 +6719,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gugam\\.nuget\\packages\\": {}
+    "C:\\Users\\George\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj",
+      "projectUniqueName": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj",
       "projectName": "UnitTests",
-      "projectPath": "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj",
-      "packagesPath": "C:\\Users\\gugam\\.nuget\\packages\\",
-      "outputPath": "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\UnitTests\\obj\\",
+      "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\UnitTests\\UnitTests.csproj",
+      "packagesPath": "C:\\Users\\George\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\UnitTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\gugam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\George\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6744,8 +6744,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj": {
-              "projectPath": "D:\\Arquivos de Programas (D)\\Git\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj"
+            "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj": {
+              "projectPath": "C:\\Users\\George\\Desktop\\Projetos\\Projeto_Lab_Eng_Software\\Presentation\\Presentation.csproj"
             }
           }
         }
@@ -6810,16 +6810,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"

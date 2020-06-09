@@ -64,6 +64,7 @@
     <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Interfaces\Repositories\IRepository.cs" />
     <Compile Include="Interfaces\Repositories\IRepositoryAdministrador.cs" />
+    <Compile Include="Interfaces\Repositories\IRepositoryDocente.cs" />
     <Compile Include="Interfaces\Repositories\IRepositoryExame.cs" />
     <Compile Include="Interfaces\Repositories\IRepositoryMedico.cs" />
     <Compile Include="Interfaces\Repositories\IRepositoryPaciente.cs" />

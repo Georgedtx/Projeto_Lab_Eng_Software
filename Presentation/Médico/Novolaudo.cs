@@ -1,4 +1,6 @@
-﻿using System;
+﻿using App.Controllers;
+using Infra.IoC;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,16 +12,58 @@ using System.Windows.Forms;
 
 namespace Presentation.Administradores
 {
-    public partial class Form1 : Form
+    public partial class Novolaudo : Form
     {
-        public Form1()
+        private readonly RegistrosExamesController _registrosExamesController;
+        public Novolaudo()
         {
+            _registrosExamesController = DependenciesResolve.Resolve<RegistrosExamesController>();
             InitializeComponent();
+            AtualizarDataGrid();
+        }
+        private void AtualizarDataGrid()
+        {
+            //listaPacientes.DataSource = _pacientesController.ObterTodos()
+            //.Select(m => new { Nome = m.Nome });
+            //listaPacientes2.DataSource = _pacientesController.ObterTodos()
+            //.Select(m => new { Nome = m.Nome });
+            //var data = from info in _registrosExamesController.
+            //           orderby info.Nome
+            //           select new
+            //           {
+            //               Nome = info.Nome
+            //           };
+            //listaExames.DataSource = data.ToList();
+        }
+        private void LimparCampos()
+        {
+            CampoNome.Clear();
+            CampoData.Clear();
+            CampoMedico.Clear();
+            CampoRecomendacoes.Clear();
+            CampoExame.Clear();
+        }
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void Emitir_Click(object sender, EventArgs e)
         {
+            //_registrosExamesController.EmitirLaudo(CampoMedico.Text, IdExame, laudo);
+        }
+        private DateTime ObterData()
+        {
+            if (CampoData.Text.Length == 10)
+            {
+                var dia = Convert.ToInt16(CampoData.Text.Substring(0, 2));
+                var mes = Convert.ToInt16(CampoData.Text.Substring(3, 2));
+                var ano = Convert.ToInt16(CampoData.Text.Substring(6, 4));
 
+                return new DateTime(ano, mes, dia);
+            }
+
+            return new DateTime();
         }
     }
 }

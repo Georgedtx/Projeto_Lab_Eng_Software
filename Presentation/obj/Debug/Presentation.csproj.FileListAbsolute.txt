@@ -328,3 +328,11 @@ C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Newtonsoft.Json.xml
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Médico.ListagemExames.resources
 C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Médico.TelaMedPrincipal.resources
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\Interop.AcroPDFLib.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.csproj.ResolveComReference.cache
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Administradores.Form1.resources
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Médico.Laudo.resources
+C:\Users\George\Desktop\Projetos\Projeto_Lab_Eng_Software\Presentation\obj\Debug\Presentation.Médico.Visualizar.resources
