@@ -17,7 +17,7 @@ namespace Infra.UoW
         }
 
         private RepositoryAdministrador repositoryAdministrador;
-        private Repository<Arquivo> repositoryArquivo;
+        private RepositoryArquivo repositoryArquivo;
         private RepositoryDocente repositoryDocente;
         private RepositoryExame repositoryExame;
         private RepositoryMedico repositoryMedico;
@@ -40,13 +40,13 @@ namespace Infra.UoW
             }
         }
 
-        public IRepository<Arquivo> RepositoryArquivo
+        public IRepositoryArquivo RepositoryArquivo
         {
             get
             {
                 if (repositoryArquivo == null)
                 {
-                    repositoryArquivo = new Repository<Arquivo>(_context);
+                    repositoryArquivo = new RepositoryArquivo(_context);
                 }
                 return repositoryArquivo;
             }

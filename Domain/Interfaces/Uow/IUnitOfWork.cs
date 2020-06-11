@@ -7,7 +7,7 @@ namespace Domain.Interfaces.Uow
     public interface IUnitOfWork : IDisposable
     {
         IRepositoryAdministrador RepositoryAdministrador { get;}
-        IRepository<Arquivo> RepositoryArquivo { get; }
+        IRepositoryArquivo RepositoryArquivo { get; }
         IRepositoryDocente RepositoryDocente { get; }
         IRepositoryExame RepositoryExame { get; }
         IRepositoryMedico RepositoryMedico { get; }
