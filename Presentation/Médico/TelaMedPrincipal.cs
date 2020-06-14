@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using FontAwesome.Sharp;
 using Presentation.Usuarios;
 using System.Runtime.InteropServices;
+using Presentation.Administradores;
 
 namespace Presentation.Médico
 {
@@ -155,6 +156,12 @@ namespace Presentation.Médico
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }   
+        }
+
+        private void Recepcionista_Click_1(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            OpenChildForm(new Novolaudo());
+        }
     }
 }

@@ -100,12 +100,12 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.listaMedicos.Dock = System.Windows.Forms.DockStyle.Right;
-            this.listaMedicos.Location = new System.Drawing.Point(414, 3);
+            this.listaMedicos.Location = new System.Drawing.Point(396, 3);
             this.listaMedicos.Margin = new System.Windows.Forms.Padding(2);
             this.listaMedicos.Name = "listaMedicos";
             this.listaMedicos.RowHeadersWidth = 51;
             this.listaMedicos.RowTemplate.Height = 24;
-            this.listaMedicos.Size = new System.Drawing.Size(478, 460);
+            this.listaMedicos.Size = new System.Drawing.Size(496, 460);
             this.listaMedicos.TabIndex = 12;
             // 
             // dataGridViewTextBoxColumn1

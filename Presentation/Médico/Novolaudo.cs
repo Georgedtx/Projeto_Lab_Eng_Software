@@ -23,10 +23,6 @@ namespace Presentation.Administradores
         }
         private void AtualizarDataGrid()
         {
-            //listaPacientes.DataSource = _pacientesController.ObterTodos()
-            //.Select(m => new { Nome = m.Nome });
-            //listaPacientes2.DataSource = _pacientesController.ObterTodos()
-            //.Select(m => new { Nome = m.Nome });
             //var data = from info in _registrosExamesController.
             //           orderby info.Nome
             //           select new
@@ -50,7 +46,11 @@ namespace Presentation.Administradores
 
         private void Emitir_Click(object sender, EventArgs e)
         {
+
             //_registrosExamesController.EmitirLaudo(CampoMedico.Text, IdExame, laudo);
+            //MessageBox.Show("Laudo emitido com sucesso");
+            //LimparCampos();
+            //AtualizarDataGrid();
         }
         private DateTime ObterData()
         {

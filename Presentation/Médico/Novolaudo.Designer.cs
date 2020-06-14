@@ -57,7 +57,7 @@
             this.listaExames.Location = new System.Drawing.Point(550, 0);
             this.listaExames.Name = "listaExames";
             this.listaExames.RowHeadersWidth = 51;
-            this.listaExames.Size = new System.Drawing.Size(354, 504);
+            this.listaExames.Size = new System.Drawing.Size(380, 568);
             this.listaExames.TabIndex = 44;
             // 
             // Exame
@@ -113,7 +113,7 @@
             this.CampoRecomendacoes.Margin = new System.Windows.Forms.Padding(2);
             this.CampoRecomendacoes.Multiline = true;
             this.CampoRecomendacoes.Name = "CampoRecomendacoes";
-            this.CampoRecomendacoes.Size = new System.Drawing.Size(402, 136);
+            this.CampoRecomendacoes.Size = new System.Drawing.Size(416, 136);
             this.CampoRecomendacoes.TabIndex = 69;
             // 
             // CampoExame
@@ -200,7 +200,7 @@
             this.CampoNome.Margin = new System.Windows.Forms.Padding(2);
             this.CampoNome.Name = "CampoNome";
             this.CampoNome.ReadOnly = true;
-            this.CampoNome.Size = new System.Drawing.Size(434, 24);
+            this.CampoNome.Size = new System.Drawing.Size(416, 24);
             this.CampoNome.TabIndex = 34;
             // 
             // label9

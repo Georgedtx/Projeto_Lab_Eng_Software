@@ -43,9 +43,9 @@
             this.fechar = new FontAwesome.Sharp.IconButton();
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.NomeTelaPrincipal = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.logoPainel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
@@ -351,6 +351,30 @@
             this.panelDesktop.Size = new System.Drawing.Size(919, 534);
             this.panelDesktop.TabIndex = 5;
             // 
+            // NomeTelaPrincipal
+            // 
+            this.NomeTelaPrincipal.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.NomeTelaPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NomeTelaPrincipal.Enabled = false;
+            this.NomeTelaPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NomeTelaPrincipal.Location = new System.Drawing.Point(438, 266);
+            this.NomeTelaPrincipal.Name = "NomeTelaPrincipal";
+            this.NomeTelaPrincipal.Size = new System.Drawing.Size(121, 17);
+            this.NomeTelaPrincipal.TabIndex = 28;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.label1.Location = new System.Drawing.Point(376, 267);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 16);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Nome :";
+            // 
             // iconButton1
             // 
             this.iconButton1.BackColor = System.Drawing.Color.PaleTurquoise;
@@ -372,31 +396,6 @@
             this.iconButton1.TabIndex = 26;
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label1.Location = new System.Drawing.Point(434, 265);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 16);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Nome :";
-            // 
-            // NomeTelaPrincipal
-            // 
-            this.NomeTelaPrincipal.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.NomeTelaPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NomeTelaPrincipal.Enabled = false;
-            this.NomeTelaPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NomeTelaPrincipal.Location = new System.Drawing.Point(400, 305);
-            this.NomeTelaPrincipal.Name = "NomeTelaPrincipal";
-            this.NomeTelaPrincipal.Size = new System.Drawing.Size(121, 24);
-            this.NomeTelaPrincipal.TabIndex = 28;
-            this.NomeTelaPrincipal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // AdmMenuPrincipal
             // 
