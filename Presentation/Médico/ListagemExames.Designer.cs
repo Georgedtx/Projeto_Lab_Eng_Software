@@ -32,7 +32,7 @@
             this.ListaPedidosExame = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Datalistagem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ListaPedidosExame)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +52,7 @@
             this.ListaPedidosExame.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.Column1});
+            this.Datalistagem});
             this.ListaPedidosExame.Dock = System.Windows.Forms.DockStyle.Right;
             this.ListaPedidosExame.Location = new System.Drawing.Point(-38, 0);
             this.ListaPedidosExame.Margin = new System.Windows.Forms.Padding(2);
@@ -79,11 +79,11 @@
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // Column1
+            // Datalistagem
             // 
-            this.Column1.DataPropertyName = "Datalistagem";
-            this.Column1.HeaderText = "Data de Emissão";
-            this.Column1.Name = "Column1";
+            this.Datalistagem.DataPropertyName = "Datalistagem";
+            this.Datalistagem.HeaderText = "Data de Emissão";
+            this.Datalistagem.Name = "Datalistagem";
             // 
             // ListagemExames
             // 
@@ -103,6 +103,6 @@
         private System.Windows.Forms.DataGridView ListaPedidosExame;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Datalistagem;
     }
 }

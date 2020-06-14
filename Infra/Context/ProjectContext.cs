@@ -2,6 +2,7 @@
 using FluentValidation.Results;
 using Infra.Configurations;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace Infra.Context
 {
@@ -19,7 +20,7 @@ namespace Infra.Context
         public DbSet<RegistroExame> RegistrosExames { get; set; }
         public DbSet<Residente> Residentes { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
-
+        public DbSet<Arquivo> Arquivos { get; internal set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
