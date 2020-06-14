@@ -10,7 +10,7 @@ namespace Infra.Repositories
     {
         public RepositoryArquivo(ProjectContext _context) : base(_context) { }
 
-        public Arquivo obterPorId(Guid id)
+        public Arquivo ObterPorId(Guid id)
         {
             return _context.Arquivos.Where(a => a.Id == id).FirstOrDefault();
         }

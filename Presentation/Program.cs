@@ -21,7 +21,7 @@ namespace Presentation
             Application.SetCompatibleTextRenderingDefault(false);
 
             DependenciesResolve.Wire(Dependencies.Create());
-            Application.Run(new Novolaudo());
+            Application.Run(new ListagemExames());
         }
     }
 }

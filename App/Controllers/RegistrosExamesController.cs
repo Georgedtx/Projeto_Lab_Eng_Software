@@ -67,54 +67,54 @@ namespace App.Controllers
             return _unitOfWork.RepositoryPedidoExame.ObterPorId(id);
         }
 
-        private string AddImagem(IFormFile arquivo)
-        {
-            string nomeArquivo = "";
-            var caminho = "~/Uploads/Imagens/";
+        //private string AddImagem(IFormFile arquivo)
+        //{
+        //    string nomeArquivo = "";
+        //    var caminho = "~/Uploads/Imagens/";
 
-            if (arquivo != null && arquivo.Length > 0)
-            {
-                if (!Directory.Exists(caminho))
-                {
-                    Directory.CreateDirectory(caminho);
-                }
+        //    if (arquivo != null && arquivo.Length > 0)
+        //    {
+        //        if (!Directory.Exists(caminho))
+        //        {
+        //            Directory.CreateDirectory(caminho);
+        //        }
 
-                nomeArquivo = Guid.NewGuid().ToString() + Path.GetExtension(arquivo.FileName);
-                caminho = caminho + nomeArquivo;
+        //        nomeArquivo = Guid.NewGuid().ToString() + Path.GetExtension(arquivo.FileName);
+        //        caminho = caminho + nomeArquivo;
 
-                using (var stream = new FileStream(caminho, FileMode.Create))
-                {
-                    arquivo.CopyTo(stream);
-                }
-            }
-            return nomeArquivo;
-        }
+        //        using (var stream = new FileStream(caminho, FileMode.Create))
+        //        {
+        //            arquivo.CopyTo(stream);
+        //        }
+        //    }
+        //    return nomeArquivo;
+        //}
 
 
-        public void adicionarImagem(IFormFileCollection arquivos, Guid idExame)
-        {
-            var exame = BuscarPedidoExamePorId(IdExame);
+        //public void adicionarImagem(IFormFileCollection arquivos, Guid idExame)
+        //{
+        //    var exame = BuscarPedidoExamePorId(IdExame);
 
-            if (exame == null) throw new Exception("Exame não Encontrado");
+        //    if (exame == null) throw new Exception("Exame não Encontrado");
 
-            var caminho = "~/Uploads/Imagens/";
+        //    var caminho = "~/Uploads/Imagens/";
 
-            foreach (var arquivo in arquivos)
-            {
-                var nomeArquivo = AddImagem(arquivo);
+        //    foreach (var arquivo in arquivos)
+        //    {
+        //        var nomeArquivo = AddImagem(arquivo);
 
-                var arquivo = new Arquivo(nomeArquivo, caminho + nomeArquivo, exame.Id);
+        //        var arquivo = new Arquivo(nomeArquivo, caminho + nomeArquivo, exame.Id);
 
-                _unitOfWork.RepositoryArquivo.Adicionar(arquivo);
-                _unitOfWork.Commit();
-            }
+        //        _unitOfWork.RepositoryArquivo.Adicionar(arquivo);
+        //        _unitOfWork.Commit();
+        //    }
 
-            var registro = new RegistroExame(exame.Id);
+        //    var registro = new RegistroExame(exame.Id);
 
-            registro.Arquivo = arquivos;
+        //    registro.Arquivo = arquivos;
 
-            _unitOfWork.RepositoryRegistroExame.Adicionar(registro);
-            _unitOfWork.Commit();
-        }
+        //    _unitOfWork.RepositoryRegistroExame.Adicionar(registro);
+        //    _unitOfWork.Commit();
+        //}
     }
 }

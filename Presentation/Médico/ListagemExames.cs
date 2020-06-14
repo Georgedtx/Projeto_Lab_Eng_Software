@@ -24,14 +24,31 @@ namespace Presentation.Médico
 
         private void AtualizarDataGrid()
         {
-            //var data2 = from info in _pedidosExamesController.
-            //            orderby info.Exame
-            //            select new
-            //            {
-            //                //Pedidos = info.Exame.Nome.ToString(),
-            //                Hipótese = info.Hipotese
-            //            };
-            //ListaPedidosExame.DataSource = data2.ToList();
+            var data2 = from info in _pedidosExamesController.ObterTodos()
+                        orderby info.DataEmissao
+                        select new
+                        {
+                            //Pedidos = info.Exame.Nome.ToString(),
+                            //Hipótese = info.Hipotese,
+                            Datalistagem = info.DataEmissao
+
+                        };
+            ListaPedidosExame.DataSource = data2.ToList();
+        }
+
+        private void ListaPedidosExame_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (ListaPedidosExame.SelectedRows.Count > 0)
+            {
+
+                var a = ListaPedidosExame.CurrentRow.Cells["Datalistagem"].Value.ToString();
+                //CampoHipotese2.Text = ListaPedidosExame.CurrentRow.Cells["Hipótese"].Value.ToString();
+                MessageBox.Show("aaaa",a);
+            }
+            else
+            {
+                MessageBox.Show("Selecione uma linha.");
+            }
         }
     }
 }

@@ -61,6 +61,7 @@
             this.ListaPedidosExame.RowTemplate.Height = 24;
             this.ListaPedidosExame.Size = new System.Drawing.Size(941, 495);
             this.ListaPedidosExame.TabIndex = 13;
+            this.ListaPedidosExame.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListaPedidosExame_CellDoubleClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -80,6 +81,7 @@
             // 
             // Column1
             // 
+            this.Column1.DataPropertyName = "Datalistagem";
             this.Column1.HeaderText = "Data de Emissão";
             this.Column1.Name = "Column1";
             // 
