@@ -63,7 +63,7 @@
             this.iconPictureBox2.IconColor = System.Drawing.Color.White;
             this.iconPictureBox2.IconSize = 77;
             this.iconPictureBox2.Location = new System.Drawing.Point(30, 0);
-            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.iconPictureBox2.Name = "iconPictureBox2";
             this.iconPictureBox2.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.iconPictureBox2.Size = new System.Drawing.Size(174, 77);
@@ -80,7 +80,7 @@
             this.painelTitulo.Controls.Add(this.fechar);
             this.painelTitulo.Controls.Add(this.lblTitleChildForm);
             this.painelTitulo.Location = new System.Drawing.Point(166, 0);
-            this.painelTitulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.painelTitulo.Margin = new System.Windows.Forms.Padding(2);
             this.painelTitulo.Name = "painelTitulo";
             this.painelTitulo.Size = new System.Drawing.Size(919, 77);
             this.painelTitulo.TabIndex = 10;
@@ -99,7 +99,7 @@
             this.minimizar.IconSize = 16;
             this.minimizar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.minimizar.Location = new System.Drawing.Point(812, 2);
-            this.minimizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.minimizar.Margin = new System.Windows.Forms.Padding(2);
             this.minimizar.Name = "minimizar";
             this.minimizar.Rotation = 0D;
             this.minimizar.Size = new System.Drawing.Size(30, 19);
@@ -119,7 +119,7 @@
             this.maximizar.IconColor = System.Drawing.Color.Gainsboro;
             this.maximizar.IconSize = 16;
             this.maximizar.Location = new System.Drawing.Point(850, 2);
-            this.maximizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.maximizar.Margin = new System.Windows.Forms.Padding(2);
             this.maximizar.Name = "maximizar";
             this.maximizar.Rotation = 0D;
             this.maximizar.Size = new System.Drawing.Size(30, 19);
@@ -139,7 +139,7 @@
             this.fechar.IconColor = System.Drawing.Color.Gainsboro;
             this.fechar.IconSize = 16;
             this.fechar.Location = new System.Drawing.Point(888, 2);
-            this.fechar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fechar.Margin = new System.Windows.Forms.Padding(2);
             this.fechar.Name = "fechar";
             this.fechar.Rotation = 0D;
             this.fechar.Size = new System.Drawing.Size(30, 19);
@@ -169,7 +169,7 @@
             this.panelMenu.Controls.Add(this.logoPainel);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(165, 611);
             this.panelMenu.TabIndex = 11;
@@ -189,7 +189,7 @@
             this.Recepcionista.IconSize = 50;
             this.Recepcionista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Recepcionista.Location = new System.Drawing.Point(0, 221);
-            this.Recepcionista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Recepcionista.Margin = new System.Windows.Forms.Padding(2);
             this.Recepcionista.Name = "Recepcionista";
             this.Recepcionista.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Recepcionista.Rotation = 0D;
@@ -214,7 +214,7 @@
             this.Exames.IconSize = 50;
             this.Exames.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Exames.Location = new System.Drawing.Point(0, 149);
-            this.Exames.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Exames.Margin = new System.Windows.Forms.Padding(2);
             this.Exames.Name = "Exames";
             this.Exames.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Exames.Rotation = 0D;
@@ -239,7 +239,7 @@
             this.Sair.IconSize = 50;
             this.Sair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Sair.Location = new System.Drawing.Point(0, 539);
-            this.Sair.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Sair.Margin = new System.Windows.Forms.Padding(2);
             this.Sair.Name = "Sair";
             this.Sair.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Sair.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -265,7 +265,7 @@
             this.PedidoExames.IconSize = 50;
             this.PedidoExames.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PedidoExames.Location = new System.Drawing.Point(0, 77);
-            this.PedidoExames.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PedidoExames.Margin = new System.Windows.Forms.Padding(2);
             this.PedidoExames.Name = "PedidoExames";
             this.PedidoExames.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PedidoExames.Rotation = 0D;
@@ -281,7 +281,7 @@
             this.logoPainel.Controls.Add(this.iconPictureBox1);
             this.logoPainel.Dock = System.Windows.Forms.DockStyle.Top;
             this.logoPainel.Location = new System.Drawing.Point(0, 0);
-            this.logoPainel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logoPainel.Margin = new System.Windows.Forms.Padding(2);
             this.logoPainel.Name = "logoPainel";
             this.logoPainel.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.logoPainel.Size = new System.Drawing.Size(165, 77);
@@ -295,7 +295,7 @@
             this.iconPictureBox1.IconColor = System.Drawing.Color.White;
             this.iconPictureBox1.IconSize = 77;
             this.iconPictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.iconPictureBox1.Size = new System.Drawing.Size(165, 77);
@@ -313,7 +313,7 @@
             this.panelDesktop.Controls.Add(this.label1);
             this.panelDesktop.Controls.Add(this.NomeTelaPrincipal);
             this.panelDesktop.Location = new System.Drawing.Point(164, 77);
-            this.panelDesktop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelDesktop.Margin = new System.Windows.Forms.Padding(2);
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(919, 534);
             this.panelDesktop.TabIndex = 12;
@@ -331,12 +331,12 @@
             this.Medico.IconColor = System.Drawing.Color.LightSeaGreen;
             this.Medico.IconSize = 150;
             this.Medico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Medico.Location = new System.Drawing.Point(393, 72);
-            this.Medico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Medico.Location = new System.Drawing.Point(350, 72);
+            this.Medico.Margin = new System.Windows.Forms.Padding(2);
             this.Medico.Name = "Medico";
             this.Medico.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Medico.Rotation = 0D;
-            this.Medico.Size = new System.Drawing.Size(122, 163);
+            this.Medico.Size = new System.Drawing.Size(154, 163);
             this.Medico.TabIndex = 24;
             this.Medico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Medico.UseVisualStyleBackColor = false;
